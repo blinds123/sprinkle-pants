@@ -1,0 +1,34 @@
+{
+  "name": "freeperrylarp1",
+  "version": "0.1.0",
+  "description": "Build evidence-bounded Auralo campaigns with one isolated, replaceable FREE product and a mandatory product-marriage contract.",
+  "author": {
+    "name": "Nelson Chan",
+    "url": "https://github.com/blinds123"
+  },
+  "license": "Proprietary",
+  "keywords": [
+    "auralo",
+    "ecommerce",
+    "landing-page",
+    "direct-response",
+    "creative-strategy"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "FreePerryLarp1",
+    "shortDescription": "Pair fixed Auralo with an isolated FREE product.",
+    "longDescription": "Keeps Auralo Pheromone Perfume as the fixed paid product while starting every supplied FREE product from a clean campaign contract. It requires current evidence, an accepted buyer moment and product-marriage brief, bounded angle selection, customer-facing visible text, claim lineage, and cross-campaign leakage checks before prompt delivery.",
+    "developerName": "Nelson Chan",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Build a fresh Auralo plus FREE-product campaign.",
+      "Audit this campaign for stale-product leakage.",
+      "Validate the marriage brief before writing."
+    ]
+  }
+}

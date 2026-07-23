@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "dossier_id": "auralo-pheromone-perfume-15ml",
+  "version": "1.0.0",
+  "product": {
+    "id": "auralo-pheromone-perfume-15ml",
+    "public_name": "Auralo Pheromone Perfume",
+    "price_usd": 29,
+    "format": "15 ml dropper bottle",
+    "reference_assets": [
+      {
+        "asset_id": "AURALO-REF-001",
+        "path": "auralo-reference.png",
+        "sha256": "1781cd27811a984a89290722966742f5cb18084fcd78905515df1ad19fd9973d"
+      }
+    ]
+  },
+  "facts": [
+    {
+      "evidence_id": "AURALO-IDENTITY-001",
+      "claim": "Auralo is a 15 ml pheromone-inspired floral-amber perfume.",
+      "public_language": "Auralo is a 15 ml pheromone-inspired floral-amber perfume.",
+      "scope": "identity",
+      "status": "authorized",
+      "evidence_type": "client_attested_reference_equivalence",
+      "source_url": "https://godaperfume.uk/"
+    },
+    {
+      "evidence_id": "AURALO-SCENT-001",
+      "claim": "The scent profile combines jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper.",
+      "public_language": "Jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper shape its floral-amber scent.",
+      "scope": "sensory",
+      "status": "authorized",
+      "evidence_type": "client_attested_reference_equivalence",
+      "source_url": "https://godaperfume.uk/"
+    },
+    {
+      "evidence_id": "AURALO-USE-001",
+      "claim": "Apply two or three drops to pulse points such as the wrists, behind the ears, neck, and inner elbows.",
+      "public_language": "Apply two or three drops to pulse points such as the wrists, behind the ears, neck, and inner elbows.",
+      "scope": "use",
+      "status": "authorized",
+      "evidence_type": "client_attested_reference_equivalence",
+      "source_url": "https://godaperfume.uk/"
+    },
+    {
+      "evidence_id": "AURALO-PRICE-001",
+      "claim": "Auralo Pheromone Perfume is the $29 paid product in this campaign format.",
+      "public_language": "Get Auralo Pheromone Perfume for $29.",
+      "scope": "commercial",
+      "status": "authorized",
+      "evidence_type": "standing_user_offer_instruction",
+      "source_url": "client://freeperrylarp1-offer-contract"
+    }
+  ],
+  "prohibited_outcome_patterns": [
+    "guaranteed attraction",
+    "cannot resist",
+    "will chase you",
+    "makes men flirt",
+    "instant desire",
+    "every man",
+    "unable to resist",
+    "get more compliments",
+    "dangerously effective",
+    "desire in a bottle",
+    "clinically proven pheromones",
+    "verified customer",
+    "verified buyer",
+    "thousands of women swear",
+    "five thousand six hundred thirty reviews"
+  ],
+  "competitor_material_policy": {
+    "allowed": [
+      "layout rhythm",
+      "section architecture",
+      "visual density",
+      "proof-zone composition"
+    ],
+    "forbidden": [
+      "testimonial transfer",
+      "review-count transfer",
+      "verified-buyer transfer",
+      "attraction-outcome transfer",
+      "competitor product-claim transfer"
+    ]
+  }
+}
