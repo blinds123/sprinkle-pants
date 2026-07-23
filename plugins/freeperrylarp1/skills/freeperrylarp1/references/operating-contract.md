@@ -72,9 +72,12 @@ placeholder, or production instruction rendered as visible copy blocks delivery.
 Every public text leaf carries exactly one typed claim record with the same
 normalized text and exact public path. Its scope requires the corresponding
 paid, FREE, offer, or relationship evidence lanes, and its product/outcome
-vocabulary must occur in the cited current evidence. An unrelated valid
-evidence ID cannot authorize a new claim. Missing paths, extra factual language,
-and scope/evidence mismatches stop as `CLAIM_NOT_AUTHORIZED`.
+language must be covered by exact fragments that occur in both the cited
+current evidence and the public text. This preserves value/unit relationships;
+the `$29` price and `15 ml` format cannot be swapped merely because both tokens
+exist. An unrelated valid evidence ID cannot authorize a new claim. Missing
+paths, extra factual language, fragment mismatches, and scope/evidence
+mismatches stop as `CLAIM_NOT_AUTHORIZED`.
 
 Punctuation is removed before claim checks, so turning a statement into a
 question or adding `*` cannot bypass the ledger. Mock-page disclosures use the

@@ -129,7 +129,10 @@ class ContractTests(unittest.TestCase):
             "campaign_id": self.campaign["campaign_id"],
             "marriage_brief_sha256": contract.canonical_sha256(accepted_brief),
             "copy": {
-                "headline": "Your signature scent comes with a star-bright finish.",
+                "headline": (
+                    "Scent and jewellery: separate finishing choices before "
+                    "an evening out."
+                ),
                 "subheadline": (
                     "Get Auralo Pheromone Perfume for $29 and receive the "
                     "Star Burst Necklace FREE."
@@ -150,11 +153,31 @@ class ContractTests(unittest.TestCase):
                     "claim_id": "CLAIM-001",
                     "public_path": "copy.headline",
                     "scope": "relationship",
-                    "text": "Your signature scent comes with a star-bright finish.",
+                    "text": (
+                        "Scent and jewellery: separate finishing choices before "
+                        "an evening out."
+                    ),
                     "evidence_ids": [
-                        "AURALO-IDENTITY-001",
+                        "AURALO-SCENT-001",
                         "FREE-IDENTITY-001",
                         "REL-001",
+                    ],
+                    "evidence_bindings": [
+                        {
+                            "evidence_id": "AURALO-SCENT-001",
+                            "fragments": ["Scent"],
+                        },
+                        {
+                            "evidence_id": "FREE-IDENTITY-001",
+                            "fragments": ["jewellery"],
+                        },
+                        {
+                            "evidence_id": "REL-001",
+                            "fragments": [
+                                "separate finishing choices",
+                                "before an evening out",
+                            ],
+                        },
                     ],
                 },
                 {
@@ -168,6 +191,19 @@ class ContractTests(unittest.TestCase):
                     "evidence_ids": [
                         "AURALO-PRICE-001",
                         "FREE-IDENTITY-001",
+                    ],
+                    "evidence_bindings": [
+                        {
+                            "evidence_id": "AURALO-PRICE-001",
+                            "fragments": [
+                                "Auralo Pheromone Perfume",
+                                "$29",
+                            ],
+                        },
+                        {
+                            "evidence_id": "FREE-IDENTITY-001",
+                            "fragments": ["Star Burst Necklace"],
+                        },
                     ],
                 },
                 {
@@ -185,6 +221,31 @@ class ContractTests(unittest.TestCase):
                         "FREE-IDENTITY-001",
                         "FREE-FORM-001",
                     ],
+                    "evidence_bindings": [
+                        {
+                            "evidence_id": "AURALO-IDENTITY-001",
+                            "fragments": [
+                                "Auralo Pheromone Perfume",
+                                "15 ml",
+                                "bottle",
+                            ],
+                        },
+                        {
+                            "evidence_id": "AURALO-SCENT-001",
+                            "fragments": ["floral-amber scent"],
+                        },
+                        {
+                            "evidence_id": "FREE-IDENTITY-001",
+                            "fragments": [
+                                "Star Burst Necklace",
+                                "radiating pendant",
+                            ],
+                        },
+                        {
+                            "evidence_id": "FREE-FORM-001",
+                            "fragments": ["gold-tone chain"],
+                        },
+                    ],
                 },
                 {
                     "claim_id": "CLAIM-004",
@@ -192,6 +253,12 @@ class ContractTests(unittest.TestCase):
                     "scope": "paid_fact",
                     "text": "Choose Auralo for $29",
                     "evidence_ids": ["AURALO-PRICE-001"],
+                    "evidence_bindings": [
+                        {
+                            "evidence_id": "AURALO-PRICE-001",
+                            "fragments": ["Auralo", "$29"],
+                        }
+                    ],
                 },
                 {
                     "claim_id": "CLAIM-005",
@@ -202,6 +269,7 @@ class ContractTests(unittest.TestCase):
                         "Product details and purchase terms appear on this mock page."
                     ),
                     "evidence_ids": [],
+                    "evidence_bindings": [],
                 },
                 {
                     "claim_id": "CLAIM-006",
@@ -209,6 +277,12 @@ class ContractTests(unittest.TestCase):
                     "scope": "paid_fact",
                     "text": "Meet Auralo Pheromone Perfume",
                     "evidence_ids": ["AURALO-IDENTITY-001"],
+                    "evidence_bindings": [
+                        {
+                            "evidence_id": "AURALO-IDENTITY-001",
+                            "fragments": ["Auralo Pheromone Perfume"],
+                        }
+                    ],
                 },
                 {
                     "claim_id": "CLAIM-007",
@@ -216,6 +290,12 @@ class ContractTests(unittest.TestCase):
                     "scope": "free_fact",
                     "text": "Your Star Burst Necklace is FREE",
                     "evidence_ids": ["FREE-IDENTITY-001"],
+                    "evidence_bindings": [
+                        {
+                            "evidence_id": "FREE-IDENTITY-001",
+                            "fragments": ["Star Burst Necklace"],
+                        }
+                    ],
                 },
                 {
                     "claim_id": "CLAIM-008",
@@ -223,6 +303,15 @@ class ContractTests(unittest.TestCase):
                     "scope": "paid_fact",
                     "text": "Auralo Pheromone Perfume — $29",
                     "evidence_ids": ["AURALO-PRICE-001"],
+                    "evidence_bindings": [
+                        {
+                            "evidence_id": "AURALO-PRICE-001",
+                            "fragments": [
+                                "Auralo Pheromone Perfume",
+                                "$29",
+                            ],
+                        }
+                    ],
                 },
                 {
                     "claim_id": "CLAIM-009",
@@ -230,6 +319,12 @@ class ContractTests(unittest.TestCase):
                     "scope": "free_fact",
                     "text": "Star Burst Necklace — FREE",
                     "evidence_ids": ["FREE-IDENTITY-001"],
+                    "evidence_bindings": [
+                        {
+                            "evidence_id": "FREE-IDENTITY-001",
+                            "fragments": ["Star Burst Necklace"],
+                        }
+                    ],
                 },
             ],
             "image_jobs": [
@@ -517,6 +612,25 @@ class ContractTests(unittest.TestCase):
             ),
         )
 
+    def test_generic_product_placeholders_in_prompt_direction_are_rejected(
+        self,
+    ) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["image_jobs"][0]["production_direction"] = (
+            "Place the paid product beside the free product in soft window light."
+        )
+        self.assert_code(
+            "CROSS_CAMPAIGN_LEAK",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+            ),
+        )
+
     def test_unsupported_outcome_in_prompt_direction_is_rejected(self) -> None:
         brief = self.brief()
         payload = self.payload(brief)
@@ -642,6 +756,51 @@ class ContractTests(unittest.TestCase):
                 "scope": "paid_fact",
                 "text": unsupported,
                 "evidence_ids": ["AURALO-IDENTITY-001"],
+                "evidence_bindings": [
+                    {
+                        "evidence_id": "AURALO-IDENTITY-001",
+                        "fragments": ["Auralo Pheromone Perfume"],
+                    }
+                ],
+            }
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+            ),
+        )
+
+    def test_valid_evidence_values_cannot_be_swapped_into_false_claim(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        unsupported = "Auralo Pheromone Perfume is a 29 ml perfume for $15."
+        payload["copy"]["headline"] = unsupported
+        payload["claims"][0].update(
+            {
+                "scope": "paid_fact",
+                "text": unsupported,
+                "evidence_ids": [
+                    "AURALO-IDENTITY-001",
+                    "AURALO-PRICE-001",
+                ],
+                "evidence_bindings": [
+                    {
+                        "evidence_id": "AURALO-IDENTITY-001",
+                        "fragments": [
+                            "Auralo Pheromone Perfume",
+                            "15 ml",
+                        ],
+                    },
+                    {
+                        "evidence_id": "AURALO-PRICE-001",
+                        "fragments": ["$29"],
+                    },
+                ],
             }
         )
         self.assert_code(

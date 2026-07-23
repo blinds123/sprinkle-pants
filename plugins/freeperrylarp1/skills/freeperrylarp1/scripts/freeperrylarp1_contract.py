@@ -504,6 +504,10 @@ def claim_tokens(*values: str) -> set[str]:
     return result
 
 
+def comparable_phrase(value: str) -> str:
+    return re.sub(r"\s+", " ", value.casefold()).strip()
+
+
 def relationship_support_tokens(
     evidence_ids: Iterable[str],
     records: dict[str, dict[str, Any]],
@@ -1440,6 +1444,7 @@ def _validate_claims(
                 "scope",
                 "text",
                 "evidence_ids",
+                "evidence_bindings",
             },
             f"claims[{index}]",
             code="PUBLIC_PAYLOAD_INVALID",
@@ -1532,6 +1537,16 @@ def _validate_claims(
                     "CLAIM_NOT_AUTHORIZED",
                     f"{claim_id} disclosure must not masquerade as evidence",
                 )
+            bindings = require_list(
+                claim.get("evidence_bindings"),
+                f"claims[{index}].evidence_bindings",
+                0,
+            )
+            if bindings:
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} disclosure must not carry evidence bindings",
+                )
             unsupported_disclosure_tokens = claim_tokens(text) - claim_tokens(
                 *DISCLOSURE_COPY_TOKENS
             )
@@ -1560,12 +1575,81 @@ def _validate_claims(
                 f"{claim_id} uses evidence outside its declared scope",
                 details=sorted(unexpected_lanes),
             )
-        support_texts = [
-            support_text
-            for evidence_id in evidence_ids
-            for support_text in evidence_records[evidence_id]["texts"]
-        ]
-        supported_tokens = claim_tokens(*support_texts, *SAFE_COPY_TOKENS)
+
+        bindings = require_list(
+            claim.get("evidence_bindings"),
+            f"claims[{index}].evidence_bindings",
+            len(evidence_ids),
+        )
+        bound_evidence_ids: set[str] = set()
+        bound_fragments: list[str] = []
+        for binding_index, raw_binding in enumerate(bindings):
+            binding_path = f"claims[{index}].evidence_bindings[{binding_index}]"
+            binding = require_mapping(raw_binding, binding_path)
+            reject_unknown_keys(
+                binding,
+                {"evidence_id", "fragments"},
+                binding_path,
+                code="PUBLIC_PAYLOAD_INVALID",
+            )
+            evidence_id = require_string(
+                binding.get("evidence_id"),
+                f"{binding_path}.evidence_id",
+            )
+            if evidence_id not in evidence_ids:
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} binding cites evidence outside evidence_ids",
+                    details=[evidence_id],
+                )
+            if evidence_id in bound_evidence_ids:
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} repeats an evidence binding",
+                    details=[evidence_id],
+                )
+            bound_evidence_ids.add(evidence_id)
+            fragments = require_list(
+                binding.get("fragments"),
+                f"{binding_path}.fragments",
+                1,
+            )
+            support_phrases = [
+                comparable_phrase(value)
+                for value in evidence_records[evidence_id]["texts"]
+            ]
+            claim_phrase = comparable_phrase(text)
+            for fragment_index, raw_fragment in enumerate(fragments):
+                fragment = require_string(
+                    raw_fragment,
+                    f"{binding_path}.fragments[{fragment_index}]",
+                    3,
+                )
+                comparable_fragment = comparable_phrase(fragment)
+                if not any(
+                    comparable_fragment in support_phrase
+                    for support_phrase in support_phrases
+                ):
+                    raise ContractError(
+                        "CLAIM_NOT_AUTHORIZED",
+                        f"{claim_id} binding fragment is absent from cited evidence",
+                        details=[evidence_id, fragment],
+                    )
+                if comparable_fragment not in claim_phrase:
+                    raise ContractError(
+                        "CLAIM_NOT_AUTHORIZED",
+                        f"{claim_id} binding fragment is absent from public text",
+                        details=[evidence_id, fragment],
+                    )
+                bound_fragments.append(fragment)
+        if bound_evidence_ids != set(evidence_ids):
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id} does not bind every cited evidence ID",
+                details=sorted(set(evidence_ids) - bound_evidence_ids),
+            )
+
+        supported_tokens = claim_tokens(*bound_fragments, *SAFE_COPY_TOKENS)
         unsupported_tokens = claim_tokens(text) - supported_tokens
         if unsupported_tokens:
             raise ContractError(
@@ -1744,11 +1828,11 @@ def validate_public_payload(
         for entity in forbidden_entities:
             if _contains_entity(text, entity):
                 stale_hits.append(f"{path}: prior entity: {entity}")
+        for label, pattern in GENERIC_PUBLIC_PRODUCT_PATTERNS:
+            match = pattern.search(text)
+            if match:
+                stale_hits.append(f"{path}: {label}: {match.group(0)}")
         if mode == "public":
-            for label, pattern in GENERIC_PUBLIC_PRODUCT_PATTERNS:
-                match = pattern.search(text)
-                if match:
-                    stale_hits.append(f"{path}: {label}: {match.group(0)}")
             for label, pattern in VISIBLE_PRODUCTION_PATTERNS:
                 match = pattern.search(text)
                 if match:
