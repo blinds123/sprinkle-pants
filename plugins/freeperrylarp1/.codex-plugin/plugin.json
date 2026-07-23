@@ -1,7 +1,7 @@
 {
   "name": "freeperrylarp1",
-  "version": "0.1.0",
-  "description": "Build evidence-bounded Auralo campaigns with one isolated, replaceable FREE product and a mandatory product-marriage contract.",
+  "version": "0.2.0",
+  "description": "Build evidence-bounded Auralo campaigns from frozen neutral research, independent creative challenge, and copy-first page mapping.",
   "author": {
     "name": "Nelson Chan",
     "url": "https://github.com/blinds123"
@@ -17,8 +17,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "FreePerryLarp1",
-    "shortDescription": "Pair fixed Auralo with an isolated FREE product.",
-    "longDescription": "Keeps Auralo Pheromone Perfume as the fixed paid product while starting every supplied FREE product from a clean campaign contract. It requires current evidence, an accepted buyer moment and product-marriage brief, bounded angle selection, customer-facing visible text, claim lineage, and cross-campaign leakage checks before prompt delivery.",
+    "shortDescription": "Turn neutral product evidence into one strong sales argument.",
+    "longDescription": "Keeps Auralo Pheromone Perfume as the fixed paid product while starting every supplied FREE product from a clean campaign contract. It freezes neutral research before ideation, requires isolated connection hypotheses and an independent critic, gives the writer a clean customer-language packet, and maps only accepted finished copy into page sections and image jobs.",
     "developerName": "Nelson Chan",
     "category": "Productivity",
     "capabilities": [
@@ -28,7 +28,7 @@
     "defaultPrompt": [
       "Build a fresh Auralo plus FREE-product campaign.",
       "Audit this campaign for stale-product leakage.",
-      "Validate the marriage brief before writing."
+      "Validate neutral research and the independent creative decision before writing."
     ]
   }
 }

@@ -25,9 +25,21 @@ dependent. Auralo must carry independent paid-product desire; the FREE product
 must carry independent wanted value; the bridge explains why the transaction is
 attractive without pretending the categories require each other.
 
-`evidence_backed_complement` is allowed only when at least two current-run
-relationship evidence rows support distinct, non-substitutable roles. A shared
-setting, chronology, colour match, or generic getting-ready scene is not enough.
+`evidence_backed_complement` is allowed only when at least two retrieved,
+explicit dual-product records from two source families support the relationship.
+A shared setting, chronology, colour match, token overlap, or generated scene is
+not evidence.
+
+## Research firewall
+
+Fresh research independently covers the paid product, FREE product, verbatim
+customer language, objections, and purchase triggers. It is frozen before any
+connection hypothesis is generated. Neutral queries cannot contain a
+preselected ritual, moment, pairing, bridge, relationship, creative angle, or
+both offered products together.
+
+The frozen snapshot is hash-bound to every generator and the critic. Customer
+language remains verbatim; hypotheses never become evidence.
 
 ## Required marriage brief
 
@@ -35,37 +47,55 @@ The writer gate requires:
 
 - matching campaign and product IDs;
 - accepted status;
+- frozen-research, candidate-set, independent-critic, and clean-writer-packet
+  hashes;
+- at least four unique generator sessions and one different critic session;
 - primary and backup angle;
-- concrete buyer moment;
+- one plain-English sales argument and concrete buyer situation;
 - a structured buyer bridge naming the shared avatar, evidenced
-  occasion/desire, reason to act, and current relationship evidence IDs;
+  occasion/desire, reason to act, and current product/customer evidence IDs;
 - concise transaction bridge;
 - distinct paid and FREE product roles;
 - a passed substitution test that actually replaces, swaps, or removes one
   product and explains why the evidenced buyer reason changes;
 - current evidence IDs;
-- at least one current relationship row for `wanted_premium` and two distinct
-  rows for `evidence_backed_complement`; and
+- at least two preserved customer-language IDs;
+- no inferred relationship evidence for `wanted_premium`;
+- two explicit dual-product records from two source families for
+  `evidence_backed_complement`; and
 - no more than two repair cycles.
 
-The buyer moment, transaction bridge, reason to act, and substitution reason
-must materialize distinctive language from those current relationship rows.
-Naming one item paid and the other FREE is offer clarity, not an accepted
-product marriage.
+The buyer reasoning is evaluated against the complete evidence and independent
+challenge results. Shared tokens do not prove a relationship, and the selected
+argument is not required to parrot research vocabulary. Naming one item paid and
+the other FREE is transaction clarity, not an accepted product marriage.
 
 ## Direct-response standard
 
-Score angles on paid-product desire, FREE-product desire, first-touch clarity,
-specific buyer moment, bridge credibility, evidence fit, claim integrity, and
-creative distinctiveness. Strong copy may challenge beliefs or use questions,
-but the next line must clarify the evidence-backed product and transaction
-truth. Do not claim an endorsement, authorship, or outcome that is not evidenced.
+Candidates never score themselves. A separate critic scores paid-product
+desire, FREE-product desire, first-touch clarity, buyer-situation specificity,
+transaction credibility, evidence fit, claim integrity, and creative
+distinctiveness, then executes forced-pairing, generic-language,
+unsupported-assumption, weak-desire, interchangeability, and customer-voice
+challenges. Strong copy may challenge beliefs or use questions, but the next
+line must clarify the evidence-backed product and transaction truth. Do not
+claim an endorsement, authorship, or outcome that is not evidenced.
 
 ## Leakage boundary
 
-The writer receives the fixed Auralo dossier, current campaign manifest, current
-research, and accepted marriage brief. It never receives prior campaign copy or
-prior-product fingerprints.
+The writer receives a clean hash-bound packet containing only current product
+truth, preserved customer language, objections, purchase triggers, one
+plain-English sales argument, and the structural writing job. It never receives
+research queries, frames, candidate rankings, critic metadata, relationship-mode
+labels, prior campaign copy, or prior-product fingerprints.
+
+The writer completes the natural sales argument before page or image mapping.
+A separate copy-chief session must pass natural read-aloud quality, target-market
+specificity, the actual two-product argument, generic-AI language, internal
+framework leakage, and evidence integrity against the exact finished-copy hash.
+Only then may sections, visible image text, image jobs, and prompts bind to that
+hash. Every finished copy leaf and image job is mapped exactly once, and each
+image job names the finished copy paths that supply its persuasive job.
 
 The validator receives a separate prior-product registry after writing. It
 checks every public field, prompt direction, visible-text field, and site-data

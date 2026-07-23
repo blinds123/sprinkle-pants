@@ -1,36 +1,57 @@
 ---
 name: freeperrylarp1-brainstorm
-description: Select one evidence-bound primary angle and one backup for a FreePerryLarp1 campaign without looping. Use after current Auralo, FREE-product, and relationship research is accepted and before any customer-facing writing begins.
+description: Generate several connections from frozen neutral research, challenge them in an independent critic context, and select one evidence-bound sales argument plus a materially different backup before customer-facing writing.
 ---
 
 # FreePerryLarp1 Brainstorm
 
-Widen once, score once, and permit at most two bounded repair cycles. This skill
-does not write public copy and cannot promote a hypothesis into evidence.
+This sidecar prevents an early concept from teaching the research what to find.
+It does not write public copy and cannot promote a hypothesis into evidence.
 
 ## Inputs
 
-- validated current campaign manifest;
-- explicit current campaign asset root with hash-verified FREE references;
+- validated current campaign manifest and asset root;
 - fixed Auralo dossier;
-- current-run research ledger;
-- no prior campaign copy, prompts, images, or site data.
+- one `fresh_only`, frozen neutral research snapshot;
+- one validator-only prior-product registry that is never copied into the
+  writer packet;
+- at least four materially different candidate connections from unique
+  generator sessions;
+- one critic receipt from a separate session;
+- no prior campaign copy, prompts, images, site data, or prior-product registry.
 
-## Method
+## Required sequence
 
-1. Generate materially different candidate angles.
-2. Give Auralo independent paid-product desire in every candidate.
-3. Give the current FREE product independent wanted value.
-4. Choose `wanted_premium` unless current relationship evidence earns
-   `evidence_backed_complement`.
-5. Score the candidates using the documented eight-part scorecard.
-6. Reject claim-integrity or evidence failures before ranking.
-7. Select one primary and one backup.
-8. Emit the mandatory marriage brief.
+1. Validate that research independently covers the paid product, FREE product,
+   verbatim customer language, objections, and purchase triggers.
+2. Reject research queries containing a preselected ritual, moment, pairing,
+   bridge, relationship, creative angle, or both offered products together.
+3. Freeze the research hash before generating any connection.
+4. Generate at least four connections in isolated sessions. Generators cannot
+   see or score each other.
+5. Bind the exact candidate set to a SHA-256.
+6. Give the frozen evidence and candidate set to a new critic session.
+7. Make the critic score every candidate and execute every required challenge:
+   forced pairing, generic AI language, unsupported assumptions, weak paid
+   desire, weak FREE desire, interchangeability, and customer-voice fit.
+8. Select the highest-scoring eligible primary and strongest materially
+   different backup. Candidate-supplied scores are rejected.
+9. Emit a schema `2.0` marriage brief plus a clean writer packet.
 
-If fewer than two valid candidates remain, return `ANGLE_REPAIR_REQUIRED` while
-the repair count is below two. At two failed repairs, return `ANGLE_GAP`. If the
-product roles or transaction bridge cannot pass the substitution test, return
-`MARRIAGE_GAP`.
+`wanted_premium` is the honest default. It does not require invented
+relationship evidence. `evidence_backed_complement` needs at least two explicit
+dual-product records from two source families; semantic or token similarity is
+not enough.
 
-Read [method.md](references/method.md) before changing the scorecard.
+The writer packet contains current product truth, preserved customer language,
+objections, purchase triggers, and one plain-English sales argument. It excludes
+queries, frames, candidate rankings, critic metadata, relationship-mode labels,
+and prior-product fingerprints.
+
+If fewer than four valid candidates survive generation, return
+`ANGLE_REPAIR_REQUIRED` below two repairs and `ANGLE_GAP` at the limit. If fewer
+than two candidates survive independent challenge, use the same bounded repair
+path. Unresolved evidence or forced logic returns `MARRIAGE_GAP`.
+
+Read [method.md](references/method.md) before changing isolation, challenge, or
+selection behavior.

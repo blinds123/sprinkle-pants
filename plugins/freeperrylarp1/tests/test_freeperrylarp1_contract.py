@@ -39,25 +39,39 @@ class ContractTests(unittest.TestCase):
         repair_cycles: int = 0,
     ) -> dict:
         relationship_ids = (
-            ["REL-001", "REL-002"]
-            if mode == "evidence_backed_complement"
-            else ["REL-001"]
+            ["R-REL-001", "R-REL-002"] if mode == "evidence_backed_complement" else []
         )
         evidence_ids = [
             "AURALO-IDENTITY-001",
             "AURALO-SCENT-001",
             "FREE-IDENTITY-001",
             "FREE-FORM-001",
+        ]
+        research_evidence_ids = [
+            "R-PAID-VOICE-001",
+            "R-FREE-VOICE-001",
+            "R-OBJECTION-001",
             *relationship_ids,
         ]
         return {
-            "schema_version": "1.0",
+            "schema_version": "2.0",
             "status": "accepted",
             "campaign_id": self.campaign["campaign_id"],
             "paid_product_id": contract.AURALO_ID,
             "free_product_id": self.campaign["free_product"]["id"],
             "relationship_mode": mode,
             "repair_cycles": repair_cycles,
+            "research_snapshot_sha256": "1" * 64,
+            "candidate_set_sha256": "2" * 64,
+            "critic_receipt_sha256": "3" * 64,
+            "writer_packet_sha256": "4" * 64,
+            "generator_session_ids": [
+                "generator-session-1",
+                "generator-session-2",
+                "generator-session-3",
+                "generator-session-4",
+            ],
+            "critic_session_id": "independent-critic-session",
             "primary_angle": {
                 "id": "signature-before-words",
                 "hook": "What if your signature arrived before you said a word?",
@@ -68,6 +82,11 @@ class ContractTests(unittest.TestCase):
                 "hook": "A $29 scent with a star-bright finish included.",
                 "buyer_action": "Choose the floral-amber scent and wear the starburst at your collarbone.",
             },
+            "sales_argument": (
+                "Make Auralo worth choosing for its evidenced scent and compact format, "
+                "then make the Star Burst Necklace independently desirable before "
+                "stating the clear $29 and FREE transaction."
+            ),
             "buyer_moment": "She is choosing the last details before leaving for an evening out.",
             "buyer_bridge": {
                 "shared_avatar": (
@@ -81,7 +100,11 @@ class ContractTests(unittest.TestCase):
                     "The $29 scent purchase adds the wanted visible necklace "
                     "choice before the evening."
                 ),
-                "evidence_ids": relationship_ids,
+                "evidence_ids": [
+                    "R-PAID-VOICE-001",
+                    "R-FREE-VOICE-001",
+                    "R-OBJECTION-001",
+                ],
             },
             "transaction_bridge": (
                 "Choose Auralo Pheromone Perfume for $29 and receive the "
@@ -106,11 +129,17 @@ class ContractTests(unittest.TestCase):
                 "evidence_ids": [
                     "AURALO-IDENTITY-001",
                     "FREE-IDENTITY-001",
-                    *relationship_ids,
+                    "R-PAID-VOICE-001",
                 ],
             },
             "evidence_ids": evidence_ids,
+            "research_evidence_ids": research_evidence_ids,
+            "customer_language_evidence_ids": [
+                "R-PAID-VOICE-001",
+                "R-FREE-VOICE-001",
+            ],
             "relationship_evidence_ids": relationship_ids,
+            "relationship_source_family_count": 2 if relationship_ids else 0,
         }
 
     def registry(self, prior_campaigns: list[dict] | None = None) -> dict:
@@ -127,7 +156,7 @@ class ContractTests(unittest.TestCase):
         registry: dict | None = None,
     ) -> dict:
         accepted_brief = brief or self.brief()
-        return {
+        payload = {
             "campaign_id": self.campaign["campaign_id"],
             "marriage_brief_sha256": contract.canonical_sha256(accepted_brief),
             "copy": {
@@ -334,6 +363,7 @@ class ContractTests(unittest.TestCase):
                     "id": "IMG-01",
                     "angle_id": "signature-before-words",
                     "product_presence": "paid",
+                    "copy_source_paths": ["copy.body", "copy.cta"],
                     "evidence_ids": ["AURALO-IDENTITY-001"],
                     "production_direction": (
                         "Editorial bottle still life with believable window light "
@@ -345,6 +375,7 @@ class ContractTests(unittest.TestCase):
                     "id": "IMG-02",
                     "angle_id": "finish-worth-remembering",
                     "product_presence": "free",
+                    "copy_source_paths": ["copy.body", "copy.subheadline"],
                     "evidence_ids": ["FREE-IDENTITY-001"],
                     "production_direction": (
                         "Editorial necklace still life matching the supplied "
@@ -356,6 +387,7 @@ class ContractTests(unittest.TestCase):
                     "id": "IMG-03",
                     "angle_id": "signature-before-words",
                     "product_presence": "both",
+                    "copy_source_paths": ["copy.headline", "copy.subheadline"],
                     "evidence_ids": [
                         "AURALO-IDENTITY-001",
                         "FREE-IDENTITY-001",
@@ -371,6 +403,43 @@ class ContractTests(unittest.TestCase):
                 },
             ],
         }
+        copy_sha256 = contract.canonical_sha256(payload["copy"])
+        copy_paths = [f"copy.{key}" for key in payload["copy"]]
+        payload.update(
+            {
+                "writer_packet_sha256": accepted_brief["writer_packet_sha256"],
+                "copy_sha256": copy_sha256,
+                "copy_review": {
+                    "schema_version": "1.0",
+                    "status": "accepted",
+                    "copy_sha256": copy_sha256,
+                    "writer_session_id": "writer-session-001",
+                    "reviewer_session_id": "copy-chief-session-001",
+                    "checks": {
+                        field: {
+                            "status": "pass",
+                            "finding": f"{field} passed against the complete finished copy.",
+                            "copy_paths": copy_paths,
+                        }
+                        for field in sorted(contract.COPY_REVIEW_CHECKS)
+                    },
+                },
+                "page_mapping": {
+                    "schema_version": "1.0",
+                    "copy_sha256": copy_sha256,
+                    "sections": [
+                        {
+                            "id": "complete-sales-argument",
+                            "copy_paths": copy_paths,
+                            "image_job_ids": [
+                                job["id"] for job in payload["image_jobs"]
+                            ],
+                        }
+                    ],
+                },
+            }
+        )
+        return payload
 
     def assert_code(self, expected: str, callback) -> None:
         with self.assertRaises(contract.ContractError) as raised:
@@ -572,7 +641,7 @@ class ContractTests(unittest.TestCase):
 
     def test_complement_mode_requires_two_relationship_rows(self) -> None:
         changed = self.brief(mode="evidence_backed_complement")
-        changed["relationship_evidence_ids"] = ["REL-001"]
+        changed["relationship_evidence_ids"] = ["R-REL-001"]
         self.assert_code(
             "MARRIAGE_GAP",
             lambda: contract.validate_marriage_brief(
@@ -658,6 +727,124 @@ class ContractTests(unittest.TestCase):
         )
         self.assertEqual(result["image_job_count"], 3)
         self.assertEqual(result["status"], "accepted")
+        self.assertEqual(result["copy_sha256"], self.payload(brief)["copy_sha256"])
+        self.assertIn("page_mapping_sha256", result)
+
+    def test_page_and_image_mapping_cannot_precede_finished_copy(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["page_mapping"]["copy_sha256"] = "0" * 64
+        self.assert_code(
+            "COPY_NOT_FINAL",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_copy_hash_must_match_the_complete_finished_argument(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["copy_sha256"] = "0" * 64
+        self.assert_code(
+            "COPY_HASH_MISMATCH",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_copy_chief_must_be_independent_from_the_writer(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["copy_review"]["reviewer_session_id"] = payload["copy_review"][
+            "writer_session_id"
+        ]
+        self.assert_code(
+            "COPY_REVIEW_NOT_INDEPENDENT",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_writer_packet_hash_must_match_the_selected_clean_packet(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["writer_packet_sha256"] = "0" * 64
+        self.assert_code(
+            "WRITER_PACKET_MISMATCH",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_generic_ai_pairing_glue_is_rejected_before_delivery(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["copy"]["headline"] = (
+            "Auralo Pheromone Perfume and Star Burst Necklace are better together."
+        )
+        self.assert_code(
+            "CROSS_CAMPAIGN_LEAK",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_page_mapping_must_cover_every_image_job_exactly_once(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["page_mapping"]["sections"][0]["image_job_ids"].pop()
+        self.assert_code(
+            "PAGE_MAPPING_INVALID",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_image_jobs_must_derive_from_finished_copy_paths(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["image_jobs"][0]["copy_source_paths"] = ["strategy.primary_angle"]
+        self.assert_code(
+            "COPY_NOT_FINAL",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
 
     def test_internal_strategy_visible_text_is_rejected(self) -> None:
         brief = self.brief()

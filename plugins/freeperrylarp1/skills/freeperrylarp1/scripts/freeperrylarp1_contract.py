@@ -26,6 +26,22 @@ EXPECTED_DOSSIER_SHA256 = (
 )
 MAX_ANGLE_REPAIR_CYCLES = 2
 RELATIONSHIP_MODES = {"wanted_premium", "evidence_backed_complement"}
+NEUTRAL_QUERY_LANES = {
+    "paid_product",
+    "free_product",
+    "customer_voice",
+    "objection",
+    "purchase_trigger",
+}
+RESEARCH_RECORD_LANES = NEUTRAL_QUERY_LANES | {"context", "relationship"}
+RESEARCH_RECORD_KINDS = {
+    "product_fact",
+    "customer_language",
+    "objection",
+    "purchase_trigger",
+    "market_context",
+    "explicit_dual_product_language",
+}
 DEFAULT_DOSSIER_PATH = (
     Path(__file__).resolve().parents[1] / "assets" / "auralo-dossier.json"
 )
@@ -83,6 +99,64 @@ INTERNAL_STRATEGY_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
         ),
     ),
 )
+
+NEUTRAL_RESEARCH_CONTAMINATION_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
+    (
+        "preselected connection",
+        re.compile(
+            r"\b(?:marry|marriage|pair(?:ing)?|connect(?:ion|ed)?|"
+            r"complement(?:ary)?|belong together|two[- ]product|"
+            r"transaction bridge|buyer bridge)\b",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "preselected scene or framework",
+        re.compile(
+            r"\b(?:ritual|shared moment|buyer moment|getting[- ]ready|"
+            r"creative angle|relationship thesis|sensory layer|"
+            r"visible first impression)\b",
+            re.IGNORECASE,
+        ),
+    ),
+)
+
+GENERIC_AI_COPY_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
+    (
+        "generic elevation promise",
+        re.compile(
+            r"\b(?:elevate your (?:everyday|routine|style)|"
+            r"take your .{0,24} to the next level)\b",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "generic pairing glue",
+        re.compile(
+            r"\b(?:perfect(?:ly)? pair(?:ing|ed)?|designed to complement|"
+            r"seamlessly (?:blend|bring|unite)|the perfect duo|"
+            r"better together)\b",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "abstract transformation glue",
+        re.compile(
+            r"\b(?:transform your (?:moment|routine|experience)|"
+            r"one cohesive experience|complete your look and feel)\b",
+            re.IGNORECASE,
+        ),
+    ),
+)
+
+COPY_REVIEW_CHECKS = {
+    "natural_read_aloud",
+    "target_market_specificity",
+    "product_marriage_argument",
+    "no_generic_ai_glue",
+    "no_internal_framework",
+    "evidence_integrity",
+}
 
 GENERIC_PUBLIC_PRODUCT_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("paid-product placeholder", re.compile(r"\bpaid product\b", re.IGNORECASE)),
@@ -323,22 +397,6 @@ DISCLOSURE_COPY_TOKENS = {
     "this",
 }
 
-RELATIONSHIP_EVIDENCE_STOP_TOKENS = {
-    "buyer",
-    "current",
-    "describes",
-    "evidence",
-    "item",
-    "language",
-    "product",
-    "products",
-    "research",
-    "row",
-    "shows",
-    "source",
-    "the",
-}
-
 
 class ContractError(ValueError):
     """A stable machine-readable contract failure."""
@@ -390,6 +448,13 @@ def file_sha256(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def require_sha256(value: Any, path: str) -> str:
+    text = require_string(value, path)
+    if not re.fullmatch(r"[0-9a-f]{64}", text):
+        raise ContractError("INVALID_CONTRACT", f"{path} must be a SHA-256 digest")
+    return text
 
 
 def require_mapping(value: Any, path: str) -> dict[str, Any]:
@@ -526,6 +591,280 @@ def evidence_support_records(
         existing["texts"].append(row["excerpt"])
         records[evidence_id] = existing
     return records
+
+
+def validate_neutral_research_snapshot(
+    snapshot: dict[str, Any],
+    campaign: dict[str, Any],
+    dossier: dict[str, Any],
+    *,
+    asset_root: Path,
+) -> dict[str, Any]:
+    """Validate and freeze product-first research before any connection hypothesis."""
+
+    validate_campaign(campaign, dossier, asset_root=asset_root)
+    reject_unknown_keys(
+        snapshot,
+        {
+            "schema_version",
+            "campaign_id",
+            "session_id",
+            "fresh_only",
+            "status",
+            "created_at",
+            "queries",
+            "records",
+        },
+        "research_snapshot",
+        code="RESEARCH_INVALID",
+    )
+    if snapshot.get("schema_version") != "1.0":
+        raise ContractError(
+            "RESEARCH_INVALID", "research snapshot schema_version must equal 1.0"
+        )
+    if snapshot.get("campaign_id") != campaign["campaign_id"]:
+        raise ContractError(
+            "RESEARCH_INVALID", "research snapshot campaign_id mismatch"
+        )
+    session_id = require_token(
+        snapshot.get("session_id"), "research_snapshot.session_id"
+    )
+    if snapshot.get("fresh_only") is not True:
+        raise ContractError("RESEARCH_INVALID", "research snapshot must be fresh_only")
+    if snapshot.get("status") != "frozen":
+        raise ContractError(
+            "RESEARCH_NOT_FROZEN",
+            "research must be frozen before connection hypotheses are generated",
+        )
+    require_string(snapshot.get("created_at"), "research_snapshot.created_at", 10)
+
+    paid_id = AURALO_ID
+    free_id = campaign["free_product"]["id"]
+    paid_name = AURALO_NAME
+    free_name = campaign["free_product"]["public_name"]
+    queries = require_list(snapshot.get("queries"), "research_snapshot.queries", 5)
+    query_ids: set[str] = set()
+    query_lane_counts = {lane: 0 for lane in NEUTRAL_QUERY_LANES}
+    contamination: list[str] = []
+    for index, raw_query in enumerate(queries):
+        path = f"research_snapshot.queries[{index}]"
+        query = require_mapping(raw_query, path)
+        reject_unknown_keys(
+            query,
+            {"id", "lane", "target_product_id", "query"},
+            path,
+            code="RESEARCH_INVALID",
+        )
+        query_id = require_token(query.get("id"), f"{path}.id")
+        if query_id in query_ids:
+            raise ContractError(
+                "RESEARCH_INVALID", f"duplicate research query ID: {query_id}"
+            )
+        query_ids.add(query_id)
+        lane = query.get("lane")
+        if lane not in NEUTRAL_QUERY_LANES:
+            raise ContractError(
+                "RESEARCH_CONTAMINATION",
+                f"{path}.lane must be a neutral product/customer lane",
+            )
+        target_id = require_string(
+            query.get("target_product_id"), f"{path}.target_product_id"
+        )
+        expected_targets = {
+            "paid_product": {paid_id},
+            "free_product": {free_id},
+            "customer_voice": {paid_id, free_id, "market"},
+            "objection": {paid_id, free_id, "market"},
+            "purchase_trigger": {paid_id, free_id, "market"},
+        }[lane]
+        if target_id not in expected_targets:
+            raise ContractError(
+                "RESEARCH_CONTAMINATION",
+                f"{path} targets the wrong product for lane {lane}",
+            )
+        text = require_string(query.get("query"), f"{path}.query", 8)
+        normalized_query = normalized_text(text)
+        for label, pattern in NEUTRAL_RESEARCH_CONTAMINATION_PATTERNS:
+            match = pattern.search(text)
+            if match:
+                contamination.append(f"{path}: {label}: {match.group(0)}")
+        paid_markers = {normalized_text(paid_id), normalized_text(paid_name)}
+        free_markers = {normalized_text(free_id), normalized_text(free_name)}
+        if any(marker in normalized_query for marker in paid_markers) and any(
+            marker in normalized_query for marker in free_markers
+        ):
+            contamination.append(f"{path}: searches both offered products together")
+        query_lane_counts[lane] += 1
+    if contamination:
+        raise ContractError(
+            "RESEARCH_CONTAMINATION",
+            "neutral research plan contains a preselected connection or scene",
+            details=sorted(set(contamination)),
+        )
+    missing_query_lanes = sorted(
+        lane for lane, count in query_lane_counts.items() if count < 1
+    )
+    if missing_query_lanes:
+        raise ContractError(
+            "RESEARCH_GAP",
+            "neutral research plan is missing required lanes",
+            details=missing_query_lanes,
+        )
+
+    records = require_list(snapshot.get("records"), "research_snapshot.records", 8)
+    record_ids: set[str] = set()
+    source_families: set[str] = set()
+    record_lane_counts = {lane: 0 for lane in RESEARCH_RECORD_LANES}
+    kind_counts = {kind: 0 for kind in RESEARCH_RECORD_KINDS}
+    customer_language_ids: list[str] = []
+    explicit_relationship_ids: list[str] = []
+    relationship_source_families: set[str] = set()
+    for index, raw_record in enumerate(records):
+        path = f"research_snapshot.records[{index}]"
+        record = require_mapping(raw_record, path)
+        reject_unknown_keys(
+            record,
+            {
+                "id",
+                "lane",
+                "kind",
+                "target_product_id",
+                "source_family",
+                "source_url",
+                "text",
+                "verbatim",
+                "explicit_dual_product",
+            },
+            path,
+            code="RESEARCH_INVALID",
+        )
+        record_id = require_token(record.get("id"), f"{path}.id")
+        if record_id in record_ids:
+            raise ContractError(
+                "RESEARCH_INVALID", f"duplicate research record ID: {record_id}"
+            )
+        record_ids.add(record_id)
+        lane = record.get("lane")
+        kind = record.get("kind")
+        if lane not in RESEARCH_RECORD_LANES or kind not in RESEARCH_RECORD_KINDS:
+            raise ContractError(
+                "RESEARCH_INVALID", f"{path} has an invalid lane or kind"
+            )
+        target_id = require_string(
+            record.get("target_product_id"), f"{path}.target_product_id"
+        )
+        if target_id not in {paid_id, free_id, "market", "both"}:
+            raise ContractError(
+                "RESEARCH_INVALID", f"{path} has an invalid target_product_id"
+            )
+        expected_record_targets = {
+            "paid_product": {paid_id},
+            "free_product": {free_id},
+            "customer_voice": {paid_id, free_id, "market"},
+            "objection": {paid_id, free_id, "market"},
+            "purchase_trigger": {paid_id, free_id, "market"},
+            "context": {paid_id, free_id, "market"},
+            "relationship": {"both"},
+        }[lane]
+        if target_id not in expected_record_targets:
+            raise ContractError(
+                "RESEARCH_INVALID",
+                f"{path} targets the wrong product for lane {lane}",
+            )
+        expected_kinds = {
+            "paid_product": {"product_fact", "customer_language", "market_context"},
+            "free_product": {"product_fact", "customer_language", "market_context"},
+            "customer_voice": {"customer_language"},
+            "objection": {"objection"},
+            "purchase_trigger": {"purchase_trigger"},
+            "context": {"market_context"},
+            "relationship": {"explicit_dual_product_language"},
+        }[lane]
+        if kind not in expected_kinds:
+            raise ContractError(
+                "RESEARCH_INVALID",
+                f"{path}.kind is inconsistent with lane {lane}",
+            )
+        source_family = require_string(
+            record.get("source_family"), f"{path}.source_family", 2
+        )
+        source_url = require_string(record.get("source_url"), f"{path}.source_url", 8)
+        if not source_url.startswith("https://"):
+            raise ContractError(
+                "RESEARCH_INVALID",
+                f"{path}.source_url must be a retrieved HTTPS source",
+            )
+        text = require_string(record.get("text"), f"{path}.text", 12)
+        if not isinstance(record.get("verbatim"), bool):
+            raise ContractError("RESEARCH_INVALID", f"{path}.verbatim must be boolean")
+        if kind == "customer_language":
+            if record.get("verbatim") is not True:
+                raise ContractError(
+                    "RESEARCH_INVALID",
+                    f"{path} must preserve customer language verbatim",
+                )
+            customer_language_ids.append(record_id)
+        if lane == "relationship" or kind == "explicit_dual_product_language":
+            if (
+                lane != "relationship"
+                or kind != "explicit_dual_product_language"
+                or record.get("explicit_dual_product") is not True
+                or target_id != "both"
+                or normalized_text(paid_name) not in normalized_text(text)
+                or normalized_text(free_name) not in normalized_text(text)
+            ):
+                raise ContractError(
+                    "RESEARCH_INVALID",
+                    f"{path} does not contain explicit dual-product language",
+                )
+            explicit_relationship_ids.append(record_id)
+            relationship_source_families.add(source_family.casefold())
+        elif (
+            "explicit_dual_product" in record
+            and record.get("explicit_dual_product") is not False
+        ):
+            raise ContractError(
+                "RESEARCH_INVALID",
+                f"{path}.explicit_dual_product is reserved for explicit relationship records",
+            )
+        source_families.add(source_family.casefold())
+        record_lane_counts[lane] += 1
+        kind_counts[kind] += 1
+
+    shortfalls: list[str] = []
+    if record_lane_counts["paid_product"] < 2:
+        shortfalls.append("paid_product_records<2")
+    if record_lane_counts["free_product"] < 2:
+        shortfalls.append("free_product_records<2")
+    if kind_counts["customer_language"] < 2:
+        shortfalls.append("customer_language_records<2")
+    if kind_counts["objection"] < 1:
+        shortfalls.append("objection_records<1")
+    if kind_counts["purchase_trigger"] < 1:
+        shortfalls.append("purchase_trigger_records<1")
+    if len(source_families) < 2:
+        shortfalls.append("source_families<2")
+    if shortfalls:
+        raise ContractError(
+            "RESEARCH_GAP",
+            "neutral evidence is insufficient for creative synthesis",
+            details=shortfalls,
+        )
+
+    return {
+        "status": "NEUTRAL_RESEARCH_FROZEN",
+        "campaign_id": campaign["campaign_id"],
+        "session_id": session_id,
+        "sha256": canonical_sha256(snapshot),
+        "query_count": len(queries),
+        "record_count": len(records),
+        "record_ids": sorted(record_ids),
+        "record_lanes": {record["id"]: record["lane"] for record in records},
+        "customer_language_ids": sorted(customer_language_ids),
+        "explicit_relationship_ids": sorted(explicit_relationship_ids),
+        "relationship_source_family_count": len(relationship_source_families),
+        "source_family_count": len(source_families),
+    }
 
 
 def claim_tokens(*values: str) -> set[str]:
@@ -758,39 +1097,6 @@ def _assert_claim_product_ownership(
                     f"{claim_id} relationship scope assigns unanchored facts across products",
                     details=sorted(paid_markers | free_markers),
                 )
-
-
-def relationship_support_tokens(
-    evidence_ids: Iterable[str],
-    records: dict[str, dict[str, Any]],
-) -> set[str]:
-    texts = [
-        text
-        for evidence_id in evidence_ids
-        for text in records[evidence_id]["texts"]
-        if records[evidence_id]["lane"] == "relationship"
-    ]
-    return claim_tokens(*texts) - claim_tokens(*RELATIONSHIP_EVIDENCE_STOP_TOKENS)
-
-
-def require_relationship_overlap(
-    value: Any,
-    path: str,
-    support_tokens: set[str],
-    minimum: int = 2,
-) -> str:
-    text = require_string(value, path, 16)
-    overlap = claim_tokens(text) & support_tokens
-    if len(overlap) < minimum:
-        raise ContractError(
-            "MARRIAGE_GAP",
-            f"{path} merely states the offer instead of materializing the evidenced buyer bridge",
-            details=[
-                f"required_distinctive_overlap={minimum}",
-                f"observed={sorted(overlap)}",
-            ],
-        )
-    return text
 
 
 def validate_dossier(
@@ -1410,14 +1716,72 @@ def validate_marriage_brief(
             "product_roles",
             "substitution_test",
             "evidence_ids",
+            "research_evidence_ids",
+            "customer_language_evidence_ids",
             "relationship_evidence_ids",
-            "scorecard",
-            "falsification_plan",
+            "relationship_source_family_count",
+            "sales_argument",
+            "research_snapshot_sha256",
+            "candidate_set_sha256",
+            "critic_receipt_sha256",
+            "writer_packet_sha256",
+            "generator_session_ids",
+            "critic_session_id",
         },
         "marriage_brief",
     )
-    if brief.get("schema_version") != "1.0":
-        raise ContractError("INVALID_CONTRACT", "brief schema_version must equal 1.0")
+    if brief.get("schema_version") != "2.0":
+        raise ContractError("INVALID_CONTRACT", "brief schema_version must equal 2.0")
+    research_snapshot_sha256 = require_sha256(
+        brief.get("research_snapshot_sha256"),
+        "research_snapshot_sha256",
+    )
+    candidate_set_sha256 = require_sha256(
+        brief.get("candidate_set_sha256"),
+        "candidate_set_sha256",
+    )
+    critic_receipt_sha256 = require_sha256(
+        brief.get("critic_receipt_sha256"),
+        "critic_receipt_sha256",
+    )
+    writer_packet_sha256 = require_sha256(
+        brief.get("writer_packet_sha256"),
+        "writer_packet_sha256",
+    )
+    generator_sessions = require_list(
+        brief.get("generator_session_ids"),
+        "generator_session_ids",
+        4,
+    )
+    normalized_sessions = [
+        require_token(value, f"generator_session_ids[{index}]")
+        for index, value in enumerate(generator_sessions)
+    ]
+    if len(set(normalized_sessions)) != len(normalized_sessions):
+        raise ContractError(
+            "CRITIC_NOT_INDEPENDENT",
+            "generator sessions must be unique",
+        )
+    critic_session = require_token(brief.get("critic_session_id"), "critic_session_id")
+    if critic_session in set(normalized_sessions):
+        raise ContractError(
+            "CRITIC_NOT_INDEPENDENT",
+            "critic session cannot be a generator session",
+        )
+    sales_argument = require_string(
+        brief.get("sales_argument"),
+        "sales_argument",
+        40,
+    )
+    _assert_no_internal_strategy(sales_argument, "sales_argument")
+    for label, pattern in GENERIC_AI_COPY_PATTERNS:
+        match = pattern.search(sales_argument)
+        if match:
+            raise ContractError(
+                "GENERIC_COPY",
+                f"sales_argument contains {label}",
+                details=[match.group(0)],
+            )
     repairs = brief.get("repair_cycles")
     if not isinstance(repairs, int) or repairs < 0:
         raise ContractError("ANGLE_GAP", "repair_cycles must be a non-negative integer")
@@ -1459,7 +1823,7 @@ def validate_marriage_brief(
     _assert_no_internal_strategy(primary["hook"], "primary_angle.hook")
     _assert_no_internal_strategy(backup["hook"], "backup_angle.hook")
 
-    buyer_moment = require_string(brief.get("buyer_moment"), "buyer_moment", 16)
+    require_string(brief.get("buyer_moment"), "buyer_moment", 16)
     bridge = require_string(
         brief.get("transaction_bridge"),
         "transaction_bridge",
@@ -1507,33 +1871,76 @@ def validate_marriage_brief(
             "marriage brief needs current paid and FREE product evidence",
         )
 
+    research_evidence_ids = require_list(
+        brief.get("research_evidence_ids"),
+        "research_evidence_ids",
+        3,
+    )
+    research_evidence_ids = [
+        require_token(value, f"research_evidence_ids[{index}]")
+        for index, value in enumerate(research_evidence_ids)
+    ]
+    if len(set(research_evidence_ids)) != len(research_evidence_ids):
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "research_evidence_ids must be unique",
+        )
+    customer_language_ids = require_list(
+        brief.get("customer_language_evidence_ids"),
+        "customer_language_evidence_ids",
+        2,
+    )
+    customer_language_ids = [
+        require_token(value, f"customer_language_evidence_ids[{index}]")
+        for index, value in enumerate(customer_language_ids)
+    ]
+    if not set(customer_language_ids).issubset(research_evidence_ids):
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "customer language must come from the frozen research evidence set",
+        )
+
     relationship_ids = require_list(
         brief.get("relationship_evidence_ids"),
         "relationship_evidence_ids",
         0,
     )
-    invalid_relationship_ids = sorted(
-        evidence_id
-        for evidence_id in relationship_ids
-        if evidence_map.get(evidence_id) != "relationship"
-    )
-    if invalid_relationship_ids:
+    relationship_ids = [
+        require_token(value, f"relationship_evidence_ids[{index}]")
+        for index, value in enumerate(relationship_ids)
+    ]
+    if any(
+        evidence_id not in research_evidence_ids for evidence_id in relationship_ids
+    ):
         raise ContractError(
             "MARRIAGE_GAP",
-            "relationship evidence IDs are invalid",
-            details=invalid_relationship_ids,
+            "relationship evidence must come from the frozen research evidence set",
         )
-    required_relationship_count = 2 if mode == "evidence_backed_complement" else 1
+    required_relationship_count = 2 if mode == "evidence_backed_complement" else 0
     if len(set(relationship_ids)) < required_relationship_count:
         raise ContractError(
             "MARRIAGE_GAP",
             f"{mode} requires at least {required_relationship_count} current "
             "relationship evidence ID(s)",
         )
-    if any(evidence_id not in evidence_ids for evidence_id in relationship_ids):
+    relationship_source_family_count = brief.get("relationship_source_family_count")
+    if (
+        not isinstance(relationship_source_family_count, int)
+        or relationship_source_family_count < 0
+    ):
         raise ContractError(
             "MARRIAGE_GAP",
-            "relationship evidence must be part of the accepted brief evidence set",
+            "relationship_source_family_count must be a non-negative integer",
+        )
+    if mode == "evidence_backed_complement" and relationship_source_family_count < 2:
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "evidence_backed_complement requires explicit dual-product language from two source families",
+        )
+    if mode == "wanted_premium" and relationship_ids:
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "wanted_premium must not relabel inferred similarities as relationship evidence",
         )
 
     buyer_bridge = require_mapping(brief.get("buyer_bridge"), "buyer_bridge")
@@ -1551,50 +1958,34 @@ def validate_marriage_brief(
     bridge_evidence_ids = require_list(
         buyer_bridge.get("evidence_ids"),
         "buyer_bridge.evidence_ids",
-        required_relationship_count,
+        3,
     )
+    allowed_bridge_ids = set(evidence_ids) | set(research_evidence_ids)
     invalid_bridge_ids = sorted(
         evidence_id
         for evidence_id in bridge_evidence_ids
-        if evidence_map.get(evidence_id) != "relationship"
-        or evidence_id not in relationship_ids
+        if evidence_id not in allowed_bridge_ids
     )
     if invalid_bridge_ids:
         raise ContractError(
             "MARRIAGE_GAP",
-            "buyer_bridge must cite accepted current relationship evidence",
+            "buyer_bridge cites evidence outside the accepted product and research sets",
             details=invalid_bridge_ids,
         )
-    if len(set(bridge_evidence_ids)) < required_relationship_count:
+    if not set(customer_language_ids).intersection(bridge_evidence_ids):
         raise ContractError(
             "MARRIAGE_GAP",
-            "buyer_bridge does not cite enough distinct relationship evidence",
+            "buyer_bridge must use preserved current customer language",
         )
-
-    evidence_records = evidence_support_records(dossier, campaign)
-    bridge_support = relationship_support_tokens(
-        bridge_evidence_ids,
-        evidence_records,
-    )
-    require_relationship_overlap(
-        buyer_moment,
-        "buyer_moment",
-        bridge_support,
-    )
-    require_relationship_overlap(
-        bridge,
-        "transaction_bridge",
-        bridge_support,
-    )
-    require_relationship_overlap(
+    require_string(
         buyer_bridge.get("occasion_or_desire"),
         "buyer_bridge.occasion_or_desire",
-        bridge_support,
+        16,
     )
-    require_relationship_overlap(
+    require_string(
         buyer_bridge.get("reason_to_act"),
         "buyer_bridge.reason_to_act",
-        bridge_support,
+        16,
     )
 
     substitution = require_mapping(
@@ -1627,29 +2018,31 @@ def validate_marriage_brief(
         "substitution_test.evidence_ids",
         1,
     )
-    if any(evidence_id not in evidence_ids for evidence_id in substitution_evidence):
+    allowed_substitution_ids = set(evidence_ids) | set(research_evidence_ids)
+    if any(
+        evidence_id not in allowed_substitution_ids
+        for evidence_id in substitution_evidence
+    ):
         raise ContractError(
             "MARRIAGE_GAP",
             "substitution test cites evidence outside the accepted brief",
         )
     substitution_lanes = {
-        evidence_map[evidence_id] for evidence_id in substitution_evidence
+        evidence_map[evidence_id]
+        for evidence_id in substitution_evidence
+        if evidence_id in evidence_map
     }
-    required_substitution_lanes = {
-        "paid_product",
-        "free_product",
-        "relationship",
-    }
+    required_substitution_lanes = {"paid_product", "free_product"}
     if not required_substitution_lanes.issubset(substitution_lanes):
         raise ContractError(
             "MARRIAGE_GAP",
-            "substitution test must cite paid, FREE, and relationship evidence",
+            "substitution test must cite paid and FREE product evidence",
             details=sorted(required_substitution_lanes - substitution_lanes),
         )
-    substitution_reason = require_relationship_overlap(
+    substitution_reason = require_string(
         substitution.get("reason"),
         "substitution_test.reason",
-        bridge_support,
+        24,
     )
     if normalized_text(AURALO_NAME) not in normalized_text(substitution_reason):
         raise ContractError(
@@ -1671,6 +2064,10 @@ def validate_marriage_brief(
         "primary_angle_id": primary["id"],
         "backup_angle_id": backup["id"],
         "repair_cycles": repairs,
+        "research_snapshot_sha256": research_snapshot_sha256,
+        "candidate_set_sha256": candidate_set_sha256,
+        "critic_receipt_sha256": critic_receipt_sha256,
+        "writer_packet_sha256": writer_packet_sha256,
         "sha256": canonical_sha256(brief),
     }
 
@@ -2082,6 +2479,7 @@ def _validate_image_jobs(
                 "production_direction",
                 "visible_text",
                 "evidence_ids",
+                "copy_source_paths",
             },
             f"image_jobs[{index}]",
             code="PUBLIC_PAYLOAD_INVALID",
@@ -2092,6 +2490,23 @@ def _validate_image_jobs(
                 "PUBLIC_PAYLOAD_INVALID", f"duplicate image job: {job_id}"
             )
         observed_ids.add(job_id)
+        copy_paths = _string_leaf_map(payload.get("copy"), ("copy",))
+        source_paths = require_list(
+            job.get("copy_source_paths"),
+            f"image_jobs[{index}].copy_source_paths",
+            1,
+        )
+        invalid_source_paths = sorted(
+            value
+            for value in source_paths
+            if not isinstance(value, str) or value not in copy_paths
+        )
+        if invalid_source_paths:
+            raise ContractError(
+                "COPY_NOT_FINAL",
+                f"image_jobs[{index}] is not derived from finished copy",
+                details=invalid_source_paths,
+            )
         if job.get("angle_id") not in allowed_angles:
             raise ContractError(
                 "ANGLE_NOT_BOUND",
@@ -2170,6 +2585,227 @@ def _validate_image_jobs(
         )
 
 
+def _string_leaf_map(node: Any, path: tuple[str, ...] = ()) -> dict[str, str]:
+    result: dict[str, str] = {}
+    if isinstance(node, dict):
+        for key, value in node.items():
+            result.update(_string_leaf_map(value, path + (str(key),)))
+    elif isinstance(node, list):
+        for index, value in enumerate(node):
+            result.update(_string_leaf_map(value, path + (str(index),)))
+    elif isinstance(node, str):
+        result[".".join(path)] = node
+    return result
+
+
+def _validate_copy_first_handoff(
+    payload: dict[str, Any],
+    brief_result: dict[str, Any],
+) -> dict[str, Any]:
+    writer_packet_sha256 = require_sha256(
+        payload.get("writer_packet_sha256"),
+        "writer_packet_sha256",
+    )
+    if writer_packet_sha256 != brief_result["writer_packet_sha256"]:
+        raise ContractError(
+            "WRITER_PACKET_MISMATCH",
+            "public payload is not bound to the clean writer packet selected from frozen research",
+        )
+
+    copy_block = require_mapping(payload.get("copy"), "copy")
+    copy_sha256 = require_sha256(payload.get("copy_sha256"), "copy_sha256")
+    expected_copy_sha256 = canonical_sha256(copy_block)
+    if copy_sha256 != expected_copy_sha256:
+        raise ContractError(
+            "COPY_HASH_MISMATCH",
+            "copy changed after the writer handoff",
+        )
+    copy_paths = _string_leaf_map(copy_block, ("copy",))
+    if not copy_paths:
+        raise ContractError("PUBLIC_PAYLOAD_INVALID", "copy contains no text")
+
+    review = require_mapping(payload.get("copy_review"), "copy_review")
+    reject_unknown_keys(
+        review,
+        {
+            "schema_version",
+            "status",
+            "copy_sha256",
+            "writer_session_id",
+            "reviewer_session_id",
+            "checks",
+        },
+        "copy_review",
+        code="COPY_REVIEW_INVALID",
+    )
+    if review.get("schema_version") != "1.0" or review.get("status") != "accepted":
+        raise ContractError(
+            "COPY_REVIEW_INVALID",
+            "copy review must be an accepted schema 1.0 receipt",
+        )
+    if (
+        require_sha256(review.get("copy_sha256"), "copy_review.copy_sha256")
+        != copy_sha256
+    ):
+        raise ContractError(
+            "COPY_HASH_MISMATCH", "copy review targets a different copy hash"
+        )
+    writer_session = require_token(
+        review.get("writer_session_id"),
+        "copy_review.writer_session_id",
+    )
+    reviewer_session = require_token(
+        review.get("reviewer_session_id"),
+        "copy_review.reviewer_session_id",
+    )
+    if writer_session == reviewer_session:
+        raise ContractError(
+            "COPY_REVIEW_NOT_INDEPENDENT",
+            "the writer cannot approve its own copy",
+        )
+    checks = require_mapping(review.get("checks"), "copy_review.checks")
+    if set(checks) != COPY_REVIEW_CHECKS:
+        raise ContractError(
+            "COPY_REVIEW_INVALID",
+            "copy review must execute every quality challenge",
+            details=[
+                f"missing={sorted(COPY_REVIEW_CHECKS - set(checks))}",
+                f"extra={sorted(set(checks) - COPY_REVIEW_CHECKS)}",
+            ],
+        )
+    for field in sorted(COPY_REVIEW_CHECKS):
+        path = f"copy_review.checks.{field}"
+        check = require_mapping(checks[field], path)
+        reject_unknown_keys(
+            check,
+            {"status", "finding", "copy_paths"},
+            path,
+            code="COPY_REVIEW_INVALID",
+        )
+        if check.get("status") != "pass":
+            raise ContractError(
+                "COPY_REVIEW_REJECTED",
+                f"{field} did not pass",
+                details=[str(check.get("finding", ""))],
+            )
+        require_string(check.get("finding"), f"{path}.finding", 12)
+        cited_paths = require_list(check.get("copy_paths"), f"{path}.copy_paths", 1)
+        unknown_paths = sorted(
+            value
+            for value in cited_paths
+            if not isinstance(value, str) or value not in copy_paths
+        )
+        if unknown_paths:
+            raise ContractError(
+                "COPY_REVIEW_INVALID",
+                f"{field} cites missing copy paths",
+                details=unknown_paths,
+            )
+
+    page_mapping = require_mapping(payload.get("page_mapping"), "page_mapping")
+    reject_unknown_keys(
+        page_mapping,
+        {"schema_version", "copy_sha256", "sections"},
+        "page_mapping",
+        code="PAGE_MAPPING_INVALID",
+    )
+    if page_mapping.get("schema_version") != "1.0":
+        raise ContractError(
+            "PAGE_MAPPING_INVALID", "page mapping schema_version must equal 1.0"
+        )
+    if (
+        require_sha256(
+            page_mapping.get("copy_sha256"),
+            "page_mapping.copy_sha256",
+        )
+        != copy_sha256
+    ):
+        raise ContractError(
+            "COPY_NOT_FINAL",
+            "page and image mapping cannot run before finished accepted copy",
+        )
+    image_jobs = require_list(payload.get("image_jobs"), "image_jobs", 1)
+    expected_image_ids = {
+        require_token(job.get("id"), f"image_jobs[{index}].id")
+        for index, job in enumerate(image_jobs)
+        if isinstance(job, dict)
+    }
+    sections = require_list(page_mapping.get("sections"), "page_mapping.sections", 1)
+    mapped_copy_paths: list[str] = []
+    mapped_image_ids: list[str] = []
+    observed_section_ids: set[str] = set()
+    for index, raw_section in enumerate(sections):
+        path = f"page_mapping.sections[{index}]"
+        section = require_mapping(raw_section, path)
+        reject_unknown_keys(
+            section,
+            {"id", "copy_paths", "image_job_ids"},
+            path,
+            code="PAGE_MAPPING_INVALID",
+        )
+        section_id = require_identifier(section.get("id"), f"{path}.id")
+        if section_id in observed_section_ids:
+            raise ContractError(
+                "PAGE_MAPPING_INVALID", f"duplicate section ID: {section_id}"
+            )
+        observed_section_ids.add(section_id)
+        section_copy_paths = require_list(
+            section.get("copy_paths"), f"{path}.copy_paths", 1
+        )
+        unknown_copy_paths = sorted(
+            value
+            for value in section_copy_paths
+            if not isinstance(value, str) or value not in copy_paths
+        )
+        if unknown_copy_paths:
+            raise ContractError(
+                "PAGE_MAPPING_INVALID",
+                f"{path} maps text that is not in the finished copy",
+                details=unknown_copy_paths,
+            )
+        section_image_ids = require_list(
+            section.get("image_job_ids"),
+            f"{path}.image_job_ids",
+            1,
+        )
+        unknown_image_ids = sorted(
+            value
+            for value in section_image_ids
+            if not isinstance(value, str) or value not in expected_image_ids
+        )
+        if unknown_image_ids:
+            raise ContractError(
+                "PAGE_MAPPING_INVALID",
+                f"{path} maps unknown image jobs",
+                details=unknown_image_ids,
+            )
+        mapped_copy_paths.extend(section_copy_paths)
+        mapped_image_ids.extend(section_image_ids)
+    if set(mapped_copy_paths) != set(copy_paths):
+        raise ContractError(
+            "PAGE_MAPPING_INVALID",
+            "every finished copy leaf must be mapped exactly once",
+        )
+    if len(mapped_copy_paths) != len(set(mapped_copy_paths)):
+        raise ContractError(
+            "PAGE_MAPPING_INVALID",
+            "finished copy leaves cannot be mapped more than once",
+        )
+    if set(mapped_image_ids) != expected_image_ids or len(mapped_image_ids) != len(
+        set(mapped_image_ids)
+    ):
+        raise ContractError(
+            "PAGE_MAPPING_INVALID",
+            "every image job must be mapped exactly once after copy acceptance",
+        )
+    return {
+        "writer_packet_sha256": writer_packet_sha256,
+        "copy_sha256": copy_sha256,
+        "copy_review_sha256": canonical_sha256(review),
+        "page_mapping_sha256": canonical_sha256(page_mapping),
+    }
+
+
 def validate_public_payload(
     payload: dict[str, Any],
     campaign: dict[str, Any],
@@ -2184,6 +2820,10 @@ def validate_public_payload(
         {
             "campaign_id",
             "marriage_brief_sha256",
+            "writer_packet_sha256",
+            "copy_sha256",
+            "copy_review",
+            "page_mapping",
             "copy",
             "claims",
             "image_jobs",
@@ -2212,7 +2852,6 @@ def validate_public_payload(
             "ANGLE_NOT_BOUND",
             "payload is not hash-bound to the accepted marriage brief",
         )
-
     content_rows = list(_content_strings(payload))
     if not content_rows:
         raise ContractError(
@@ -2233,6 +2872,11 @@ def validate_public_payload(
             match = pattern.search(text)
             if match:
                 stale_hits.append(f"{path}: {label}: {match.group(0)}")
+        if mode == "public":
+            for label, pattern in GENERIC_AI_COPY_PATTERNS:
+                match = pattern.search(text)
+                if match:
+                    stale_hits.append(f"{path}: {label}: {match.group(0)}")
         if mode == "public":
             for label, pattern in VISIBLE_PRODUCTION_PATTERNS:
                 match = pattern.search(text)
@@ -2290,6 +2934,7 @@ def validate_public_payload(
 
     _validate_image_jobs(payload, brief_result, campaign, dossier)
     _validate_claims(payload, campaign, dossier, content_rows)
+    copy_first_receipt = _validate_copy_first_handoff(payload, brief_result)
 
     return {
         "status": "accepted",
@@ -2299,6 +2944,7 @@ def validate_public_payload(
         "content_string_count": len(content_rows),
         "image_job_count": len(payload["image_jobs"]),
         "prior_entity_count": len(forbidden_entities),
+        **copy_first_receipt,
     }
 
 
