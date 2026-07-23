@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -65,6 +66,55 @@ CHALLENGE_FIELDS = {
     "weak_free_desire",
     "interchangeability",
     "customer_voice_fit",
+}
+CHALLENGE_CONCEPT_PATTERNS = {
+    "forced_pairing": re.compile(
+        r"\b(?:forced|independent|together|depend|relationship)\b",
+        re.IGNORECASE,
+    ),
+    "generic_ai_language": re.compile(
+        r"\b(?:generic|language|copy|phrase|wording)\b",
+        re.IGNORECASE,
+    ),
+    "unsupported_assumption": re.compile(
+        r"\b(?:assumption|support|evidence|prove)\b",
+        re.IGNORECASE,
+    ),
+    "weak_paid_desire": re.compile(
+        r"\b(?:auralo|paid|scent|perfume|desire)\b",
+        re.IGNORECASE,
+    ),
+    "weak_free_desire": re.compile(
+        r"\b(?:free|necklace|bonus|desire|wanted)\b",
+        re.IGNORECASE,
+    ),
+    "interchangeability": re.compile(
+        r"\b(?:replace|replacement|swap|interchange|substitut)\w*\b",
+        re.IGNORECASE,
+    ),
+    "customer_voice_fit": re.compile(
+        r"\b(?:customer|buyer|voice|language|words)\b",
+        re.IGNORECASE,
+    ),
+}
+GENERIC_CHALLENGE_PATTERNS = (
+    re.compile(
+        r"\bpassed after (?:looking at|reviewing) (?:the )?cited evidence\b",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\b(?:was )?tested against (?:the )?cited current evidence\b",
+        re.IGNORECASE,
+    ),
+    re.compile(
+        r"\b(?:reviewed current evidence|no issue found|appears acceptable)\b",
+        re.IGNORECASE,
+    ),
+)
+COUNTEREVIDENCE_CHALLENGES = {
+    "forced_pairing",
+    "unsupported_assumption",
+    "interchangeability",
 }
 MINIMUM_CANDIDATES = 4
 
@@ -427,9 +477,14 @@ def _critic_scores(
 def _critic_challenges(
     critic: dict[str, Any],
     candidates: dict[str, dict[str, Any]],
+    evidence_lanes: dict[str, str],
+    required_research_ids: set[str],
+    customer_language_ids: set[str],
+    objection_ids: set[str],
 ) -> dict[str, dict[str, Any]]:
     rows = require_list(critic.get("challenges"), "critic.challenges", len(candidates))
     result: dict[str, dict[str, Any]] = {}
+    seen_finding_templates: set[str] = set()
     for index, raw_row in enumerate(rows):
         path = f"critic.challenges[{index}]"
         row = require_mapping(raw_row, path)
@@ -452,10 +507,21 @@ def _critic_challenges(
                 require_list(row.get("evidence_ids"), f"{path}.evidence_ids", 2)
             )
         ]
-        if not set(evidence_ids).issubset(candidates[candidate_id]["evidence_ids"]):
+        if len(set(evidence_ids)) != len(evidence_ids):
             raise ContractError(
                 "CHALLENGE_NOT_EXECUTED",
-                f"{path} cites evidence outside the challenged candidate",
+                f"{path}.evidence_ids must be unique",
+            )
+        if not set(evidence_ids).issubset(evidence_lanes):
+            raise ContractError(
+                "CHALLENGE_NOT_EXECUTED",
+                f"{path} cites evidence outside the frozen complete evidence",
+            )
+        if not required_research_ids.issubset(evidence_ids):
+            raise ContractError(
+                "CHALLENGE_NOT_EXECUTED",
+                f"{path} did not consult every frozen research record",
+                details=sorted(required_research_ids - set(evidence_ids)),
             )
         checks = require_mapping(row.get("checks"), f"{path}.checks")
         if set(checks) != CHALLENGE_FIELDS:
@@ -467,13 +533,21 @@ def _critic_challenges(
                     f"extra={sorted(set(checks) - CHALLENGE_FIELDS)}",
                 ],
             )
-        normalized_checks: dict[str, dict[str, str]] = {}
+        normalized_checks: dict[str, dict[str, Any]] = {}
+        seen_tests: set[str] = set()
+        seen_findings: set[str] = set()
         all_pass = True
         for field in sorted(CHALLENGE_FIELDS):
             check = require_mapping(checks[field], f"{path}.checks.{field}")
             reject_unknown_keys(
                 check,
-                {"status", "finding"},
+                {
+                    "status",
+                    "test",
+                    "finding",
+                    "evidence_ids",
+                    "counterevidence_ids",
+                },
                 f"{path}.checks.{field}",
                 code="CHALLENGE_NOT_EXECUTED",
             )
@@ -483,12 +557,154 @@ def _critic_challenges(
                     "CHALLENGE_NOT_EXECUTED",
                     f"{path}.checks.{field}.status must be pass or fail",
                 )
+            test = require_string(
+                check.get("test"),
+                f"{path}.checks.{field}.test",
+                24,
+            )
             finding = require_string(
                 check.get("finding"),
                 f"{path}.checks.{field}.finding",
-                12,
+                24,
             )
-            normalized_checks[field] = {"status": status, "finding": finding}
+            combined = f"{test} {finding}"
+            if not CHALLENGE_CONCEPT_PATTERNS[field].search(combined):
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} does not execute its named test",
+                )
+            if candidate_id.casefold() not in combined.casefold():
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} is not bound to {candidate_id}",
+                )
+            generic_match = next(
+                (
+                    pattern.search(combined)
+                    for pattern in GENERIC_CHALLENGE_PATTERNS
+                    if pattern.search(combined)
+                ),
+                None,
+            )
+            if generic_match:
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} contains a reusable boilerplate result",
+                    details=[generic_match.group(0)],
+                )
+            normalized_test = normalized_text(test)
+            normalized_finding = normalized_text(finding)
+            finding_template = normalized_text(
+                re.sub(
+                    re.escape(candidate_id),
+                    "",
+                    finding,
+                    flags=re.IGNORECASE,
+                )
+            )
+            if normalized_test in seen_tests or normalized_finding in seen_findings:
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} reuses another challenge result",
+                )
+            seen_tests.add(normalized_test)
+            seen_findings.add(normalized_finding)
+            if finding_template in seen_finding_templates:
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} reuses a finding from another candidate",
+                )
+            seen_finding_templates.add(finding_template)
+
+            check_evidence_ids = [
+                require_token(
+                    value,
+                    f"{path}.checks.{field}.evidence_ids[{item_index}]",
+                )
+                for item_index, value in enumerate(
+                    require_list(
+                        check.get("evidence_ids"),
+                        f"{path}.checks.{field}.evidence_ids",
+                        2,
+                    )
+                )
+            ]
+            counterevidence_ids = [
+                require_token(
+                    value,
+                    f"{path}.checks.{field}.counterevidence_ids[{item_index}]",
+                )
+                for item_index, value in enumerate(
+                    require_list(
+                        check.get("counterevidence_ids"),
+                        f"{path}.checks.{field}.counterevidence_ids",
+                        0,
+                    )
+                )
+            ]
+            if len(set(check_evidence_ids)) != len(check_evidence_ids):
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field}.evidence_ids must be unique",
+                )
+            if len(set(counterevidence_ids)) != len(counterevidence_ids):
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field}.counterevidence_ids must be unique",
+                )
+            if not set(check_evidence_ids).issubset(evidence_ids):
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} cites evidence not consulted by the critic",
+                )
+            if not set(counterevidence_ids).issubset(check_evidence_ids):
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} counterevidence is not in its evidence set",
+                )
+            check_lanes = {
+                evidence_lanes[evidence_id] for evidence_id in check_evidence_ids
+            }
+            if field in {
+                "forced_pairing",
+                "unsupported_assumption",
+                "interchangeability",
+            } and not {"paid_product", "free_product"}.issubset(check_lanes):
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} must test both product lanes",
+                )
+            if field == "weak_paid_desire" and "paid_product" not in check_lanes:
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} lacks paid-product evidence",
+                )
+            if field == "weak_free_desire" and "free_product" not in check_lanes:
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} lacks FREE-product evidence",
+                )
+            if field in {"generic_ai_language", "customer_voice_fit"} and not (
+                set(check_evidence_ids) & customer_language_ids
+            ):
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} lacks preserved customer language",
+                )
+            if field in COUNTEREVIDENCE_CHALLENGES and not (
+                set(counterevidence_ids) & objection_ids
+            ):
+                raise ContractError(
+                    "CHALLENGE_NOT_EXECUTED",
+                    f"{path}.checks.{field} lacks objection counterevidence",
+                )
+            normalized_checks[field] = {
+                "status": status,
+                "test": test,
+                "finding": finding,
+                "evidence_ids": check_evidence_ids,
+                "counterevidence_ids": counterevidence_ids,
+            }
             all_pass = all_pass and status == "pass"
         expected_verdict = "eligible" if all_pass else "rejected"
         if row.get("verdict") != expected_verdict:
@@ -515,10 +731,7 @@ def _writer_packet(
     research_snapshot: dict[str, Any],
     research_receipt: dict[str, Any],
 ) -> dict[str, Any]:
-    record_map = {record["id"]: record for record in research_snapshot["records"]}
-    selected_records = [
-        record_map[evidence_id] for evidence_id in primary["research_evidence_ids"]
-    ]
+    all_records = research_snapshot["records"]
     customer_language = [
         {
             "id": record["id"],
@@ -526,18 +739,23 @@ def _writer_packet(
             "target_product_id": record["target_product_id"],
             "source_family": record["source_family"],
         }
-        for record in selected_records
-        if record["id"] in primary["customer_language_evidence_ids"]
+        for record in all_records
+        if record["kind"] == "customer_language"
     ]
     objections = [
         {"id": record["id"], "text": record["text"]}
-        for record in selected_records
+        for record in all_records
         if record["kind"] == "objection"
     ]
     purchase_triggers = [
         {"id": record["id"], "text": record["text"]}
-        for record in selected_records
+        for record in all_records
         if record["kind"] == "purchase_trigger"
+    ]
+    market_context = [
+        {"id": record["id"], "text": record["text"]}
+        for record in all_records
+        if record["kind"] == "market_context"
     ]
     return {
         "schema_version": "1.0",
@@ -553,7 +771,6 @@ def _writer_packet(
                     "public_language": row["public_language"],
                 }
                 for row in dossier["facts"]
-                if row["evidence_id"] in primary["product_evidence_ids"]
             ],
         },
         "free_product_truth": {
@@ -566,12 +783,12 @@ def _writer_packet(
                     "public_language": row["public_language"],
                 }
                 for row in campaign["free_product"]["facts"]
-                if row["evidence_id"] in primary["product_evidence_ids"]
             ],
         },
         "customer_language": customer_language,
         "objections": objections,
         "purchase_triggers": purchase_triggers,
+        "market_context": market_context,
         "plain_english_sales_argument": primary["sales_argument"],
         "writer_job": {
             "sequence": [
@@ -860,7 +1077,18 @@ def select_angles(
         )
     candidate_map = {candidate["id"]: candidate for candidate in normalized_candidates}
     scores = _critic_scores(critic, set(candidate_ids))
-    challenges = _critic_challenges(critic, candidate_map)
+    evidence_lanes = {
+        **authorized_evidence,
+        **research_receipt["record_lanes"],
+    }
+    challenges = _critic_challenges(
+        critic,
+        candidate_map,
+        evidence_lanes,
+        set(research_receipt["record_ids"]),
+        set(research_receipt["customer_language_ids"]),
+        set(research_receipt["objection_ids"]),
+    )
     require_string(critic.get("selection_reason"), "critic.selection_reason", 24)
     for field in (
         "rejected_assumptions",

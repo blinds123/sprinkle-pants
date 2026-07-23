@@ -16,3 +16,11 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Validate repository contracts
         run: python3 scripts/validate_repository.py --root .
+      - name: Compile freeperrylarp1 contracts
+        run: python3 -m compileall -q plugins/freeperrylarp1
+      - name: Run freeperrylarp1 unit and adversarial tests
+        run: >-
+          python3 -m unittest discover
+          -s plugins/freeperrylarp1/tests
+          -p 'test_*.py'
+          -v

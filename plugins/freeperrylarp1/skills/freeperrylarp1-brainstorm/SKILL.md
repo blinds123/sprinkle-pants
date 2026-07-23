@@ -25,7 +25,8 @@ It does not write public copy and cannot promote a hypothesis into evidence.
 1. Validate that research independently covers the paid product, FREE product,
    verbatim customer language, objections, and purchase triggers.
 2. Reject research queries containing a preselected ritual, moment, pairing,
-   bridge, relationship, creative angle, or both offered products together.
+   bridge, relationship, creative angle, both offered products together, or
+   both product categories in one query.
 3. Freeze the research hash before generating any connection.
 4. Generate at least four connections in isolated sessions. Generators cannot
    see or score each other.
@@ -33,7 +34,9 @@ It does not write public copy and cannot promote a hypothesis into evidence.
 6. Give the frozen evidence and candidate set to a new critic session.
 7. Make the critic score every candidate and execute every required challenge:
    forced pairing, generic AI language, unsupported assumptions, weak paid
-   desire, weak FREE desire, interchangeability, and customer-voice fit.
+   desire, weak FREE desire, interchangeability, and customer-voice fit. Each
+   challenge needs a distinct candidate-bound test, finding, evidence IDs, and
+   required objection counterevidence; boilerplate passes are rejected.
 8. Select the highest-scoring eligible primary and strongest materially
    different backup. Candidate-supplied scores are rejected.
 9. Emit a schema `2.0` marriage brief plus a clean writer packet.
@@ -43,8 +46,9 @@ relationship evidence. `evidence_backed_complement` needs at least two explicit
 dual-product records from two source families; semantic or token similarity is
 not enough.
 
-The writer packet contains current product truth, preserved customer language,
-objections, purchase triggers, and one plain-English sales argument. It excludes
+The writer packet contains all current product truth and every accepted
+customer-language, objection, purchase-trigger, and market-context record plus
+one plain-English sales argument. It excludes
 queries, frames, candidate rankings, critic metadata, relationship-mode labels,
 and prior-product fingerprints.
 

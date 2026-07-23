@@ -285,6 +285,45 @@ COMMON_ENTITY_WORDS = {
     "with",
 }
 
+QUERY_GENERIC_WORDS = COMMON_ENTITY_WORDS | {
+    "before",
+    "buyer",
+    "buyers",
+    "buying",
+    "choose",
+    "customer",
+    "customers",
+    "details",
+    "format",
+    "instructions",
+    "market",
+    "purchase",
+    "questions",
+    "shopper",
+    "shoppers",
+    "use",
+    "words",
+}
+
+REGISTRY_GENERIC_WORDS = COMMON_ENTITY_WORDS | {
+    "client",
+    "compact",
+    "current",
+    "detail",
+    "form",
+    "reference",
+    "shows",
+    "supplied",
+}
+
+AURALO_CATEGORY_MARKERS = {
+    "aroma",
+    "cologne",
+    "fragrance",
+    "perfume",
+    "scent",
+}
+
 PUBLIC_ROOT_KEYS = {
     "alt_text",
     "body",
@@ -534,6 +573,44 @@ def distinctive_tokens(*values: str) -> set[str]:
     }
 
 
+def _query_vocabulary(*values: str) -> set[str]:
+    """Return category/product markers without generic research vocabulary."""
+
+    return {
+        token
+        for value in values
+        for token in re.findall(r"[a-z0-9]+", value.casefold())
+        if len(token) >= 4 and token not in QUERY_GENERIC_WORDS
+    }
+
+
+def _query_product_markers(
+    campaign: dict[str, Any],
+    dossier: dict[str, Any],
+) -> tuple[set[str], set[str]]:
+    paid_values = [
+        dossier["product"]["public_name"],
+        dossier["product"]["format"],
+        *(row["claim"] for row in dossier["facts"]),
+        *(row["public_language"] for row in dossier["facts"]),
+    ]
+    free_product = campaign["free_product"]
+    free_values = [
+        free_product["public_name"],
+        free_product["category"],
+        *free_product["identity_terms"],
+        *(row["claim"] for row in free_product["facts"]),
+        *(row["public_language"] for row in free_product["facts"]),
+    ]
+    paid_markers = _query_vocabulary(*paid_values)
+    free_markers = _query_vocabulary(*free_values)
+    paid_markers.update(AURALO_CATEGORY_MARKERS)
+    if "jewellery" in free_markers:
+        free_markers.add("jewelry")
+    shared = paid_markers & free_markers
+    return paid_markers - shared, free_markers - shared
+
+
 def all_evidence_ids(
     dossier: dict[str, Any],
     campaign: dict[str, Any],
@@ -642,6 +719,10 @@ def validate_neutral_research_snapshot(
     free_id = campaign["free_product"]["id"]
     paid_name = AURALO_NAME
     free_name = campaign["free_product"]["public_name"]
+    paid_category_markers, free_category_markers = _query_product_markers(
+        campaign,
+        dossier,
+    )
     queries = require_list(snapshot.get("queries"), "research_snapshot.queries", 5)
     query_ids: set[str] = set()
     query_lane_counts = {lane: 0 for lane in NEUTRAL_QUERY_LANES}
@@ -694,6 +775,34 @@ def validate_neutral_research_snapshot(
             marker in normalized_query for marker in free_markers
         ):
             contamination.append(f"{path}: searches both offered products together")
+        query_tokens = set(re.findall(r"[a-z0-9]+", normalized_query))
+        paid_category_hits = sorted(query_tokens & paid_category_markers)
+        free_category_hits = sorted(query_tokens & free_category_markers)
+        if paid_category_hits and free_category_hits:
+            contamination.append(
+                f"{path}: mixes paid-category markers {paid_category_hits[:4]} "
+                f"with FREE-category markers {free_category_hits[:4]}"
+            )
+        elif lane == "paid_product" and free_category_hits:
+            contamination.append(
+                f"{path}: paid-product lane contains FREE-category markers "
+                f"{free_category_hits[:4]}"
+            )
+        elif lane == "free_product" and paid_category_hits:
+            contamination.append(
+                f"{path}: FREE-product lane contains paid-category markers "
+                f"{paid_category_hits[:4]}"
+            )
+        elif target_id == paid_id and free_category_hits:
+            contamination.append(
+                f"{path}: paid-product target contains FREE-category markers "
+                f"{free_category_hits[:4]}"
+            )
+        elif target_id == free_id and paid_category_hits:
+            contamination.append(
+                f"{path}: FREE-product target contains paid-category markers "
+                f"{paid_category_hits[:4]}"
+            )
         query_lane_counts[lane] += 1
     if contamination:
         raise ContractError(
@@ -860,7 +969,11 @@ def validate_neutral_research_snapshot(
         "record_count": len(records),
         "record_ids": sorted(record_ids),
         "record_lanes": {record["id"]: record["lane"] for record in records},
+        "record_kinds": {record["id"]: record["kind"] for record in records},
         "customer_language_ids": sorted(customer_language_ids),
+        "objection_ids": sorted(
+            record["id"] for record in records if record["kind"] == "objection"
+        ),
         "explicit_relationship_ids": sorted(explicit_relationship_ids),
         "relationship_source_family_count": len(relationship_source_families),
         "source_family_count": len(source_families),
@@ -2072,11 +2185,40 @@ def validate_marriage_brief(
     }
 
 
-def _entity_terms(free_product: dict[str, Any]) -> set[str]:
+def _distinctive_fact_phrases(*values: str) -> set[str]:
+    """Fingerprint prior fact language without exporting it to generation."""
+
+    phrases: set[str] = set()
+    for value in values:
+        tokens = re.findall(r"[a-z0-9]+", value.casefold())
+        for width in (2, 3):
+            for index in range(len(tokens) - width + 1):
+                window = tokens[index : index + width]
+                if all(
+                    len(token) >= 4 and token not in REGISTRY_GENERIC_WORDS
+                    for token in window
+                ):
+                    phrases.add(" ".join(window))
+    return phrases
+
+
+def _entity_terms(campaign: dict[str, Any]) -> set[str]:
+    free_product = campaign["free_product"]
     terms = {normalized_text(value) for value in free_product["identity_terms"]}
     full_name = normalized_text(free_product["public_name"])
     if full_name not in COMMON_ENTITY_WORDS:
         terms.add(full_name)
+    fact_language = [
+        text
+        for fact in free_product["facts"]
+        for text in (fact["claim"], fact["public_language"])
+    ]
+    ledger_language = [
+        row["excerpt"]
+        for row in campaign["evidence_ledger"]
+        if row["lane"] == "free_product"
+    ]
+    terms.update(_distinctive_fact_phrases(*fact_language, *ledger_language))
     return terms
 
 
@@ -2088,14 +2230,14 @@ def build_prior_entity_registry(
     asset_root: Path,
 ) -> dict[str, Any]:
     validate_campaign(current_campaign, dossier, asset_root=asset_root)
-    current_terms = _entity_terms(current_campaign["free_product"])
+    current_terms = _entity_terms(current_campaign)
     forbidden: set[str] = set()
     sources: list[dict[str, str]] = []
     for prior in prior_campaigns:
         _validate_campaign_schema(prior, dossier)
         if prior["campaign_id"] == current_campaign["campaign_id"]:
             continue
-        prior_terms = _entity_terms(prior["free_product"])
+        prior_terms = _entity_terms(prior)
         forbidden.update(term for term in prior_terms if term not in current_terms)
         sources.append(
             {

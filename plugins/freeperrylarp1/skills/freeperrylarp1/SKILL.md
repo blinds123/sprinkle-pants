@@ -24,8 +24,10 @@ contract again.
   include them in the writer packet.
 - Freeze neutral paid-product, FREE-product, customer-language, objection, and
   purchase-trigger research before proposing any connection.
+- Treat `fresh_only` and the frozen hash as contract attestations. Require a
+  separate retrieval receipt before claiming that live research ran.
 - Never seed neutral research with a ritual, moment, pairing, bridge, angle, or
-  other preselected connection.
+  other preselected connection. Do not co-search the two product categories.
 - Require an accepted marriage brief before any writer or prompt compiler runs.
 - Allow at most two angle-repair cycles. Then stop with `ANGLE_GAP` or
   `MARRIAGE_GAP`; do not keep brainstorming.
@@ -49,13 +51,14 @@ contract again.
    different connection hypotheses in isolated sessions.
 5. Give the frozen research and exact candidate-set hash to a separate critic.
    The critic executes forced-pairing, generic-language, unsupported-assumption,
-   weak-desire, interchangeability, and customer-voice challenges.
+   weak-desire, interchangeability, and customer-voice challenges with
+   candidate-specific tests, evidence, findings, and counterevidence.
 6. Accept the highest-scoring eligible primary and strongest materially
    different backup. Candidate-owned scores and token overlap are never
    selection evidence.
-7. Give the writer only the clean writer packet: current product truth,
-   preserved customer language, objections, purchase triggers, and one
-   plain-English sales argument. Do not send generator frames, candidate
+7. Give the writer only the clean writer packet: all current product truth,
+   all accepted customer language, objections, purchase triggers, market
+   context, and one plain-English sales argument. Do not send generator frames, candidate
    rankings, critic metadata, prior-product fingerprints, or query recipes.
 8. Write the complete natural sales argument before assigning page sections,
    image jobs, overlays, or prompts.

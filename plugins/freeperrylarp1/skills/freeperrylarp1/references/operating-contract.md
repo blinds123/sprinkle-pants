@@ -36,10 +36,15 @@ Fresh research independently covers the paid product, FREE product, verbatim
 customer language, objections, and purchase triggers. It is frozen before any
 connection hypothesis is generated. Neutral queries cannot contain a
 preselected ritual, moment, pairing, bridge, relationship, creative angle, or
-both offered products together.
+both offered products together. They also cannot mix paid- and FREE-product
+category vocabulary in one query without naming the products.
 
 The frozen snapshot is hash-bound to every generator and the critic. Customer
 language remains verbatim; hypotheses never become evidence.
+
+`fresh_only` plus the frozen hash is a contract attestation, not proof that a
+live retrieval tool ran. Production research must retain its own retrieval
+receipt and source timestamps.
 
 ## Required marriage brief
 
@@ -77,15 +82,19 @@ desire, FREE-product desire, first-touch clarity, buyer-situation specificity,
 transaction credibility, evidence fit, claim integrity, and creative
 distinctiveness, then executes forced-pairing, generic-language,
 unsupported-assumption, weak-desire, interchangeability, and customer-voice
-challenges. Strong copy may challenge beliefs or use questions, but the next
+challenges. Every check must be candidate-specific, name the test performed,
+record a distinct concrete result, and cite the evidence and counterevidence it
+used. Reusable pass boilerplate is rejected. Strong copy may challenge beliefs
+or use questions, but the next
 line must clarify the evidence-backed product and transaction truth. Do not
 claim an endorsement, authorship, or outcome that is not evidenced.
 
 ## Leakage boundary
 
-The writer receives a clean hash-bound packet containing only current product
-truth, preserved customer language, objections, purchase triggers, one
-plain-English sales argument, and the structural writing job. It never receives
+The writer receives a clean hash-bound packet containing all current product
+truth, all accepted customer language, objections, purchase triggers and market
+context, one plain-English sales argument, and the structural writing job. It
+never receives
 research queries, frames, candidate rankings, critic metadata, relationship-mode
 labels, prior campaign copy, or prior-product fingerprints.
 
@@ -97,9 +106,12 @@ Only then may sections, visible image text, image jobs, and prompts bind to that
 hash. Every finished copy leaf and image job is mapped exactly once, and each
 image job names the finished copy paths that supply its persuasive job.
 
-The validator receives a separate prior-product registry after writing. It
-checks every public field, prompt direction, visible-text field, and site-data
-string. A previous product entity, internal strategy diagnosis, generic product
+The validator receives a separate prior-product registry that is never exposed
+to generators or the writer. It fingerprints distinctive prior identity, fact,
+public-language, and FREE-evidence excerpts; scans research and candidate inputs
+before writing; then checks every public field, prompt direction,
+visible-text field, and site-data string. A previous product entity or
+distinctive fact phrase, internal strategy diagnosis, generic product
 placeholder, or production instruction rendered as visible copy blocks delivery.
 
 ## Claims

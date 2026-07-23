@@ -78,19 +78,19 @@ class BrainstormGateTests(unittest.TestCase):
                     "id": "Q-VOICE-001",
                     "lane": "customer_voice",
                     "target_product_id": "market",
-                    "query": "exact words fragrance and jewellery shoppers use before buying",
+                    "query": "exact words personal-accessory shoppers use before buying",
                 },
                 {
                     "id": "Q-OBJECTION-001",
                     "lane": "objection",
                     "target_product_id": "market",
-                    "query": "why fragrance and jewellery shoppers hesitate before purchase",
+                    "query": "why personal-accessory shoppers hesitate before purchase",
                 },
                 {
                     "id": "Q-TRIGGER-001",
                     "lane": "purchase_trigger",
                     "target_product_id": "market",
-                    "query": "what makes fragrance and jewellery shoppers decide to buy",
+                    "query": "what makes personal-accessory shoppers decide to buy",
                 },
             ],
             "records": [
@@ -289,6 +289,42 @@ class BrainstormGateTests(unittest.TestCase):
         candidate_set_sha256 = contract.canonical_sha256(normalized)
         score_rows = []
         challenge_rows = []
+        challenge_results = {
+            "forced_pairing": (
+                "Does this candidate make either product depend on being used together?",
+                "The connection-argument keeps each product independently desirable before the transaction.",
+            ),
+            "generic_ai_language": (
+                "Does this candidate replace customer language with generic copy wording?",
+                "The connection-argument keeps the buyer's exact clarity and focal-detail language.",
+            ),
+            "unsupported_assumption": (
+                "Which assumption in this candidate lacks support from current product evidence?",
+                "The connection-argument limits its conclusion to the two evidenced product roles.",
+            ),
+            "weak_paid_desire": (
+                "Does this candidate create paid desire for Auralo before mentioning the bonus?",
+                "The connection-argument leads with Auralo scent, bottle format, and the $29 decision.",
+            ),
+            "weak_free_desire": (
+                "Does this candidate make the FREE necklace wanted before applying the price label?",
+                "The connection-argument names the necklace focal design before calling it FREE.",
+            ),
+            "interchangeability": (
+                "Would a replacement or product swap leave this candidate's argument unchanged?",
+                "The connection-argument changes if the evidenced scent or starburst form is substituted.",
+            ),
+            "customer_voice_fit": (
+                "Does this candidate preserve the customer's own buying words and concerns?",
+                "The connection-argument answers the cited buyer demand for exact value and focal detail.",
+            ),
+        }
+        candidate_details = [
+            "the dinner self-purchase keeps separate scent and focal-design reasons before the transaction",
+            "the after-work route uses floral-amber scent and a visible starburst to avoid a second decision",
+            "the birthday self-gift proves each exact item before stating the FREE term",
+            "the weekend-away route ties compact bottle format and starburst form to distinct buyer jobs",
+        ]
         for index, candidate in enumerate(candidates):
             score_rows.append(
                 {
@@ -307,15 +343,33 @@ class BrainstormGateTests(unittest.TestCase):
                 {
                     "candidate_id": candidate["id"],
                     "verdict": "eligible",
-                    "evidence_ids": [
-                        "R-PAID-VOICE-001",
-                        "R-FREE-VOICE-001",
-                        "R-OBJECTION-001",
-                    ],
+                    "evidence_ids": [record["id"] for record in snapshot["records"]],
                     "checks": {
                         field: {
                             "status": "pass",
-                            "finding": f"{field} was tested against the cited current evidence.",
+                            "test": (
+                                f"For {candidate['id']}: {challenge_results[field][0]}"
+                            ),
+                            "finding": (
+                                f"For {candidate['id']}: "
+                                f"{challenge_results[field][1]} Specifically, "
+                                f"{candidate_details[index]}."
+                            ),
+                            "evidence_ids": [
+                                "R-PAID-VOICE-001",
+                                "R-FREE-VOICE-001",
+                                "R-OBJECTION-001",
+                            ],
+                            "counterevidence_ids": (
+                                ["R-OBJECTION-001"]
+                                if field
+                                in {
+                                    "forced_pairing",
+                                    "unsupported_assumption",
+                                    "interchangeability",
+                                }
+                                else []
+                            ),
                         }
                         for field in sorted(brainstorm.CHALLENGE_FIELDS)
                     },
@@ -404,6 +458,10 @@ class BrainstormGateTests(unittest.TestCase):
             result["writer_packet_sha256"],
             result["decision_brief"]["writer_packet_sha256"],
         )
+        self.assertEqual(
+            [row["id"] for row in result["writer_packet"]["market_context"]],
+            ["R-CONTEXT-001"],
+        )
 
     def test_research_query_cannot_be_seeded_with_ritual_or_moment(self) -> None:
         payload = self.payload()
@@ -419,6 +477,13 @@ class BrainstormGateTests(unittest.TestCase):
         )
         self.assert_code("RESEARCH_CONTAMINATION", lambda: self.select(payload))
 
+    def test_research_query_cannot_mix_product_categories_without_names(self) -> None:
+        payload = self.payload()
+        payload["research_snapshot"]["queries"][2]["query"] = (
+            "matching fragrance and jewellery for a date night outfit"
+        )
+        self.assert_code("RESEARCH_CONTAMINATION", lambda: self.select(payload))
+
     def test_prior_free_product_language_cannot_enter_research_or_writer_packet(
         self,
     ) -> None:
@@ -431,6 +496,24 @@ class BrainstormGateTests(unittest.TestCase):
         )
         payload["research_snapshot"]["records"][7]["text"] = (
             "Shoppers discussed a quilted shell while comparing accessories."
+        )
+        self.assert_code("CROSS_CAMPAIGN_LEAK", lambda: self.select(payload))
+
+    def test_prior_fact_language_cannot_leak_without_an_identity_term(self) -> None:
+        prior = json.loads(json.dumps(self.second_campaign))
+        prior["free_product"]["facts"][0]["claim"] += " It also shows a hidden pocket."
+        prior["free_product"]["facts"][0]["public_language"] += (
+            " A hidden pocket holds small items."
+        )
+        payload = self.payload()
+        payload["prior_entity_registry"] = contract.build_prior_entity_registry(
+            self.campaign,
+            [prior],
+            self.dossier,
+            asset_root=ASSET_ROOT,
+        )
+        payload["research_snapshot"]["records"][7]["text"] = (
+            "Buyers look for a hidden pocket when comparing personal accessories."
         )
         self.assert_code("CROSS_CAMPAIGN_LEAK", lambda: self.select(payload))
 
@@ -453,13 +536,25 @@ class BrainstormGateTests(unittest.TestCase):
         payload["critic"]["challenges"][0]["checks"].pop("forced_pairing")
         self.assert_code("CHALLENGE_NOT_EXECUTED", lambda: self.select(payload))
 
+    def test_reusable_boilerplate_cannot_pass_the_critic_gate(self) -> None:
+        payload = self.payload()
+        for row in payload["critic"]["challenges"]:
+            for check in row["checks"].values():
+                check["finding"] = "Passed after looking at the cited evidence."
+        self.assert_code("CHALLENGE_NOT_EXECUTED", lambda: self.select(payload))
+
+    def test_critic_must_consult_the_complete_frozen_evidence(self) -> None:
+        payload = self.payload()
+        payload["critic"]["challenges"][0]["evidence_ids"].remove("R-CONTEXT-001")
+        self.assert_code("CHALLENGE_NOT_EXECUTED", lambda: self.select(payload))
+
     def test_failed_forced_pairing_challenge_removes_candidate(self) -> None:
         payload = self.payload()
         row = payload["critic"]["challenges"][0]
-        row["checks"]["forced_pairing"] = {
-            "status": "fail",
-            "finding": "The connection depends on a forced use-together assumption.",
-        }
+        row["checks"]["forced_pairing"]["status"] = "fail"
+        row["checks"]["forced_pairing"]["finding"] = (
+            "For connection-1: the forced connection still depends on a shared-use assumption."
+        )
         row["verdict"] = "rejected"
         payload["critic"]["primary_candidate_id"] = "connection-2"
         payload["critic"]["backup_candidate_id"] = "connection-3"

@@ -2,7 +2,7 @@
 
 - Issue: `blinds123/sprinkle-pants#1`
 - Branch: `codex/issue-001-freeperrylarp1-foundation`
-- Scope: parallel `freeperrylarp1` contract foundation only
+- Scope: parallel `freeperrylarp1` contract foundation plus its required Finn CI
 - Plugin version: `0.2.0`
 - Fixed paid product: Auralo Pheromone Perfume, 15 ml, `$29`
 - Global activation: intentionally not performed before review and human merge
@@ -27,7 +27,7 @@ All commands were run from the clean Issue 1 worktree.
 | `ruff check plugins/freeperrylarp1` | PASS |
 | `ruff format --check plugins/freeperrylarp1` | PASS |
 | `python3 -m compileall -q plugins/freeperrylarp1` | PASS |
-| `python3 -m unittest discover -s plugins/freeperrylarp1/tests -p 'test_*.py' -v` | PASS, 64 tests |
+| `python3 -m unittest discover -s plugins/freeperrylarp1/tests -p 'test_*.py' -v` | PASS, 68 tests |
 | Repository validator | PASS |
 | Plugin manifest validator | PASS |
 | Main skill validator | PASS |
@@ -51,10 +51,14 @@ All commands were run from the clean Issue 1 worktree.
 | Mismatched FREE-reference hash canary | `CAMPAIGN_ASSET_INVALID` |
 | Ritual/moment-seeded research query canary | `RESEARCH_CONTAMINATION` |
 | Both-products-in-one-neutral-query canary | `RESEARCH_CONTAMINATION` |
+| Mixed product-category query without names canary | `RESEARCH_CONTAMINATION` |
 | Prior FREE-product language in research canary | `CROSS_CAMPAIGN_LEAK` |
+| Prior distinctive fact phrase in research canary | `CROSS_CAMPAIGN_LEAK` |
 | Candidate-owned score canary | `ANGLE_REPAIR_REQUIRED` |
 | Reused generator/critic session canary | `CRITIC_NOT_INDEPENDENT` |
 | Missing executed challenge canary | `CHALLENGE_NOT_EXECUTED` |
+| Reusable critic boilerplate canary | `CHALLENGE_NOT_EXECUTED` |
+| Critic omits one frozen research record canary | `CHALLENGE_NOT_EXECUTED` |
 | Wrong candidate-set hash canary | `CANDIDATE_SET_HASH_MISMATCH` |
 | Page/image mapping before accepted copy canary | `COPY_NOT_FINAL` |
 | Finished-copy hash mismatch canary | `COPY_HASH_MISMATCH` |
@@ -64,17 +68,18 @@ All commands were run from the clean Issue 1 worktree.
 | Incomplete image mapping canary | `PAGE_MAPPING_INVALID` |
 | Image job with non-copy source path canary | `COPY_NOT_FINAL` |
 | `git diff --check` | PASS |
+| Protected `Finn Loop contract` workflow | Repository validation, compile, and all 68 tests required |
 
 ## Acceptance and non-goal ledger
 
 | Contract item | Evidence |
 | --- | --- |
-| AC-1 | New files are isolated under `plugins/freeperrylarp1`; the predecessor plugin is unchanged. |
+| AC-1 | Product implementation is isolated under `plugins/freeperrylarp1`; the only outside change extends the issue-listed Finn workflow to run compile and the complete successor suite. The predecessor plugin is unchanged. |
 | AC-2 | Versioned dossier and reference asset are hash-verified; only enumerated fact IDs may support public claims. |
 | AC-3 | Campaign input requires a fresh free-product identity, evidence ledger, fact ledger, and reference images. References must exist under an explicit campaign asset root, remain inside that root, avoid symlinks, and match their declared SHA-256. There are no prior-campaign defaults or examples in writer-facing assets. |
-| AC-4 | Neutral paid/FREE/customer/objection/purchase-trigger research is frozen before ideation. At least four isolated generators produce materially different connections; a different critic session scores and challenges all candidates. The accepted marriage brief is bound to the research, candidate set, critic, and clean writer packet hashes. Candidate self-scores, token overlap, paid/FREE restatements, and inferred relationship evidence cannot select the result. |
+| AC-4 | Neutral paid/FREE/customer/objection/purchase-trigger research is frozen before ideation. Product/category co-searches fail even without exact product names. At least four isolated generators produce materially different connections; a different critic session scores and executes candidate-bound tests with evidence and counterevidence. The accepted marriage brief is bound to the research, candidate set, critic, and clean writer packet hashes. The packet carries the complete accepted evidence rather than only winning-candidate citations. Candidate self-scores, reusable critic findings, token overlap, paid/FREE restatements, and inferred relationship evidence cannot select the result. The schema attests `fresh_only` and hash freeze but does not claim a live retrieval receipt. |
 | AC-5 | Angle repair attempts are capped at two; unresolved failures stop as `ANGLE_GAP` or `MARRIAGE_GAP`. |
-| AC-6 | The validator-only prior-product registry now guards research and candidate inputs before writer-packet creation as well as public/prompt outputs. Strategy text, generic AI glue, generic placeholders, and stale entities stop as `CROSS_CAMPAIGN_LEAK`. |
+| AC-6 | The validator-only prior-product registry fingerprints identity terms plus distinctive prior fact, public-language, and FREE-evidence phrases. It guards research and candidate inputs before writer-packet creation as well as public/prompt outputs, while remaining absent from the writer packet. Strategy text, generic AI glue, generic placeholders, stale entities, and stale distinctive facts stop as `CROSS_CAMPAIGN_LEAK`. |
 | AC-7 | Production direction is permitted only in non-visible fields; every visible-text field is treated as customer-facing copy. Each image job is bound to exact finished-copy paths after independent copy review. |
 | AC-8 | Every public text leaf is exactly bound to a typed claim path, required evidence lanes, and exact cited evidence fragments whose co-occurring factual order and product ownership must be preserved. Paid facts and `$29` stay attached to Auralo; FREE facts and the `FREE` label stay attached to the exact current FREE product. Relationship scope cannot carry commercial markers, partial product ownership, or unanchored cross-lane identity assignments. Public and prompt content share the outcome and fabricated-proof firewalls; questions, asterisks, disclosures, unrelated valid IDs, swapped fact values, scope laundering, role inversions, reversed instructions, and rating decoration cannot authorize new claims. |
 | AC-9 | Two unrelated-product fixtures plus adversarial tests prove neutral-research contamination, prior-product research leakage, candidate self-scoring, critic reuse, skipped challenge, candidate-hash drift, generic AI glue, premature mapping, stale-entity, missing-marriage, hidden-field, unsupported-claim, and private-strategy rejection. |
