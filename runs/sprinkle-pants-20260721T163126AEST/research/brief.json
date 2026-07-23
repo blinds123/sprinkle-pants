@@ -1,0 +1,1784 @@
+{
+  "schema_version": "2.0",
+  "campaign_id": "sprinkle-pants-client-preview-20260721",
+  "generated_at": "2026-07-21T06:37:55Z",
+  "raw_sha256": "be0f6e3b34efe0eb171bd0ff95aa7ae6f14c5e94fd35deb7699d3bf28e7ab109",
+  "raw_bytes": 523036,
+  "last30days_generated_at": "2026-07-21T06:37:43.975983+00:00",
+  "range_from": "2026-06-21",
+  "range_to": "2026-07-21",
+  "source_counts": {
+    "grounding": 5,
+    "instagram": 5,
+    "pinterest": 4,
+    "supplied_comment": 3,
+    "tiktok": 1,
+    "tiktok_comment": 1,
+    "youtube": 8,
+    "youtube_comment": 2
+  },
+  "source_status": {
+    "arxiv": {
+      "at": "2026-07-21T06:36:48.772903Z",
+      "attempted": true,
+      "detail": "Command arxiv-pp-cli timed out after 30s",
+      "fix_hint": "doctor",
+      "items_returned": 0,
+      "source": "arxiv",
+      "state": "timeout"
+    },
+    "digg": {
+      "at": "2026-07-21T06:36:21.788051Z",
+      "attempted": true,
+      "detail": "falling back to local FTS5: GET https://di.gg/api/search/stories: HTTP 400: {\"error\":\"Query must be 3–120 characters\"}",
+      "fix_hint": "doctor",
+      "items_returned": 3,
+      "source": "digg",
+      "state": "partial"
+    },
+    "github": {
+      "at": "2026-07-21T06:36:18.749611Z",
+      "attempted": true,
+      "detail": "GitHub API request failed: HTTP 422: unprocessable query",
+      "fix_hint": "doctor",
+      "items_returned": 0,
+      "source": "github",
+      "state": "error"
+    },
+    "grounding": {
+      "at": "2026-07-21T06:36:23.297109Z",
+      "attempted": true,
+      "items_returned": 14,
+      "source": "grounding",
+      "state": "ok"
+    },
+    "hackernews": {
+      "at": "2026-07-21T06:37:35.939152Z",
+      "attempted": true,
+      "items_returned": 10,
+      "source": "hackernews",
+      "state": "ok"
+    },
+    "instagram": {
+      "at": "2026-07-21T06:37:35.029126Z",
+      "attempted": true,
+      "detail": "HTTPError: HTTP 404: Not Found",
+      "fix_hint": "doctor",
+      "items_returned": 6,
+      "source": "instagram",
+      "state": "partial"
+    },
+    "pinterest": {
+      "at": "2026-07-21T06:36:28.045246Z",
+      "attempted": true,
+      "items_returned": 33,
+      "source": "pinterest",
+      "state": "ok"
+    },
+    "polymarket": {
+      "at": "2026-07-21T06:36:22.392294Z",
+      "attempted": true,
+      "items_returned": 0,
+      "source": "polymarket",
+      "state": "no-results"
+    },
+    "reddit": {
+      "at": "2026-07-21T06:36:21.804328Z",
+      "attempted": true,
+      "items_returned": 0,
+      "source": "reddit",
+      "state": "no-results"
+    },
+    "techmeme": {
+      "at": "2026-07-21T06:36:22.826831Z",
+      "attempted": true,
+      "items_returned": 0,
+      "source": "techmeme",
+      "state": "no-results"
+    },
+    "threads": {
+      "at": "2026-07-21T06:36:24.012456Z",
+      "attempted": true,
+      "items_returned": 0,
+      "source": "threads",
+      "state": "no-results"
+    },
+    "tiktok": {
+      "at": "2026-07-21T06:36:56.045327Z",
+      "attempted": true,
+      "items_returned": 3,
+      "source": "tiktok",
+      "state": "ok"
+    },
+    "x": {
+      "at": "2026-07-21T06:37:36.774681Z",
+      "attempted": true,
+      "items_returned": 1,
+      "source": "x",
+      "state": "ok"
+    },
+    "youtube": {
+      "at": "2026-07-21T06:37:08.540924Z",
+      "attempted": true,
+      "items_returned": 12,
+      "source": "youtube",
+      "state": "ok"
+    }
+  },
+  "errors_by_source": {
+    "arxiv": "Command arxiv-pp-cli timed out after 30s",
+    "github": "GitHub API request failed: HTTP 422: unprocessable query"
+  },
+  "competitor_evidence_sha256": "a97dcfe90b62a40f5b49850deb6c8450a24e14df394f4cb2b2e9d769b5f4503b",
+  "competitor_evidence_count": 0,
+  "competitor_evidence_compaction": {
+    "input_count": 5,
+    "reference_mapped_count": 5,
+    "selected_count": 0,
+    "duplicate_count": 0,
+    "omitted_by_cap": 0
+  },
+  "competitor_evidence": [],
+  "evidence_count": 29,
+  "official_reference_evidence_count": 5,
+  "official_reference_evidence": [
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "appearance",
+      "source_type": "official_product_page",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "sprinkle-tweed-appearance"
+      ],
+      "id": "P-001"
+    },
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "functionality",
+      "source_type": "official_product_page",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "relaxed-adjustable-fit"
+      ],
+      "id": "P-002"
+    },
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "compatibility",
+      "source_type": "official_product_page",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "women-size-range"
+      ],
+      "id": "P-003"
+    },
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The standard length is 110 cm from waistband to hem.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "compatibility",
+      "source_type": "official_product_page",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "standard-length"
+      ],
+      "id": "P-004"
+    },
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "limitation",
+      "source_type": "official_product_page",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "tweed-care"
+      ],
+      "id": "P-005"
+    }
+  ],
+  "official_reference_research_session": {
+    "campaign_id": "sprinkle-pants-client-preview-20260721",
+    "captured_at": "2026-07-21T16:31:26+10:00",
+    "fresh_research": true,
+    "reused_prior_facts": false,
+    "reference_product": {
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "variant_name": "Woman / XS-S, M, and L-XL",
+      "variant_resolution": "ai_resolved_from_fresh_evidence"
+    }
+  },
+  "retrieved_evidence_count": 26,
+  "exa_recovery_count": 0,
+  "exa_recovery_sha256": "",
+  "recovery_attempted": false,
+  "supplied_input_count": 10,
+  "supplied_comment_count": 3,
+  "quarantined_input_count": 81,
+  "role_summary": [
+    {
+      "role": "product_context",
+      "evidence_count": 18,
+      "input_ids": [
+        "R-002",
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012",
+        "R-014"
+      ],
+      "examples": [
+        {
+          "input_id": "R-002",
+          "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!"
+        },
+        {
+          "input_id": "R-003",
+          "text": "They might not have come specifically to your yard they may have just been driving past you meat had"
+        },
+        {
+          "input_id": "R-004",
+          "text": "Comment “LINK” and I’ll send you the links on your DMs❤️ You don’t need a wardrobe full of clothes. You need pieces that can do the heavy l — Hi, I'm Priyanshi and I got these from a long, and let me show you six looks, three occasions with"
+        }
+      ]
+    },
+    {
+      "role": "problem_context",
+      "evidence_count": 8,
+      "input_ids": [
+        "R-001",
+        "R-013",
+        "R-015",
+        "R-016",
+        "R-017",
+        "R-018",
+        "R-020",
+        "R-023"
+      ],
+      "examples": [
+        {
+          "input_id": "R-001",
+          "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa"
+        },
+        {
+          "input_id": "R-013",
+          "text": "How to Style Linen Pants (& Look CHIC) ☀️ Easy Summer Outfit Ideas ✅ — Linen season is finally here, and I personally cannot stop talking about linen. I love linen pants, shirts, dresses, and all the things. And in today's video, I'm going "
+        },
+        {
+          "input_id": "R-015",
+          "text": "Testing the Viral $280 LESET Pants Against a $90 Gap Alternative | Worth the Hype? — I'm pretty sure the last time I shoppedat Gap was when I worked there in 2015. Hi everyone and welcome back to mychannel. I'm going to do a quick pant revi"
+        }
+      ]
+    },
+    {
+      "role": "customer_voice",
+      "evidence_count": 6,
+      "input_ids": [
+        "R-001",
+        "R-002",
+        "R-003",
+        "S-005",
+        "S-006",
+        "S-010"
+      ],
+      "examples": [
+        {
+          "input_id": "R-001",
+          "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa"
+        },
+        {
+          "input_id": "R-002",
+          "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!"
+        },
+        {
+          "input_id": "R-003",
+          "text": "They might not have come specifically to your yard they may have just been driving past you meat had"
+        }
+      ]
+    },
+    {
+      "role": "purchase_signal",
+      "evidence_count": 4,
+      "input_ids": [
+        "R-001",
+        "R-002",
+        "S-005",
+        "S-006"
+      ],
+      "examples": [
+        {
+          "input_id": "R-001",
+          "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa"
+        },
+        {
+          "input_id": "R-002",
+          "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!"
+        },
+        {
+          "input_id": "S-005",
+          "text": "Please send me a link to buy a pair of these trousers please?????"
+        }
+      ]
+    },
+    {
+      "role": "objection",
+      "evidence_count": 3,
+      "input_ids": [
+        "R-001",
+        "R-002",
+        "S-005"
+      ],
+      "examples": [
+        {
+          "input_id": "R-001",
+          "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa"
+        },
+        {
+          "input_id": "R-002",
+          "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!"
+        },
+        {
+          "input_id": "S-005",
+          "text": "Please send me a link to buy a pair of these trousers please?????"
+        }
+      ]
+    }
+  ],
+  "buyer_language": [
+    {
+      "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the same brand. The old one is still soft, still holds its color, still has clean seams. The new one felt thinner, the stitchi",
+      "input_ids": [
+        "R-001"
+      ],
+      "origin": "retrieved_research",
+      "roles": [
+        "problem_context",
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ]
+    },
+    {
+      "text": "Petite heaven :) i loved them!",
+      "input_ids": [
+        "R-002"
+      ],
+      "origin": "retrieved_research",
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ]
+    },
+    {
+      "text": "They might not have come specifically to your yard they may have just been driving past you meat had",
+      "input_ids": [
+        "R-003"
+      ],
+      "origin": "retrieved_research",
+      "roles": [
+        "product_context",
+        "customer_voice"
+      ]
+    },
+    {
+      "text": "Please send me a link to buy a pair of these trousers please?????",
+      "input_ids": [
+        "S-005"
+      ],
+      "origin": "supplied_language",
+      "roles": [
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ]
+    },
+    {
+      "text": "How do I buy a pair!!!",
+      "input_ids": [
+        "S-006"
+      ],
+      "origin": "supplied_language",
+      "roles": [
+        "customer_voice",
+        "purchase_signal"
+      ]
+    },
+    {
+      "text": "vanilla sprinkles sur ismile.world :))",
+      "input_ids": [
+        "S-010"
+      ],
+      "origin": "supplied_language",
+      "roles": [
+        "customer_voice"
+      ]
+    }
+  ],
+  "avatar_seed": {
+    "audience": "A style-forward woman buying for herself who wants one distinctive pair of trousers to make simple casual and social outfits feel deliberately styled.",
+    "dominant_roles": [
+      "product_context",
+      "problem_context",
+      "customer_voice",
+      "purchase_signal"
+    ],
+    "purchase_moment": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+  },
+  "sufficiency": {
+    "passed": true,
+    "required": {
+      "market_context": 3,
+      "customer_voice": 5,
+      "retrieved_customer_voice": 2,
+      "objection": 2,
+      "purchase_signal": 1,
+      "market_source_families": 2
+    },
+    "observed": {
+      "market_context": 26,
+      "customer_voice": 6,
+      "retrieved_customer_voice": 3,
+      "objection": 3,
+      "purchase_signal": 4,
+      "market_source_families": 5
+    },
+    "missing": []
+  },
+  "evidence": [
+    {
+      "source": "youtube_comment",
+      "title": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa",
+      "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the same brand. The old one is still soft, still holds its color, still has clean seams. The new one felt thinner, the stitching was uneven, and the color already lo",
+      "url": "https://www.youtube.com/watch?v=DZBzFVi0tbI",
+      "entity_context": "6 Women's Linen Brands You MUST Stop Buying in 2026 (And 3 You Can Actually Trust)",
+      "published_at": "2026-07-11T06:36:51.494Z",
+      "relevance": 0.5,
+      "primary_segment_match": true,
+      "term_matches": 5,
+      "roles": [
+        "problem_context",
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ],
+      "selection_reason": "problem_context+customer_voice+objection+purchase_signal",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-001"
+    },
+    {
+      "source": "youtube_comment",
+      "title": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!",
+      "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!",
+      "url": "https://www.youtube.com/watch?v=e5z-Heg6qfY",
+      "entity_context": "Testing the Viral $280 LESET Pants Against a $90 Gap Alternative | Worth the Hype?",
+      "published_at": "2026-07-16T06:37:08.355Z",
+      "relevance": 0.5,
+      "primary_segment_match": true,
+      "term_matches": 2,
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ],
+      "selection_reason": "product_context+customer_voice+objection+purchase_signal",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-002"
+    },
+    {
+      "source": "tiktok_comment",
+      "title": "They might not have come specifically to your yard they may have just been driving past you meat had",
+      "text": "They might not have come specifically to your yard they may have just been driving past you meat had",
+      "url": "https://www.tiktok.com/@totalsellingsolutions/video/7655100173906988305",
+      "entity_context": "How should you handle a customer who says, “I’m just looking”? It is one of the most common phrases in the showroom, and often the most mi",
+      "published_at": "2026-06-27",
+      "relevance": 0.5,
+      "primary_segment_match": true,
+      "term_matches": 3,
+      "roles": [
+        "product_context",
+        "customer_voice"
+      ],
+      "selection_reason": "product_context+customer_voice",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-003"
+    },
+    {
+      "source": "instagram",
+      "title": "Comment “LINK” and I’ll send you the links on your DMs❤️ You don’t need a wardrobe full of clothes. You need pieces that can do the heavy l",
+      "text": "Comment “LINK” and I’ll send you the links on your DMs❤️ You don’t need a wardrobe full of clothes. You need pieces that can do the heavy l — Hi, I'm Priyanshi and I got these from a long, and let me show you six looks, three occasions with just two pants. Let's go. Just look at them. The buckle detail, the patch pockets, the eye cotton fabric which is 100% pure cotton, these pants are not your average trousers. Now watch what happens when I pair them with this black waistcoat. Girls, can we have a moment for this look? So chic, right? Now let's SG. Shoes, bag and glasses. And now you walk like you on the plates. Now let's do the blue. Going with a classic beige satin shirt, because girls, that's called balancing. So, brunch with your girls, you can go for a wrap top... — Comment “LINK” and I’ll send you the links on your DMs❤️ You don’t need a wardrobe full of clothes. You need pieces that can do the heavy lifting. These trousers can take you from work meetings to brunch plans to party nights with just a few styling swaps. That’s exactly how I like to shop, fewer impulse buys, more versatile pieces you’ll actually wear. Hi, I’m Priyanshi, a Certified Personal Stylist from the London College of Fashion. I’ve helped 500+ women build wardrobes that are versatile, intentional, and truly reflect their personal style. Book a styling session through the link in bio or simply DM “STYLE” to get started. 🤍 styling tips, versatile wardrobe, workwear outfits, brunch outfits, party outfits, trousers styling, capsule wardrobe, wardrobe essentials, outfit ideas, personal stylist, smart s",
+      "url": "https://www.instagram.com/reel/DafZTLVie-2/",
+      "entity_context": "",
+      "published_at": "2026-07-07",
+      "relevance": 0.17,
+      "primary_segment_match": true,
+      "term_matches": 13,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-004"
+    },
+    {
+      "source": "youtube",
+      "title": "Why 90% of Women Don’t Look Good in Linen — How Elegant Women FIX IT",
+      "text": "Why 90% of Women Don’t Look Good in Linen — How Elegant Women FIX IT — Let's be honest, linen sounds great, breathable, light, effortless until you put it on. Suddenly is wrinkled, shapeless, and somehow makes you look like it got dressed in a hurry. And no, the fix isn't to obsess over steaming or trying to keep it wrinkle-free, because linen is supposed to wrinkle. The trick is knowing how to wear it. So the wrinkles feel intentional and not sloppy. Once you get this right, linen becomes one of the most elegant, relaxed fabrics you will ever wear. Let me show you how. The problem isn't linen, it's the way we wear it. Linen on its own doesn't flatter everyone right out of the box. It's loose. It wrinkles. It often comes with... — Why 90% of Women Don’t Look Good in Linen — How Elegant Women FIX IT Let's be honest, linen sounds great, breathable, light, effortless until you put it on. Suddenly is wrinkled, shapeless, and somehow makes you look like it got dressed in a hurry. And no, the fix isn't to obsess over steaming or trying to keep it wrinkle-free, because linen is supposed to wrinkle. The trick is knowing how to wear it. So the wrinkles feel intentional and not sloppy. Once you get this right, linen becomes one of the most elegant, relaxed fabrics you will ever wear. Let me show you how. The problem isn't linen, it's the way we wear it. Linen on its own doesn't flatter everyone right out of the box. It's loose. It wrinkles. It often comes with elastic waistbands. On paper, it's not exactly a style icon, but when you learn to work with its natural qualities instead of",
+      "url": "https://www.youtube.com/watch?v=6_zao39nCTw",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.23,
+      "primary_segment_match": true,
+      "term_matches": 11,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-005"
+    },
+    {
+      "source": "tiktok",
+      "title": "How should you handle a customer who says, “I’m just looking”? It is one of the most common phrases in the showroom, and often the most mi",
+      "text": "How should you handle a customer who says, “I’m just looking”? It is one of the most common phrases in the showroom, and often the most mi — How should you handle a customer that says I'm just looking firstly, you gotta remember that when you go into a store and a salesperson approaches you ask yourself how many times do you say those sales people I'm just looking when you think about it it's a natural human reflective answer to give as a salesperson can reduce the amount of times you get I'm just looking by walking up the customer and say hi, I'm Steve and you are great nice to meet you I noticed you're looking at the XYZ car you're then looking at that particular a car first of all you gotta start connecting with them so if they say to you, oh look here... — How should you handle a customer who says, “I’m just looking”? It is one of the most common phrases in the showroom, and often the most misunderstood. “I’m just looking” is not a rejection. It is a natural, reflexive response that needs the right approach. ✅ Stay calm and avoid getting defensive ✅ Remember people do not visit a dealership by accident ✅ Take the pressure off by acknowledging they are just browsing ✅ Ask permission to show vehicles while they browse ✅ Gently explore interest with questions about specials or specific models ✅ Work with the customer for 15 to 20 minutes before making a buying judgement When customers feel relaxed rather than pressured, they open up. That is when real conversations start and buying intent becomes clear. Celebrating 20 Years of TSS 🏆 www.totalsellingsolutions.com.au #TotalS",
+      "url": "https://www.tiktok.com/@totalsellingsolutions/video/7655100173906988305",
+      "entity_context": "",
+      "published_at": "2026-06-24",
+      "relevance": 0.14,
+      "primary_segment_match": true,
+      "term_matches": 11,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-006"
+    },
+    {
+      "source": "pinterest",
+      "title": "Spring 2026 fashion is all about color, comfort and playful styling. This season blends bold prints, relaxed silhouettes and fresh color com",
+      "text": "Spring 2026 fashion is all about color, comfort and playful styling. This season blends bold prints, relaxed silhouettes and fresh color com — Spring 2026 fashion is all about color, comfort and playful styling. This season blends bold prints, relaxed silhouettes and fresh color combinations into effortless everyday outfits. Think wide‑leg trousers, striped and gingham patterns, statement knits, colorful sneakers and light layering pieces that feel modern yet wearable. Perfect inspiration for casual spring days, city looks and everyday s — Spring 2026 fashion is all about color, comfort and playful styling. This season blends bold prints, relaxed silhouettes and fresh color combinations into effortless everyday outfits. Think wide‑leg trousers, striped and gingham patterns, statement knits, colorful sneakers and light layering pieces that feel modern yet wearable. Perfect inspiration for casual spring days, city looks and everyday street style. Save this pin if you love spring outfit ideas, women’s fashion trends and colorful everyday looks.",
+      "url": "https://www.pinterest.com/pin/6473993212641423",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.12,
+      "primary_segment_match": true,
+      "term_matches": 11,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-007"
+    },
+    {
+      "source": "grounding",
+      "title": "20 Henley Top Outfit Ideas for Effortless Layered Style",
+      "text": "20 Henley Top Outfit Ideas for Effortless Layered Style — They work with jeans, trousers, skirts, shorts, leggings, and layered jackets, which makes them useful in almost every season. The best outfits come from <strong>balancing the casual button-front detail with pieces that add shape, texture, or structure</strong>. Try fitted henleys with wide bottoms, relaxed ... — 20 Henley Top Outfit Ideas for Effortless Layered Style They work with jeans, trousers, skirts, shorts, leggings, and layered jackets, which makes them useful in almost every season. The best outfits come from <strong>balancing the casual button-front detail with pieces that add shape, texture, or structure</strong>. Try fitted henleys with wide bottoms, relaxed ...",
+      "url": "https://www.sewmamasew.com/20-henley-top-outfit-ideas/",
+      "entity_context": "",
+      "published_at": "2026-07-15",
+      "relevance": 0.07,
+      "primary_segment_match": true,
+      "term_matches": 10,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-008"
+    },
+    {
+      "source": "youtube",
+      "title": "9 Most Flattering Ways to Wear Pants if You are Short",
+      "text": "9 Most Flattering Ways to Wear Pants if You are Short — If you're short like me, I'm 5'2, you may have noticed pants and trousers can make you look even shorter because if you don't do it the right way, they can highlight the fact that your legs are short. But if you get it right, they also become your best friends and even make you look stunning. So today, let me share with you the nine very specific outfit combinations that can automatically make you look taller. Make sure you stay till the end. I'm going to talk about casual pants with flat shoes. Oh, these are the hardest. So, make sure you don't miss this part. Everything is linked down below and tagged on YouTube shopping or scan the... — 9 Most Flattering Ways to Wear Pants if You are Short If you're short like me, I'm 5'2, you may have noticed pants and trousers can make you look even shorter because if you don't do it the right way, they can highlight the fact that your legs are short. But if you get it right, they also become your best friends and even make you look stunning. So today, let me share with you the nine very specific outfit combinations that can automatically make you look taller. Make sure you stay till the end. I'm going to talk about casual pants with flat shoes. Oh, these are the hardest. So, make sure you don't miss this part. Everything is linked down below and tagged on YouTube shopping or scan the QR code to go to my blog post. Starting with something we all have, black dress pants. I got it from Spanx. These are petite size kick flare shape, which I know is supposed to elongate our legs. One ",
+      "url": "https://www.youtube.com/watch?v=wfrBtG0wGek",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.31,
+      "primary_segment_match": true,
+      "term_matches": 9,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-009"
+    },
+    {
+      "source": "youtube",
+      "title": "Why You Look BAD In Baggy/Wide Fit Pants (10 MISTAKES)",
+      "text": "Why You Look BAD In Baggy/Wide Fit Pants (10 MISTAKES) — so you're looking to try wide fit pants or you've already tried it and don't think you look good well that's false don't worry I got you bro from relaxed fitting pants to balloon fitting pants I'm gonna show you the biggest mistakes I personally made when it comes to this sizing let's get it the first mistake is it just might be your Heights you're not accounting for that so listen if you're short it doesn't mean that you can't wear baggy pants but I do think that it is required that you don't make any of these other mistakes later on in this video I mean just think about it if you put on baggy pants on someone... — Why You Look BAD In Baggy/Wide Fit Pants (10 MISTAKES) so you're looking to try wide fit pants or you've already tried it and don't think you look good well that's false don't worry I got you bro from relaxed fitting pants to balloon fitting pants I'm gonna show you the biggest mistakes I personally made when it comes to this sizing let's get it the first mistake is it just might be your Heights you're not accounting for that so listen if you're short it doesn't mean that you can't wear baggy pants but I do think that it is required that you don't make any of these other mistakes later on in this video I mean just think about it if you put on baggy pants on someone that's five foot six versus someone that's over six foot tall it's just going to sit on both of their frames differently right so always keep that in mind you can counteract this by wearing some chunky sneakers that add some Heights but that's t",
+      "url": "https://www.youtube.com/watch?v=0PSD-SFUScM",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.17,
+      "primary_segment_match": true,
+      "term_matches": 9,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-010"
+    },
+    {
+      "source": "youtube",
+      "title": "The Most Flattering Pants For The Office! 🏢👠 GRAPENT High-Waisted Work Trousers Review",
+      "text": "The Most Flattering Pants For The Office! 🏢👠 GRAPENT High-Waisted Work Trousers Review — confidence every single day. Let's be real. Finding clothes that are actually trendy and comfy is a whole mission. But don't worry. We've got you covered. Our latest men's and women's collection drops the perfect mix of global trends and premium breathable fabrics made for all-day wear. You are going to love this collection because it is truly for everyone. We have everything from super chill oversized tees to sharp elevated blazers that mean business. The hype is real and we are drowning in five-star reviews. Everyone is obsessing over how flattering the fit is, how it literally elongates your silhouette, and makes any outfit look high-end. In my opinion, the biggest reason why you must have this product right... — The Most Flattering Pants For The Office! 🏢👠 GRAPENT High-Waisted Work Trousers Review confidence every single day. Let's be real. Finding clothes that are actually trendy and comfy is a whole mission. But don't worry. We've got you covered. Our latest men's and women's collection drops the perfect mix of global trends and premium breathable fabrics made for all-day wear. You are going to love this collection because it is truly for everyone. We have everything from super chill oversized tees to sharp elevated blazers that mean business. The hype is real and we are drowning in five-star reviews. Everyone is obsessing over how flattering the fit is, how it literally elongates your silhouette, and makes any outfit look high-end. In my opinion, the biggest reason why you must h",
+      "url": "https://www.youtube.com/watch?v=M_gsOKDNdoM",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.14,
+      "primary_segment_match": true,
+      "term_matches": 9,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-011"
+    },
+    {
+      "source": "youtube",
+      "title": "What To Wear & Not Wear With Wide Leg Trousers / Trending Top & Shoe Options That Will Work",
+      "text": "What To Wear & Not Wear With Wide Leg Trousers / Trending Top & Shoe Options That Will Work — have you wanted to add a pair of looser leg trouser pants to your wardrobe but just had no idea how to style them if so this video is for you and i do have to say that this was a struggle for me as well so i did spend a lot of time trying to figure out what would work and then what i thought didn't work as well and i'm going to try to give you some style tips and examples that will help you put together really great outfits from things that you already own and hopefully that you will love for this fall season for those of you that are new around here welcome to my... — What To Wear & Not Wear With Wide Leg Trousers / Trending Top & Shoe Options That Will Work have you wanted to add a pair of looser leg trouser pants to your wardrobe but just had no idea how to style them if so this video is for you and i do have to say that this was a struggle for me as well so i did spend a lot of time trying to figure out what would work and then what i thought didn't work as well and i'm going to try to give you some style tips and examples that will help you put together really great outfits from things that you already own and hopefully that you will love for this fall season for those of you that are new around here welcome to my channel my name is jamie and i spent over 20 years in women's contemporary retail and we were high in retail so we were very customer service oriented and i managed stores and i was also in sales so i helped women dress themselves all day long for over 20 years and t",
+      "url": "https://www.youtube.com/watch?v=LZx6WpWGuOg",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.37,
+      "primary_segment_match": true,
+      "term_matches": 8,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-012"
+    },
+    {
+      "source": "youtube",
+      "title": "How to Style Linen Pants (& Look CHIC) ☀️ Easy Summer Outfit Ideas ✅",
+      "text": "How to Style Linen Pants (& Look CHIC) ☀️ Easy Summer Outfit Ideas ✅ — Linen season is finally here, and I personally cannot stop talking about linen. I love linen pants, shirts, dresses, and all the things. And in today's video, I'm going to be sharing you the best ways to style linen pants. Linen pants can look extremely chic, sophisticated, like chef's kiss, but it can also can look like you're wearing pajamas. So, today I'm going to break down what shirts to wear, what shoes to wear with linen pants, how to make linen pants look more expensive, and more. So, if you want to know the best ways to style your linen pants this summer, let's get started. Before we get into the styling, the fun bits, we need to break... — How to Style Linen Pants (& Look CHIC) ☀️ Easy Summer Outfit Ideas ✅ Linen season is finally here, and I personally cannot stop talking about linen. I love linen pants, shirts, dresses, and all the things. And in today's video, I'm going to be sharing you the best ways to style linen pants. Linen pants can look extremely chic, sophisticated, like chef's kiss, but it can also can look like you're wearing pajamas. So, today I'm going to break down what shirts to wear, what shoes to wear with linen pants, how to make linen pants look more expensive, and more. So, if you want to know the best ways to style your linen pants this summer, let's get started. Before we get into the styling, the fun bits, we need to break down that there's two major types of linen pants. The first kind is a basic like drawstring style. So, this one does not have any pleats, there are n",
+      "url": "https://www.youtube.com/watch?v=ojqP41Nx5o0",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.17,
+      "primary_segment_match": true,
+      "term_matches": 8,
+      "roles": [
+        "problem_context"
+      ],
+      "selection_reason": "problem_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-013"
+    },
+    {
+      "source": "instagram",
+      "title": "Workwear for your week in the office. I’ve rounded up some business casual and professional options! I’m still impressed the set has shorts",
+      "text": "Workwear for your week in the office. I’ve rounded up some business casual and professional options! I’m still impressed the set has shorts — best pieces for the office and so cute for teachers. Very professional, looks like a dress but it's actually separate and the skirt has built-in shorts underneath. The wavy neckline drapes and looks so designer. Best dress pants that come in petite and tall options, comfortable because they have elastic in the back. Love the pattern, built-in slip underneath, great length, functional buttons, optional tie around the waist. 100% cotton, built-in slip so not see through. Layer it with a blazer, or even a denim jacket. 100% cotton, I love the sleeves, modest V-neck and it does have pockets. — Workwear for your week in the office. I’ve rounded up some business casual and professional options! I’m still impressed the set has shorts under! ✨ ‘WORK’ for the links to shop. Office style, professional attire, trouser pants, dress pants, midi dress. #workwear #businesscasual #professional #officestyle best pieces for the office and so cute for teachers. Very professional, looks like a dress but it's actually separate and the skirt has built-in shorts underneath. The wavy neckline drapes and looks so designer. Best dress pants that come in petite and tall options, comfortable because they have elastic in the back. Love the pattern, built-in slip underneath, great length, functional buttons, optional tie around the waist. 100% cotton, built-in slip so not see through. Layer it with a blazer, or even a denim jacket. 100% cotton, I love the sleeves,",
+      "url": "https://www.instagram.com/reel/DbA7T9Wxiif/",
+      "entity_context": "",
+      "published_at": "2026-07-20",
+      "relevance": 0.15,
+      "primary_segment_match": true,
+      "term_matches": 8,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-014"
+    },
+    {
+      "source": "youtube",
+      "title": "Testing the Viral $280 LESET Pants Against a $90 Gap Alternative | Worth the Hype?",
+      "text": "Testing the Viral $280 LESET Pants Against a $90 Gap Alternative | Worth the Hype? — I'm pretty sure the last time I shoppedat Gap was when I worked there in 2015. Hi everyone and welcome back to mychannel. I'm going to do a quick pant review today. One of my top wish listitems for the summer was a pair of the poplin Kyoto pants from Lisette. Theyare all over all my social media and I have beenobsessed with them for months. I almost bought them last year and I resisted andthen summer rolled around again and everyone was wearing them and they weresold out. So naturally I wanted them even more than before. The problem is isthat these pants are $280. I feel like there's not a lot of pantsin this world that are worth... — Testing the Viral $280 LESET Pants Against a $90 Gap Alternative | Worth the Hype? I'm pretty sure the last time I shoppedat Gap was when I worked there in 2015. Hi everyone and welcome back to mychannel. I'm going to do a quick pant review today. One of my top wish listitems for the summer was a pair of the poplin Kyoto pants from Lisette. Theyare all over all my social media and I have beenobsessed with them for months. I almost bought them last year and I resisted andthen summer rolled around again and everyone was wearing them and they weresold out. So naturally I wanted them even more than before. The problem is isthat these pants are $280. I feel like there's not a lot of pantsin this world that are worth $280 let alone a poplin pair of pants withkind of limited features. I thought I would run a little bit of experimentbecause these pants have been aroun",
+      "url": "https://www.youtube.com/watch?v=e5z-Heg6qfY",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.2,
+      "primary_segment_match": true,
+      "term_matches": 7,
+      "roles": [
+        "problem_context"
+      ],
+      "selection_reason": "problem_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-015"
+    },
+    {
+      "source": "instagram",
+      "title": "This week our senior fashion editor shares the style of trousers she can't stop buying. @jodieldun adopted fisherman trousers long before",
+      "text": "This week our senior fashion editor shares the style of trousers she can't stop buying. @jodieldun adopted fisherman trousers long before — People always compliment me on one style of trousers that I own and now I found them on the high street. These trousers are from Free People are the Fisher style. I love the shape of them. Feels like a polished version of a utility trouser with a little split down the side. It's really cute and they can even do evening with a glitzy top. — This week our senior fashion editor shares the style of trousers she can't stop buying. @jodieldun adopted fisherman trousers long before they hit the mainstream, and they've since become the most complimented pair in her wardrobe. Comfortable, chic and surprisingly versatile, she's finally revealing why she's so obsessed — and sharing the high-street pair from @freepeopleeu she's found that nails the look without the designer price tag. Head to the link in bio to shop her exact pair. People always compliment me on one style of trousers that I own and now I found them on the high street. These trousers are from Free People are the Fisher style. I love the shape of them. Feels like a polished version of a utility trouser with a little split down the side. It's really cute and they can even do evening with a glitzy top.",
+      "url": "https://www.instagram.com/reel/DZ90mtpDMkp/",
+      "entity_context": "",
+      "published_at": "2026-06-24",
+      "relevance": 0.15,
+      "primary_segment_match": true,
+      "term_matches": 7,
+      "roles": [
+        "problem_context"
+      ],
+      "selection_reason": "problem_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-016"
+    },
+    {
+      "source": "instagram",
+      "title": "Anyone else? I’ve let go of silly styling rules! As I’ve grown older, my outfits reflect the dimension and color of my life experiences. T",
+      "text": "Anyone else? I’ve let go of silly styling rules! As I’ve grown older, my outfits reflect the dimension and color of my life experiences. T — When I was younger, tops and bottoms had to match exactly, and if they didn't, it was a white tea. It sort of limited my style. I literally would have been putting them up against each other saying, oh, that doesn't match. The whole idea of color blocking, different color on the bottom and on the top was a no-go, and boy did that feel restricting. Just like getting a little older, life gets more interesting and so do your outfits. You mix it up a little bit. Blue and yellow? Yes. No black or white in these jeans. We've had lots of life experiences as we get older. Life just gets more interesting and more dimensional when you get... — Anyone else? I’ve let go of silly styling rules! As I’ve grown older, my outfits reflect the dimension and color of my life experiences. These $17 patterned jeans from @walmart are a fun way to explore colorblocking and print mixing. #walmartfashion #walmartpartner Comment SHOP and I’ll dm the links! When I was younger, tops and bottoms had to match exactly, and if they didn't, it was a white tea. It sort of limited my style. I literally would have been putting them up against each other saying, oh, that doesn't match. The whole idea of color blocking, different color on the bottom and on the top was a no-go, and boy did that feel restricting. Just like getting a little older, life gets more interesting and so do your outfits. You mix it up a little bit. Blue and yellow? Yes. No black or white in these jea",
+      "url": "https://www.instagram.com/reel/DanGPEcRuC5/",
+      "entity_context": "",
+      "published_at": "2026-07-10",
+      "relevance": 0.15,
+      "primary_segment_match": true,
+      "term_matches": 6,
+      "roles": [
+        "problem_context"
+      ],
+      "selection_reason": "problem_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-017"
+    },
+    {
+      "source": "instagram",
+      "title": "5 Casual Pants Every Man Needs",
+      "text": "5 Casual Pants Every Man Needs — Here are five casual pants I think every man needs in their wardrobe. The first is a pair of dark denim. Look for one in a slightly higher rise and a slightly wider leg, so you can wear across different functions, whether it is a date night or business casual meeting. The next is actually my favorite of the five and it is a pair of lighter wash denims. These reads more casual than the darker denim, but what I really love about this is its ability to contrast a darker top. The next are these pair of green fatigues. Visually what makes a fatigue stand out is the pockets in the front. It gives it a much more casual... — 5 Casual Pants Every Man Needs Here are five casual pants I think every man needs in their wardrobe. The first is a pair of dark denim. Look for one in a slightly higher rise and a slightly wider leg, so you can wear across different functions, whether it is a date night or business casual meeting. The next is actually my favorite of the five and it is a pair of lighter wash denims. These reads more casual than the darker denim, but what I really love about this is its ability to contrast a darker top. The next are these pair of green fatigues. Visually what makes a fatigue stand out is the pockets in the front. It gives it a much more casual and rugged look. Fatigues also have side tabs if you don't want to wear a belt with it, which just gives it a little bit more functionality in that regard. The next is a pair of brown cotton canvas pants. Often times after people already got their denims, they tend to default to a pair of b",
+      "url": "https://www.instagram.com/reel/DavCezUxmCb/",
+      "entity_context": "",
+      "published_at": "2026-07-13",
+      "relevance": 0.08,
+      "primary_segment_match": true,
+      "term_matches": 6,
+      "roles": [
+        "problem_context"
+      ],
+      "selection_reason": "problem_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-018"
+    },
+    {
+      "source": "youtube",
+      "title": "TWRHLL by Christie Brinkley Faux Suede Ankle Pant",
+      "text": "TWRHLL by Christie Brinkley Faux Suede Ankle Pant — constantly I just keep my cart just going uh when when we get boxes coming to the house my husband's like what did you buy this time I'm like I I don't know I've just been doing a lot of shopping let's take a look at these pants if I didn't tell you they were faux suede you would think they were the real deal um but it's this beautiful ankle pant in your choice of chocolate We've Got Deep Navy in front of Christy we've got purple loving that purple and we have them in Black extra small a 3X these are a 28 in inseam and something suede does not do is stretch and these do yes yeah... — TWRHLL by Christie Brinkley Faux Suede Ankle Pant constantly I just keep my cart just going uh when when we get boxes coming to the house my husband's like what did you buy this time I'm like I I don't know I've just been doing a lot of shopping let's take a look at these pants if I didn't tell you they were faux suede you would think they were the real deal um but it's this beautiful ankle pant in your choice of chocolate We've Got Deep Navy in front of Christy we've got purple loving that purple and we have them in Black extra small a 3X these are a 28 in inseam and something suede does not do is stretch and these do yes yeah and these these pants I think are a pant that comes alive when you put it on I think it's hard to tell when you're seeing it on the hanger like this but these pants fit great I've seen it on a lot of different models and they really come to life and the these are a great can't you know you can do that kind of equestrian",
+      "url": "https://www.youtube.com/watch?v=BhNTXtkzes8",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.12,
+      "primary_segment_match": true,
+      "term_matches": 5,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-019"
+    },
+    {
+      "source": "grounding",
+      "title": "22 Travel Outfits That Are Much Chicer Than Sweats, but Just as Comfortable for Long-Haul Flights",
+      "text": "22 Travel Outfits That Are Much Chicer Than Sweats, but Just as Comfortable for Long-Haul Flights — You’ll also find a wrinkle-free top with fun smocked cuff sleeves you can style multiple ways: dressed down with denim, dressed up with linen, or layered. These are the kinds of pieces that’ll bounce back no matter how tightly they’ve been folded. ... If you love the feel of sweats but want something that looks just a little more refined, these polished knits are perfectly balanced. — 22 Travel Outfits That Are Much Chicer Than Sweats, but Just as Comfortable for Long-Haul Flights You’ll also find a wrinkle-free top with fun smocked cuff sleeves you can style multiple ways: dressed down with denim, dressed up with linen, or layered. These are the kinds of pieces that’ll bounce back no matter how tightly they’ve been folded. ... If you love the feel of sweats but want something that looks just a little more refined, these polished knits are perfectly balanced.",
+      "url": "https://www.realsimple.com/comfy-travel-outfits-that-arent-sweatpants-amazon-june-2026-11970232",
+      "entity_context": "",
+      "published_at": "2026-06-22",
+      "relevance": 0.07,
+      "primary_segment_match": true,
+      "term_matches": 5,
+      "roles": [
+        "problem_context"
+      ],
+      "selection_reason": "problem_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-020"
+    },
+    {
+      "source": "pinterest",
+      "title": "Make a statement this season in our meticulously tailored Peg Trousers for a polished, contemporary look that will effortlessly transition y",
+      "text": "Make a statement this season in our meticulously tailored Peg Trousers for a polished, contemporary look that will effortlessly transition y — Make a statement this season in our meticulously tailored Peg Trousers for a polished, contemporary look that will effortlessly transition you from day to night. This high-waisted design has two single knife pleats implemented at the front of the trousers and are half lined for added comfort. Adorned with Holland Coope",
+      "url": "https://us.hollandcooper.com/products/high-waisted-peg-trouser-hailes-green-tweed",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.05,
+      "primary_segment_match": true,
+      "term_matches": 5,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-021"
+    },
+    {
+      "source": "grounding",
+      "title": "Women's Printed Pants | ZARA United States",
+      "text": "Women's Printed Pants | ZARA United States — Make a statement with our printed women&#x27;s pants. Uncover the latest in fashion at ZARA.com with trendy women&#x27;s pants for a bold statement. — Women's Printed Pants | ZARA United States Make a statement with our printed women&#x27;s pants. Uncover the latest in fashion at ZARA.com with trendy women&#x27;s pants for a bold statement.",
+      "url": "https://www.zara.com/us/en/woman-trousers-printed-l6976.html",
+      "entity_context": "",
+      "published_at": "2026-07-09",
+      "relevance": 0.09,
+      "primary_segment_match": true,
+      "term_matches": 4,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-022"
+    },
+    {
+      "source": "grounding",
+      "title": "Airport Trousers Are How To Travel In Comfort And Style: H&M's £18 Pair Look First-Class Worthy",
+      "text": "Airport Trousers Are How To Travel In Comfort And Style: H&M's £18 Pair Look First-Class Worthy — Forget leggings: all the most stylish women wear airport trousers to travel, and they&#x27;re every bit as comfortable. These are the best ones to buy right now. — Airport Trousers Are How To Travel In Comfort And Style: H&M's £18 Pair Look First-Class Worthy Forget leggings: all the most stylish women wear airport trousers to travel, and they&#x27;re every bit as comfortable. These are the best ones to buy right now.",
+      "url": "https://www.elle.com/uk/fashion/what-to-wear/a71643446/best-airport-trousers/",
+      "entity_context": "",
+      "published_at": "2026-06-23",
+      "relevance": 0.08,
+      "primary_segment_match": true,
+      "term_matches": 3,
+      "roles": [
+        "problem_context"
+      ],
+      "selection_reason": "problem_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-023"
+    },
+    {
+      "source": "pinterest",
+      "title": "this is jane wayne. tweed trousers.",
+      "text": "this is jane wayne. tweed trousers.",
+      "url": "http://www.thisisjanewayne.com/news/2016/11/28/outfit-musterchaos/",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.14,
+      "primary_segment_match": true,
+      "term_matches": 2,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-024"
+    },
+    {
+      "source": "grounding",
+      "title": "Best Summer Travel Pants For Women: Linen, Barrel, Crop",
+      "text": "Best Summer Travel Pants For Women: Linen, Barrel, Crop — From elevated joggers and roomy cargo pants to pull-on trousers and lightweight denim (plus the odd sweatpant that we couldn’t resist), meet our 20 favorite travel companions ahead. — Best Summer Travel Pants For Women: Linen, Barrel, Crop From elevated joggers and roomy cargo pants to pull-on trousers and lightweight denim (plus the odd sweatpant that we couldn’t resist), meet our 20 favorite travel companions ahead.",
+      "url": "https://www.refinery29.com/en-us/best-travel-pants",
+      "entity_context": "",
+      "published_at": "2026-07-06",
+      "relevance": 0.08,
+      "primary_segment_match": true,
+      "term_matches": 2,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-025"
+    },
+    {
+      "source": "pinterest",
+      "title": "These tweed trousers by ME+EM feature a houndstooth print and wide leg. A contrasting side stripe emphasises the fluid drape.",
+      "text": "These tweed trousers by ME+EM feature a houndstooth print and wide leg. A contrasting side stripe emphasises the fluid drape.",
+      "url": "https://editorialist.com/p/meem-travel-tweed-wide-leg-trouser/?size=US%200&sku=140170168_33006746&pla=true&utm_source=pinterest&utm_medium=social_pinterest&utm_campaign=pinterest",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.06,
+      "primary_segment_match": true,
+      "term_matches": 2,
+      "roles": [
+        "product_context"
+      ],
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-026"
+    },
+    {
+      "id": "S-005",
+      "origin": "supplied_language",
+      "source": "supplied_comment",
+      "title": "Supplied comment 5",
+      "text": "Please send me a link to buy a pair of these trousers please?????",
+      "url": "",
+      "published_at": "",
+      "relevance": 1.0,
+      "term_matches": 5,
+      "roles": [
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ],
+      "usage": "buyer_language_only",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal.",
+      "primary_segment_match": true
+    },
+    {
+      "id": "S-006",
+      "origin": "supplied_language",
+      "source": "supplied_comment",
+      "title": "Supplied comment 6",
+      "text": "How do I buy a pair!!!",
+      "url": "",
+      "published_at": "",
+      "relevance": 1.0,
+      "term_matches": 4,
+      "roles": [
+        "customer_voice",
+        "purchase_signal"
+      ],
+      "usage": "buyer_language_only",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal.",
+      "primary_segment_match": true
+    },
+    {
+      "id": "S-010",
+      "origin": "supplied_language",
+      "source": "supplied_comment",
+      "title": "Supplied comment 10",
+      "text": "vanilla sprinkles sur ismile.world :))",
+      "url": "",
+      "published_at": "",
+      "relevance": 1.0,
+      "term_matches": 6,
+      "roles": [
+        "customer_voice"
+      ],
+      "usage": "buyer_language_only",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal.",
+      "primary_segment_match": true
+    }
+  ],
+  "quarantined_inputs": [
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Chang records first dates for AI performance feedback from Claude",
+      "text": "Chang records first dates for AI performance feedback from Claude — She uses the Granola app to capture the audio. — Chang records first dates for AI performance feedback from Claude She uses the Granola app to capture the audio.",
+      "url": "https://di.gg/ai/ox2g3ypk",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-001"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "X product head Nikita Bier teases profile redesign updates",
+      "text": "X product head Nikita Bier teases profile redesign updates — No specific features or release timelines were provided. — X product head Nikita Bier teases profile redesign updates No specific features or release timelines were provided.",
+      "url": "https://di.gg/ai/dt6mq326",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-002"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Andrew McCalip criticizes Dell XPS touch-capacitive delete key",
+      "text": "Andrew McCalip criticizes Dell XPS touch-capacitive delete key — Robotics startup founder Yacine originally praised the laptop's performance. — Andrew McCalip criticizes Dell XPS touch-capacitive delete key Robotics startup founder Yacine originally praised the laptop's performance.",
+      "url": "https://di.gg/ai/5czgabcu",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-003"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Ismile World Kelby Pants | TikTok",
+      "text": "Ismile World Kelby Pants | TikTok — 657.1K posts. Discover videos related to Ismile World Kelby Pants on TikTok. See more videos about Yasemines World Pants, Syna World Pants, Syna World Cargo Pants, Smile World Bercy, Dandy World Mapride X, Yeu The World Pants. — Ismile World Kelby Pants | TikTok 657.1K posts. Discover videos related to Ismile World Kelby P",
+      "url": "https://www.tiktok.com/discover/ismile-world-kelby-pants",
+      "relevance": 0.03,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-004"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "20 V Neck Top Outfit Ideas for Effortlessly Chic Dressing",
+      "text": "20 V Neck Top Outfit Ideas for Effortlessly Chic Dressing — <strong>A fitted V neck tee creates a clean base, while a draped blouse makes the outfit feel softer</strong>. Add loafers, ankle boots, or pointed heels depending on how dressed up you want to be. — 20 V Neck Top Outfit Ideas for Effortlessly Chic Dressing <strong>A fitted V neck tee creates a clea",
+      "url": "https://www.sewmamasew.com/20-v-neck-top-outfit-ideas/",
+      "relevance": 0.0,
+      "term_matches": 6,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-005"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Shoppers call out high street brand after being injured wearing 'deadly' trousers | Metro News",
+      "text": "Shoppers call out high street brand after being injured wearing 'deadly' trousers | Metro News — The issue with these trousers, as I found out myself while wearing them on holiday, is the <strong>wide-leg, flimsy design</strong>. — Shoppers call out high street brand after being injured wearing 'deadly' trousers | Metro News The issue with these trousers, as",
+      "url": "https://metro.co.uk/2026/07/09/shoppers-call-high-street-brand-injured-wearing-deadly-trousers-29094523/",
+      "relevance": 0.02,
+      "term_matches": 3,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-006"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Amazon.com: Clothing - Women: Clothing, Shoes & Jewelry: Tops, Tees & Blouses, Dresses, Active & More",
+      "text": "Amazon.com: Clothing - Women: Clothing, Shoes & Jewelry: Tops, Tees & Blouses, Dresses, Active & More — Shop the Latest Designer Clothing for <strong>Women</strong> Online at Amazon.com. Free Shipping and Free Returns on eligible items. — Amazon.com: Clothing - Women: Clothing, Shoes & Jewelry: Tops, Tees & Blouses, Dresses, Active & More Shop the Latest Des",
+      "url": "https://www.amazon.com/Womens-Clothing/b?ie=UTF8&node=1040660",
+      "relevance": 0.03,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-007"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Womens Clothing - Tweed | Magee 1866",
+      "text": "Womens Clothing - Tweed | Magee 1866 — Please select your shipping country · Unfortunately, any items in your bag will removed — Womens Clothing - Tweed | Magee 1866 Please select your shipping country · Unfortunately, any items in your bag will removed",
+      "url": "https://www.magee1866.com/tweed/womens-clothing/",
+      "relevance": 0.03,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-008"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Look instantly Chic with these Simple outfit ideas - YouTube",
+      "text": "Look instantly Chic with these Simple outfit ideas - YouTube — Want to look instantly chic without buying a whole new wardrobe? In this video, I&#x27;m sharing simple outfit ideas that are effortless, timeless, and easy to re... — Look instantly Chic with these Simple outfit ideas - YouTube Want to look instantly chic without buying a whole new wardrobe? In ",
+      "url": "https://www.youtube.com/watch?v=5KqLHy0-7is",
+      "relevance": 0.03,
+      "term_matches": 6,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-009"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Tweed Dresses for Women - Bloomingdale's",
+      "text": "Tweed Dresses for Women - Bloomingdale's — Explore our chic collection of designer dresses &amp; gowns at Bloomingdale&#x27;s. Free Shipping and Returns available or buy online and pick up in store! — Tweed Dresses for Women - Bloomingdale's Explore our chic collection of designer dresses &amp; gowns at Bloomingdale&#x27;s. Free Shipping and Returns availabl",
+      "url": "https://www.bloomingdales.com/shop/womens-apparel/designer-dresses/Fabric/Tweed?id=21683",
+      "relevance": 0.08,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-010"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Amazon.com: Crinkle Pants",
+      "text": "Amazon.com: Crinkle Pants — Discover comfortable, versatile crinkle pants in a variety of styles. Enjoy the breathable, lightweight fabric and flattering wide-leg silhouette. — Amazon.com: Crinkle Pants Discover comfortable, versatile crinkle pants in a variety of styles. Enjoy the breathable, lightweight fabric and flattering wide-leg silhouette.",
+      "url": "https://www.amazon.com/Crinkle-Pants/s?k=Crinkle+Pants",
+      "relevance": 0.0,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-011"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "26 Cute Casual Outfit Ideas for Women with Styling Tips",
+      "text": "26 Cute Casual Outfit Ideas for Women with Styling Tips — This outfit demonstrates how one statement accessory can transform a simple dress into something memorable. A long-sleeved maxi dress in rust red with contrasting navy trim and decorative lacing creates a beautifully bohemian silhouette. The fitted bodice and flowing skirt flatter most body types, whi",
+      "url": "https://www.outfittrends.com/casual-outfits-for-women/",
+      "relevance": 0.03,
+      "term_matches": 11,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-012"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "C programmers commit fresh crimes against readability",
+      "text": "C programmers commit fresh crimes against readability",
+      "url": "https://www.theregister.com/offbeat/2026/07/05/c-programmers-commit-fresh-crimes-against-readability/5265981",
+      "relevance": 0.09,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-013"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Brussels prepares fresh Google fines as Big Tech enforcement increases",
+      "text": "Brussels prepares fresh Google fines as Big Tech enforcement increases",
+      "url": "https://www.ft.com/content/c5a880f1-aa6a-4336-b499-3ab95cf37857",
+      "relevance": 0.08,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-014"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Iran Hatched Fresh Plot to Kill Trump, Israel Told U.S.",
+      "text": "Iran Hatched Fresh Plot to Kill Trump, Israel Told U.S.",
+      "url": "https://www.wsj.com/world/middle-east/iran-hatched-fresh-plot-to-kill-trump-israel-told-u-s-1511d9d2",
+      "relevance": 0.08,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-015"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "At DocuWriter.ai, the documentation will make you smile:)",
+      "text": "At DocuWriter.ai, the documentation will make you smile:)",
+      "url": "https://www.docuwriter.ai/",
+      "relevance": 0.0,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-016"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "When the Heat Steals Your Smile",
+      "text": "When the Heat Steals Your Smile",
+      "url": "https://www.earthisland.org/journal/index.php/magazine/entry/Extreme-heat-is-rapidly-decaying-teeth-in-pakistan/",
+      "relevance": 0.07,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-017"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Fresh: A powerful terminal text editor and IDE",
+      "text": "Fresh: A powerful terminal text editor and IDE",
+      "url": "https://getfresh.dev/",
+      "relevance": 0.09,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-018"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Iran war: Trump says ceasefire 'over' after fresh strikes",
+      "text": "Iran war: Trump says ceasefire 'over' after fresh strikes",
+      "url": "https://www.dw.com/en/iran-war-trump-says-ceasefire-over-after-fresh-strikes/live-77869350",
+      "relevance": 0.08,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-019"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Show HN: An always-fresh memory that learns your repo, so agents stop re-reading",
+      "text": "Show HN: An always-fresh memory that learns your repo, so agents stop re-reading",
+      "url": "https://github.com/shofer-dev/claude-code-live-memory",
+      "relevance": 0.07,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-020"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "A Fresh Equation Born from Hacker News Chaos",
+      "text": "A Fresh Equation Born from Hacker News Chaos",
+      "url": "https://zenodo.org/records/21015132",
+      "relevance": 0.09,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-021"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "A big thank you – accessibility for blind users from fresh install",
+      "text": "A big thank you – accessibility for blind users from fresh install",
+      "url": "https://discuss.grapheneos.org/d/36908-a-big-thank-you-accessibility-for-blind-users-from-fresh-install",
+      "relevance": 0.08,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-022"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram_comment",
+      "title": "Where do I get these? Need bigger around my thighs cuz they r huuuge.",
+      "text": "Where do I get these? Need bigger around my thighs cuz they r huuuge.",
+      "url": "https://www.instagram.com/reel/DavCezUxmCb/",
+      "relevance": 0.5,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-023"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram_comment",
+      "title": "1:14 plastic face 😅",
+      "text": "1:14 plastic face 😅",
+      "url": "https://www.instagram.com/reel/DavCezUxmCb/",
+      "relevance": 0.5,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-024"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram",
+      "title": "The only pant you need @leset 🤍",
+      "text": "The only pant you need @leset 🤍 — One pant, five completely different looks and honestly, that's the whole philosophy. When you find the right piece you don't need more you just need to think differently about what you already have. This is how I approach getting dressed. Less in your closet, more intention behind it. More creativity, more versatility, more ",
+      "url": "https://www.instagram.com/reel/DZ_AwBaSwgl/",
+      "relevance": 0.0,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-025"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Soft, sweet, and perfect for spring 🌼✨ This pastel yellow outfit features a floral embroidered cardigan, wide-leg denim jeans, daisy accesso",
+      "text": "Soft, sweet, and perfect for spring 🌼✨ This pastel yellow outfit features a floral embroidered cardigan, wide-leg denim jeans, daisy accesso — Soft, sweet, and perfect for spring 🌼✨ This pastel yellow outfit features a floral embroidered cardigan, wide-leg denim jeans, daisy accessories, cute platform sneakers, and elegant coquette details. A dreamy fashion ",
+      "url": "https://www.pinterest.com/pin/11118330334368051",
+      "relevance": 0.03,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-026"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Elevate your style with this trendy brown and grey outfit combo! ✨ Featuring an off-shoulder brown top, baggy grey jeans, stylish sneakers,",
+      "text": "Elevate your style with this trendy brown and grey outfit combo! ✨ Featuring an off-shoulder brown top, baggy grey jeans, stylish sneakers, — Elevate your style with this trendy brown and grey outfit combo! ✨ Featuring an off-shoulder brown top, baggy grey jeans, stylish sneakers, elegant accessories, and a classy handbag for the perfect everyday look. 🤎🖤",
+      "url": "https://www.pinterest.com/pin/38702878044122388",
+      "relevance": 0.03,
+      "term_matches": 5,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-027"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Add a touch of sweetness to your everyday style with this adorable pink cardigan and wide-leg jeans combo. Cute, comfy, and perfect for brun",
+      "text": "Add a touch of sweetness to your everyday style with this adorable pink cardigan and wide-leg jeans combo. Cute, comfy, and perfect for brun — Add a touch of sweetness to your everyday style with this adorable pink cardigan and wide-leg jeans combo. Cute, comfy, and perfect for brunch, college, shopping, or casual outings. #CuteOutfit #PinkAesthetic #CasualS",
+      "url": "https://www.pinterest.com/pin/1151232723524298234",
+      "relevance": 0.03,
+      "term_matches": 3,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-028"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "outfit featuring baggy floral denim, a delicate crochet shrug, a daisy crop top, matching sneakers, and cute floral accessories. Perfect for",
+      "text": "outfit featuring baggy floral denim, a delicate crochet shrug, a daisy crop top, matching sneakers, and cute floral accessories. Perfect for — outfit featuring baggy floral denim, a delicate crochet shrug, a daisy crop top, matching sneakers, and cute floral accessories. Perfect for Pinterest-inspired fashion lovers who adore coquette, cottagecore, and soft-",
+      "url": "https://www.pinterest.com/pin/844493676868567",
+      "relevance": 0.03,
+      "term_matches": 8,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-029"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Dress down without losing polish in this smart casual office look — knit vest, tailored trousers, and loafers for relaxed yet put-together w",
+      "text": "Dress down without losing polish in this smart casual office look — knit vest, tailored trousers, and loafers for relaxed yet put-together w — Dress down without losing polish in this smart casual office look — knit vest, tailored trousers, and loafers for relaxed yet put-together workdays. #smartcasual #officestyle #casualfriday",
+      "url": "https://www.pinterest.com/pin/1108941108274828288",
+      "relevance": 0.03,
+      "term_matches": 5,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-030"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 1",
+      "text": "Pinterest pin 1",
+      "url": "https://www.pinterest.com/pin/179651472631331818",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-031"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 3",
+      "text": "Pinterest pin 3",
+      "url": "https://www.pinterest.com/pin/318840848638173139",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-032"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 4",
+      "text": "Pinterest pin 4",
+      "url": "https://www.pinterest.com/pin/418271884164631478",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-033"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 5",
+      "text": "Pinterest pin 5",
+      "url": "https://www.pinterest.com/pin/283445370331573997",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-034"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 6",
+      "text": "Pinterest pin 6",
+      "url": "https://fktr.in/xGy0yip",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-035"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Elevated and timeless, these pieces will go so far in your wardrobe.",
+      "text": "Elevated and timeless, these pieces will go so far in your wardrobe.",
+      "url": "https://www.elitedaily.com/fashion/amazon-is-selling-a-ton-of-these-cheap-basics-that-actually-look-expensive?utm_medium=pro&utm_source=pinterest&utm_campaign=pinpro297897904p",
+      "relevance": 0.0,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-036"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "I rounded up over 20 teacher outfits that are perfect for the classroom! I styled each piece multiple ways to show how versatile they are! W",
+      "text": "I rounded up over 20 teacher outfits that are perfect for the classroom! I styled each piece multiple ways to show how versatile they are! W — I rounded up over 20 teacher outfits that are perfect for the classroom! I styled each piece multiple ways to show how versatile they are! Wearing an XS/0 in everything",
+      "url": "https://loverlygrey.com/20-teacher-outfit-ideas-for-fall/",
+      "relevance": 0.0,
+      "term_matches": 3,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-037"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 9",
+      "text": "Pinterest pin 9",
+      "url": "https://www.pinterest.com/pin/7529524373324481",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-038"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 11",
+      "text": "Pinterest pin 11",
+      "url": "https://www.pinterest.com/pin/2181499816999649",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-039"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 1",
+      "text": "Pinterest pin 1",
+      "url": "https://www.pinterest.com/pin/1012676666234886133",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-040"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 2",
+      "text": "Pinterest pin 2",
+      "url": "https://www.pinterest.com/?show_error=true",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-041"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 3",
+      "text": "Pinterest pin 3",
+      "url": "https://www.pinterest.com/pin/140806235224923",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-042"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 5",
+      "text": "Pinterest pin 5",
+      "url": "https://www.pinterest.com/pin/1090363759809616010",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-043"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 6",
+      "text": "Pinterest pin 6",
+      "url": "https://www.pinterest.com/pin/1548181186859478",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-044"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 7",
+      "text": "Pinterest pin 7",
+      "url": "https://www.pinterest.com/pin/116952921569782651",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-045"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 8",
+      "text": "Pinterest pin 8",
+      "url": "https://www.pinterest.com/pin/300052393944897238",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-046"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "A dreamy soft girl outfit inspiration 🩵✨ Cozy baby blue cardigan paired with a cute white lace top, light-wash wide leg jeans, and a matchin",
+      "text": "A dreamy soft girl outfit inspiration 🩵✨ Cozy baby blue cardigan paired with a cute white lace top, light-wash wide leg jeans, and a matchin — A dreamy soft girl outfit inspiration 🩵✨ Cozy baby blue cardigan paired with a cute white lace top, light-wash wide leg jeans, and a matching blue bag for the perfect feminine everyday look. Perfect for college days, ",
+      "url": "https://www.pinterest.com/pin/207587864071325307",
+      "relevance": 0.0,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-047"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Wondering what to wear with brown pants female? Check this post for chic and cute brown pants outfit ideas to help you create perfect outfit",
+      "text": "Wondering what to wear with brown pants female? Check this post for chic and cute brown pants outfit ideas to help you create perfect outfit — Wondering what to wear with brown pants female? Check this post for chic and cute brown pants outfit ideas to help you create perfect outfits with brown pants this year!",
+      "url": "https://www.girlsharestips.com/what-to-wear-with-brown-pants-female/",
+      "relevance": 0.0,
+      "term_matches": 3,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-048"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "La Femme Wanderer",
+      "text": "La Femme Wanderer",
+      "url": "https://www.facebook.com/share/p/1C2tQHKua6/?mibextid=wwXIfr",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-049"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 6",
+      "text": "Pinterest pin 6",
+      "url": "https://www.sewmamasew.com/35-preppy-vacation-outfits/?utm_source=Pinterest&utm_medium=organic",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-050"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 7",
+      "text": "Pinterest pin 7",
+      "url": "https://www.pinterest.com/pin/2040762329272625",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-051"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 8",
+      "text": "Pinterest pin 8",
+      "url": "https://www.pinterest.com/pin/201043570863409665",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-052"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "\"Timeless elegance in your party outfit styling 🤍 Sophisticated looks here!\"",
+      "text": "\"Timeless elegance in your party outfit styling 🤍 Sophisticated looks here!\"",
+      "url": "https://www.pinterest.com/pin/1131177631457208869",
+      "relevance": 0.0,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-053"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 10",
+      "text": "Pinterest pin 10",
+      "url": "https://www.pinterest.com/pin/6614730698010548",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-054"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "tiktok",
+      "title": "objection handling in sales #salestips #remoteclosing #highticketsales",
+      "text": "objection handling in sales #salestips #remoteclosing #highticketsales — as a closer if your objection handling is just pulling up the first word track that comes to mind that you have memorized you do not know how to objection handle instead your focus should be on actually understanding why these objections happen in the first place so let's dive into it y",
+      "url": "https://www.tiktok.com/@nayanicoll/video/7659489604357164302",
+      "relevance": 0.19,
+      "term_matches": 5,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-055"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "tiktok_comment",
+      "title": "Why I never deal with dealerships",
+      "text": "Why I never deal with dealerships",
+      "url": "https://www.tiktok.com/@totalsellingsolutions/video/7655100173906988305",
+      "relevance": 0.5,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-056"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "x",
+      "title": "The full strategy for scaling a supplement brand toward $500K a month under Andromeda and GEM. Pillar 1, the structure. > Main CBO, broad,",
+      "text": "The full strategy for scaling a supplement brand toward $500K a month under Andromeda and GEM. Pillar 1, the structure. > Main CBO, broad, — The full strategy for scaling a supplement brand toward $500K a month under Andromeda and GEM. Pillar 1, the structure. > Main CBO, broad, one ad set x persona, full awareness-stage coverage. Bid-cap scaling campaign on",
+      "url": "https://x.com/antonioventre_/status/2077156940384293173",
+      "relevance": 0.16,
+      "term_matches": 3,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-057"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "youtube",
+      "title": "6 Women's Linen Brands You MUST Stop Buying in 2026 (And 3 You Can Actually Trust)",
+      "text": "6 Women's Linen Brands You MUST Stop Buying in 2026 (And 3 You Can Actually Trust) — There's a Talbots linen popover hangingin your closet right now that you bought 8 years ago. It still fits. The colorstill holds. The seams are still clean. Now, go to Talbots today. Pick up whatlooks like the same popover and wash it three times. The stitching pulls. Thecol",
+      "url": "https://www.youtube.com/watch?v=DZBzFVi0tbI",
+      "relevance": 0.33,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-058"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "youtube_comment",
+      "title": "Private equity destroys everything it touches.",
+      "text": "Private equity destroys everything it touches.",
+      "url": "https://www.youtube.com/watch?v=DZBzFVi0tbI",
+      "relevance": 0.5,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-059"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "youtube_comment",
+      "title": "Talbots has really gone down in quality, and not just the linen,",
+      "text": "Talbots has really gone down in quality, and not just the linen,",
+      "url": "https://www.youtube.com/watch?v=DZBzFVi0tbI",
+      "relevance": 0.5,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-060"
+    }
+  ],
+  "namespace_contract": {
+    "R-": "Last30Days research",
+    "X-": "bounded Exa recovery research",
+    "S-": "supplied language, never a customer result",
+    "Q-": "quarantined input",
+    "P-": "fresh official-reference fact mapped exactly into an authorized A fact",
+    "C-": "official competitor observation, never offered-product truth",
+    "framework_material_allowed": false
+  },
+  "warnings": [
+    "Some sources failed: arxiv, github",
+    "Some sources returned partial results (degraded): digg, instagram"
+  ]
+}

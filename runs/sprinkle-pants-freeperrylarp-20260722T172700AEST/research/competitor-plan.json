@@ -1,0 +1,64 @@
+{
+  "schema_version": "2.0",
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "research_session_id": "685ac819f8bf45b29d9a04e177ea52f3",
+  "research_not_before": "2026-07-22T07:26:51Z",
+  "created_at": "2026-07-22T07:26:51Z",
+  "required": true,
+  "urls": [
+    "https://ismile.world/products/vanilla-sprinkles-tracker"
+  ],
+  "free_product_reference": {
+    "mode": "exact_appearance_and_function",
+    "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+    "official_domain": "ismile.world",
+    "variant_name": "Woman / XS-S, M, and L-XL",
+    "variant_resolution": "ai_resolved_from_fresh_evidence",
+    "variant_basis": "The current official page separately lists Woman / XS-S, Woman / M, and Woman / L-XL; the current supplied comments ask about XS-S and M women's waist sizing; and the supplied reference image shows the women's trouser.",
+    "authorization": "standing_user_instruction",
+    "fresh_research_required": true,
+    "improvements_allowed": false,
+    "transfer_scope": [
+      "appearance",
+      "functionality",
+      "dependencies",
+      "limitations",
+      "setup",
+      "compatibility",
+      "included components"
+    ],
+    "excluded_scope": [
+      "brand identity",
+      "trademarks",
+      "price",
+      "promotions",
+      "testimonials",
+      "ratings",
+      "review counts",
+      "shipping",
+      "returns",
+      "warranty",
+      "seller-specific claims"
+    ],
+    "offered_product_name": "Sprinkle Tweed Pants"
+  },
+  "capture_fields": [
+    "exact variant identity",
+    "physical appearance",
+    "materials, dimensions, and visible components",
+    "included components and variants",
+    "core function and user action",
+    "inputs and outputs",
+    "setup and operating sequence",
+    "dependencies",
+    "compatibility",
+    "limitations and exclusions"
+  ],
+  "rules": [
+    "Research the supplied official reference URL and same-domain official specifications, FAQ, or manual fresh for this campaign.",
+    "Resolve the exact variant before capture; ask the user if more than one variant could apply.",
+    "Map only appearance and function facts into product_truth under the standing exact-parity authorization.",
+    "Do not propose or transfer improvements, branding, trademarks, price, promotions, ratings, testimonials, shipping, returns, or warranty.",
+    "Other official competitor observations remain C evidence and cannot authorize offered-product claims."
+  ]
+}

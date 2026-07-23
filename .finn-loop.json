@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "tracker": "github",
+  "repository": "blinds123/sprinkle-pants",
+  "approval_label": "agent-ready",
+  "blocked_label": "blocked",
+  "in_progress_label": "agent-in-progress",
+  "review_label": "agent-review",
+  "spec_drafted_label": "spec-drafted",
+  "approved_label": "loop-approved",
+  "changes_requested_label": "loop-changes-requested",
+  "human_review_label": "needs-human-review",
+  "required_check": "Finn Loop contract",
+  "human_merge_only": true
+}

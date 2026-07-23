@@ -1,0 +1,61 @@
+{
+  "intent": "product",
+  "freshness_mode": "balanced_recent",
+  "cluster_mode": "none",
+  "subqueries": [
+    {
+      "label": "product-reviews-and-questions",
+      "search_query": "ismile vanilla sprinkles tracker women's multicoloured tweed statement trousers reviews comments questions",
+      "ranking_query": "What do real buyers ask, praise, doubt, compare, or complain about when considering Sprinkle Tweed Pants or the same type of women's multicoloured tweed statement trousers? Preserve their exact words and distinguish buyer comments from seller copy.",
+      "sources": [
+        "reddit",
+        "youtube",
+        "tiktok",
+        "instagram",
+        "x",
+        "threads"
+      ],
+      "weight": 1.0
+    },
+    {
+      "label": "real-use-moments",
+      "search_query": "ismile vanilla sprinkles tracker getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit weekend city outings styled with a simple fitted top or sweater casual evenings and creative social settings where texture and colour can lead the look",
+      "ranking_query": "When does a style-forward woman buying the pants for herself first notice this problem, how do they handle it now, where does that approach fail, and what words do they use for the situation?",
+      "sources": [
+        "reddit",
+        "youtube",
+        "tiktok",
+        "instagram"
+      ],
+      "weight": 0.9
+    },
+    {
+      "label": "alternatives-and-buying-concerns",
+      "search_query": "ismile vanilla sprinkles tracker women's multicoloured tweed statement trousers alternatives worth it problems returns setup",
+      "ranking_query": "What alternatives do buyers use instead of this type of women's multicoloured tweed statement trousers, how do those alternatives fall short, and which unanswered questions stop a purchase?",
+      "sources": [
+        "reddit",
+        "youtube",
+        "tiktok",
+        "instagram",
+        "x",
+        "threads"
+      ],
+      "weight": 0.8
+    }
+  ],
+  "freeperry30days_context": {
+    "topic": "Fresh buyer language, purchase signals, objections, styling moments, and outfit frustrations around women's statement trousers, multicoloured tweed pants, relaxed baggy pants, and distinctive casual outfits. Exclude competitor pricing and seller promotions.",
+    "campaign_id": "sprinkle-pants-client-preview-20260721",
+    "audience": {
+      "region": "Europe",
+      "language": "English",
+      "seed": "A style-forward woman buying for herself who wants one distinctive pair of trousers to make simple casual and social outfits feel deliberately styled."
+    },
+    "competitor_urls": [
+      "https://ismile.world/products/vanilla-sprinkles-tracker"
+    ],
+    "analysis_rule": "Use how and when questions to uncover process. Queries and internal labels are instructions, never evidence or offered-product truth. Reddit posts and genuine comments or reviews may supply buyer voice. Top-level creator posts supply market context only.",
+    "recovery_rule": "Use one bounded Exa query only when sufficiency names a missing evidence role."
+  }
+}

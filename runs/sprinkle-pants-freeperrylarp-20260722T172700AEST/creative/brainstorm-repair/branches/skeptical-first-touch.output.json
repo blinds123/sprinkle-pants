@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "branch_id": "B-03",
+  "frame_id": "skeptical-first-touch",
+  "isolation_session_id": "b03-sft-6c520a0d-346f-4ba3-b767-a16310839931",
+  "problem_sha256": "ff32828ee9840393a2ac7d14109bc5b2140c645dafc0c8f03c0c9f8dc8aca666",
+  "input_sha256": "5d4f331931e40c69bdd5dcf7703e4cf96af0c68863493f5a283e7ce684775f49",
+  "observed_other_branch_ids": [],
+  "ideas": [
+    {
+      "id": "B-03-I-01",
+      "text": "Platform: Know Every Detail Before You Go. Beginning, scenes 1-5 (pants only): cream tweed, multicoloured flecks, braided drawcord, fringed hems, then the relaxed adjustable waist; overlay territory: ‘Come closer,’ ‘Fleck by fleck,’ and ‘Choose your fit.’ Transition, scenes 6-10 (perfume only): the 15 ml bottle, floral-amber description, named notes, and two or three drops at the wrists and neck; overlay territory: ‘Meet the notes,’ ‘Jasmine. Peony. Pink pepper,’ and ‘Two or three drops.’ Payoff, scenes 11-15 (both): dressed at the mirror, perfume applied at pulse points, bag picked up, doorway pause, evening exit; overlay territory: ‘Details checked,’ ‘Ready feels like this,’ and ‘Out the door.’ Reject unsupported strength, projection, longevity, attraction, or reaction claims; reject split-screen packshots and explanatory captions that force the pairing.",
+      "rationale": "A proof-before-desire sequence answers first-touch skepticism with inspectable construction, fit, scent composition, and use facts before the self-purchase payoff.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-013",
+        "A-014",
+        "A-015",
+        "R-001",
+        "X-001"
+      ]
+    },
+    {
+      "id": "B-03-I-02",
+      "text": "Platform: The Before-I-Leave Checklist. Beginning, scenes 1-5 (pants only): size choice, waist adjustment, relaxed silhouette, hem check, and a final snag-free once-over; overlay territory: ‘My size,’ ‘Waist, adjusted,’ ‘Room to move,’ and ‘Tweed, checked.’ Transition, scenes 6-10 (both naturally): pants on, perfume opened at the vanity, drops to wrists, drops behind the ears, then accessories gathered; overlay territory: ‘Wrists,’ ‘Behind the ears,’ and ‘One last check.’ Payoff, scenes 11-15 (both, with the final scene led by the pants): mirror turn, seated shoe moment, standing full look, keys in hand, city-bound stride; overlay territory: ‘Shoes. Keys. Plans,’ ‘Nothing left to second-guess,’ and ‘Let’s go.’ Reject invented sizing advice beyond the stated ranges, casual-wash implications, perfume-performance promises, and repeated side-by-side product poses.",
+      "rationale": "A practical checklist turns common size and fragrance questions into a believable getting-ready action without claiming an outcome the evidence cannot support.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-009",
+        "A-010",
+        "A-012",
+        "A-015",
+        "S-003",
+        "S-007",
+        "R-001"
+      ]
+    },
+    {
+      "id": "B-03-I-03",
+      "text": "Platform: Ask It Up Close. Beginning, scenes 1-5 (pants only): buyer questions lead into exact size ranges, adjustable waist, relaxed fit, cream tweed, and fringe; overlay territory: ‘Which size is mine?’ ‘XS-S: EU 34-38,’ ‘M: EU 38-40,’ and ‘L-XL: EU 42-44.’ Transition, scenes 6-10 (perfume only): ‘What does it smell like?’ opens into floral-amber, jasmine and blackcurrant bud, panna cotta and peony, rose and pink pepper, then pulse-point application; overlay territory uses those exact question-and-answer fragments. Payoff, scenes 11-15 (both naturally): she pulls the drawcord, applies drops to inner elbows and neck, sees the full look, takes the bottle in her bag, and steps toward her plan; overlay territory: ‘Questions answered,’ ‘My pick,’ and ‘Plans on.’ Reject testimonials written as answers, exact waist recommendations, claims that notes guarantee strength, and layouts resembling a technical comparison chart.",
+      "rationale": "A direct question-and-answer structure respects the buyer’s demonstrated need for sizing and scent clarity, then converts information into a lived decision sequence.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-010",
+        "A-013",
+        "A-014",
+        "A-015",
+        "R-001",
+        "S-003",
+        "S-007"
+      ]
+    },
+    {
+      "id": "B-03-I-04",
+      "text": "Platform: Fifteen Minutes to Plans. Beginning, scenes 1-5 (pants only): pants laid out, tweed detail considered, elastic waist stepped into, drawcord adjusted, relaxed fit seen in the mirror; overlay territory: ‘15 minutes,’ ‘Start with texture,’ ‘Tie it my way,’ and ‘The look is on.’ Transition, scenes 6-10 (perfume only): bottle uncapped, notes read, two or three drops placed at wrists, behind ears, and neck; overlay territory: ‘5 minutes,’ ‘Floral-amber,’ ‘Jasmine to pink pepper,’ and ‘Pulse points.’ Payoff, scenes 11-15 (both naturally): earrings on, perfume returned to the vanity, jacket carried, doorway look, weekend street arrival; overlay territory: ‘One minute,’ ‘Plans waiting,’ and ‘Right on time.’ Reject any claim that the fragrance lasts through the outing, any promised social response, unsupported fabric comfort language, and a final frame reduced to two packages beside each other.",
+      "rationale": "A countdown supplies momentum and gives each item its own credible role in a familiar pre-plan routine while preserving a natural handoff from dressing to pulse-point application.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-013",
+        "A-014",
+        "A-015",
+        "S-005",
+        "S-006",
+        "X-001"
+      ]
+    }
+  ]
+}

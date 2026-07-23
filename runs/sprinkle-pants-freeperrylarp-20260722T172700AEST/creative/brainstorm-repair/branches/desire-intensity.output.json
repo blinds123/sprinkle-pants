@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "branch_id": "B-01",
+  "frame_id": "desire-intensity",
+  "isolation_session_id": "b01-desire-20260723T074833AEST-82df6d16",
+  "problem_sha256": "ff32828ee9840393a2ac7d14109bc5b2140c645dafc0c8f03c0c9f8dc8aca666",
+  "input_sha256": "cbe62594e2ae08e2dfd4efc2393d607c2b5e6047c2fa022c845db1d65dd052a5",
+  "observed_other_branch_ids": [],
+  "ideas": [
+    {
+      "id": "B-01-I-01",
+      "text": "Platform: Out-the-Door Energy. Beginning, images 1–5: pants-only dressing beats move from cream tweed on the bed to the elastic waist, braided drawcord, and fringed hems in motion. Transition, images 6–10: perfume-only beats follow two or three drops from wrist to neck before keys are picked up. Payoff, images 11–15: both appear naturally as she leaves for her plan, with the bottle returning only where a pulse-point touch belongs. Overlay territories: ‘Put the plan on,’ ‘Flecks on. Mood up,’ ‘Two drops, then out,’ and ‘Meet the version of you who said yes.’ Reject split-screen catalog pairings, product diagrams, attraction promises, and any line explaining why the items are together.",
+      "rationale": "The repeated getting-ready actions build desire from tactile detail to decisive movement while giving each item independent room before the doorway payoff.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-013",
+        "A-015",
+        "S-005",
+        "S-006"
+      ]
+    },
+    {
+      "id": "B-01-I-02",
+      "text": "Platform: The Detail That Decides It. Beginning, images 1–5: pants-only close details turn indecision into a choice—the multicoloured flecks, drawcord pull, relaxed leg, then fringe passing the mirror. Transition, images 6–10: perfume-only details move from the 15 ml bottle to a wrist and behind the ear, with floral-amber notes named plainly. Payoff, images 11–15: both live in the same mirror-to-street sequence as her hand moves from waist to wrist to door handle. Overlay territories: ‘It was always these pants,’ ‘The last detail changes everything,’ ‘Jasmine. Rose. Pink pepper,’ and ‘Ready looks good on you.’ Reject floating-product collages, invented scent strength or longevity, reaction shots from strangers, and literal fleck-to-fragrance comparisons.",
+      "rationale": "A recurring hand-to-detail motif intensifies self-purchase desire through small irreversible choices and answers practical curiosity without adding performance claims.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-013",
+        "A-014",
+        "A-015",
+        "R-001",
+        "X-001"
+      ]
+    },
+    {
+      "id": "B-01-I-03",
+      "text": "Platform: Plans Changed. Outfit Didn’t. Beginning, images 1–5: pants-only scenes move from a slow morning fit check to a relaxed city walk, letting the cream tweed and baggy silhouette carry the day. Transition, images 6–10: perfume-only scenes begin when an evening message arrives, followed by drops at wrists, neck, and behind the ears. Payoff, images 11–15: both return in an evening departure where the same pants now feel intentional, not replaced. Overlay territories: ‘Keep the pants on,’ ‘Your day just got interesting,’ ‘Floral amber for the next plan,’ and ‘Same outfit. New hour.’ Reject wardrobe-transformation tricks, claims that the scent causes invitations or attention, fake testimonials, and awkward bottle-in-hand poses throughout.",
+      "rationale": "The time-of-day turn makes the purchase feel versatile and desirable through a believable change of plan, with perfume entering at a specific evening action.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-013",
+        "A-014",
+        "A-015",
+        "S-005"
+      ]
+    },
+    {
+      "id": "B-01-I-04",
+      "text": "Platform: The Yes List. Beginning, images 1–5: pants-only beats count down the choices that remove friction—relaxed fit, adjustable waist, size check, drawcord tied, shoes on. Transition, images 6–10: perfume-only beats continue the countdown—bottle uncapped, two or three drops, wrists touched, neck touched, bag packed. Payoff, images 11–15: both settle into a taxi-to-arrival sequence, ending on her stepping into the plan rather than posing with products. Overlay territories: ‘Yes to the pants,’ ‘Adjust. Tie. Go,’ ‘Your size, then your night,’ and ‘Five minutes from staying in to stepping out.’ Reject unsupported sizing advice, urgency claims, scent-performance promises, and checklist layouts that make the ritual feel clinical.",
+      "rationale": "A countdown converts sizing and purchase questions into mounting anticipation, then releases that tension in a concrete arrival rather than an abstract product pairing.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-010",
+        "A-013",
+        "A-015",
+        "S-003",
+        "S-007"
+      ]
+    }
+  ]
+}

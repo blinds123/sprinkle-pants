@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "branch_id": "B-02",
+  "frame_id": "two-product-relationship",
+  "isolation_session_id": "b02-relationship-6f32bb44-9ef5-4cf6-9ad4-0fe16ff6521c",
+  "problem_sha256": "ff32828ee9840393a2ac7d14109bc5b2140c645dafc0c8f03c0c9f8dc8aca666",
+  "input_sha256": "59e7669b8d98bfe8aac355f8b512e0b1286874f1d3ac85791646e03cb08e8fb5",
+  "observed_other_branch_ids": [],
+  "ideas": [
+    {
+      "id": "B-02-I-01",
+      "text": "Platform: Tie. Dab. Go. Beginning, scenes 1-5: pants only, from stepping into the relaxed cream tweed to pulling the braided drawcord. Transition, scenes 6-9: perfume only, with two or three drops moving from wrist to neck. Payoff, scenes 10-15: both appear naturally as she releases the drawcord, lifts her scented wrist, picks up her keys, and leaves for the plan. Overlay territory: \"Plans on.\" \"Tie it your way.\" \"Two or three drops, then out the door.\" \"Your night starts here.\" Reject split-screen packshots, matching-product claims, attraction promises, and any line explaining why the pair works.",
+      "rationale": "A repeatable three-action cadence links adjustable comfort and authorized pulse-point application to the same credible getting-ready sequence.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-013",
+        "A-015",
+        "S-005"
+      ]
+    },
+    {
+      "id": "B-02-I-02",
+      "text": "Platform: Flecks to Florals. Beginning, scenes 1-4: pants only, tracing cream tweed, multicoloured flecks, fringe, and the braided drawcord as she dresses. Transition, scenes 5-10: perfume only, moving through jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper as drops meet pulse points. Payoff, scenes 11-15: both enter the frame through lived gestures—a flecked leg crossing, a wrist near the collar, and a final doorway pause. Overlay territory: \"Colour in every step.\" \"Florals at your pulse.\" \"A little sweet. A little spark.\" \"Ready in full colour.\" Reject invented scent strength, floating ingredient collages, literal colour-to-note matching, and copy that calls the combination intentional.",
+      "rationale": "The platform uses the pants' visible texture and the perfume's stated floral-amber notes as parallel sensory chapters without assigning unsupported performance to either.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-013",
+        "A-014",
+        "A-015",
+        "R-001",
+        "X-001"
+      ]
+    },
+    {
+      "id": "B-02-I-03",
+      "text": "Platform: Room to Move, One Last Detail. Beginning, scenes 1-6: pants only, following an easy waist adjustment, a seated shoe moment, and fringe in motion before a city outing. Transition, scenes 7-10: perfume only, slowing down for measured drops at wrists and behind the ears. Payoff, scenes 11-15: both appear as she rises, checks the waist, brushes a wrist near her neck, and walks into the evening. Overlay territory: \"Easy from the first step.\" \"Set the waist.\" \"Add your last detail.\" \"Now make the plan yours.\" Reject claims about fit beyond the supplied cut and size bands, reaction shots from strangers, exaggerated scent trails, and forced side-by-side product posing.",
+      "rationale": "The contrast between a relaxed silhouette and a precise finishing gesture creates progression while preserving the pants as the visual lead and the perfume as the final action.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-009",
+        "A-010",
+        "A-013",
+        "A-015",
+        "S-003",
+        "S-007"
+      ]
+    },
+    {
+      "id": "B-02-I-04",
+      "text": "Platform: From Careful Choice to Carefree Plans. Beginning, scenes 1-5: pants only, showing her choose the size band, adjust the elastic waist, and keep the delicate tweed clear of a rough chair edge. Transition, scenes 6-10: perfume only, with the 15 ml bottle and two or three drops applied to wrist, neck, and behind the ears. Payoff, scenes 11-15: both appear through a calm mirror check, a raised wrist, an unobstructed walk, and departure. Overlay territory: \"Choose your fit.\" \"Keep the tweed close, not caught.\" \"A few drops at your pulse.\" \"Save the fuss for another day.\" Reject wash-at-home implications, universal-fit language, snag-proof claims, perfume efficacy claims, and scenes where she sprays the pants.",
+      "rationale": "A practical self-purchase sequence answers real fit curiosity, respects garment care, and turns perfume application into the natural next step before leaving.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-009",
+        "A-010",
+        "A-012",
+        "A-013",
+        "A-015",
+        "S-003",
+        "S-006",
+        "S-007"
+      ]
+    }
+  ]
+}

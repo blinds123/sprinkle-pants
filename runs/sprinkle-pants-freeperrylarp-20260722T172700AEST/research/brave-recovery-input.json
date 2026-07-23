@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "research_session_id": "685ac819f8bf45b29d9a04e177ea52f3",
+  "recovery_plan_sha256": "b2cafce56058593f75c38717392ac24b6f7932ad702e9183cd6d4ae3172a5724",
+  "generated_at": "2026-07-22T07:41:15Z",
+  "provider": "brave",
+  "preferred_provider": "exa",
+  "provider_unavailable_reason": "EXA_API_KEY is unavailable in the resumed environment; the configured Brave backend supplied the bounded fallback.",
+  "query": "Recent first-person customer discussions about Auralo Pheromone Perfume or women's multicoloured tweed statement trousers. Find exact buyer questions, objections, and purchase wording for retrieved_customer_voice. Exclude seller copy, affiliate promotions, and unrelated products.",
+  "reason_codes": [
+    "retrieved_customer_voice"
+  ],
+  "items": [
+    {
+      "source": "brave",
+      "title": "Aura Fragrance Reviews | Read Customer Service Reviews of www.aurafragrance.com",
+      "text": "I recently purchased Governor’s Island by Bond No. 9 from Aura Perfume (Order #655205), and this has been a frustrating experience. The fragrance I received is extremely weak—honestly, it smells more like alcohol than an actual perfume. There’s little to no projection, and the scent barely lasts.",
+      "url": "https://www.trustpilot.com/review/www.aurafragrance.com",
+      "published_at": "2026-07-19",
+      "relevance": 0.8
+    }
+  ]
+}

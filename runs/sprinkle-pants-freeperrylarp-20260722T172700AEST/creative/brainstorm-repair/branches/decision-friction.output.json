@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "branch_id": "B-05",
+  "frame_id": "decision-friction",
+  "isolation_session_id": "b05-decision-friction-71c86f2a-918d-4e67-9139-aec29162de38",
+  "problem_sha256": "ff32828ee9840393a2ac7d14109bc5b2140c645dafc0c8f03c0c9f8dc8aca666",
+  "input_sha256": "3624d4000faa5b3d2d5fc2ec303e0afa5f983a2d6bec72023d9c8fbff767c408",
+  "observed_other_branch_ids": [],
+  "ideas": [
+    {
+      "id": "B-05-I-01",
+      "text": "Platform: Dress. Dab. Go. Beginning, images 1-5, stays with cream-flecked tweed, the braided drawcord, relaxed fit, and the shopper choosing her size. Transition, images 6-10, moves to two or three drops at the wrists, neck, or behind the ears. Payoff, images 11-15, brings both into the doorway-to-city progression. Overlay territories: ‘Pick your fit.’ ‘Two or three drops.’ ‘Now, where to?’ Pants appear alone first, perfume alone at the transition, and both only once she is ready to leave. Reject attraction claims, invented scent strength, and side-by-side pack shots with no lived action.",
+      "rationale": "A repeatable three-verb sequence converts fit and application questions into small, ordered actions before the social plan begins.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-010",
+        "A-013",
+        "A-015",
+        "S-003",
+        "S-007"
+      ]
+    },
+    {
+      "id": "B-05-I-02",
+      "text": "Platform: Tonight, in Three Choices. Beginning, images 1-5, answers ‘Which fit?’ through the adjustable waist, relaxed cut, and three published size bands. Transition, images 6-10, asks ‘Which pulse point?’ while the floral-amber perfume is applied by drops. Payoff, images 11-15, asks ‘Which plan?’ as pants and perfume move naturally from mirror to bag to front door. Overlay territories: ‘XS–S, M, or L–XL?’ ‘Wrists, neck, or behind the ears?’ ‘Dinner, dancing, or a city wander?’ Pants own the first choice, perfume owns the second, and both carry the third. Reject fake testimonials, guaranteed reactions, and hiding practical answers behind vague mood copy.",
+      "rationale": "The numbered choice pattern makes the shopper’s recurring size and purchase questions feel finite and answerable while ending on anticipation rather than logistics.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-009",
+        "A-010",
+        "A-013",
+        "A-015",
+        "S-003",
+        "S-005",
+        "S-006",
+        "S-007"
+      ]
+    },
+    {
+      "id": "B-05-I-03",
+      "text": "Platform: Pick a Fleck. Pick a Note. Pick the Night. Beginning, images 1-5, follows multicoloured flecks from close detail to a full relaxed-pants look. Transition, images 6-10, echoes that selection rhythm through jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper. Payoff, images 11-15, carries one chosen colour cue and one named note through the final getting-ready moments with both items. Overlay territories: ‘Start with the fleck that caught you.’ ‘Choose tonight’s note.’ ‘Take both out.’ Pants stand alone during colour discovery, perfume stands alone during note discovery, and both meet during the final choice. Reject claims about projection or longevity, fabricated compliments, and literal colour-to-ingredient equivalence.",
+      "rationale": "A recurring act of choosing links visible texture and stated fragrance notes without making an unsupported performance promise.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-013",
+        "A-014",
+        "R-001",
+        "X-001"
+      ]
+    },
+    {
+      "id": "B-05-I-04",
+      "text": "Platform: The Plan Starts on the Chair. Beginning, images 1-5, builds a chair-side edit around the cream tweed pants, adjustable waist, baggy fit, and size decision. Transition, images 6-10, moves from dressing to pulse-point application, with the 15 ml perfume becoming the last item picked up. Payoff, images 11-15, follows pants and perfume from chair to mirror to doorway, then closes on the empty chair after she leaves. Overlay territories: ‘Comfort picked.’ ‘Pulse points next.’ ‘Plans: on.’ Pants lead the laid-out preparation, perfume gets its own final-touch beat, and both share the departure. Reject calling the fragrance a skin scent, promising attention, or forcing both packages into every frame; keep dry-clean and snag-care facts in a direct detail card rather than disguising them as romance.",
+      "rationale": "The chair is a concrete recurring anchor that turns purchase uncertainty into a familiar self-styling routine and leaves a clear visual payoff.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-010",
+        "A-012",
+        "A-013",
+        "A-015",
+        "R-001",
+        "S-007"
+      ]
+    }
+  ]
+}

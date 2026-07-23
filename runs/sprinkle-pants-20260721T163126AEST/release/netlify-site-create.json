@@ -1,0 +1,27 @@
+{
+  "schema_version": "3.0",
+  "proof_kind": "fresh_netlify_site_creation",
+  "created_at": "2026-07-21T22:59:09Z",
+  "binding": {
+    "run_root": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST",
+    "campaign_id": "sprinkle-pants-client-preview-20260721",
+    "run_plugin_version": "0.4.0+codex.20260721063218",
+    "release_plugin_version": "0.4.0+codex.20260721074509",
+    "site_tree_sha256": "92998957cd37ca523a8f0d3750cd02ba397ff6c7ed6a5ccf509f2bafdee51184",
+    "qa_sha256": "3e85e13031005908c124d307d6281fb99cbf7432d045a274ea313fb025e70b5f",
+    "image_manifest_sha256": "2b8e580f1b20824e26d1f9d805c59fe919266bdf8b802ad8721917e01618d3da",
+    "site_data_sha256": "03cf1d8d6a5f68e57a3f1ab4461c3c02e0268b11c3ad811f838795f8d3128fd5"
+  },
+  "provider": "netlify",
+  "account_slug": "blinds123",
+  "site_name": "fp30-sprinkle-pants-client-260721-224255-71efdd3b",
+  "site_id": "ee3ec1ec-405b-4750-a359-99388a95ab27",
+  "site_url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app",
+  "created_new": true,
+  "created_during_this_invocation": false,
+  "preexisting_site_match_count": 0,
+  "before_site_count": 456,
+  "linking_disabled": true,
+  "reuse_existing_site": false,
+  "ambient_site_link_used": false
+}

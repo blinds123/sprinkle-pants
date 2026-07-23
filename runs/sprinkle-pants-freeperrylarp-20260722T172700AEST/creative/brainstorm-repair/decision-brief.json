@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.0",
+  "state": "BRAINSTORM_ACCEPTED",
+  "accepted_at": "2026-07-23T02:08:26Z",
+  "run_id": "brainstorm-c2b13889-7349-4c79-b117-0547d579e56d",
+  "mode": "conversion",
+  "profile": "fast",
+  "problem_sha256": "ff32828ee9840393a2ac7d14109bc5b2140c645dafc0c8f03c0c9f8dc8aca666",
+  "critic_session_id": "critic-independent-20260723-a7e91c4f-8bd2-47fc-9d03-98e6ca44d9f1",
+  "primary_idea_id": "B-04-I-04",
+  "backup_idea_id": "B-01-I-03",
+  "decision_brief": {
+    "selected_idea_ids": [
+      "B-04-I-04",
+      "B-01-I-03"
+    ],
+    "primary_hook": "Plans on.",
+    "creative_platform": "Plans On: a shopper-facing getting-ready story in which hands tie the drawcord, place two or three drops at pulse points, collect keys, and carry the same look into the next plan.",
+    "recurring_motif": "Hands create forward motion: waist to wrist to keys to door. The rhyme is felt through matched gestures and directional cuts, never explained in words.",
+    "product_relationship": "The pants are the worn visual world and the perfume is a brief pulse-point action inside that world. Each is desirable alone; they coexist only because both are naturally present while one person gets ready and leaves.",
+    "page_argument": "Lead with wanting the pants, resolve fit and construction questions, let a measured fragrance application mark the transition from dressed to leaving, then show the payoff as movement into a real plan. Keep offer and factual detail modules distinct from the emotional image sequence.",
+    "scene_grammar": {
+      "beginning": "Pants only. Start with the pants on a bed or chair, then show stepping in, pulling the elastic waist into place, tying the braided drawcord, checking the relaxed silhouette in the mirror, and fringe moving toward the door.",
+      "transition": "Perfume only. Cut on hand movement to the 15 ml bottle being opened, two or three drops placed at wrist, neck, or behind the ears, then the bottle set down or slipped into a bag. Do not show a message, compliment, or reaction caused by application.",
+      "payoff": "Both naturally. Return to the full dressed figure for a mirror glance, bag close, keys taken, doorway crossing, and street-bound stride. The perfume may appear incidentally on the vanity or in the open bag, but never posed beside the pants."
+    },
+    "section_sequence": [
+      "Desire opener: close tweed, coloured flecks, drawcord pull, and a moving full look under 'Plans on.'",
+      "Pants proof: relaxed cut, adjustable elastic waist, published size bands, braided drawcord, and fringed hems.",
+      "Mirror-to-plan bridge: keep the pants on as time or destination changes; avoid claiming transformation.",
+      "Perfume action: 15 ml bottle, floral-amber description, named notes, and two or three drops at permitted pulse points.",
+      "Departure payoff: bag, keys, doorway, and a real outside destination with both present only through use.",
+      "Offer and care detail: state verified price, inclusion, size, and care facts plainly outside the cinematic overlays.",
+      "Decision close: return to a pants-led moving image and a direct next step."
+    ],
+    "proof_jobs": [
+      "Show cream tweed and multicoloured flecks at useful close range.",
+      "Show the elastic waist and braided drawcord being adjusted rather than merely named.",
+      "Show the relaxed silhouette and fringe in motion.",
+      "Present only the published size bands; do not infer body measurements or fit guarantees.",
+      "Show the perfume as a 15 ml bottle and describe it only with supported floral-amber notes.",
+      "Show two or three drops at supported pulse points without strength, longevity, attraction, or social-response claims.",
+      "Keep verified offer and care facts in legible, direct modules instead of hiding them inside romance copy."
+    ],
+    "visual_jobs": [
+      "Use hands and directional cuts to move from drawcord to wrist to keys.",
+      "Give the pants multiple scales: macro texture, waist action, full silhouette, and walking motion.",
+      "Give perfume a short self-contained application chapter with no garment in frame.",
+      "Use mirror, chair, vanity, bag, keys, and doorway as lived props, not styled pairing devices.",
+      "Vary the five action loops so the system does not become a repetitive triptych template.",
+      "End on a moving person or emptied departure space, never two packages on a surface."
+    ],
+    "objection_order": [
+      "Do I want the pants visually?",
+      "What are the texture, cut, waist, and hem details?",
+      "Which published size band can I choose?",
+      "What is the perfume format and scent description?",
+      "How is it applied?",
+      "What exactly is the verified offer and care requirement?"
+    ],
+    "public_overlay_territories": [
+      "Plans on.",
+      "Tie it your way.",
+      "Flecks in every step.",
+      "Same pants. New hour.",
+      "Two or three drops.",
+      "Wrists. Neck. Behind the ears.",
+      "One last look.",
+      "Keys. Bag. Go.",
+      "Meet you outside.",
+      "Out the door.",
+      "Ready when you are.",
+      "Keep the pants on."
+    ],
+    "product_visibility_plan": {
+      "pants_only": "Scenes 1-6. Dressing, waist adjustment, drawcord tie, texture close-up, mirror fit check, and fringe in motion. No perfume bottle, note graphic, or scent copy appears.",
+      "perfume_only": "Scenes 7-10. Bottle open, measured drops, wrist, neck or behind-ear application, then bottle set down or placed in a bag. No pants packshot or textile comparison appears.",
+      "both_naturally": "Scenes 11-15. The pants are worn while she checks the mirror, closes the bag, takes keys, crosses the doorway, and leaves. Perfume is visible only when the action plausibly keeps it in hand, on the vanity, or in the bag."
+    },
+    "translation_examples": [
+      {
+        "internal_strategy": "Make the two items feel like one self-purchase ritual.",
+        "customer_facing_expression": "Plans on."
+      },
+      {
+        "internal_strategy": "Use sequential hand choreography to create cross-product cohesion.",
+        "customer_facing_expression": "Tie it your way."
+      },
+      {
+        "internal_strategy": "Let perfume act as the transition from outfit consideration to departure.",
+        "customer_facing_expression": "Two or three drops."
+      },
+      {
+        "internal_strategy": "Demonstrate day-to-evening versatility without a performance claim.",
+        "customer_facing_expression": "Same pants. New hour."
+      },
+      {
+        "internal_strategy": "Convert the completed ritual into decisive forward motion.",
+        "customer_facing_expression": "Keys. Bag. Go."
+      }
+    ],
+    "leakage_traps": [
+      "Banned phrase or pattern: 'these products belong together' or any synonym for belonging, matching, pairing, bundle logic, or perfect combination.",
+      "Banned phrase or pattern: 'two products, one ritual', 'complete the ritual', or any line that names the internal creative mechanism.",
+      "Banned phrase or pattern: 'dress by touch, finish at the pulse' when used to explain why both items appear.",
+      "Banned phrase or pattern: 'pick a fleck, pick a note' or any literal colour-to-fragrance-note equivalence.",
+      "Banned phrase or pattern: 'take both out', 'buy them together', or any instruction whose visible job is to force co-usage.",
+      "Banned phrase or pattern: split-screen packshots, tabletop pairings, arrows, plus signs, matching diagrams, or repeated side-by-side layouts.",
+      "Banned phrase or pattern: 'the final detail changes everything', 'confidence unlocked', or any before-and-after identity claim.",
+      "Banned phrase or pattern: attraction, compliments, reactions, projection, longevity, strength, or scent-trail promises.",
+      "Banned phrase or pattern: calling either item a 'product' in public copy or narrating its role in the funnel.",
+      "Banned phrase or pattern: unsupported comfort, universal fit, snag-proof, easy-care, wash-at-home, or exact preparation-time claims."
+    ],
+    "public_copy_rules": [
+      "Write only what a shopper can feel, see, choose, or do; never explain the strategy.",
+      "Prefer short action lines tied to a visible beat: tie, drop, look, take keys, leave.",
+      "Never call the items products and never say they match, belong together, complete each other, or should be used together.",
+      "Keep the pants visually dominant and allow perfume to enter only at its natural application moment.",
+      "Use exact supported size, construction, note, volume, application, offer, and care facts in direct information modules.",
+      "Do not imply scent strength, longevity, attraction, compliments, confidence transformation, or social causation.",
+      "Do not turn internal labels such as ritual, pairing, conversion, proof, mechanism, or cross-sell into visible copy.",
+      "Do not use a split screen, plus sign, arrows, or adjacent packshots to manufacture a relationship."
+    ],
+    "evidence_ids": [
+      "A-008",
+      "A-009",
+      "A-010",
+      "A-012",
+      "A-013",
+      "A-014",
+      "A-015",
+      "R-001",
+      "S-003",
+      "S-005",
+      "S-006",
+      "S-007",
+      "X-001"
+    ],
+    "falsification_plan": "Reject or revise the platform if a blinded reviewer sees any single frame and describes it as a bundle advertisement, cannot identify a believable next action, reads an unsupported outcome claim, or encounters visible copy explaining why both items appear. Run a second pass with overlays removed: the sequence must still read as pants on, drops applied, keys taken, and departure. Then restore overlays and fail any line that uses product, pair, match, together, complete, ritual, or an unsupported performance term."
+  },
+  "scores": {
+    "B-01-I-01": {
+      "idea_id": "B-01-I-01",
+      "novelty": 7,
+      "evidence_fit": 9,
+      "buyer_force": 9,
+      "cross_product_fit": 9,
+      "implementation_fit": 9,
+      "claim_integrity": 9,
+      "consequence_resilience": 9,
+      "trap": "Strong route; keep 'Meet the version of you who said yes' out because it turns a physical ritual into generic confidence copy.",
+      "weighted_total": 8.76
+    },
+    "B-01-I-02": {
+      "idea_id": "B-01-I-02",
+      "novelty": 7,
+      "evidence_fit": 9,
+      "buyer_force": 8,
+      "cross_product_fit": 8,
+      "implementation_fit": 9,
+      "claim_integrity": 8,
+      "consequence_resilience": 8,
+      "trap": "'The last detail changes everything' is an inflated outcome claim; the hand motif works better when the visible line names the action.",
+      "weighted_total": 8.2
+    },
+    "B-01-I-03": {
+      "idea_id": "B-01-I-03",
+      "novelty": 8,
+      "evidence_fit": 9,
+      "buyer_force": 9,
+      "cross_product_fit": 8,
+      "implementation_fit": 8,
+      "claim_integrity": 9,
+      "consequence_resilience": 8,
+      "trap": "",
+      "weighted_total": 8.53
+    },
+    "B-01-I-04": {
+      "idea_id": "B-01-I-04",
+      "novelty": 6,
+      "evidence_fit": 8,
+      "buyer_force": 7,
+      "cross_product_fit": 8,
+      "implementation_fit": 8,
+      "claim_integrity": 8,
+      "consequence_resilience": 7,
+      "trap": "The 'Yes List' and countdown are internal conversion devices that could become clinical meta-copy instead of a desirable scene.",
+      "weighted_total": 7.5
+    },
+    "B-02-I-01": {
+      "idea_id": "B-02-I-01",
+      "novelty": 7,
+      "evidence_fit": 9,
+      "buyer_force": 9,
+      "cross_product_fit": 10,
+      "implementation_fit": 10,
+      "claim_integrity": 9,
+      "consequence_resilience": 9,
+      "trap": "The cadence is excellent, but repeating the three-word mechanism too literally across every frame would expose the creative scaffold.",
+      "weighted_total": 9.03
+    },
+    "B-02-I-02": {
+      "idea_id": "B-02-I-02",
+      "novelty": 8,
+      "evidence_fit": 8,
+      "buyer_force": 7,
+      "cross_product_fit": 7,
+      "implementation_fit": 7,
+      "claim_integrity": 8,
+      "consequence_resilience": 6,
+      "trap": "Flecks-to-florals invites a forced sensory equivalence and ingredient-collage imagery; texture and notes should never be visibly mapped to each other.",
+      "weighted_total": 7.39
+    },
+    "B-02-I-03": {
+      "idea_id": "B-02-I-03",
+      "novelty": 7,
+      "evidence_fit": 9,
+      "buyer_force": 8,
+      "cross_product_fit": 9,
+      "implementation_fit": 9,
+      "claim_integrity": 9,
+      "consequence_resilience": 9,
+      "trap": "'One last detail' is safe only as scene logic; repeated visible use would announce the intended product hierarchy.",
+      "weighted_total": 8.58
+    },
+    "B-02-I-04": {
+      "idea_id": "B-02-I-04",
+      "novelty": 6,
+      "evidence_fit": 9,
+      "buyer_force": 6,
+      "cross_product_fit": 7,
+      "implementation_fit": 7,
+      "claim_integrity": 8,
+      "consequence_resilience": 7,
+      "trap": "Care warnings and the rough-chair beat dampen aspiration; 'Save the fuss' also smuggles in an ease claim the evidence does not establish.",
+      "weighted_total": 7.25
+    },
+    "B-03-I-01": {
+      "idea_id": "B-03-I-01",
+      "novelty": 5,
+      "evidence_fit": 10,
+      "buyer_force": 7,
+      "cross_product_fit": 7,
+      "implementation_fit": 8,
+      "claim_integrity": 10,
+      "consequence_resilience": 8,
+      "trap": "Proof-first sequencing can flatten into a catalog or inspection guide; retain facts in detail cards, not as the public creative platform.",
+      "weighted_total": 8.01
+    },
+    "B-03-I-02": {
+      "idea_id": "B-03-I-02",
+      "novelty": 5,
+      "evidence_fit": 9,
+      "buyer_force": 7,
+      "cross_product_fit": 8,
+      "implementation_fit": 9,
+      "claim_integrity": 9,
+      "consequence_resilience": 8,
+      "trap": "The checklist is useful production logic but visible labels such as 'Tweed, checked' feel administrative and reveal the persuasion method.",
+      "weighted_total": 7.93
+    },
+    "B-03-I-03": {
+      "idea_id": "B-03-I-03",
+      "novelty": 6,
+      "evidence_fit": 10,
+      "buyer_force": 7,
+      "cross_product_fit": 6,
+      "implementation_fit": 7,
+      "claim_integrity": 10,
+      "consequence_resilience": 8,
+      "trap": "Question-and-answer layouts turn the story into FAQ meta-copy and make the two item chapters feel mechanically assembled.",
+      "weighted_total": 7.86
+    },
+    "B-03-I-04": {
+      "idea_id": "B-03-I-04",
+      "novelty": 6,
+      "evidence_fit": 8,
+      "buyer_force": 8,
+      "cross_product_fit": 8,
+      "implementation_fit": 8,
+      "claim_integrity": 7,
+      "consequence_resilience": 7,
+      "trap": "The fifteen-minute promise is unsupported as a literal preparation time and can create accidental performance pressure.",
+      "weighted_total": 7.53
+    },
+    "B-04-I-01": {
+      "idea_id": "B-04-I-01",
+      "novelty": 6,
+      "evidence_fit": 9,
+      "buyer_force": 9,
+      "cross_product_fit": 9,
+      "implementation_fit": 9,
+      "claim_integrity": 8,
+      "consequence_resilience": 8,
+      "trap": "'The pants that make the plan' attributes an outcome to the garment; replace it with a line about putting them on or leaving.",
+      "weighted_total": 8.41
+    },
+    "B-04-I-02": {
+      "idea_id": "B-04-I-02",
+      "novelty": 8,
+      "evidence_fit": 8,
+      "buyer_force": 8,
+      "cross_product_fit": 7,
+      "implementation_fit": 8,
+      "claim_integrity": 8,
+      "consequence_resilience": 6,
+      "trap": "'Dress by touch. Finish at the pulse.' is elegant but explains the cross-item mechanism and risks presenting the sensory chapters as a designed match.",
+      "weighted_total": 7.69
+    },
+    "B-04-I-03": {
+      "idea_id": "B-04-I-03",
+      "novelty": 5,
+      "evidence_fit": 10,
+      "buyer_force": 8,
+      "cross_product_fit": 7,
+      "implementation_fit": 8,
+      "claim_integrity": 9,
+      "consequence_resilience": 8,
+      "trap": "Size-led framing solves friction but makes the perfume feel like checkout machinery; do not let offer mechanics become the creative platform.",
+      "weighted_total": 8.04
+    },
+    "B-04-I-04": {
+      "idea_id": "B-04-I-04",
+      "novelty": 8,
+      "evidence_fit": 9,
+      "buyer_force": 10,
+      "cross_product_fit": 10,
+      "implementation_fit": 10,
+      "claim_integrity": 9,
+      "consequence_resilience": 10,
+      "trap": "",
+      "weighted_total": 9.41
+    },
+    "B-05-I-01": {
+      "idea_id": "B-05-I-01",
+      "novelty": 6,
+      "evidence_fit": 9,
+      "buyer_force": 9,
+      "cross_product_fit": 9,
+      "implementation_fit": 10,
+      "claim_integrity": 9,
+      "consequence_resilience": 9,
+      "trap": "Reliable but generic; 'Dress. Dab. Go.' should not become a slogan repeated so often that the ritual feels like instructions.",
+      "weighted_total": 8.76
+    },
+    "B-05-I-02": {
+      "idea_id": "B-05-I-02",
+      "novelty": 7,
+      "evidence_fit": 9,
+      "buyer_force": 8,
+      "cross_product_fit": 8,
+      "implementation_fit": 8,
+      "claim_integrity": 9,
+      "consequence_resilience": 8,
+      "trap": "The three-choice scaffold is useful internally, but visible option lists feel like a quiz and 'Which pulse point?' overstates meaningful consumer choice.",
+      "weighted_total": 8.23
+    },
+    "B-05-I-03": {
+      "idea_id": "B-05-I-03",
+      "novelty": 8,
+      "evidence_fit": 8,
+      "buyer_force": 7,
+      "cross_product_fit": 6,
+      "implementation_fit": 7,
+      "claim_integrity": 7,
+      "consequence_resilience": 6,
+      "trap": "'Pick a fleck. Pick a note.' forces a relationship that does not exist, and 'Take both out' openly explains the pairing.",
+      "weighted_total": 7.09
+    },
+    "B-05-I-04": {
+      "idea_id": "B-05-I-04",
+      "novelty": 8,
+      "evidence_fit": 9,
+      "buyer_force": 8,
+      "cross_product_fit": 9,
+      "implementation_fit": 9,
+      "claim_integrity": 8,
+      "consequence_resilience": 8,
+      "trap": "The chair is a useful anchor, but 'Comfort picked' is unsupported and a repeated laid-out-item composition could regress into a forced bundle still life.",
+      "weighted_total": 8.47
+    }
+  },
+  "clusters": [
+    {
+      "label": "embodied departure ritual",
+      "idea_ids": [
+        "B-01-I-01",
+        "B-02-I-01",
+        "B-04-I-01",
+        "B-04-I-04",
+        "B-05-I-01",
+        "B-05-I-04"
+      ]
+    },
+    {
+      "label": "decisive final detail",
+      "idea_ids": [
+        "B-01-I-02",
+        "B-02-I-03"
+      ]
+    },
+    {
+      "label": "day-to-evening continuity",
+      "idea_ids": [
+        "B-01-I-03"
+      ]
+    },
+    {
+      "label": "countdown and checklist momentum",
+      "idea_ids": [
+        "B-01-I-04",
+        "B-03-I-02",
+        "B-03-I-04"
+      ]
+    },
+    {
+      "label": "sensory texture-to-note analogy",
+      "idea_ids": [
+        "B-02-I-02",
+        "B-04-I-02",
+        "B-05-I-03"
+      ]
+    },
+    {
+      "label": "practical proof and bounded choice",
+      "idea_ids": [
+        "B-02-I-04",
+        "B-03-I-01",
+        "B-03-I-03",
+        "B-04-I-03",
+        "B-05-I-02"
+      ]
+    }
+  ],
+  "second_order_consequences": [
+    "A strong hand-action system can become visually repetitive; vary camera distance, location, direction, and payoff while preserving the waist-to-wrist-to-keys grammar.",
+    "If perfume appears too early or too often, the pants lose visual primacy and the sequence reads like a forced bundle; reserve a clean perfume-only transition and incidental later visibility.",
+    "If practical sizing and care facts are pushed into cinematic overlays, desire collapses into instruction; isolate them in direct detail modules.",
+    "If a message or stranger reaction follows application, viewers may infer an unsupported social effect even without explicit copy; remove causal editing.",
+    "If every payoff frame contains the bottle, natural use becomes conspicuous placement; allow it to disappear after application."
+  ],
+  "third_order_consequences": [
+    "Repeated use across campaigns could harden into a generic three-step template; preserve the action grammar but rotate destination, time shift, props, and ending composition.",
+    "The elegant sensory analogy route could re-enter downstream through art direction even after copy is cleaned; prohibit ingredient piles, colour-note matching, and visible comparison devices in image prompts and QA.",
+    "Offer-led conversion modules may gradually colonize the creative opener; maintain a hard boundary between shopper emotion, product proof, and verified offer disclosure.",
+    "Downstream editors may treat the perfume as a symbolic confidence trigger; require frame-level review for magical lighting shifts, posture transformations, attention, or reactions after application.",
+    "A chair or vanity anchor can become a recurring packshot surface; enforce an action requirement for every frame containing both items."
+  ],
+  "rejected_assumptions": [
+    "The pants and perfume share a meaningful colour, ingredient, material, or scent relationship.",
+    "The fragrance creates invitations, confidence, attention, compliments, attraction, projection, or lasting performance.",
+    "The garment is universally comfortable, snag-proof, easy-care, washable at home, or guaranteed to fit.",
+    "A countdown duration accurately describes how long shoppers take to get ready.",
+    "Showing both packages together is sufficient to make the relationship believable.",
+    "A shopper needs visible copy explaining why the two items are in the same campaign.",
+    "The offer mechanic should serve as the emotional creative platform.",
+    "A note list should be visualized as loose ingredients or matched to the pants' flecks."
+  ],
+  "unresolved_evidence_gaps": [
+    "No supported fragrance strength, longevity, projection, attraction, or user-response evidence is available; these territories remain prohibited.",
+    "No supported exact waist measurements, body-shape guidance, comfort guarantee, or individualized size recommendation is available.",
+    "No evidence establishes a literal sensory or aesthetic relationship between the pants' flecks and the fragrance notes."
+  ],
+  "isolation_level": "independent_contexts",
+  "branch_count": 5,
+  "idea_count": 20,
+  "critic_input_sha256": "1c6a66f1ad30b9a97d775d1b0c83b9277edd4bfd5a756775b969a364cb4848c0",
+  "critic_output_sha256": "913ff20663b7c8a8da059fa11e4fc7ae88c06ac1ba87948f00f624083af056e9"
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": "2.0",
+  "research_session": {
+    "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+    "research_session_id": "260fe3ec5f6a483780f9d759471f7ec0",
+    "competitor_plan_sha256": "81d6bb02121ecaaeaf53d316b62da8c072557293db1bee403f020382fc1e6d47",
+    "captured_at": "2026-07-22T07:18:31Z",
+    "fresh_research": true,
+    "reused_prior_facts": false
+  },
+  "reference_product": {
+    "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+    "variant_name": "Woman / XS-S, M, and L-XL",
+    "variant_resolution": "ai_resolved_from_fresh_evidence"
+  },
+  "items": [
+    {
+      "claim": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "appearance",
+      "source_type": "official_product_page"
+    },
+    {
+      "claim": "The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "functionality",
+      "source_type": "official_product_page"
+    },
+    {
+      "claim": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "compatibility",
+      "source_type": "official_size_guide"
+    },
+    {
+      "claim": "The standard length is 110 cm from waistband to hem.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "compatibility",
+      "source_type": "official_size_guide"
+    },
+    {
+      "claim": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces and accessories that may snag it.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "limitation",
+      "source_type": "official_product_page"
+    }
+  ]
+}

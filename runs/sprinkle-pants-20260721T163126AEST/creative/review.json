@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0",
+  "reviewed_at": "2026-07-21T07:22:59Z",
+  "passed": true,
+  "errors": [],
+  "warnings": [
+    "Some sources failed: arxiv, github",
+    "Some sources returned partial results (degraded): digg, instagram"
+  ],
+  "checks": {
+    "prompt_count": 39,
+    "story_count": 15,
+    "proof_count": 24,
+    "pack_counts": [
+      10,
+      10,
+      10,
+      9
+    ],
+    "sample_story_count": 24,
+    "distinct_cast_count": 24,
+    "reference_image_count": 2,
+    "prompt_word_limit": 220,
+    "prompt_word_count_max": 219,
+    "prompt_word_count_average": 203.6,
+    "research_evidence_count": 29,
+    "selected_research_count": 6,
+    "writer_packet_bytes": 20185,
+    "framework_keys_in_research": 0
+  }
+}

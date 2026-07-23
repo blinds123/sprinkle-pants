@@ -1,0 +1,210 @@
+{
+  "schema_version": "2.0",
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "preset": "auralo-eu",
+  "product": {
+    "name": "Sprinkle Tweed Pants",
+    "category": "women's multicoloured tweed statement trousers",
+    "description": "Women's cream tweed trousers with multicoloured flecks, a multicoloured braided drawcord, an adjustable elastic waist, a relaxed baggy leg, and fringed hems.",
+    "image_paths": [
+      "/Users/nelsonchan/Downloads/vanillasprinklestrackers.jpg"
+    ],
+    "source_urls": [
+      "https://ismile.world/products/vanilla-sprinkles-tracker"
+    ]
+  },
+  "audience": {
+    "region": "Europe",
+    "language": "English",
+    "seed": "A woman choosing a visually distinctive pair of trousers for herself and considering fragrance as part of the same getting-ready moment."
+  },
+  "offer": {
+    "paid_name": "Auralo Pheromone Perfume",
+    "paid_price_usd": 29,
+    "companion_name": "Sprinkle Tweed Pants",
+    "companion_price_usd": 0,
+    "shipping": "Ships within 4 days",
+    "returns": "90-day returns",
+    "warranty": "Five-year warranty",
+    "checkout_provider": "SimpleSwap",
+    "checkout_endpoint": "https://simpleswap-automation-1.onrender.com/buy-now",
+    "commercial_terms_source": "client_attested",
+    "paid_image_paths": [
+      "/Users/nelsonchan/Documents/Sprinkle pants/assets/reference-images/AURALO-15ML-DROPPER-REFERENCE-20260722.png"
+    ]
+  },
+  "free_product_reference": {
+    "mode": "exact_appearance_and_function",
+    "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+    "variant_name": "Woman / XS-S, M, and L-XL",
+    "variant_resolution": "ai_resolved_from_fresh_evidence",
+    "variant_basis": "The current official page separately lists Woman / XS-S, Woman / M, and Woman / L-XL; the current supplied comments ask about XS-S and M women's waist sizing; and the supplied reference image shows the women's trouser.",
+    "authorization": "standing_user_instruction",
+    "fresh_research_required": true,
+    "improvements_allowed": false
+  },
+  "market_confirmation": {
+    "status": "ai_decided_recommendations",
+    "decision_authority": "standing_user_instruction",
+    "confirmed_fields": [
+      "primary_buyer",
+      "primary_moment",
+      "secondary_moments",
+      "offer_structure"
+    ],
+    "research_basis": [
+      "current user-supplied TikTok comments",
+      "current official product-page preflight on 2026-07-22",
+      "current public fragrance and statement-trouser category preflight on 2026-07-22"
+    ],
+    "reused_prior_positioning": false,
+    "confirmed_at": "2026-07-22T17:04:03+10:00"
+  },
+  "positioning": {
+    "primary_buyer": "a woman buying the Sprinkle Tweed Pants for herself",
+    "primary_moment": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+    "secondary_moments": [
+      "a weekend city outing built around a simple top and distinctive trousers",
+      "an evening plan where she wants her outfit and scent to feel intentional"
+    ],
+    "new_opportunity": "let one textured trouser carry the visual interest while Auralo becomes the final scent step before leaving",
+    "desired_result": "feel intentionally put together through a memorable visible detail and a personal fragrance ritual",
+    "specific_vehicle": "Auralo Pheromone Perfume at $29 with the exact Sprinkle Tweed Pants included FREE",
+    "customer_belief": "A getting-ready choice feels more complete when the outfit has one memorable visual detail and the wearer has chosen a scent for the moment.",
+    "problem_statement": "A basic outfit can feel unfinished, while choosing too many competing pieces can make getting ready feel harder than it needs to be.",
+    "offer_connection": "Auralo is the paid personal-scent step; the Sprinkle Tweed Pants are the FREE visible statement reward.",
+    "paid_role": "Auralo is the $29 15 ml pheromone-inspired floral-amber perfume applied to pulse points before leaving.",
+    "companion_role": "The Sprinkle Tweed Pants are the FREE exact-parity women's statement trousers.",
+    "secrets": [
+      {
+        "title": "Let the texture lead the look",
+        "explanation": "The cream tweed, multicoloured flecks, braided drawcord, and fringed hems give the trousers their visible identity.",
+        "fact_keys": [
+          "sprinkle-current-appearance"
+        ]
+      },
+      {
+        "title": "Choose the relaxed shape deliberately",
+        "explanation": "The official design uses an adjustable elastic waist and a relaxed baggy fit.",
+        "fact_keys": [
+          "sprinkle-current-fit"
+        ]
+      },
+      {
+        "title": "Remove the size uncertainty",
+        "explanation": "The current official size and length information gives the buyer a concrete basis for choosing before checkout.",
+        "fact_keys": [
+          "sprinkle-current-sizes",
+          "sprinkle-current-length"
+        ]
+      }
+    ],
+    "public_language_guardrails": [
+      "Do not name or compare against the reference seller.",
+      "Do not mention the reference seller's price, stock status, alterations, ratings, testimonials, shipping, returns, or warranty.",
+      "Do not claim stretch, pockets, lining, warmth, machine washability, attraction, coercion, or a guaranteed reaction.",
+      "Do not expose framework names, research labels, production instructions, or the word offer in public copy."
+    ],
+    "hero_headline": "Get Auralo's $29 Pheromone Perfume and Receive the Sprinkle Tweed Pants FREE.",
+    "hero_subheadline": "One personal scent ritual. One cream multicoloured-tweed statement pair. Both in the same getting-ready decision.",
+    "story_intro": "What if getting ready started with one piece that makes the look unmistakably yours—and ended with the scent you chose for the moment?",
+    "setup_steps": [
+      "Choose XS-S for EU 34-38, M for EU 38-40, or L-XL for EU 42-44.",
+      "Adjust the elastic waist to set the intended relaxed baggy fit.",
+      "Dry clean only and keep the delicate tweed away from rough surfaces that may snag it."
+    ]
+  },
+  "product_truth": [
+    {
+      "fact_key": "sprinkle-current-appearance",
+      "claim": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "public_language": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "status": "authorized",
+      "type": "appearance",
+      "evidence": "Standing exact-parity authorization plus the current official product page and supplied exact-product image captured on 2026-07-22",
+      "required_in_story": true,
+      "faq_question": "What do the pants look like?",
+      "reference_claim": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "reference_scope": "appearance"
+    },
+    {
+      "fact_key": "sprinkle-current-fit",
+      "claim": "The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit.",
+      "public_language": "The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit.",
+      "status": "authorized",
+      "type": "functionality",
+      "evidence": "Standing exact-parity authorization plus the current official product page captured on 2026-07-22",
+      "required_in_story": true,
+      "faq_question": "How do the pants fit?",
+      "reference_claim": "The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit.",
+      "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "reference_scope": "functionality"
+    },
+    {
+      "fact_key": "sprinkle-current-sizes",
+      "claim": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "public_language": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "status": "authorized",
+      "type": "compatibility",
+      "evidence": "Standing exact-parity authorization plus the current official size guide captured on 2026-07-22",
+      "required_in_story": true,
+      "faq_question": "Which size should I choose?",
+      "reference_claim": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "reference_scope": "compatibility"
+    },
+    {
+      "fact_key": "sprinkle-current-length",
+      "claim": "The standard length is 110 cm from waistband to hem.",
+      "public_language": "The standard length is 110 cm from waistband to hem.",
+      "status": "authorized",
+      "type": "compatibility",
+      "evidence": "Standing exact-parity authorization plus the current official size guide captured on 2026-07-22",
+      "required_in_story": false,
+      "faq_question": "How long are the pants?",
+      "reference_claim": "The standard length is 110 cm from waistband to hem.",
+      "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "reference_scope": "compatibility"
+    },
+    {
+      "fact_key": "sprinkle-current-care",
+      "claim": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces and accessories that may snag it.",
+      "public_language": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces and accessories that may snag it.",
+      "status": "authorized",
+      "type": "limitation",
+      "evidence": "Standing exact-parity authorization plus the current official care instructions captured on 2026-07-22",
+      "required_in_story": true,
+      "faq_question": "How should I care for the pants?",
+      "reference_claim": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces and accessories that may snag it.",
+      "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "reference_scope": "limitation"
+    }
+  ],
+  "relationship": {
+    "selection_authority": "ai_from_current_research",
+    "allowed_modes": [
+      "wanted_reward",
+      "complete_ritual"
+    ],
+    "default_when_overlap_is_weak": "wanted_reward",
+    "research_required": true
+  },
+  "layout_mode": "conversion_39_v5",
+  "supplied_comments": [
+    "when is M coming back its sold out",
+    "back in stock!!!🩷",
+    "What is M in UK numbers size?",
+    "uk10-12",
+    "Please send me a link to buy a pair of these trousers please?????",
+    "How do I buy a pair!!!",
+    "R u wearing size xs/s or M? What size would u recommend for waist 26",
+    "i’m wearing the xs/s :) with a 26 waist i’d definitely recommend the xs/s!",
+    "C’est quoi la réf ?",
+    "vanilla sprinkles sur ismile.world :))"
+  ],
+  "competitor_urls": [
+    "https://ismile.world/products/vanilla-sprinkles-tracker"
+  ],
+  "research_topic": "Current buyer demand, questions, objections, styling moments, and purchase signals for Vanilla Sprinkles-style women's multicoloured tweed baggy trousers; current perfume desire, scent-language, application, objections, and purchase moments; and evidence of a shared getting-ready moment between a statement trouser and personal fragrance."
+}

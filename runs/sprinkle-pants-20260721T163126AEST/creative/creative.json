@@ -1,0 +1,1205 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-07-21T06:41:05Z",
+  "campaign": {
+    "schema_version": "2.0",
+    "campaign_id": "sprinkle-pants-client-preview-20260721",
+    "preset": "auralo-eu",
+    "product": {
+      "name": "Sprinkle Tweed Pants",
+      "category": "women's multicoloured tweed statement trousers",
+      "description": "Cream multicoloured-flecked tweed pants with a relaxed baggy silhouette, adjustable elastic waist, braided drawcord, and fringed hems.",
+      "image_paths": [
+        "/Users/nelsonchan/Downloads/vanillasprinklestrackers.jpg"
+      ],
+      "source_urls": [
+        "https://ismile.world/products/vanilla-sprinkles-tracker"
+      ]
+    },
+    "audience": {
+      "region": "Europe",
+      "language": "English",
+      "seed": "A style-forward woman buying for herself who wants one distinctive pair of trousers to make simple casual and social outfits feel deliberately styled."
+    },
+    "offer": {
+      "companion_price_usd": 0,
+      "paid_name": "Auralo Pheromone Perfume",
+      "paid_price_usd": 29,
+      "shipping": "Ships within 4 days",
+      "returns": "90-day returns",
+      "warranty": "Five-year warranty",
+      "checkout_provider": "SimpleSwap",
+      "checkout_endpoint": "https://simpleswap-automation-1.onrender.com/buy-now",
+      "companion_name": "Sprinkle Tweed Pants",
+      "paid_image_paths": [
+        "/Users/nelsonchan/Downloads/FreePerry30Days-Star-Burst-39-Image-Prompts-20260720/reference-images/REF-02-AURALO-PERFUME.png"
+      ],
+      "structure": "direct_to_customer_two_product",
+      "product_count": 2
+    },
+    "product_truth": [
+      {
+        "fact_key": "sprinkle-tweed-appearance",
+        "claim": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+        "public_language": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+        "status": "authorized",
+        "type": "appearance",
+        "evidence": "Standing exact-parity authorization plus the fresh official product page and supplied official product image",
+        "required_in_story": true,
+        "faq_question": "What do the pants look like?",
+        "reference_claim": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+        "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+        "reference_scope": "appearance"
+      },
+      {
+        "fact_key": "relaxed-adjustable-fit",
+        "claim": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist.",
+        "public_language": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist.",
+        "status": "authorized",
+        "type": "primary_capability",
+        "evidence": "Standing exact-parity authorization plus the fresh official product page",
+        "required_in_story": true,
+        "faq_question": "How do the pants fit?",
+        "reference_claim": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist.",
+        "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+        "reference_scope": "functionality"
+      },
+      {
+        "fact_key": "women-size-range",
+        "claim": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+        "public_language": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+        "status": "authorized",
+        "type": "compatibility",
+        "evidence": "Standing exact-parity authorization plus the fresh official size guide",
+        "required_in_story": true,
+        "faq_question": "Which size should I choose?",
+        "reference_claim": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+        "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+        "reference_scope": "compatibility"
+      },
+      {
+        "fact_key": "standard-length",
+        "claim": "The standard length is 110 cm from waistband to hem.",
+        "public_language": "The standard length is 110 cm from waistband to hem.",
+        "status": "authorized",
+        "type": "compatibility",
+        "evidence": "Standing exact-parity authorization plus the fresh official size guide",
+        "required_in_story": false,
+        "faq_question": "How long are the pants?",
+        "reference_claim": "The standard length is 110 cm from waistband to hem.",
+        "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+        "reference_scope": "compatibility"
+      },
+      {
+        "fact_key": "tweed-care",
+        "claim": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it.",
+        "public_language": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it.",
+        "status": "authorized",
+        "type": "limitation",
+        "evidence": "Standing exact-parity authorization plus the fresh official care instructions",
+        "required_in_story": true,
+        "faq_question": "How should I care for the pants?",
+        "reference_claim": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it.",
+        "reference_url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+        "reference_scope": "limitation"
+      }
+    ],
+    "positioning": {
+      "primary_buyer": "a style-forward woman buying the pants for herself",
+      "primary_moment": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "new_opportunity": "make the statement piece the trousers so their multicoloured tweed, relaxed silhouette, drawcord, and fringed hems do the visual work",
+      "desired_result": "feel deliberately styled and distinctive without adding more competing pieces",
+      "specific_vehicle": "the Sprinkle Tweed Pants' multicoloured cream tweed, relaxed baggy fit, adjustable elastic waist, braided drawcord, and fringed hems",
+      "customer_belief": "When one piece carries the colour, texture, and silhouette, a simple outfit can feel more individual and intentional.",
+      "problem_statement": "Easy outfits often disappear into the background, while piling on more pieces can make them feel busy instead of personal.",
+      "offer_connection": "Auralo is the paid getting-ready finishing touch; the Sprinkle Tweed Pants are the FREE statement piece that shapes the outfit.",
+      "paid_role": "Auralo's $29 Pheromone Perfume is the paid product used as a getting-ready finishing touch.",
+      "companion_role": "The Sprinkle Tweed Pants are the FREE exact-parity statement trousers with the multicoloured tweed design and relaxed adjustable fit.",
+      "secondary_moments": [
+        "weekend city outings styled with a simple fitted top or sweater",
+        "casual evenings and creative social settings where texture and colour can lead the look"
+      ],
+      "secrets": [
+        {
+          "title": "Let the trousers carry the outfit",
+          "explanation": "The cream tweed, multicoloured flecks, braided drawcord, and fringed hems provide the colour and texture, so the rest of the outfit can stay simple.",
+          "fact_keys": [
+            "sprinkle-tweed-appearance"
+          ]
+        },
+        {
+          "title": "Choose the baggy shape on purpose",
+          "explanation": "The relaxed baggy fit and adjustable elastic waist make the silhouette a deliberate part of the look.",
+          "fact_keys": [
+            "relaxed-adjustable-fit"
+          ]
+        },
+        {
+          "title": "Know the size and care before first wear",
+          "explanation": "Use the EU size ranges and 110 cm standard length to choose, then protect the delicate tweed with dry-clean-only care.",
+          "fact_keys": [
+            "women-size-range",
+            "standard-length",
+            "tweed-care"
+          ]
+        }
+      ],
+      "public_language_guardrails": [
+        "Do not mention the reference seller or competitor.",
+        "Do not compare prices or use compare-at pricing.",
+        "Do not claim comfort, stretch, warmth, durability, pockets, lining, or machine washability.",
+        "Do not turn framework names, research labels, or production instructions into public copy."
+      ],
+      "hero_headline": "When You Get Auralo's $29 Pheromone Perfume Today, You Get Sprinkle Tweed Pants FREE.",
+      "hero_subheadline": "A cream multicoloured-tweed statement pair with a relaxed baggy fit, adjustable elastic waist, braided drawcord, and fringed hems.",
+      "story_intro": "If your easiest outfits keep feeling forgettable, the answer may not be more layers or more accessories. It may be one pair of trousers designed to carry the colour, texture, and silhouette.",
+      "setup_steps": [
+        "Choose XS-S for EU 34-38, M for EU 38-40, or L-XL for EU 42-44.",
+        "Use the adjustable elastic waist to set the relaxed baggy fit.",
+        "Dry clean only and keep the delicate tweed away from rough surfaces that may snag it."
+      ]
+    },
+    "free_product_reference": {
+      "mode": "exact_appearance_and_function",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "official_domain": "ismile.world",
+      "variant_name": "Woman / XS-S, M, and L-XL",
+      "variant_resolution": "ai_resolved_from_fresh_evidence",
+      "variant_basis": "The supplied product image is the women's trouser, every supplied sizing comment discusses XS-S or M and a 26-inch waist, and the official page lists the women's range as XS-S, M, and L-XL.",
+      "authorization": "standing_user_instruction",
+      "fresh_research_required": true,
+      "improvements_allowed": false,
+      "transfer_scope": [
+        "appearance",
+        "functionality",
+        "dependencies",
+        "limitations",
+        "setup",
+        "compatibility",
+        "included components"
+      ],
+      "excluded_scope": [
+        "brand identity",
+        "trademarks",
+        "price",
+        "promotions",
+        "testimonials",
+        "ratings",
+        "review counts",
+        "shipping",
+        "returns",
+        "warranty",
+        "seller-specific claims"
+      ],
+      "offered_product_name": "Sprinkle Tweed Pants"
+    },
+    "market_confirmation": {
+      "status": "ai_decided_recommendations",
+      "decision_authority": "standing_user_instruction",
+      "confirmed_fields": [
+        "offer_structure",
+        "primary_buyer",
+        "primary_moment",
+        "secondary_moments"
+      ],
+      "research_basis": [
+        "fresh supplied TikTok comments",
+        "fresh official reference-product research",
+        "fresh public customer language about fun tweed and baggy statement trousers"
+      ],
+      "reused_prior_positioning": false,
+      "confirmed_at": "2026-07-21T16:31:26+10:00"
+    },
+    "supplied_comments": [
+      "when is M coming back its sold out",
+      "back in stock!!!🩷",
+      "What is M in UK numbers size?",
+      "uk10-12",
+      "Please send me a link to buy a pair of these trousers please?????",
+      "How do I buy a pair!!!",
+      "R u wearing size xs/s or M? What size would u recommend for waist 26",
+      "i’m wearing the xs/s :) with a 26 waist i’d definitely recommend the xs/s!",
+      "C’est quoi la réf ?",
+      "vanilla sprinkles sur ismile.world :))"
+    ],
+    "competitor_urls": [
+      "https://ismile.world/products/vanilla-sprinkles-tracker"
+    ],
+    "research_topic": "Fresh buyer language, purchase signals, objections, styling moments, and outfit frustrations around women's statement trousers, multicoloured tweed pants, relaxed baggy pants, and distinctive casual outfits. Exclude competitor pricing and seller promotions.",
+    "creative_direction": {
+      "visual_style": "Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions.",
+      "buyer_world": "Everyday environments in the target market that match the campaign's locked use moments.",
+      "cast_rule": "Use 24 visibly distinct adults who fit the primary buyer; vary apparent age, skin tone, facial features, hair, wardrobe, camera, and lighting.",
+      "theme": {
+        "background": "#f7f4ef",
+        "surface": "#ffffff",
+        "ink": "#1f1b1c",
+        "accent": "#8f2f4a",
+        "accent_dark": "#5e1d31",
+        "soft_accent": "#dcecf7"
+      }
+    },
+    "preview": {
+      "mode": "client_preview",
+      "checkout_mode": "dry_run",
+      "indexing": "blocked",
+      "footer_disclosure": "This client preview contains illustrative claims and sample customer stories."
+    },
+    "created_at": "2026-07-21T06:34:01Z"
+  },
+  "research_digest": {
+    "raw_sha256": "be0f6e3b34efe0eb171bd0ff95aa7ae6f14c5e94fd35deb7699d3bf28e7ab109",
+    "evidence_count": 29,
+    "source_counts": {
+      "grounding": 5,
+      "instagram": 5,
+      "pinterest": 4,
+      "supplied_comment": 3,
+      "tiktok": 1,
+      "tiktok_comment": 1,
+      "youtube": 8,
+      "youtube_comment": 2
+    },
+    "role_summary": [
+      {
+        "role": "product_context",
+        "evidence_count": 18,
+        "input_ids": [
+          "R-002",
+          "R-003",
+          "R-004",
+          "R-005",
+          "R-006",
+          "R-007",
+          "R-008",
+          "R-009",
+          "R-010",
+          "R-011",
+          "R-012",
+          "R-014"
+        ],
+        "examples": [
+          {
+            "input_id": "R-002",
+            "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!"
+          },
+          {
+            "input_id": "R-003",
+            "text": "They might not have come specifically to your yard they may have just been driving past you meat had"
+          },
+          {
+            "input_id": "R-004",
+            "text": "Comment “LINK” and I’ll send you the links on your DMs❤️ You don’t need a wardrobe full of clothes. You need pieces that can do the heavy l — Hi, I'm Priyanshi and I got these from a long, and let me show you six looks, three occasions with"
+          }
+        ]
+      },
+      {
+        "role": "problem_context",
+        "evidence_count": 8,
+        "input_ids": [
+          "R-001",
+          "R-013",
+          "R-015",
+          "R-016",
+          "R-017",
+          "R-018",
+          "R-020",
+          "R-023"
+        ],
+        "examples": [
+          {
+            "input_id": "R-001",
+            "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa"
+          },
+          {
+            "input_id": "R-013",
+            "text": "How to Style Linen Pants (& Look CHIC) ☀️ Easy Summer Outfit Ideas ✅ — Linen season is finally here, and I personally cannot stop talking about linen. I love linen pants, shirts, dresses, and all the things. And in today's video, I'm going "
+          },
+          {
+            "input_id": "R-015",
+            "text": "Testing the Viral $280 LESET Pants Against a $90 Gap Alternative | Worth the Hype? — I'm pretty sure the last time I shoppedat Gap was when I worked there in 2015. Hi everyone and welcome back to mychannel. I'm going to do a quick pant revi"
+          }
+        ]
+      },
+      {
+        "role": "customer_voice",
+        "evidence_count": 6,
+        "input_ids": [
+          "R-001",
+          "R-002",
+          "R-003",
+          "S-005",
+          "S-006",
+          "S-010"
+        ],
+        "examples": [
+          {
+            "input_id": "R-001",
+            "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa"
+          },
+          {
+            "input_id": "R-002",
+            "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!"
+          },
+          {
+            "input_id": "R-003",
+            "text": "They might not have come specifically to your yard they may have just been driving past you meat had"
+          }
+        ]
+      },
+      {
+        "role": "purchase_signal",
+        "evidence_count": 4,
+        "input_ids": [
+          "R-001",
+          "R-002",
+          "S-005",
+          "S-006"
+        ],
+        "examples": [
+          {
+            "input_id": "R-001",
+            "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa"
+          },
+          {
+            "input_id": "R-002",
+            "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!"
+          },
+          {
+            "input_id": "S-005",
+            "text": "Please send me a link to buy a pair of these trousers please?????"
+          }
+        ]
+      },
+      {
+        "role": "objection",
+        "evidence_count": 3,
+        "input_ids": [
+          "R-001",
+          "R-002",
+          "S-005"
+        ],
+        "examples": [
+          {
+            "input_id": "R-001",
+            "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the sa"
+          },
+          {
+            "input_id": "R-002",
+            "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!"
+          },
+          {
+            "input_id": "S-005",
+            "text": "Please send me a link to buy a pair of these trousers please?????"
+          }
+        ]
+      }
+    ],
+    "writer_packet_sha256": "36b944606126ca9fe8cb8dfc4fac43b7782a699404d1a829944c0889e67e4363"
+  },
+  "avatar": {
+    "label": "The style-forward self-purchaser who wants one memorable piece",
+    "purchase_moment": "Getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+    "pains": [
+      {
+        "text": "Easy outfits can feel forgettable, while adding more pieces can make them feel busy.",
+        "research_ids": [
+          "R-001"
+        ]
+      },
+      {
+        "text": "Trouser sizing and length can stop a confident purchase decision.",
+        "research_ids": [
+          "R-002"
+        ]
+      }
+    ],
+    "desires": [
+      {
+        "text": "She wants trousers distinctive enough to lead the whole look.",
+        "research_ids": [
+          "S-005"
+        ]
+      },
+      {
+        "text": "She wants to see the offer and know immediately how to get the pair.",
+        "research_ids": [
+          "S-006"
+        ]
+      }
+    ],
+    "objections": [
+      {
+        "text": "She needs the size range, length, and care requirements before deciding.",
+        "research_ids": [
+          "R-001",
+          "R-002"
+        ]
+      }
+    ],
+    "language_cues": [
+      {
+        "text": "Please send me a link to buy a pair.",
+        "research_ids": [
+          "S-005"
+        ]
+      },
+      {
+        "text": "How do I buy a pair.",
+        "research_ids": [
+          "S-006"
+        ]
+      }
+    ]
+  },
+  "strategy_private": {
+    "big_domino": {
+      "new_opportunity": "make the statement piece the trousers so their multicoloured tweed, relaxed silhouette, drawcord, and fringed hems do the visual work",
+      "desired_result": "feel deliberately styled and distinctive without adding more competing pieces",
+      "specific_vehicle": "the Sprinkle Tweed Pants' multicoloured cream tweed, relaxed baggy fit, adjustable elastic waist, braided drawcord, and fringed hems",
+      "filled_formula": "If I can get people to believe that make the statement piece the trousers so their multicoloured tweed, relaxed silhouette, drawcord, and fringed hems do the visual work is the key to feel deliberately styled and distinctive without adding more competing pieces, and is only attainable through the Sprinkle Tweed Pants' multicoloured cream tweed, relaxed baggy fit, adjustable elastic waist, braided drawcord, and fringed hems, then all other objections become irrelevant and they have to give me money.",
+      "customer_belief": "When one piece carries the colour, texture, and silhouette, a simple outfit can feel more individual and intentional."
+    },
+    "three_reasons": [
+      {
+        "title": "Let the trousers carry the outfit",
+        "explanation": "The cream tweed, multicoloured flecks, braided drawcord, and fringed hems provide the colour and texture, so the rest of the outfit can stay simple.",
+        "fact_ids": [
+          "A-008"
+        ]
+      },
+      {
+        "title": "Choose the baggy shape on purpose",
+        "explanation": "The relaxed baggy fit and adjustable elastic waist make the silhouette a deliberate part of the look.",
+        "fact_ids": [
+          "A-009"
+        ]
+      },
+      {
+        "title": "Know the size and care before first wear",
+        "explanation": "Use the EU size ranges and 110 cm standard length to choose, then protect the delicate tweed with dry-clean-only care.",
+        "fact_ids": [
+          "A-010",
+          "A-011",
+          "A-012"
+        ]
+      }
+    ],
+    "writing_rules": [
+      "Use how and when to understand process; do not expose the research prompt.",
+      "Connect an authorized fact to a proportional customer meaning; never imply the framework is evidence.",
+      "Answer the complete set of buying questions before the final action; do not print framework labels."
+    ]
+  },
+  "copy": {
+    "announcement": "Get Auralo's $29 Pheromone Perfume and receive the Sprinkle Tweed Pants FREE.",
+    "eyebrow": "One finishing touch. One unforgettable statement piece.",
+    "headline": "When You Get Auralo's $29 Pheromone Perfume Today, You Get the Sprinkle Tweed Pants FREE.",
+    "subheadline": "Let cream tweed, multicoloured flecks, a braided drawcord, and fringed hems carry the outfit while everything else stays simple.",
+    "primary_cta": "Get Auralo + My FREE Pants",
+    "secondary_cta": "See the Pants Details",
+    "story_heading": "The trousers that do the visual work",
+    "story_intro": "Start with a simple top. Let the colour, texture, and relaxed silhouette become the point of the outfit.",
+    "story": [
+      {
+        "heading": "When simple starts to feel forgettable",
+        "body": "You know the moment: a casual plan is coming up, your reliable basics are ready, but the outfit still needs one detail that feels unmistakably yours."
+      },
+      {
+        "heading": "Make one piece the whole point",
+        "body": "When one piece carries the colour, texture, and silhouette, you can keep the rest of your outfit clean and still look deliberately styled."
+      },
+      {
+        "heading": "Colour and texture, already built in",
+        "body": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems. Pair them with a fitted tee, knit, or sweater and let those details lead."
+      },
+      {
+        "heading": "A closer look at the statement",
+        "body": "Cream tweed gives the pair its soft base. Multicoloured flecks add the visual spark, while the braided drawcord and fringed hems finish the design."
+      },
+      {
+        "heading": "Built for the plan already in your calendar",
+        "body": "Wear them when a coffee turns into a long city walk, when a casual evening deserves more personality, or when you want your trousers to carry an otherwise simple look."
+      },
+      {
+        "heading": "The silhouette is part of the design",
+        "body": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist. The shape is intentional, and the waist lets you adjust how the pair sits."
+      },
+      {
+        "heading": "More style without more competing pieces",
+        "body": "You do not need to stack prints, layers, and accessories. Choose a simple top, add your usual shoes, and let the trousers be the memorable part."
+      },
+      {
+        "heading": "Choose with the measurements in front of you",
+        "body": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44. The standard length is 110 cm from waistband to hem."
+      },
+      {
+        "heading": "Treat the tweed like the statement fabric it is",
+        "body": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it. Know the care before first wear and keep the textured finish looking considered."
+      },
+      {
+        "heading": "Two parts of one getting-ready moment",
+        "body": "Auralo's $29 Pheromone Perfume is the paid finishing touch. The Sprinkle Tweed Pants are the FREE statement piece that shapes the outfit."
+      },
+      {
+        "heading": "The complete offer, clearly stated",
+        "body": "Get Auralo's $29 Pheromone Perfume today and receive the Sprinkle Tweed Pants FREE. Ships within 4 days, with 90-day returns and a five-year warranty."
+      },
+      {
+        "heading": "One pair, three easy moments",
+        "body": "Lead with them for a casual social plan, style them with a fitted top or sweater for a weekend city outing, or use their texture and colour for a creative evening look."
+      },
+      {
+        "heading": "Three steps before you head out",
+        "body": "Choose XS-S for EU 34-38, M for EU 38-40, or L-XL for EU 42-44. Adjust the elastic waist for the relaxed baggy fit. Dry clean only and avoid rough surfaces that may snag the tweed."
+      },
+      {
+        "heading": "Finish the look with the complete offer",
+        "body": "Get Auralo's $29 Pheromone Perfume and claim the Sprinkle Tweed Pants FREE in the same offer."
+      }
+    ],
+    "offer_heading": "Get the finishing touch. Receive the statement piece FREE.",
+    "offer_body": "Your offer includes Auralo's $29 Pheromone Perfume as the paid product and the Sprinkle Tweed Pants as the FREE companion. The design-led trousers bring the colour, texture, and relaxed shape to your outfit.",
+    "offer_stack": [
+      "Auralo Pheromone Perfume — $29",
+      "Sprinkle Tweed Pants — FREE",
+      "Ships within 4 days",
+      "90-day returns",
+      "Five-year warranty"
+    ],
+    "final_heading": "Make the trousers the statement",
+    "final_body": "Get Auralo's $29 Pheromone Perfume today and receive the Sprinkle Tweed Pants FREE.",
+    "faq_heading": "Your pants and offer questions, answered",
+    "proof_sections": {
+      "social_kicker": "The first outfit idea",
+      "social_heading": "Start simple and let the trousers lead",
+      "recognition_kicker": "Real-life styling moments",
+      "recognition_heading": "For days when basics need one memorable piece",
+      "recognition_body": "See how a statement trouser can shape casual plans, city outings, and creative evenings without crowding the rest of the look.",
+      "compliments_kicker": "Details worth noticing",
+      "compliments_heading": "Cream tweed, colour flecks, drawcord, and fringe",
+      "wall_kicker": "More ways to wear the idea",
+      "wall_heading": "See the statement piece through different eyes",
+      "wall_body": "Different people, settings, and styling moments show how one distinctive pair can become the centre of a simple outfit."
+    },
+    "faq": [
+      {
+        "question": "What is included in the offer?",
+        "answer": "You get Auralo's $29 Pheromone Perfume as the paid product and the Sprinkle Tweed Pants FREE."
+      },
+      {
+        "question": "What do the pants look like?",
+        "answer": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems."
+      },
+      {
+        "question": "How do the pants fit?",
+        "answer": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist."
+      },
+      {
+        "question": "Which size should I choose?",
+        "answer": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44. The standard length is 110 cm from waistband to hem."
+      },
+      {
+        "question": "How should I care for the pants?",
+        "answer": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it."
+      },
+      {
+        "question": "What are the fulfilment terms?",
+        "answer": "Ships within 4 days, with 90-day returns and a five-year warranty."
+      }
+    ]
+  },
+  "grounding": {
+    "hero": {
+      "research_ids": [
+        "S-005",
+        "S-006"
+      ],
+      "fact_ids": [
+        "A-001",
+        "A-002"
+      ]
+    },
+    "story": [
+      {
+        "research_ids": [
+          "R-001"
+        ],
+        "fact_ids": []
+      },
+      {
+        "research_ids": [
+          "S-005"
+        ],
+        "fact_ids": []
+      },
+      {
+        "research_ids": [
+          "S-010"
+        ],
+        "fact_ids": [
+          "A-008"
+        ]
+      },
+      {
+        "research_ids": [
+          "S-010"
+        ],
+        "fact_ids": []
+      },
+      {
+        "research_ids": [
+          "S-005"
+        ],
+        "fact_ids": []
+      },
+      {
+        "research_ids": [
+          "R-002"
+        ],
+        "fact_ids": [
+          "A-009"
+        ]
+      },
+      {
+        "research_ids": [
+          "R-001"
+        ],
+        "fact_ids": []
+      },
+      {
+        "research_ids": [
+          "R-002"
+        ],
+        "fact_ids": [
+          "A-010",
+          "A-011"
+        ]
+      },
+      {
+        "research_ids": [
+          "R-001"
+        ],
+        "fact_ids": [
+          "A-012"
+        ]
+      },
+      {
+        "research_ids": [
+          "S-006"
+        ],
+        "fact_ids": [
+          "A-001",
+          "A-002"
+        ]
+      },
+      {
+        "research_ids": [
+          "S-005"
+        ],
+        "fact_ids": [
+          "A-001",
+          "A-002",
+          "A-003",
+          "A-004",
+          "A-005"
+        ]
+      },
+      {
+        "research_ids": [
+          "S-005"
+        ],
+        "fact_ids": []
+      },
+      {
+        "research_ids": [
+          "R-002"
+        ],
+        "fact_ids": []
+      },
+      {
+        "research_ids": [
+          "S-006"
+        ],
+        "fact_ids": [
+          "A-001",
+          "A-002"
+        ]
+      }
+    ],
+    "offer": {
+      "research_ids": [
+        "S-005",
+        "S-006"
+      ],
+      "fact_ids": [
+        "A-001",
+        "A-002",
+        "A-003",
+        "A-004",
+        "A-005"
+      ]
+    }
+  },
+  "sample_stories": [
+    {
+      "id": "I-001",
+      "name": "Maya R.",
+      "headline": "The outfit finally had a point",
+      "review_text": "I kept the top simple and let the flecked tweed carry the look. That was exactly the balance I wanted for a casual night out.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "outcome": "A simple outfit centred on one statement piece",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-01",
+      "cast_description": "Distinct woman, early 20s, deep brown skin, oval face, short natural coils",
+      "wardrobe": "cream knit top",
+      "camera": "front-camera selfie",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+    },
+    {
+      "id": "I-002",
+      "name": "Sofia L.",
+      "headline": "Easy for a city Saturday",
+      "review_text": "I pictured these with a fitted navy top and my everyday shoes. The texture gives the outfit enough interest without asking for extra layers.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "outcome": "A practical weekend styling direction",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-02",
+      "cast_description": "Distinct woman, late 20s, light olive skin, angular face, long dark waves",
+      "wardrobe": "navy blazer and silk camisole",
+      "camera": "three-quarter phone portrait",
+      "setting": "weekend city outings styled with a simple fitted top or sweater"
+    },
+    {
+      "id": "I-003",
+      "name": "Elena M.",
+      "headline": "Less busy than I expected",
+      "review_text": "I usually hesitate around colourful pieces, but the cream base makes the flecks easier to style. I would keep everything else quiet.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "outcome": "A calmer way to wear a colourful statement",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-03",
+      "cast_description": "Distinct woman, mid 30s, fair freckled skin, round face, copper bob",
+      "wardrobe": "green raincoat and white tee",
+      "camera": "waist-up candid",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look"
+    },
+    {
+      "id": "I-004",
+      "name": "Nadia K.",
+      "headline": "I bought the idea for myself",
+      "review_text": "I wanted one pair that could make my own basics feel intentional. The braided drawcord and fringe are the details that sold the look for me.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "outcome": "A self-purchase anchored in visible design details",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-04",
+      "cast_description": "Distinct woman, early 40s, medium brown skin, heart-shaped face, shoulder-length twists",
+      "wardrobe": "burgundy wrap top",
+      "camera": "close product-and-face crop",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+    },
+    {
+      "id": "I-005",
+      "name": "Amelia T.",
+      "headline": "The measurements made it clearer",
+      "review_text": "I checked the size range and the 110 cm length before styling the outfit in my head. Having those details upfront made the decision easier.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "outcome": "A clearer size and length decision",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-05",
+      "cast_description": "Distinct woman, late 50s, warm beige skin, rectangular face, silver pixie cut",
+      "wardrobe": "grey wool coat and scarf",
+      "camera": "mirror photo",
+      "setting": "weekend city outings styled with a simple fitted top or sweater"
+    },
+    {
+      "id": "I-006",
+      "name": "Clara B.",
+      "headline": "Just add a black top",
+      "review_text": "My plan is straightforward: black top, these trousers, simple shoes. The fabric already brings all the colour and texture I need.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "outcome": "A direct three-piece outfit formula",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-06",
+      "cast_description": "Distinct woman, mid 20s, golden brown skin, square face, long box braids",
+      "wardrobe": "denim jacket and black top",
+      "camera": "over-shoulder candid",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look"
+    },
+    {
+      "id": "I-007",
+      "name": "Isla P.",
+      "headline": "A fast answer before going out",
+      "review_text": "When time is short, I do not want to build an outfit from six different ideas. One strong pair with a plain top is much more useful to me.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "outcome": "A quicker styling decision",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-07",
+      "cast_description": "Distinct woman, early 30s, pale skin, narrow face, chin-length black hair",
+      "wardrobe": "camel trench over officewear",
+      "camera": "seated eye-level portrait",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+    },
+    {
+      "id": "I-008",
+      "name": "Leonie S.",
+      "headline": "The texture leads the look",
+      "review_text": "I like that the interest comes from the cream tweed, colour flecks, drawcord, and fringe together. It feels designed from top to hem.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "outcome": "A design-first weekend look",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-08",
+      "cast_description": "Distinct woman, late 30s, dark skin, broad smile, shaved head",
+      "wardrobe": "soft blue sweater",
+      "camera": "wide environmental phone photo",
+      "setting": "weekend city outings styled with a simple fitted top or sweater"
+    },
+    {
+      "id": "I-009",
+      "name": "Marta V.",
+      "headline": "Could one pair do enough",
+      "review_text": "I wondered if simple styling would feel unfinished. With this much texture and colour in the trousers, a quiet top actually feels like the right choice.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "outcome": "Confidence in a simpler styling approach",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-09",
+      "cast_description": "Distinct woman, mid 40s, olive skin, soft round face, dark curly lob",
+      "wardrobe": "black jumpsuit",
+      "camera": "soft side-profile crop",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look"
+    },
+    {
+      "id": "I-010",
+      "name": "Freya D.",
+      "headline": "The relaxed shape is deliberate",
+      "review_text": "I would wear the baggy silhouette as the point, not try to disguise it. The adjustable waist helps me set how I want the pair to sit.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "outcome": "A deliberate relaxed-silhouette choice",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-10",
+      "cast_description": "Distinct woman, early 60s, fair skin, high cheekbones, grey shoulder-length hair",
+      "wardrobe": "patterned blouse",
+      "camera": "chest-up direct portrait",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+    },
+    {
+      "id": "I-011",
+      "name": "Ana C.",
+      "headline": "I checked the care first",
+      "review_text": "Delicate tweed needs thoughtful care, so I was glad to see dry-clean-only guidance before deciding. I know how I would look after the pair.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "outcome": "A care-aware purchase decision",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-11",
+      "cast_description": "Distinct woman, late 20s, tan skin, diamond-shaped face, high curly ponytail",
+      "wardrobe": "running jacket",
+      "camera": "walking candid",
+      "setting": "weekend city outings styled with a simple fitted top or sweater"
+    },
+    {
+      "id": "I-012",
+      "name": "Camille J.",
+      "headline": "The FREE pair is the visual payoff",
+      "review_text": "The perfume is the paid part of the offer, and the trousers are the FREE statement piece. That structure is easy for me to understand.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "outcome": "Clear understanding of the two-product offer",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-12",
+      "cast_description": "Distinct woman, mid 30s, medium skin, oval face, straight chestnut hair with fringe",
+      "wardrobe": "linen shirt",
+      "camera": "table-level candid",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look"
+    },
+    {
+      "id": "I-013",
+      "name": "Eva N.",
+      "headline": "Ready for a low-key dinner",
+      "review_text": "For a casual dinner, I would pair them with a charcoal knit and let the flecks brighten the whole outfit. Nothing else needs to compete.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "outcome": "A scenario-specific dinner outfit",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-13",
+      "cast_description": "Distinct woman, early 50s, deep brown skin, long face, salt-and-pepper locs",
+      "wardrobe": "charcoal cardigan",
+      "camera": "doorway portrait",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+    },
+    {
+      "id": "I-014",
+      "name": "Lucia H.",
+      "headline": "My basics feel useful again",
+      "review_text": "A red crew neck, simple shoes, and these trousers already feel complete. I like having one obvious place for the eye to land.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "outcome": "Renewed use for existing wardrobe basics",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-14",
+      "cast_description": "Distinct woman, mid 20s, fair skin, round face, platinum cropped hair",
+      "wardrobe": "red crew-neck top",
+      "camera": "tight face-and-neckline crop",
+      "setting": "weekend city outings styled with a simple fitted top or sweater"
+    },
+    {
+      "id": "I-015",
+      "name": "Tara W.",
+      "headline": "Colour without second-guessing",
+      "review_text": "I would let the trousers enter the room first and keep the rest restrained. That gives me a more confident way to wear colour.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "outcome": "A confident colour-led evening look",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-15",
+      "cast_description": "Distinct woman, late 40s, warm brown skin, angular face, dark wavy bob",
+      "wardrobe": "simple evening outfit",
+      "camera": "window-reflection portrait",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look"
+    },
+    {
+      "id": "I-016",
+      "name": "Zoe A.",
+      "headline": "The white shirt gets a new role",
+      "review_text": "I already own the simple pieces. These trousers are the part that would make my white shirt feel different for another casual plan.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "outcome": "A repeatable outfit using existing basics",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-16",
+      "cast_description": "Distinct woman, early 30s, olive skin, heart-shaped face, thick auburn curls",
+      "wardrobe": "white button-down",
+      "camera": "window-light portrait",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+    },
+    {
+      "id": "I-017",
+      "name": "Lina F.",
+      "headline": "The hem detail caught me",
+      "review_text": "The fringed hems make the finish feel considered, and the braided drawcord adds another colour detail near the waist. I notice those choices.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "outcome": "A decision led by distinct design details",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-17",
+      "cast_description": "Distinct woman, mid 60s, light brown skin, oval face, short silver curls",
+      "wardrobe": "leather jacket",
+      "camera": "handheld close-up",
+      "setting": "weekend city outings styled with a simple fitted top or sweater"
+    },
+    {
+      "id": "I-018",
+      "name": "Sara G.",
+      "headline": "Not another plain trouser",
+      "review_text": "I have enough neutral trousers that disappear into an outfit. This pair gives me a different option because the texture is the feature.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "outcome": "A distinct alternative within her own wardrobe",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-18",
+      "cast_description": "Distinct woman, late 20s, dark skin, square face, waist-length braids",
+      "wardrobe": "hooded travel coat",
+      "camera": "low-light street portrait",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look"
+    },
+    {
+      "id": "I-019",
+      "name": "Mila E.",
+      "headline": "Simple does not have to vanish",
+      "review_text": "I can keep my top and shoes familiar without the outfit fading into the background. The trousers provide the memorable part.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "outcome": "A reassuring balance between familiar and distinctive",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-19",
+      "cast_description": "Distinct woman, mid 30s, fair skin, long face, sandy-blonde layered hair",
+      "wardrobe": "tailored suit",
+      "camera": "office-lift mirror photo",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+    },
+    {
+      "id": "I-020",
+      "name": "Iris O.",
+      "headline": "Made for an ordinary Saturday",
+      "review_text": "I would wear them for coffee, browsing shops, and an unplanned late lunch. A soft knit keeps the statement grounded for the whole day.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "outcome": "An ordinary-day city outfit",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-20",
+      "cast_description": "Distinct woman, early 40s, tan skin, round face, dark hair in a low bun",
+      "wardrobe": "striped weekend knit",
+      "camera": "weekend outdoor candid",
+      "setting": "weekend city outings styled with a simple fitted top or sweater"
+    },
+    {
+      "id": "I-021",
+      "name": "Layla Q.",
+      "headline": "Exactly enough for the gallery night",
+      "review_text": "For one creative evening, I want texture and colour without building a costume. These trousers with a clean top hit that specific mood.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "outcome": "A focused outfit for one creative event",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-21",
+      "cast_description": "Distinct woman, mid 20s, medium brown skin, high cheekbones, short springy curls",
+      "wardrobe": "gym zip-up",
+      "camera": "motion-frozen activity portrait",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look"
+    },
+    {
+      "id": "I-022",
+      "name": "Noor I.",
+      "headline": "The adjustable waist matters",
+      "review_text": "I came for the unusual tweed and stayed interested because the waist is adjustable. The practical detail belongs inside the design.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "outcome": "A design choice supported by a practical fit detail",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-22",
+      "cast_description": "Distinct woman, late 50s, pale olive skin, square face, silver blunt bob",
+      "wardrobe": "deep green blouse",
+      "camera": "cafe selfie",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit"
+    },
+    {
+      "id": "I-023",
+      "name": "Ines U.",
+      "headline": "Three steps and the outfit is set",
+      "review_text": "I would choose my EU size, adjust the waist, and pair the trousers with a cream knit. The care instructions are clear for afterwards.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "outcome": "A clear selection, styling, and care plan",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-23",
+      "cast_description": "Distinct woman, early 30s, deep brown skin, heart-shaped face, long natural twists",
+      "wardrobe": "cream turtleneck",
+      "camera": "home hallway portrait",
+      "setting": "weekend city outings styled with a simple fitted top or sweater"
+    },
+    {
+      "id": "I-024",
+      "name": "Ruby Y.",
+      "headline": "This is the piece I would choose",
+      "review_text": "For a casual evening, I want the cream tweed and colour flecks to lead. I would take the complete offer and keep the styling simple.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "outcome": "A decisive close based on the design",
+      "origin": "illustrative_preview",
+      "cast_id": "CAST-24",
+      "cast_description": "Distinct woman, mid 40s, fair freckled skin, oval face, dark red shoulder-length hair",
+      "wardrobe": "plum dinner jacket",
+      "camera": "arrival candid",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look"
+    }
+  ],
+  "claim_ledger": [
+    {
+      "id": "CL-001",
+      "claim": "Auralo Pheromone Perfume costs $29.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-001"
+      ],
+      "fact_key": "offer-paid-price"
+    },
+    {
+      "id": "CL-002",
+      "claim": "Sprinkle Tweed Pants costs $0 in this offer.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-002"
+      ],
+      "fact_key": "offer-companion-price"
+    },
+    {
+      "id": "CL-003",
+      "claim": "Ships within 4 days",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-003"
+      ],
+      "fact_key": "offer-shipping"
+    },
+    {
+      "id": "CL-004",
+      "claim": "90-day returns",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-004"
+      ],
+      "fact_key": "offer-returns"
+    },
+    {
+      "id": "CL-005",
+      "claim": "Five-year warranty",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-005"
+      ],
+      "fact_key": "offer-warranty"
+    },
+    {
+      "id": "CL-006",
+      "claim": "Checkout provider: SimpleSwap.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-006"
+      ],
+      "fact_key": "offer-checkout"
+    },
+    {
+      "id": "CL-007",
+      "claim": "Primary market: Europe.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-007"
+      ],
+      "fact_key": "market-region"
+    },
+    {
+      "id": "CL-008",
+      "claim": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-008"
+      ],
+      "fact_key": "sprinkle-tweed-appearance"
+    },
+    {
+      "id": "CL-009",
+      "claim": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-009"
+      ],
+      "fact_key": "relaxed-adjustable-fit"
+    },
+    {
+      "id": "CL-010",
+      "claim": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-010"
+      ],
+      "fact_key": "women-size-range"
+    },
+    {
+      "id": "CL-011",
+      "claim": "The standard length is 110 cm from waistband to hem.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-011"
+      ],
+      "fact_key": "standard-length"
+    },
+    {
+      "id": "CL-012",
+      "claim": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it.",
+      "status": "authorized",
+      "origin": "authorized_fact",
+      "fact_ids": [
+        "A-012"
+      ],
+      "fact_key": "tweed-care"
+    }
+  ],
+  "footer_disclosure": "This client preview contains illustrative claims and sample customer stories."
+}

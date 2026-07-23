@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "branch_id": "B-04",
+  "frame_id": "story-visual-sequence",
+  "isolation_session_id": "b04-story-5de5fb95-605f-41f9-9156-e37d533a3aa9",
+  "problem_sha256": "ff32828ee9840393a2ac7d14109bc5b2140c645dafc0c8f03c0c9f8dc8aca666",
+  "input_sha256": "ae9de1a6541d30dfd658cd081e07e0357e1685cb85a37682a858ed63ee78fe11",
+  "observed_other_branch_ids": [],
+  "ideas": [
+    {
+      "id": "B-04-I-01",
+      "text": "Platform: Last Touch, Then Out. Images 1-5 begin pants-only with cream tweed, flecks, drawcord and fringe as she gets dressed; 6-9 transition to perfume-only as two or three drops meet wrist, neck and behind the ear; 10-15 pay off with both naturally present while she takes her bag, crosses the doorway and enters her plan. Overlay territories: \"The pants that make the plan\", \"Two drops at the wrist\", \"Out the door\", and \"Auralo is $29. Sprinkle Tweed Pants are FREE.\"",
+      "rationale": "A linear departure story turns dressing and pulse-point application into consecutive self-directed actions. Scene allocation is five pants-only, four perfume-only and six both; reject split-screen pack shots, unexplained side-by-side placement, attraction claims, invented reactions and any visible explanation of why the items are paired.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-013",
+        "A-015"
+      ]
+    },
+    {
+      "id": "B-04-I-02",
+      "text": "Platform: Cream, Colour, Pulse. Images 1-6 begin as pants-only sensory chapters moving from cream tweed to coloured flecks, braided drawcord and fringe; 7-11 transition into perfume-only chapters named jasmine, blackcurrant bud, panna cotta, peony, rose and pink pepper; 12-15 pay off with both naturally present in one finished getting-ready sequence. Overlay territories: \"Cream with a little colour\", \"Jasmine. Rose. Pink pepper.\", \"Dress by touch. Finish at the pulse.\", and \"Buy Auralo for $29. Get the pants FREE.\"",
+      "rationale": "The recurring sequence of texture, colour and pulse creates a sensory progression without promising projection, longevity or response from others. Scene allocation is six pants-only, five perfume-only and four both; reject literal ingredient piles that imply formulation, scent-cloud effects, snag-prone rough settings, floating product collages and strategy language in overlays.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-012",
+        "A-013",
+        "A-014",
+        "R-001",
+        "X-001"
+      ]
+    },
+    {
+      "id": "B-04-I-03",
+      "text": "Platform: Pick the Pants. Make the Plan. Images 1-5 begin pants-only with the shopper choosing XS-S, M or L-XL and adjusting the elastic waist and drawcord; 6-8 transition to perfume-only with the 15 ml bottle and pulse-point application; 9-15 pay off with both naturally present as she finishes getting ready and heads into her weekend or evening. Overlay territories: \"Which size are you?\", \"XS-S: EU 34-38. M: EU 38-40. L-XL: EU 42-44.\", \"Relaxed fit. Adjustable waist.\", and \"Your next pair comes FREE with $29 Auralo.\"",
+      "rationale": "The story answers the buyer's practical path from wanting the trousers to choosing a size, then lets fragrance application mark the final action before leaving. Scene allocation is five pants-only, three perfume-only and seven both; reject unsupported waist recommendations, UK-size conversions, fit guarantees, fake testimonials, exaggerated scent performance and forced tabletop pairings.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-009",
+        "A-010",
+        "A-013",
+        "A-015",
+        "S-003",
+        "S-005",
+        "S-006",
+        "S-007"
+      ]
+    },
+    {
+      "id": "B-04-I-04",
+      "text": "Platform: Tie. Tap. Go. Fifteen images run as five three-beat loops: a pants-only hand action with waist, drawcord or fringe; a perfume-only hand action placing two or three drops at a pulse point; then a wider payoff where both are naturally present as she reaches for keys, closes her bag or steps away. Overlay territories: \"Tie it your way\", \"Two or three drops\", \"Wrists. Neck. Behind the ears.\", \"Ready when you are\", and \"$29 Auralo. FREE Sprinkle Tweed Pants.\"",
+      "rationale": "Repeated hand choreography supplies a concrete visual rhyme and makes every third frame feel like earned forward motion. Scene allocation is five pants-only, five perfume-only and five both; reject magical scent trails, people reacting to her, before-and-after confidence claims, mannequin-only repetition, identical pack-shot layouts and copy that exposes the creative mechanism.",
+      "hypothesis_only": false,
+      "evidence_ids": [
+        "A-008",
+        "A-009",
+        "A-013",
+        "A-015"
+      ]
+    }
+  ]
+}

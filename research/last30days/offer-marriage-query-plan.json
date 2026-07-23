@@ -1,0 +1,35 @@
+{
+  "intent": "concept",
+  "freshness_mode": "balanced_recent",
+  "cluster_mode": "none",
+  "subqueries": [
+    {
+      "label": "primary",
+      "search_query": "product bundle complementary products ecommerce",
+      "ranking_query": "How do ecommerce sellers and customers explain why complementary products belong together in one offer?",
+      "sources": ["reddit", "x", "youtube", "tiktok", "instagram", "hackernews", "polymarket"],
+      "weight": 1.0
+    },
+    {
+      "label": "fashion_beauty",
+      "search_query": "fashion fragrance bundle beauty apparel",
+      "ranking_query": "How are fashion apparel and fragrance or beauty products being paired and explained as one customer outcome?",
+      "sources": ["reddit", "x", "youtube", "tiktok", "instagram"],
+      "weight": 0.8
+    },
+    {
+      "label": "customer_fit",
+      "search_query": "bundle product fit customer confusion ecommerce offer",
+      "ranking_query": "What makes a mixed-category bundle feel coherent rather than random or confusing to customers?",
+      "sources": ["reddit", "x", "youtube", "tiktok"],
+      "weight": 0.8
+    },
+    {
+      "label": "usage_complementarity",
+      "search_query": "usage complementarity product bundle perceived fit",
+      "ranking_query": "What language or usage context helps customers understand complementarity between two different product categories?",
+      "sources": ["reddit", "youtube", "hackernews"],
+      "weight": 0.6
+    }
+  ]
+}

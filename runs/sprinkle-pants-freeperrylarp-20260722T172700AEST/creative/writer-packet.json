@@ -1,0 +1,609 @@
+{
+  "schema_version": "2.0",
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "generated_at": "2026-07-22T07:41:54Z",
+  "research_brief_sha256": "9c5d587dc652e2a8da29034d03719049129ad0a332dd59d387e3f59f881fa17b",
+  "cast_plan_sha256": "3d224bf85ec827c86ae71e96fa0a6aa1bb5d6fa120b2a9af6f046ce6c221e1d4",
+  "research_inputs": [
+    {
+      "id": "R-001",
+      "origin": "retrieved_research",
+      "retrieval_route": "last30days",
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "objection"
+      ],
+      "source": "youtube_comment",
+      "text": "I wish you would also say if the fragrance is a skin scent or not.",
+      "url": "https://www.youtube.com/watch?v=rMghonYVKiI",
+      "selection_reason": "product_context+customer_voice+objection"
+    },
+    {
+      "id": "X-001",
+      "origin": "exa_recovery",
+      "retrieval_route": "exa",
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "purchase_signal"
+      ],
+      "source": "brave",
+      "text": "Aura Fragrance Reviews | Read Customer Service Reviews of www.aurafragrance.com — I recently purchased Governor’s Island by Bond No. 9 from Aura Perfume (Order #655205), and this has been a frustrating experience. The fragrance I received is extremely weak—honestly, it smells more like alcohol than an actual perfume. There’s little to no projection, and the scent barely lasts.",
+      "url": "https://www.trustpilot.com/review/www.aurafragrance.com",
+      "selection_reason": "product_context+customer_voice+purchase_signal"
+    },
+    {
+      "id": "S-005",
+      "origin": "supplied_language",
+      "retrieval_route": "supplied",
+      "roles": [
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ],
+      "source": "supplied_comment",
+      "text": "Please send me a link to buy a pair of these trousers please?????",
+      "url": "",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal."
+    },
+    {
+      "id": "S-003",
+      "origin": "supplied_language",
+      "retrieval_route": "supplied",
+      "roles": [
+        "customer_voice",
+        "objection"
+      ],
+      "source": "supplied_comment",
+      "text": "What is M in UK numbers size?",
+      "url": "",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal."
+    },
+    {
+      "id": "S-006",
+      "origin": "supplied_language",
+      "retrieval_route": "supplied",
+      "roles": [
+        "customer_voice",
+        "purchase_signal"
+      ],
+      "source": "supplied_comment",
+      "text": "How do I buy a pair!!!",
+      "url": "",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal."
+    },
+    {
+      "id": "S-007",
+      "origin": "supplied_language",
+      "retrieval_route": "supplied",
+      "roles": [
+        "customer_voice",
+        "objection"
+      ],
+      "source": "supplied_comment",
+      "text": "R u wearing size xs/s or M? What size would u recommend for waist 26",
+      "url": "",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal."
+    },
+    {
+      "id": "S-010",
+      "origin": "supplied_language",
+      "retrieval_route": "supplied",
+      "roles": [
+        "customer_voice"
+      ],
+      "source": "supplied_comment",
+      "text": "vanilla sprinkles sur ismile.world :))",
+      "url": "",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal."
+    }
+  ],
+  "authorized_facts": [
+    {
+      "id": "A-001",
+      "origin": "authorized_fact",
+      "fact_key": "offer-paid-price",
+      "path": "offer.paid_price_usd",
+      "fact": "Auralo Pheromone Perfume costs $29.",
+      "type": "transaction"
+    },
+    {
+      "id": "A-002",
+      "origin": "authorized_fact",
+      "fact_key": "offer-companion-price",
+      "path": "offer.companion_price_usd",
+      "fact": "Sprinkle Tweed Pants is FREE with the qualifying $29 purchase.",
+      "type": "transaction"
+    },
+    {
+      "id": "A-003",
+      "origin": "authorized_fact",
+      "fact_key": "offer-shipping",
+      "path": "offer.shipping",
+      "fact": "Ships within 4 days",
+      "type": "transaction"
+    },
+    {
+      "id": "A-004",
+      "origin": "authorized_fact",
+      "fact_key": "offer-returns",
+      "path": "offer.returns",
+      "fact": "90-day returns",
+      "type": "transaction"
+    },
+    {
+      "id": "A-005",
+      "origin": "authorized_fact",
+      "fact_key": "offer-warranty",
+      "path": "offer.warranty",
+      "fact": "Five-year warranty",
+      "type": "transaction"
+    },
+    {
+      "id": "A-006",
+      "origin": "authorized_fact",
+      "fact_key": "offer-checkout",
+      "path": "offer.checkout_provider",
+      "fact": "Checkout provider: SimpleSwap.",
+      "type": "transaction"
+    },
+    {
+      "id": "A-007",
+      "origin": "authorized_fact",
+      "fact_key": "market-region",
+      "path": "audience.region",
+      "fact": "Primary market: Europe.",
+      "type": "market"
+    },
+    {
+      "id": "A-008",
+      "origin": "authorized_fact",
+      "fact_key": "sprinkle-current-appearance",
+      "path": "product_truth",
+      "fact": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "public_language": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "type": "appearance",
+      "evidence": "Standing exact-parity authorization plus the current official product page and supplied exact-product image captured on 2026-07-22",
+      "required_in_story": true,
+      "faq_question": "What do the pants look like?"
+    },
+    {
+      "id": "A-009",
+      "origin": "authorized_fact",
+      "fact_key": "sprinkle-current-fit",
+      "path": "product_truth",
+      "fact": "The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit.",
+      "public_language": "The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit.",
+      "type": "functionality",
+      "evidence": "Standing exact-parity authorization plus the current official product page captured on 2026-07-22",
+      "required_in_story": true,
+      "faq_question": "How do the pants fit?"
+    },
+    {
+      "id": "A-010",
+      "origin": "authorized_fact",
+      "fact_key": "sprinkle-current-sizes",
+      "path": "product_truth",
+      "fact": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "public_language": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "type": "compatibility",
+      "evidence": "Standing exact-parity authorization plus the current official size guide captured on 2026-07-22",
+      "required_in_story": true,
+      "faq_question": "Which size should I choose?"
+    },
+    {
+      "id": "A-011",
+      "origin": "authorized_fact",
+      "fact_key": "sprinkle-current-length",
+      "path": "product_truth",
+      "fact": "The standard length is 110 cm from waistband to hem.",
+      "public_language": "The standard length is 110 cm from waistband to hem.",
+      "type": "compatibility",
+      "evidence": "Standing exact-parity authorization plus the current official size guide captured on 2026-07-22",
+      "required_in_story": false,
+      "faq_question": "How long are the pants?"
+    },
+    {
+      "id": "A-012",
+      "origin": "authorized_fact",
+      "fact_key": "sprinkle-current-care",
+      "path": "product_truth",
+      "fact": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces and accessories that may snag it.",
+      "public_language": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces and accessories that may snag it.",
+      "type": "limitation",
+      "evidence": "Standing exact-parity authorization plus the current official care instructions captured on 2026-07-22",
+      "required_in_story": true,
+      "faq_question": "How should I care for the pants?"
+    },
+    {
+      "id": "A-013",
+      "origin": "authorized_fact",
+      "fact_key": "auralo-format",
+      "path": "paid_product_truth",
+      "fact": "Auralo is a 15 ml pheromone-inspired floral-amber perfume.",
+      "public_language": "Auralo is a 15 ml pheromone-inspired floral-amber perfume.",
+      "type": "identity",
+      "evidence": "client attested reference equivalence",
+      "evidence_type": "client_attested_reference_equivalence",
+      "source_url": "https://godaperfume.uk/",
+      "required_in_story": true,
+      "faq_question": ""
+    },
+    {
+      "id": "A-014",
+      "origin": "authorized_fact",
+      "fact_key": "auralo-scent-profile",
+      "path": "paid_product_truth",
+      "fact": "The scent profile combines jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper.",
+      "public_language": "The scent profile combines jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper.",
+      "type": "sensory",
+      "evidence": "client attested reference equivalence",
+      "evidence_type": "client_attested_reference_equivalence",
+      "source_url": "https://godaperfume.uk/",
+      "required_in_story": true,
+      "faq_question": ""
+    },
+    {
+      "id": "A-015",
+      "origin": "authorized_fact",
+      "fact_key": "auralo-application",
+      "path": "paid_product_truth",
+      "fact": "Apply two or three drops to pulse points such as the wrists, behind the ears, neck, and inner elbows.",
+      "public_language": "Apply two or three drops to pulse points such as the wrists, behind the ears, neck, and inner elbows.",
+      "type": "use",
+      "evidence": "client attested reference equivalence",
+      "evidence_type": "client_attested_reference_equivalence",
+      "source_url": "https://godaperfume.uk/",
+      "required_in_story": true,
+      "faq_question": ""
+    }
+  ],
+  "competitor_observations": [],
+  "offer_argument": {
+    "buyer": "a woman buying the Sprinkle Tweed Pants for herself",
+    "opening": "A basic outfit can feel unfinished, while choosing too many competing pieces can make getting ready feel harder than it needs to be.",
+    "primary_moment": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+    "secondary_moments": [
+      "a weekend city outing built around a simple top and distinctive trousers",
+      "an evening plan where she wants her outfit and scent to feel intentional"
+    ],
+    "opportunity": "let one textured trouser carry the visual interest while Auralo becomes the final scent step before leaving",
+    "outcome": "feel intentionally put together through a memorable visible detail and a personal fragrance ritual",
+    "product_way": "Auralo Pheromone Perfume at $29 with the exact Sprinkle Tweed Pants included FREE",
+    "central_conclusion": "A getting-ready choice feels more complete when the outfit has one memorable visual detail and the wearer has chosen a scent for the moment.",
+    "offer_connection": "Auralo is the paid personal-scent step; the Sprinkle Tweed Pants are the FREE visible statement reward.",
+    "paid_role": "Auralo is the $29 15 ml pheromone-inspired floral-amber perfume applied to pulse points before leaving.",
+    "companion_role": "The Sprinkle Tweed Pants are the FREE exact-parity women's statement trousers.",
+    "reasons": [
+      {
+        "title": "Let the texture lead the look",
+        "explanation": "The cream tweed, multicoloured flecks, braided drawcord, and fringed hems give the trousers their visible identity.",
+        "facts": [
+          {
+            "id": "A-008",
+            "public_language": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems."
+          }
+        ]
+      },
+      {
+        "title": "Choose the relaxed shape deliberately",
+        "explanation": "The official design uses an adjustable elastic waist and a relaxed baggy fit.",
+        "facts": [
+          {
+            "id": "A-009",
+            "public_language": "The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit."
+          }
+        ]
+      },
+      {
+        "title": "Remove the size uncertainty",
+        "explanation": "The current official size and length information gives the buyer a concrete basis for choosing before checkout.",
+        "facts": [
+          {
+            "id": "A-010",
+            "public_language": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44."
+          },
+          {
+            "id": "A-011",
+            "public_language": "The standard length is 110 cm from waistband to hem."
+          }
+        ]
+      }
+    ],
+    "headline_contract": {
+      "mode": "paid_first_free_companion_v1",
+      "required_headline": "Sprinkle Tweed Pants — FREE With Your $29 Auralo Pheromone Perfume Purchase.",
+      "secondary_hook": "Get Auralo's $29 Pheromone Perfume and Receive the Sprinkle Tweed Pants FREE."
+    },
+    "optional_subheadline": "One personal scent ritual. One cream multicoloured-tweed statement pair. Both in the same getting-ready decision.",
+    "optional_opening": "What if getting ready started with one piece that makes the look unmistakably yours—and ended with the scent you chose for the moment?",
+    "setup_steps": [
+      "Choose XS-S for EU 34-38, M for EU 38-40, or L-XL for EU 42-44.",
+      "Adjust the elastic waist to set the intended relaxed baggy fit.",
+      "Dry clean only and keep the delicate tweed away from rough surfaces that may snag it."
+    ]
+  },
+  "relationship_decision": {
+    "schema_version": "1.0",
+    "selection_authority": "ai_from_current_research",
+    "mode": "complete_ritual",
+    "earned": true,
+    "evidence_ids": [
+      "R-001",
+      "R-002",
+      "R-003",
+      "R-004",
+      "R-006",
+      "R-007",
+      "R-008",
+      "R-009"
+    ],
+    "scores": {
+      "wanted_reward": 6,
+      "complete_ritual": 8
+    },
+    "lane_counts": {
+      "paid_product": {
+        "context": 15,
+        "customer_voice": 2,
+        "objection": 1,
+        "purchase_signal": 1,
+        "sources": 5
+      },
+      "free_product": {
+        "context": 4,
+        "customer_voice": 5,
+        "objection": 3,
+        "purchase_signal": 2,
+        "sources": 4
+      },
+      "relationship": {
+        "context": 10,
+        "customer_voice": 7,
+        "objection": 4,
+        "purchase_signal": 3,
+        "sources": 6
+      }
+    },
+    "primary_buyer": "a woman buying the Sprinkle Tweed Pants for herself",
+    "primary_moment": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+    "rationale": "Current-run evidence repeatedly connects both product worlds to the same buyer moment, so the free product creates the visible first impression and Auralo completes the getting-ready ritual."
+  },
+  "copy_contract": {
+    "rhetorical_heat": "maximum",
+    "supported_direct_statement_first": true,
+    "hypothetical_desire_enabled": true,
+    "asterisk_is_not_claim_permission": true,
+    "minimum_desire_questions": 5,
+    "maximum_desire_questions": 10,
+    "forbidden_disclaimer_sentence": "Imagined possibilities, not guaranteed outcomes. Scent perception and individual experiences vary.",
+    "forbidden_public_terms": [
+      "offer",
+      "value stack",
+      "tripwire",
+      "framework",
+      "mechanism",
+      "paid product",
+      "companion product",
+      "relationship mode",
+      "avatar",
+      "big domino",
+      "engage",
+      "fibs",
+      "grand slam offer"
+    ],
+    "forbidden_universal_claim_patterns": [
+      "chemically forces",
+      "every man",
+      "guaranteed attraction",
+      "cannot resist",
+      "will chase you"
+    ]
+  },
+  "offer": {
+    "paid_name": "Auralo Pheromone Perfume",
+    "paid_price_usd": 29,
+    "companion_name": "Sprinkle Tweed Pants",
+    "companion_price_usd": 0,
+    "shipping": "Ships within 4 days",
+    "returns": "90-day returns",
+    "warranty": "Five-year warranty"
+  },
+  "story_jobs": [
+    {
+      "number": 1,
+      "job": "Intensify the free product's design desire and identity."
+    },
+    {
+      "number": 2,
+      "job": "Reveal the exact $29 Auralo transaction without diluting the free-product hook."
+    },
+    {
+      "number": 3,
+      "job": "Create unfinished-routine tension: looking ready is not always feeling finished."
+    },
+    {
+      "number": 4,
+      "job": "Introduce Auralo as the invisible finishing detail."
+    },
+    {
+      "number": 5,
+      "job": "Name the researched fragrance frustration in natural buyer language."
+    },
+    {
+      "number": 6,
+      "job": "Turn the verified scent profile into a vivid desired experience."
+    },
+    {
+      "number": 7,
+      "job": "Show the application ritual using only authorized use facts."
+    },
+    {
+      "number": 8,
+      "job": "Present the strongest verified Auralo facts before any hypothetical outcome."
+    },
+    {
+      "number": 9,
+      "job": "Frame scientific context accurately without turning general research into product proof."
+    },
+    {
+      "number": 10,
+      "job": "Connect both products through the AI-selected buyer moment."
+    },
+    {
+      "number": 11,
+      "job": "Explain why the free product is the wanted reward."
+    },
+    {
+      "number": 12,
+      "job": "Show everything that arrives and the exact $29 transaction."
+    },
+    {
+      "number": 13,
+      "job": "Answer the strongest objection and state only earned risk reversal."
+    },
+    {
+      "number": 14,
+      "job": "Close the complete transaction with one forceful action."
+    }
+  ],
+  "scenario_card_assignments": [
+    {
+      "id": "I-001",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "brief and spontaneous"
+    },
+    {
+      "id": "I-002",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "calm and practical"
+    },
+    {
+      "id": "I-003",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "initially skeptical"
+    },
+    {
+      "id": "I-004",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "warm self-purchaser"
+    },
+    {
+      "id": "I-005",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "detail-focused"
+    },
+    {
+      "id": "I-006",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "plainspoken"
+    },
+    {
+      "id": "I-007",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "busy weekday tone"
+    },
+    {
+      "id": "I-008",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "style-conscious"
+    },
+    {
+      "id": "I-009",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "question-led"
+    },
+    {
+      "id": "I-010",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "matter-of-fact"
+    },
+    {
+      "id": "I-011",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "cautious but decisive"
+    },
+    {
+      "id": "I-012",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "value-conscious"
+    },
+    {
+      "id": "I-013",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "scenario-specific"
+    },
+    {
+      "id": "I-014",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "concise relief"
+    },
+    {
+      "id": "I-015",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "confidence-focused"
+    },
+    {
+      "id": "I-016",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "ordinary repeat-use perspective"
+    },
+    {
+      "id": "I-017",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "design-first"
+    },
+    {
+      "id": "I-018",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "comparison-minded"
+    },
+    {
+      "id": "I-019",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "reassuring"
+    },
+    {
+      "id": "I-020",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "ordinary-day perspective"
+    },
+    {
+      "id": "I-021",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "focused on one real situation"
+    },
+    {
+      "id": "I-022",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "pleasantly surprised by practicality"
+    },
+    {
+      "id": "I-023",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "clear about setup"
+    },
+    {
+      "id": "I-024",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "decisive close"
+    }
+  ],
+  "rules": [
+    "Research inputs shape audience language and objections; they never authorize product claims or testimonials.",
+    "Only A facts authorize offered-product and offer claims. Their P lineage is already validated; R, S, X, and C text cannot add product behavior.",
+    "Match the official reference exactly. Do not add an improvement, extra feature, altered dependency, broader compatibility, brand detail, or seller policy.",
+    "Use how and when insights privately; do not print process labels, framework names, or field names.",
+    "Connect a known situation or authorized fact to a proportional customer meaning; never make an unsupported leap.",
+    "Every visible image heading, callout, diagram label, UI label, badge, and offer term must stay inside the exact authorized A facts and supplied offer terms. Artwork cannot invent a price, discount, saving, performance result, response time, guaranteed assistance outcome, protection, privacy or security promise, alert behavior, setting, or control.",
+    "Write public sales copy and every editorial scenario in direct second-person language.",
+    "Use high-heat What if, Could, Imagine, and Picture this constructions for desired outcomes that are not direct facts.",
+    "Editorial scenarios may be vivid but must never look like customer reviews or cite R, X, S, or C inputs as customer-result provenance.",
+    "No reviewer names, stars, quotation marks, platform logos, verified badges, aggregate review counts, or video controls.",
+    "Do not print internal terms such as offer, value stack, tripwire, framework, mechanism, paid product, companion product, relationship mode, avatar, Big Domino, ENGAGE, FIBS, or Grand Slam Offer.",
+    "When the companion price is zero, write FREE everywhere customer-facing; never write $0 or $0.00.",
+    "For a zero-price companion, use offer_argument.headline_contract.required_headline exactly as the main headline; use the researched pain or belief as an eyebrow, subheadline, or later hook."
+  ],
+  "footer_disclosure": "Promotional lifestyle scenes are creative representations. Product details and purchase terms appear on this page."
+}

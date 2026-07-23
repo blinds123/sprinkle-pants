@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "needed": true,
+  "provider": "exa",
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "research_session_id": "685ac819f8bf45b29d9a04e177ea52f3",
+  "research_not_before": "2026-07-22T07:26:51Z",
+  "created_at": "2026-07-22T07:35:23Z",
+  "reason_codes": [
+    "retrieved_customer_voice"
+  ],
+  "query": "Recent first-person customer discussions about Auralo Pheromone Perfume or women's multicoloured tweed statement trousers. Find exact buyer questions, objections, and purchase wording for retrieved_customer_voice. Exclude seller copy, affiliate promotions, and unrelated products.",
+  "maximum_queries": 1,
+  "maximum_results": 8,
+  "start_published_date": "2026-06-22",
+  "rule": "Run only for this shortfall; retain exact URLs and text; reject seller copy as customer voice."
+}

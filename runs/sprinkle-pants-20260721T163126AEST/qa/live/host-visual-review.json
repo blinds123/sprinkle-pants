@@ -1,0 +1,87 @@
+{
+  "schema_version": "2.0",
+  "reviewed_by": "host_visual_inspection",
+  "binding": {
+    "deployment_receipt_sha256": "41ee58d8127a479c67068a3d5736f682366d31629aee55d72250ad8345b41d0b",
+    "browser_observations_sha256": "a286e92dd8c8378b8641d2f5fd1308db39605e269e6bb5e52e0e1a5bf9089b6c",
+    "site_id": "ee3ec1ec-405b-4750-a359-99388a95ab27",
+    "deploy_id": "6a5ff9c48117e06d8a5bcd69",
+    "production_url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/"
+  },
+  "sales_copy_readthrough": {
+    "header_to_footer_read": true,
+    "all_visible_copy_matches_site_data": true,
+    "all_15_hero_captions_present": true,
+    "no_numbered_story_recap": true,
+    "all_24_accessible_proof_stories_present": true,
+    "offer_terms_consistent": true,
+    "faq_answers_present": true,
+    "free_language_confirmed": true,
+    "no_internal_or_ai_scaffolding": true,
+    "no_duplicate_offer_summary": true
+  },
+  "image_review": {
+    "count": 39,
+    "hero_carousel_count": 15,
+    "testimonial_count": 24,
+    "hero_webinar_sequence_ordered": true,
+    "one_full_hero_slide_per_viewport": true,
+    "active_hero_image_at_least_half_above_fold_each_viewport": true,
+    "four_testimonial_rails": true,
+    "testimonial_cards_per_rail": [6, 6, 6, 6],
+    "all_correct_sections": true,
+    "all_match_adjacent_copy": true,
+    "product_consistent": true,
+    "all_proof_text_readable": true,
+    "distinct_people": 24,
+    "no_broken_or_duplicate_slots": true,
+    "no_dollar_zero_in_artwork": true,
+    "no_unsupported_claims_in_artwork": true
+  },
+  "viewport_review": [
+    {
+      "width": 390,
+      "full_page_sha256": "34af434565a1e3f9c22c5e5d4018589311d544255a874e648f2d5973bed80f24",
+      "header_to_footer_reviewed": true,
+      "copy_readable": true,
+      "images_well_placed": true,
+      "layout_clean": true,
+      "hero_carousel_usable": true,
+      "hero_image_at_least_half_above_fold": true,
+      "testimonial_rails_usable": true,
+      "no_numbered_story_recap": true,
+      "free_language_correct": true,
+      "cta_and_drawer_work": true
+    },
+    {
+      "width": 768,
+      "full_page_sha256": "675ade59353e3afabe070fc0a287e071b730389ff0d45d8f18a266a128c63377",
+      "header_to_footer_reviewed": true,
+      "copy_readable": true,
+      "images_well_placed": true,
+      "layout_clean": true,
+      "hero_carousel_usable": true,
+      "hero_image_at_least_half_above_fold": true,
+      "testimonial_rails_usable": true,
+      "no_numbered_story_recap": true,
+      "free_language_correct": true,
+      "cta_and_drawer_work": true
+    },
+    {
+      "width": 1440,
+      "full_page_sha256": "ff49564032698318ff8c2ebaa65db6d330dc552a924ce4d3acd114caa70f4bcd",
+      "header_to_footer_reviewed": true,
+      "copy_readable": true,
+      "images_well_placed": true,
+      "layout_clean": true,
+      "hero_carousel_usable": true,
+      "hero_image_at_least_half_above_fold": true,
+      "testimonial_rails_usable": true,
+      "no_numbered_story_recap": true,
+      "free_language_correct": true,
+      "cta_and_drawer_work": true
+    }
+  ],
+  "issues": [],
+  "verdict": "LIVE_QA_ACCEPTED"
+}

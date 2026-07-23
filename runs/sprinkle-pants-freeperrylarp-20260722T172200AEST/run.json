@@ -1,0 +1,164 @@
+{
+  "schema_version": "2.0",
+  "plugin": {
+    "name": "freeperrylarp",
+    "version": "0.1.0+codex.20260722072140"
+  },
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "state": "RESEARCH_GAP",
+  "created_at": "2026-07-22T07:21:54Z",
+  "updated_at": "2026-07-22T07:24:54Z",
+  "research_session": {
+    "id": "a99ad3ec85e842d696c39792fb08af17",
+    "mode": "fresh_only",
+    "not_before": "2026-07-22T07:21:54Z",
+    "prior_run_artifacts_allowed": false,
+    "cached_research_allowed": false
+  },
+  "controlled_time_budget_minutes": {
+    "intake_preflight": {
+      "target": 2,
+      "maximum": 2
+    },
+    "research_import_avatar": {
+      "target": 6,
+      "maximum": 6
+    },
+    "optional_exa_recovery": {
+      "target": 0,
+      "maximum": 0
+    },
+    "copy_and_prompts": {
+      "target": 6,
+      "maximum": 6
+    },
+    "joint_review": {
+      "target": 2,
+      "maximum": 2
+    },
+    "external_images": {
+      "target": 10,
+      "maximum": 10
+    },
+    "image_import_and_build": {
+      "target": 4,
+      "maximum": 4
+    },
+    "qa": {
+      "target": 3,
+      "maximum": 3
+    },
+    "deploy_smoke": {
+      "target": 3,
+      "maximum": 3
+    },
+    "live_qa_and_host_readthrough": {
+      "target": 4,
+      "maximum": 4
+    },
+    "total": {
+      "target": 40,
+      "maximum": 40
+    }
+  },
+  "deadline": {
+    "target_minutes": 40.0,
+    "maximum_minutes": 40,
+    "active_elapsed_seconds": 145.505,
+    "active_remaining_seconds": 2254.495,
+    "provider_wait_seconds": 0.0,
+    "human_wait_seconds": 0.0,
+    "status": "ON_TARGET"
+  },
+  "history": [
+    {
+      "state": "BRIEF_READY",
+      "at": "2026-07-22T07:21:54Z",
+      "command": "init"
+    },
+    {
+      "state": "RESEARCH_PLAN_READY",
+      "at": "2026-07-22T07:21:54Z",
+      "command": "research-plan"
+    },
+    {
+      "state": "RESEARCH_PLAN_READY",
+      "at": "2026-07-22T07:24:20Z",
+      "command": "research-run"
+    },
+    {
+      "state": "RESEARCH_GAP",
+      "at": "2026-07-22T07:24:54Z",
+      "command": "research-ingest"
+    }
+  ],
+  "artifacts": {
+    "input/campaign.json": {
+      "path": "input/campaign.json",
+      "bytes": 16062,
+      "sha256": "a240989a68dec3fd5ccc894334f6d8ccba069e32ab5cb7b008252abe42cd5865"
+    },
+    "research/query-plan.json": {
+      "path": "research/query-plan.json",
+      "bytes": 3948,
+      "sha256": "dd4fa3caf899a22c01d5cb535a8576104317dcd9b2dc8fa718230ade2e76d5e6"
+    },
+    "research/competitor-plan.json": {
+      "path": "research/competitor-plan.json",
+      "bytes": 2467,
+      "sha256": "e775362a7de6a459330b4949d805c24da185e9cc64f8675fe930fa3aa66d3884"
+    },
+    "research/research-session.json": {
+      "path": "research/research-session.json",
+      "bytes": 926,
+      "sha256": "899d2248e58d68657a38de083b865287680bdd2e64f71ef0a0d1c349b8727ee2"
+    },
+    "research/last30days-raw.json": {
+      "path": "research/last30days-raw.json",
+      "bytes": 481046,
+      "sha256": "908263e9247a1044e11ac020dfa83f779c50d82a87f47a2e6bbe3ce332ad2138"
+    },
+    "research/last30days-receipt.json": {
+      "path": "research/last30days-receipt.json",
+      "bytes": 787,
+      "sha256": "94f2a0dbc455907706f290cc2ee7652166411aa4d3288f747c1bb682afed2888"
+    },
+    "research/brief.json": {
+      "path": "research/brief.json",
+      "bytes": 81075,
+      "sha256": "e9a362e2cbc1019ef242ab35d9952b02e50cf4b1748803782587dfd6cf6cec86"
+    },
+    "research/recovery-plan.json": {
+      "path": "research/recovery-plan.json",
+      "bytes": 1181,
+      "sha256": "0bda0d961a8a8f7bd62f5742ade419827e9e816b49159250271c89341a374eb5"
+    },
+    "research/competitor-evidence.json": {
+      "path": "research/competitor-evidence.json",
+      "bytes": 1977,
+      "sha256": "b93aa2e078477f88a64e15af6723fc7212f335e0ebf566e14e772025183d39a6"
+    }
+  },
+  "timings": [
+    {
+      "command": "init",
+      "elapsed_seconds": 0.005,
+      "recorded_at": "2026-07-22T07:21:54Z"
+    },
+    {
+      "command": "research-plan",
+      "elapsed_seconds": 0.002,
+      "recorded_at": "2026-07-22T07:21:54Z"
+    },
+    {
+      "command": "research-run",
+      "elapsed_seconds": 145.451,
+      "recorded_at": "2026-07-22T07:24:20Z"
+    },
+    {
+      "command": "research-ingest",
+      "elapsed_seconds": 0.047,
+      "recorded_at": "2026-07-22T07:24:54Z"
+    }
+  ]
+}

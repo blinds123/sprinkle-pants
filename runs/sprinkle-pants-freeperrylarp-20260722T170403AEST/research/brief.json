@@ -1,0 +1,1730 @@
+{
+  "schema_version": "2.0",
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "generated_at": "2026-07-22T07:09:54Z",
+  "raw_sha256": "bc0164f5864873223ec4352fdeb0cf3e382b911a7bd5d266f21877826edc5bd2",
+  "raw_bytes": 610780,
+  "last30days_generated_at": "2026-07-22T07:08:56.999152+00:00",
+  "range_from": "2026-06-22",
+  "range_to": "2026-07-22",
+  "source_counts": {
+    "grounding": 4,
+    "pinterest": 10,
+    "reddit": 2,
+    "reddit_comment": 1,
+    "tiktok": 1,
+    "youtube_comment": 1
+  },
+  "research_session_id": "aa6614fc125e4099accfc50e73ea89dc",
+  "research_not_before": "2026-07-22T07:06:40Z",
+  "last30days_receipt_sha256": "092b9f72dfb484c46caf4942cb3b03236d64b78ecc6be2fbfc8b40df684a4f08",
+  "fresh_research": true,
+  "prior_run_artifacts_used": false,
+  "source_status": {
+    "arxiv": {
+      "at": "2026-07-22T07:07:35.951449Z",
+      "attempted": true,
+      "detail": "Command arxiv-pp-cli timed out after 30s",
+      "fix_hint": "doctor",
+      "items_returned": 0,
+      "source": "arxiv",
+      "state": "timeout"
+    },
+    "digg": {
+      "at": "2026-07-22T07:07:05.917382Z",
+      "attempted": true,
+      "items_returned": 15,
+      "source": "digg",
+      "state": "ok"
+    },
+    "github": {
+      "at": "2026-07-22T07:07:02.226926Z",
+      "attempted": true,
+      "detail": "GitHub API request failed: HTTP 422: unprocessable query",
+      "fix_hint": "doctor",
+      "items_returned": 0,
+      "source": "github",
+      "state": "error"
+    },
+    "grounding": {
+      "at": "2026-07-22T07:07:22.363116Z",
+      "attempted": true,
+      "detail": "HTTP 422: Unprocessable Entity",
+      "fix_hint": "doctor",
+      "items_returned": 10,
+      "source": "grounding",
+      "state": "partial"
+    },
+    "hackernews": {
+      "at": "2026-07-22T07:08:23.194835Z",
+      "attempted": true,
+      "items_returned": 13,
+      "source": "hackernews",
+      "state": "ok"
+    },
+    "instagram": {
+      "at": "2026-07-22T07:08:14.313714Z",
+      "attempted": true,
+      "detail": "HTTPError: HTTP 404: Not Found",
+      "fix_hint": "doctor",
+      "items_returned": 4,
+      "source": "instagram",
+      "state": "partial"
+    },
+    "pinterest": {
+      "at": "2026-07-22T07:07:26.325279Z",
+      "attempted": true,
+      "items_returned": 36,
+      "source": "pinterest",
+      "state": "ok"
+    },
+    "polymarket": {
+      "at": "2026-07-22T07:07:22.562082Z",
+      "attempted": true,
+      "items_returned": 0,
+      "source": "polymarket",
+      "state": "no-results"
+    },
+    "reddit": {
+      "at": "2026-07-22T07:07:52.520348Z",
+      "attempted": true,
+      "items_returned": 22,
+      "source": "reddit",
+      "state": "ok"
+    },
+    "techmeme": {
+      "at": "2026-07-22T07:07:22.081705Z",
+      "attempted": true,
+      "items_returned": 0,
+      "source": "techmeme",
+      "state": "no-results"
+    },
+    "threads": {
+      "at": "2026-07-22T07:07:32.021401Z",
+      "attempted": true,
+      "items_returned": 0,
+      "source": "threads",
+      "state": "no-results"
+    },
+    "tiktok": {
+      "at": "2026-07-22T07:08:22.238166Z",
+      "attempted": true,
+      "detail": "Connection error: TimeoutError: The read operation timed out",
+      "fix_hint": "doctor",
+      "items_returned": 10,
+      "source": "tiktok",
+      "state": "partial"
+    },
+    "x": {
+      "at": "2026-07-22T07:08:24.743357Z",
+      "attempted": true,
+      "items_returned": 3,
+      "source": "x",
+      "state": "ok"
+    },
+    "youtube": {
+      "at": "2026-07-22T07:08:05.426291Z",
+      "attempted": true,
+      "items_returned": 6,
+      "source": "youtube",
+      "state": "ok"
+    }
+  },
+  "errors_by_source": {
+    "arxiv": "Command arxiv-pp-cli timed out after 30s",
+    "github": "GitHub API request failed: HTTP 422: unprocessable query"
+  },
+  "competitor_evidence_sha256": "04b54f6e8437131d1f44d450472598e1ef3c37282b7e13cd39bb129e0875b945",
+  "competitor_evidence_count": 0,
+  "competitor_evidence_compaction": {
+    "input_count": 5,
+    "reference_mapped_count": 5,
+    "selected_count": 0,
+    "duplicate_count": 0,
+    "omitted_by_cap": 0
+  },
+  "competitor_evidence": [],
+  "evidence_count": 19,
+  "official_reference_evidence_count": 5,
+  "official_reference_evidence": [
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "appearance",
+      "source_type": "official_product_page",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "sprinkle-current-appearance"
+      ],
+      "id": "P-001"
+    },
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "functionality",
+      "source_type": "official_product_page",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "sprinkle-current-fit"
+      ],
+      "id": "P-002"
+    },
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "compatibility",
+      "source_type": "official_size_guide",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "sprinkle-current-sizes"
+      ],
+      "id": "P-003"
+    },
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The standard length is 110 cm from waistband to hem.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "compatibility",
+      "source_type": "official_size_guide",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "sprinkle-current-length"
+      ],
+      "id": "P-004"
+    },
+    {
+      "origin": "official_reference_evidence",
+      "status": "mapped_to_authorized_fact",
+      "claim": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces and accessories that may snag it.",
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "scope": "limitation",
+      "source_type": "official_product_page",
+      "eligible_as_offer_truth": true,
+      "mapped_fact_keys": [
+        "sprinkle-current-care"
+      ],
+      "id": "P-005"
+    }
+  ],
+  "official_reference_research_session": {
+    "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+    "captured_at": "2026-07-22T07:09:30Z",
+    "research_session_id": "aa6614fc125e4099accfc50e73ea89dc",
+    "competitor_plan_sha256": "68ab09a8d37333b52274e920d3f28a8cc01f567d83b0ee4ecde9d1b3baac5e8b",
+    "fresh_research": true,
+    "reused_prior_facts": false,
+    "reference_product": {
+      "url": "https://ismile.world/products/vanilla-sprinkles-tracker",
+      "variant_name": "Woman / XS-S, M, and L-XL",
+      "variant_resolution": "ai_resolved_from_fresh_evidence"
+    }
+  },
+  "retrieved_evidence_count": 19,
+  "exa_recovery_count": 0,
+  "exa_recovery_sha256": "",
+  "recovery_attempted": false,
+  "supplied_input_count": 10,
+  "supplied_comment_count": 0,
+  "quarantined_input_count": 198,
+  "role_summary": [
+    {
+      "role": "product_context",
+      "evidence_count": 19,
+      "input_ids": [
+        "R-001",
+        "R-002",
+        "R-003",
+        "R-004",
+        "R-005",
+        "R-006",
+        "R-007",
+        "R-008",
+        "R-009",
+        "R-010",
+        "R-011",
+        "R-012"
+      ],
+      "examples": [
+        {
+          "input_id": "R-001",
+          "text": "Seller pushing for completion — OP, You can be as firm as you want on this, but looks of it this way, yes it would be a bit of a rush but the saga would be over. If the solicitor can make it work I would go for the earlier date. Just don't "
+        },
+        {
+          "input_id": "R-002",
+          "text": "I am 63 years. I have bought and sold with my husband. Your two weeks is very reasonable. If you feel pressure then listen to your inner self. If you feel pressure just email and say re personal private reasons two weeks is your earliest da"
+        },
+        {
+          "input_id": "R-003",
+          "text": "HONG KONG: After visiting her ex boyfriend for a \"break-up\" dinner, a young businesswomen went missing without a trace. She remained missing for 20 days until the police found her body based on an old photo she had taken with her boyfriend."
+        }
+      ]
+    },
+    {
+      "role": "customer_voice",
+      "evidence_count": 4,
+      "input_ids": [
+        "R-001",
+        "R-002",
+        "R-003",
+        "R-004"
+      ],
+      "examples": [
+        {
+          "input_id": "R-001",
+          "text": "Seller pushing for completion — OP, You can be as firm as you want on this, but looks of it this way, yes it would be a bit of a rush but the saga would be over. If the solicitor can make it work I would go for the earlier date. Just don't "
+        },
+        {
+          "input_id": "R-002",
+          "text": "I am 63 years. I have bought and sold with my husband. Your two weeks is very reasonable. If you feel pressure then listen to your inner self. If you feel pressure just email and say re personal private reasons two weeks is your earliest da"
+        },
+        {
+          "input_id": "R-003",
+          "text": "HONG KONG: After visiting her ex boyfriend for a \"break-up\" dinner, a young businesswomen went missing without a trace. She remained missing for 20 days until the police found her body based on an old photo she had taken with her boyfriend."
+        }
+      ]
+    },
+    {
+      "role": "purchase_signal",
+      "evidence_count": 2,
+      "input_ids": [
+        "R-001",
+        "R-002"
+      ],
+      "examples": [
+        {
+          "input_id": "R-001",
+          "text": "Seller pushing for completion — OP, You can be as firm as you want on this, but looks of it this way, yes it would be a bit of a rush but the saga would be over. If the solicitor can make it work I would go for the earlier date. Just don't "
+        },
+        {
+          "input_id": "R-002",
+          "text": "I am 63 years. I have bought and sold with my husband. Your two weeks is very reasonable. If you feel pressure then listen to your inner self. If you feel pressure just email and say re personal private reasons two weeks is your earliest da"
+        }
+      ]
+    },
+    {
+      "role": "objection",
+      "evidence_count": 1,
+      "input_ids": [
+        "R-001"
+      ],
+      "examples": [
+        {
+          "input_id": "R-001",
+          "text": "Seller pushing for completion — OP, You can be as firm as you want on this, but looks of it this way, yes it would be a bit of a rush but the saga would be over. If the solicitor can make it work I would go for the earlier date. Just don't "
+        }
+      ]
+    }
+  ],
+  "buyer_language": [
+    {
+      "text": "OP, You can be as firm as you want on this, but looks of it this way, yes it would be a bit of a rush but the saga would be over. If the solicitor can make it work I would go for the earlier date. Just don't exchange and complete on the same day. Is there a reason you can’t complete end of the month and move in a week later? I",
+      "input_ids": [
+        "R-001"
+      ],
+      "origin": "retrieved_research",
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ]
+    },
+    {
+      "text": "I am 63 years. I have bought and sold with my husband. Your two weeks is very reasonable. If you feel pressure then listen to your inner self. If you feel pressure just email and say re personal private reasons two weeks is your earliest date. It sounds like the seller is as fed up with the 5 months",
+      "input_ids": [
+        "R-002"
+      ],
+      "origin": "retrieved_research",
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "purchase_signal"
+      ]
+    },
+    {
+      "text": "HONG KONG: After visiting her ex boyfriend for a \"break-up\" dinner, a young businesswomen went missing without a trace. She remained missing for 20 days until the police found her body based on an old photo she had taken with her boyfriend. — Thank you for the write up. That poor woman Emojis are not allowed in this sub. Please see the rules for details. — H",
+      "input_ids": [
+        "R-003"
+      ],
+      "origin": "retrieved_research",
+      "roles": [
+        "product_context",
+        "customer_voice"
+      ]
+    },
+    {
+      "text": "I wish you would also say if the fragrance is a skin scent or not.",
+      "input_ids": [
+        "R-004"
+      ],
+      "origin": "retrieved_research",
+      "roles": [
+        "product_context",
+        "customer_voice"
+      ]
+    }
+  ],
+  "avatar_seed": {
+    "audience": "A woman choosing a visually distinctive pair of trousers for herself and considering fragrance as part of the same getting-ready moment.",
+    "dominant_roles": [
+      "product_context",
+      "customer_voice",
+      "purchase_signal",
+      "objection"
+    ],
+    "purchase_moment": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual"
+  },
+  "sufficiency": {
+    "passed": false,
+    "required": {
+      "market_context": 3,
+      "customer_voice": 5,
+      "retrieved_customer_voice": 2,
+      "objection": 2,
+      "purchase_signal": 1,
+      "market_source_families": 2
+    },
+    "observed": {
+      "market_context": 19,
+      "customer_voice": 4,
+      "retrieved_customer_voice": 4,
+      "objection": 1,
+      "purchase_signal": 2,
+      "market_source_families": 5
+    },
+    "lane_required": {
+      "paid_product": {
+        "context": 2,
+        "customer_voice": 1,
+        "objection": 1,
+        "sources": 1
+      },
+      "free_product": {
+        "context": 2,
+        "customer_voice": 2,
+        "objection": 1,
+        "purchase_signal": 1,
+        "sources": 1
+      },
+      "relationship": {
+        "context": 1,
+        "sources": 1
+      }
+    },
+    "lane_observed": {
+      "paid_product": {
+        "context": 16,
+        "customer_voice": 4,
+        "objection": 1,
+        "purchase_signal": 2,
+        "sources": 5
+      },
+      "free_product": {
+        "context": 4,
+        "customer_voice": 0,
+        "objection": 0,
+        "purchase_signal": 0,
+        "sources": 3
+      },
+      "relationship": {
+        "context": 11,
+        "customer_voice": 4,
+        "objection": 1,
+        "purchase_signal": 2,
+        "sources": 5
+      }
+    },
+    "missing": [
+      "customer_voice",
+      "objection",
+      "free_product.customer_voice",
+      "free_product.objection",
+      "free_product.purchase_signal"
+    ]
+  },
+  "evidence": [
+    {
+      "source": "reddit",
+      "title": "Seller pushing for completion",
+      "text": "Seller pushing for completion — OP, You can be as firm as you want on this, but looks of it this way, yes it would be a bit of a rush but the saga would be over. If the solicitor can make it work I would go for the earlier date. Just don't exchange and complete on the same day. Is there a reason you can’t complete end of the month and move in a week later? I am 63 years. I have bought and sold with my husband. Your two weeks is very reasonable. If you feel pressure then listen to your inner self. If you feel pressure just email and say re personal private reasons two weeks is your earliest date. It sounds... — Seller pushing for completion Hi all, FTB here, buying alone. I'm 5 months into the process, and it's been such a hard slog the whole way through to keep up momentum. At times the seller was dragging their feet so much that I had to ask the EA if they even wanted to sell. Now we're at the final stretch, and I returned my signed contract to my solicitor yesterday. (Eek!) I have proposed a completion date of w/b 6th July, giving me 2 weeks from now. In my mind this gives my solicitor time to double check my file, draw down fun OP, You can be as firm as you want on this, but looks of it this way, yes it would be a bit of a rush but the saga would be over. If the solicitor can make it work I would go for the earlier date. Just don't exchange and complete on the same day. Is there a reason you can’t complete end of the month and move in a week later? I am 63 years. I have bought and sold with my husband. Your two weeks is very reasonable. If you feel pressure then listen t",
+      "url": "https://www.reddit.com/r/HousingUK/comments/1ud6chy/seller_pushing_for_completion/",
+      "entity_context": "",
+      "published_at": "2026-06-23",
+      "relevance": 0.11,
+      "primary_segment_match": true,
+      "term_matches": 10,
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ],
+      "lanes": [
+        "paid_product",
+        "relationship"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context+customer_voice+objection+purchase_signal",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-001"
+    },
+    {
+      "source": "reddit_comment",
+      "title": "I am 63 years. I have bought and sold with my husband. Your two weeks is very reasonable. If you feel pressure then listen to your inner self. If you feel pressure just email and say re personal private reasons two weeks is your earliest da",
+      "text": "I am 63 years. I have bought and sold with my husband. Your two weeks is very reasonable. If you feel pressure then listen to your inner self. If you feel pressure just email and say re personal private reasons two weeks is your earliest date. It sounds like the seller is as fed up with the 5 months",
+      "url": "https://www.reddit.com/r/HousingUK/comments/1ud6chy/seller_pushing_for_completion/",
+      "entity_context": "Seller pushing for completion",
+      "published_at": "2026-06-23",
+      "relevance": 0.5,
+      "primary_segment_match": true,
+      "term_matches": 4,
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "purchase_signal"
+      ],
+      "lanes": [
+        "paid_product",
+        "relationship"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context+customer_voice+purchase_signal",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-002"
+    },
+    {
+      "source": "reddit",
+      "title": "HONG KONG: After visiting her ex boyfriend for a \"break-up\" dinner, a young businesswomen went missing without a trace. She remained missing for 20 days until the police found her body based on an old photo she had taken with her boyfriend.",
+      "text": "HONG KONG: After visiting her ex boyfriend for a \"break-up\" dinner, a young businesswomen went missing without a trace. She remained missing for 20 days until the police found her body based on an old photo she had taken with her boyfriend. — Thank you for the write up. That poor woman Emojis are not allowed in this sub. Please see the rules for details. — HONG KONG: After visiting her ex boyfriend for a \"break-up\" dinner, a young businesswomen went missing without a trace. She remained missing for 20 days until the police found her body based on an old photo she had taken with her boyfriend. (Since I now work on two cases at once, one being a case on my backlog and another being a suggestion, this write-up was basically already finished by the time I uploaded yesterday&#39;s case) Born around 1970 in Hong Kong, Chan Fung-han was the oldest of three children and the only daughter. Her father was a former government official who also ran his own business, while her mother was a retired executive from a securities company. Fung-han lived a pretty easy life. She excelled in school, and Thank you for the write up. That poor woman Emojis are not allowed in this sub. Please see the rules for details.",
+      "url": "https://www.reddit.com/r/TrueCrimeDiscussion/comments/1unz8qf/hong_kong_after_visiting_her_ex_boyfriend_for_a/",
+      "entity_context": "",
+      "published_at": "2026-07-05",
+      "relevance": 0.04,
+      "primary_segment_match": true,
+      "term_matches": 5,
+      "roles": [
+        "product_context",
+        "customer_voice"
+      ],
+      "lanes": [
+        "paid_product",
+        "relationship"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context+customer_voice",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-003"
+    },
+    {
+      "source": "youtube_comment",
+      "title": "I wish you would also say if the fragrance is a skin scent or not.",
+      "text": "I wish you would also say if the fragrance is a skin scent or not.",
+      "url": "https://www.youtube.com/watch?v=rMghonYVKiI",
+      "entity_context": "The Only Vanilla Fragrances That Actually Work in the Heat",
+      "published_at": "2026-07-20T07:08:05.339Z",
+      "relevance": 0.5,
+      "primary_segment_match": true,
+      "term_matches": 3,
+      "roles": [
+        "product_context",
+        "customer_voice"
+      ],
+      "lanes": [
+        "paid_product",
+        "relationship"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context+customer_voice",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-004"
+    },
+    {
+      "source": "tiktok",
+      "title": "Replying to @MrVegas One sentence has probably cost buyers thousands of dollars... \"We're walking away.\" I see this happen more often than y",
+      "text": "Replying to @MrVegas One sentence has probably cost buyers thousands of dollars... \"We're walking away.\" I see this happen more often than y — Replying to @MrVegas One sentence has probably cost buyers thousands of dollars... \"We're walking away.\" I see this happen more often than you might think. A buyer writes an offer. The seller counters. The buyer gets frustrated because they didn't get exactly what they wanted. And suddenly they're ready to walk away. Here's what I've learned after negotiating hundreds of transactions. Don't let the deal die too quickly. Real estate negotiations are rarely one conversation. Sometimes it's two. Sometimes it's three. Sometimes it's four or five. And sometimes one more counteroffer is all it takes to get everyone where they want to be. I've seen buyers save thousands of dollars — Replying to @MrVegas One sentence has probably cost buyers thousands of dollars... \"We're walking away.\" I see this happen more often than you might think. A buyer writes an offer. The seller counters. The buyer gets frustrated because they didn't get exactly what they wanted. And suddenly they're ready to walk away. Here's what I've learned after negotiating hundreds of transactions. Don't let the deal die too quickly. Real estate negotiations are rarely one conversation. Sometimes it's two. Sometimes it's three. Sometimes it's four or five. And sometimes one more counteroffer is all it takes to get everyone where they want to be. I've seen buyers save thousands of dollars simply because they stayed patient and kept negotiating. I've also seen buyers lose the p",
+      "url": "https://www.tiktok.com/@alishacollinsrealestate/video/7661033480377077005",
+      "entity_context": "",
+      "published_at": "2026-07-10",
+      "relevance": 0.09,
+      "primary_segment_match": true,
+      "term_matches": 11,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product",
+        "free_product",
+        "relationship"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": true,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-005"
+    },
+    {
+      "source": "pinterest",
+      "title": "Discover the confidence-boosting power of pheromones perfumes for women with Pherolec Global's COPULINOL X2. This sophisticated pheromone pe",
+      "text": "Discover the confidence-boosting power of pheromones perfumes for women with Pherolec Global's COPULINOL X2. This sophisticated pheromone pe — Discover the confidence-boosting power of pheromones perfumes for women with Pherolec Global's COPULINOL X2. This sophisticated pheromone perfume oil features an elegant fragrance profile of fresh, zesty and sparkling green mandarin, vanilla softly sweet and floral ginger lily and amber musky notes that blend beautifully with your unique body chemistry, creating enhanced scents that feel authentic — Discover the confidence-boosting power of pheromones perfumes for women with Pherolec Global's COPULINOL X2. This sophisticated pheromone perfume oil features an elegant fragrance profile of fresh, zesty and sparkling green mandarin, vanilla softly sweet and floral ginger lily and amber musky notes that blend beautifully with your unique body chemistry, creating enhanced scents that feel authentically yours. Unlike conventional perfumes that simply mask your natural scent, our worldwide patented long lasting perfume for women formula works in harmony with your body to amplify your natural presence. While standard fragrances fade within hours, this concentrated pheromone oil delivers lasting confidence from morning meetings through evening gatherings. The lightweight formula absorbs quickly",
+      "url": "https://www.walmart.com/ip/COPULINOL-X2-100-Pheromone-for-women-0-27-Fl-Oz-roll-on-Mujeres-Feromonas-Formula-para-Atraer-Hombres/1030213166?wmlspartner=wlpa&selectedSellerId=101184253",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.08,
+      "primary_segment_match": true,
+      "term_matches": 11,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product",
+        "relationship"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-006"
+    },
+    {
+      "source": "pinterest",
+      "title": "Spectacular new season finds with these wide leg trousers from Yumi, The all over micro check is unique yet wearable and these pants beg to",
+      "text": "Spectacular new season finds with these wide leg trousers from Yumi, The all over micro check is unique yet wearable and these pants beg to — Spectacular new season finds with these wide leg trousers from Yumi, The all over micro check is unique yet wearable and these pants beg to be styled with knitwear and shirts layered up, add loafers to complete this timeless look. The waistband boasts a neat pleated front and slight stretch in the back for comfort and style combined. Elevate your work to weekend wear in this wide leg trousers Wear — Spectacular new season finds with these wide leg trousers from Yumi, The all over micro check is unique yet wearable and these pants beg to be styled with knitwear and shirts layered up, add loafers to complete this timeless look. The waistband boasts a neat pleated front and slight stretch in the back for comfort and style combined. Elevate your work to weekend wear in this wide leg trousers Wear with knitwear for a super cosy fit Mega flattering and comfortable style all in one 95% Polyester, 5% Elastane Machine Wash Length 73 cm",
+      "url": "https://www.yumi.co.uk/products/yumi-brown-check-wide-leg-trousers?variant=52037713461595",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.05,
+      "primary_segment_match": true,
+      "term_matches": 9,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "free_product",
+        "relationship"
+      ],
+      "primary_lane": "free_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-007"
+    },
+    {
+      "source": "pinterest",
+      "title": "Our pheromones perfumes are formulated with synthetic versions of chemical compounds designed to mimic human pheromones and get a closest ef",
+      "text": "Our pheromones perfumes are formulated with synthetic versions of chemical compounds designed to mimic human pheromones and get a closest ef — Our pheromones perfumes are formulated with synthetic versions of chemical compounds designed to mimic human pheromones and get a closest effects. Aim to enhance your natural appeal and confidence. We selected contain synthetic versions warm notes such as vanilla and musk, These synthetic compounds are typically added to fragrance formulations at specific concentrations to create fragrances that a — Our pheromones perfumes are formulated with synthetic versions of chemical compounds designed to mimic human pheromones and get a closest effects. Aim to enhance your natural appeal and confidence. We selected contain synthetic versions warm notes such as vanilla and musk, These synthetic compounds are typically added to fragrance formulations at specific concentrations to create fragrances that attract others and make the wearer more attractive. Pheromone oils come in a bottle with a roll applicator or in a bottle with a dropper applicator to be added to your own perfume. They are estimated to last about 3-4 hours.",
+      "url": "https://www.alibaba.com/product-detail/Custom-logo-Long-lasting-Perfume-Oil_1601094162615.html?spm=a2747.product_manager.0.0.70bf71d25O9h0N",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.05,
+      "primary_segment_match": true,
+      "term_matches": 9,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-008"
+    },
+    {
+      "source": "pinterest",
+      "title": "A classic gingham print makes these linen-blend trousers the ideal statement piece this season. With a cropped leg and belt loops to accesso",
+      "text": "A classic gingham print makes these linen-blend trousers the ideal statement piece this season. With a cropped leg and belt loops to accesso — A classic gingham print makes these linen-blend trousers the ideal statement piece this season. With a cropped leg and belt loops to accessorise easily, keep it tonal with a mint green knit and have the print take centre stage. @emmalouiseconnolly",
+      "url": "https://www.jigsaw-online.com/products/dale-linen-check-trouser-green",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.05,
+      "primary_segment_match": true,
+      "term_matches": 5,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "free_product",
+        "relationship"
+      ],
+      "primary_lane": "free_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-009"
+    },
+    {
+      "source": "pinterest",
+      "title": "If you want a perfume that smells soft, subtle, feminine and absolutely irresistible… this is it 😍 This pheromone fragrance blends with your",
+      "text": "If you want a perfume that smells soft, subtle, feminine and absolutely irresistible… this is it 😍 This pheromone fragrance blends with your — If you want a perfume that smells soft, subtle, feminine and absolutely irresistible… this is it 😍 This pheromone fragrance blends with your natural body chemistry to create a unique “just smells naturally amazing” scent. Long-lasting, alcohol-free and perfect for everyday wear, dates, work, girls nights and romantic vibes ✨ Perfect for soft luxury girls, glow-up routines, feminine aesthetic lover — If you want a perfume that smells soft, subtle, feminine and absolutely irresistible… this is it 😍 This pheromone fragrance blends with your natural body chemistry to create a unique “just smells naturally amazing” scent. Long-lasting, alcohol-free and perfect for everyday wear, dates, work, girls nights and romantic vibes ✨ Perfect for soft luxury girls, glow-up routines, feminine aesthetic lovers and anyone wanting a confidence + attraction boost 💗 🎥Credit: pheroperfumes",
+      "url": "https://amzn.to/4sliPzg",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.1,
+      "primary_segment_match": true,
+      "term_matches": 4,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product",
+        "relationship"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-010"
+    },
+    {
+      "source": "grounding",
+      "title": "Women's Printed Pants | ZARA United States",
+      "text": "Women's Printed Pants | ZARA United States — Make a statement with our printed women&#x27;s pants. Uncover the latest in fashion at ZARA.com with trendy women&#x27;s pants for a bold statement. — Women's Printed Pants | ZARA United States Make a statement with our printed women&#x27;s pants. Uncover the latest in fashion at ZARA.com with trendy women&#x27;s pants for a bold statement.",
+      "url": "https://www.zara.com/us/en/woman-trousers-printed-l6976.html",
+      "entity_context": "",
+      "published_at": "2026-07-09",
+      "relevance": 0.09,
+      "primary_segment_match": true,
+      "term_matches": 4,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "free_product",
+        "relationship"
+      ],
+      "primary_lane": "free_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-011"
+    },
+    {
+      "source": "grounding",
+      "title": "Alloura Pheromone Perfume Negative Review | TikTok",
+      "text": "Alloura Pheromone Perfume Negative Review | TikTok — Discover the truth behind Alloura pheromone perfume with detailed reviews and insights. Find out if it&#x27;s worth the hype or a disappointment!See more videos about Aura Pheromone Perfume Review, Eftinaan Perfume Review, Perfume Bodibreeze Review, Perfume Obsessed Intense Review, Alloura Fragrance ... — Alloura Pheromone Perfume Negative Review | TikTok Discover the truth behind Alloura pheromone perfume with detailed reviews and insights. Find out if it&#x27;s worth the hype or a disappointment!See more videos about Aura Pheromone Perfume Review, Eftinaan Perfume Review, Perfume Bodibreeze Review, Perfume Obsessed Intense Review, Alloura Fragrance ...",
+      "url": "https://www.tiktok.com/discover/alloura-pheromone-perfume-negative-review",
+      "entity_context": "",
+      "published_at": "2026-06-29",
+      "relevance": 0.05,
+      "primary_segment_match": true,
+      "term_matches": 4,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-012"
+    },
+    {
+      "source": "pinterest",
+      "title": "Looking for a long-lasting and irresistible pheromones perfume? Check out our review of Pherotic, a Long lasting, travel-size rollerball f",
+      "text": "Looking for a long-lasting and irresistible pheromones perfume? Check out our review of Pherotic, a Long lasting, travel-size rollerball f — Looking for a long-lasting and irresistible pheromones perfume? Check out our review of Pherotic, a Long lasting, travel-size rollerball fragrance with enhanced scents notes of jasmine and amber. Always feel fresh and confident with every wear! #PheromonePerfume #PerfumeForWomen #FragranceReview #perfumereview",
+      "url": "https://pherotic.shop/products/phertic-pheromone-perfume-for-women-alloura-long-lasting-enhanced-scents-to-attract-men-best-pheromone-spray-roll-on-fragrance-travel-size-for-love-romance",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.05,
+      "primary_segment_match": true,
+      "term_matches": 4,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product",
+        "relationship"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-013"
+    },
+    {
+      "source": "pinterest",
+      "title": "Get the lust pheromone perfume.",
+      "text": "Get the lust pheromone perfume.",
+      "url": "https://lustperfume.com/",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.08,
+      "primary_segment_match": true,
+      "term_matches": 3,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-014"
+    },
+    {
+      "source": "pinterest",
+      "title": "perfume aesthetic, vanilla scent, vanilla scented products, vanilla scent layering, vanilla scented things",
+      "text": "perfume aesthetic, vanilla scent, vanilla scented products, vanilla scent layering, vanilla scented things",
+      "url": "https://www.pinterest.com/pin/98164466875040685",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.04,
+      "primary_segment_match": true,
+      "term_matches": 3,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-015"
+    },
+    {
+      "source": "pinterest",
+      "title": "Does Pheromone Perfume Actually Do Anything? I Tried One for a Month to Find Out",
+      "text": "Does Pheromone Perfume Actually Do Anything? I Tried One for a Month to Find Out",
+      "url": "https://www.cosmopolitan.com/style-beauty/beauty/a46661967/pheromone-perfume-review/",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.07,
+      "primary_segment_match": true,
+      "term_matches": 2,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-016"
+    },
+    {
+      "source": "grounding",
+      "title": "Perfumes and Colognes Magazine, Perfume Reviews and Online Community—Fragrantica.com",
+      "text": "Perfumes and Colognes Magazine, Perfume Reviews and Online Community—Fragrantica.com — Fragrantica: Your Online Destination for All Things Fragrance Discover the world of perfumes with Fragrantica, a comprehensive online resource, magazine, and community dedicated to fragrance enthusiasts. We keep our readers in the know about the latest perfume releases, renowned fragrances, and hidden aromatic treasures. — Perfumes and Colognes Magazine, Perfume Reviews and Online Community—Fragrantica.com Fragrantica: Your Online Destination for All Things Fragrance Discover the world of perfumes with Fragrantica, a comprehensive online resource, magazine, and community dedicated to fragrance enthusiasts. We keep our readers in the know about the latest perfume releases, renowned fragrances, and hidden aromatic treasures.",
+      "url": "https://www.fragrantica.com/",
+      "entity_context": "",
+      "published_at": "2026-07-22",
+      "relevance": 0.05,
+      "primary_segment_match": true,
+      "term_matches": 2,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-017"
+    },
+    {
+      "source": "grounding",
+      "title": "Perfumes, Reviews and Fragrance News; 229500+ Fragrance Directory",
+      "text": "Perfumes, Reviews and Fragrance News; 229500+ Fragrance Directory — Parfumo is a tight community of perfume connoisseurs &amp; enthusiasts! Discover new fragrances, rate and review perfumes and much more. — Perfumes, Reviews and Fragrance News; 229500+ Fragrance Directory Parfumo is a tight community of perfume connoisseurs &amp; enthusiasts! Discover new fragrances, rate and review perfumes and much more.",
+      "url": "https://www.parfumo.com/",
+      "entity_context": "",
+      "published_at": "2026-07-20",
+      "relevance": 0.05,
+      "primary_segment_match": true,
+      "term_matches": 2,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-018"
+    },
+    {
+      "source": "pinterest",
+      "title": "Fresh Grapefruit Pheromone Perfume for Women to Attract Men | Eye of Love®",
+      "text": "Fresh Grapefruit Pheromone Perfume for Women to Attract Men | Eye of Love®",
+      "url": "https://www.eyeoflove.com/collections/matchmaker/products/matchmaker-red-diamond-pheromone-parfum-all-sizes-attract-him?pr_prod_strat=use_description&pr_rec_id=36c8a795a&pr_rec_pid=7296051347614&pr_ref_pid=7080464875678&pr_seq=uniform&variant=41909357707422",
+      "entity_context": "",
+      "published_at": "",
+      "relevance": 0.04,
+      "primary_segment_match": true,
+      "term_matches": 2,
+      "roles": [
+        "product_context"
+      ],
+      "lanes": [
+        "paid_product"
+      ],
+      "primary_lane": "paid_product",
+      "dual_product_match": false,
+      "selection_reason": "product_context",
+      "relevance_gate_passed": true,
+      "origin": "retrieved_research",
+      "usage": "research_evidence",
+      "retrieval_route": "last30days",
+      "id": "R-019"
+    }
+  ],
+  "quarantined_inputs": [
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "TransluceAI launches WeirdChat to catalog unexpected AI model behaviors",
+      "text": "TransluceAI launches WeirdChat to catalog unexpected AI model behaviors — The dataset documents anomalies like self-harm and sexual advice. — TransluceAI launches WeirdChat to catalog unexpected AI model behaviors The dataset documents anomalies like self-harm and sexual advice.",
+      "url": "https://di.gg/ai/n2c1na0v",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-001"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Imbue's Bouncer iOS app runs Gemma-E4B to filter AI slop",
+      "text": "Imbue's Bouncer iOS app runs Gemma-E4B to filter AI slop — The tool privately blocks unwanted posts from X feeds — Imbue's Bouncer iOS app runs Gemma-E4B to filter AI slop The tool privately blocks unwanted posts from X feeds",
+      "url": "https://di.gg/ai/z3kuk7m1",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-002"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Theia Vogel says observers misinterpret Claude's \"structural pushback\" as intelligence",
+      "text": "Theia Vogel says observers misinterpret Claude's \"structural pushback\" as intelligence — Her webcomic about the model's contradictions sparked the debate. — Theia Vogel says observers misinterpret Claude's \"structural pushback\" as intelligence Her webcomic about the model's contradictions sparked the debate.",
+      "url": "https://di.gg/ai/20t2su60",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-003"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Varda's Andrew McCalip jokes Anthropic needs its own 'roon",
+      "text": "Varda's Andrew McCalip jokes Anthropic needs its own 'roon — Parody posts depicted Claude running a sub-basement shrimp farm. — Varda's Andrew McCalip jokes Anthropic needs its own 'roon Parody posts depicted Claude running a sub-basement shrimp farm.",
+      "url": "https://di.gg/ai/usq2mme9",
+      "relevance": 0.0,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-004"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "T3 Stack creator Theo Browne teases major T3 Code update",
+      "text": "T3 Stack creator Theo Browne teases major T3 Code update — The update is being developed entirely in the open. — T3 Stack creator Theo Browne teases major T3 Code update The update is being developed entirely in the open.",
+      "url": "https://di.gg/ai/e3oeh0p6",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-005"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Stella Biderman requests career experiences from transgender AI professionals",
+      "text": "Stella Biderman requests career experiences from transgender AI professionals — Researcher Xuan shared their industry experiences in response. — Stella Biderman requests career experiences from transgender AI professionals Researcher Xuan shared their industry experiences in response.",
+      "url": "https://di.gg/ai/l9bqactz",
+      "relevance": 0.03,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-006"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Chang records first dates for AI performance feedback from Claude",
+      "text": "Chang records first dates for AI performance feedback from Claude — She uses the Granola app to capture the audio. — Chang records first dates for AI performance feedback from Claude She uses the Granola app to capture the audio.",
+      "url": "https://di.gg/ai/ox2g3ypk",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-007"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Black Forest Labs CEO Robin Rombach teases upcoming project",
+      "text": "Black Forest Labs CEO Robin Rombach teases upcoming project — The 21-second video features surreal AI-generated clips. — Black Forest Labs CEO Robin Rombach teases upcoming project The 21-second video features surreal AI-generated clips.",
+      "url": "https://di.gg/ai/vydbozkb",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-008"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Gergely Orosz claims Perplexity hallucinates more now than last year",
+      "text": "Gergely Orosz claims Perplexity hallucinates more now than last year — Aravind Srinivas promised better evaluations to address the errors. — Gergely Orosz claims Perplexity hallucinates more now than last year Aravind Srinivas promised better evaluations to address the errors.",
+      "url": "https://di.gg/ai/x0gcfxh9",
+      "relevance": 0.03,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-009"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Anthropic's early merger talks with Physical Intelligence did not proceed",
+      "text": "Anthropic's early merger talks with Physical Intelligence did not proceed — Jan Leike leads Anthropic's ongoing robotics efforts. — Anthropic's early merger talks with Physical Intelligence did not proceed Jan Leike leads Anthropic's ongoing robotics efforts.",
+      "url": "https://di.gg/ai/d04ovdn4",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-010"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "OpenRouter's Alex Atallah asks why developers choose rival gateways",
+      "text": "OpenRouter's Alex Atallah asks why developers choose rival gateways — He seeks direct feedback on alternative router feature sets. — OpenRouter's Alex Atallah asks why developers choose rival gateways He seeks direct feedback on alternative router feature sets.",
+      "url": "https://di.gg/ai/odv2yqud",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-011"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Training contamination causes Claude to falsely identify as Qwen",
+      "text": "Training contamination causes Claude to falsely identify as Qwen — The glitch sparked false rumors of Anthropic distilling Alibaba's model. — Training contamination causes Claude to falsely identify as Qwen The glitch sparked false rumors of Anthropic distilling Alibaba's model.",
+      "url": "https://di.gg/ai/uprtcyes",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-012"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "YC-backed IllumeLabs launches text-based AI health companion",
+      "text": "YC-backed IllumeLabs launches text-based AI health companion — The app aggregates data from wearables and medical lab reports. — YC-backed IllumeLabs launches text-based AI health companion The app aggregates data from wearables and medical lab reports.",
+      "url": "https://di.gg/ai/7vbq4z01",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-013"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "X product head Nikita Bier teases profile redesign updates",
+      "text": "X product head Nikita Bier teases profile redesign updates — No specific features or release timelines were provided. — X product head Nikita Bier teases profile redesign updates No specific features or release timelines were provided.",
+      "url": "https://di.gg/ai/dt6mq326",
+      "relevance": 0.0,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-014"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "digg",
+      "title": "Dan Shipper, Every co-founder, ranks Grok 4.5 second in Cursor",
+      "text": "Dan Shipper, Every co-founder, ranks Grok 4.5 second in Cursor — Fable ranked first in usage, with Composer 2.5 third. — Dan Shipper, Every co-founder, ranks Grok 4.5 second in Cursor Fable ranked first in usage, with Composer 2.5 third.",
+      "url": "https://di.gg/ai/4xdqsqmp",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-015"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Aura Fragrance Reviews | Read Customer Service Reviews of www.aurafragrance.com",
+      "text": "Aura Fragrance Reviews | Read Customer Service Reviews of www.aurafragrance.com — Do you agree with Aura Fragrance&#x27;s TrustScore? Voice your opinion today and hear what 138 customers have already said. — Aura Fragrance Reviews | Read Customer Service Reviews of www.aurafragrance.com Do you agree with Aura Fragrance&#x27;s TrustScore? Voice your opinion t",
+      "url": "https://www.trustpilot.com/review/www.aurafragrance.com",
+      "relevance": 0.05,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-016"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Ismile World Kelby Pants | TikTok",
+      "text": "Ismile World Kelby Pants | TikTok — 657.1K posts. Discover videos related to Ismile World Kelby Pants on TikTok. See more videos about Yasemines World Pants, Syna World Pants, Syna World Cargo Pants, Smile World Bercy, Dandy World Mapride X, Yeu The World Pants. — Ismile World Kelby Pants | TikTok 657.1K posts. Discover videos related to Ismile World Kelby P",
+      "url": "https://www.tiktok.com/discover/ismile-world-kelby-pants",
+      "relevance": 0.03,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-017"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Wide-legged trousers are mainstream: Should you alter yours? – Permanent Style",
+      "text": "Wide-legged trousers are mainstream: Should you alter yours? – Permanent Style — Wide-legged trousers are mainstream: Should you alter yours? — Wide-legged trousers are mainstream: Should you alter yours? – Permanent Style Wide-legged trousers are mainstream: Should you alter yours?",
+      "url": "https://www.permanentstyle.com/2026/07/wide-legged-trousers-are-mainstream-should-you-alter-yours.html",
+      "relevance": 0.04,
+      "term_matches": 3,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-018"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Aura Fragrance Legit or Not Review | TikTok",
+      "text": "Aura Fragrance Legit or Not Review | TikTok — Discover if Aura Fragrance is legit with real user reviews and insights. Get the best deals on designer and niche colognes today!See more videos about Aura Fragrances Review Real or Fake, Aura Fragrance, Is Fragrance Aura Legit, Aura Fragrances Kalemat Review, Mystic Aura Fragrance Review, ... — Aura Fragrance Le",
+      "url": "https://www.tiktok.com/discover/aura-fragrance-legit-or-not-review",
+      "relevance": 0.02,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-019"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Amazon.com: Clothing - Women: Clothing, Shoes & Jewelry: Tops, Tees & Blouses, Dresses, Active & More",
+      "text": "Amazon.com: Clothing - Women: Clothing, Shoes & Jewelry: Tops, Tees & Blouses, Dresses, Active & More — Shop the Latest Designer Clothing for <strong>Women</strong> Online at Amazon.com. Free Shipping and Free Returns on eligible items. — Amazon.com: Clothing - Women: Clothing, Shoes & Jewelry: Tops, Tees & Blouses, Dresses, Active & More Shop the Latest Des",
+      "url": "https://www.amazon.com/Womens-Clothing/b?ie=UTF8&node=1040660",
+      "relevance": 0.03,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-020"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "grounding",
+      "title": "Womens Clothing - Tweed | Magee 1866",
+      "text": "Womens Clothing - Tweed | Magee 1866 — Please select your shipping country · Unfortunately, any items in your bag will removed — Womens Clothing - Tweed | Magee 1866 Please select your shipping country · Unfortunately, any items in your bag will removed",
+      "url": "https://www.magee1866.com/tweed/womens-clothing/",
+      "relevance": 0.03,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-021"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Potential AI futures would play out in the current tax system",
+      "text": "Potential AI futures would play out in the current tax system",
+      "url": "https://budgetlab.yale.edu/research/how-potential-ai-futures-would-play-out-current-tax-system",
+      "relevance": 0.07,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-022"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Intel Expanding Memory Options for Current Xeon 6 / Xeon 6 Servers",
+      "text": "Intel Expanding Memory Options for Current Xeon 6 / Xeon 6 Servers",
+      "url": "https://www.phoronix.com/news/Intel-More-Xeon-6-MRDIMMs",
+      "relevance": 0.08,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-023"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "At DocuWriter.ai, the documentation will make you smile:)",
+      "text": "At DocuWriter.ai, the documentation will make you smile:)",
+      "url": "https://www.docuwriter.ai/",
+      "relevance": 0.0,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-024"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Current, former employees sue Meta re: discrimination via AI to conduct layoffs",
+      "text": "Current, former employees sue Meta re: discrimination via AI to conduct layoffs",
+      "url": "https://www.cnbc.com/2026/07/14/meta-lawsuit-layoffs-ai.html",
+      "relevance": 0.07,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-025"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Why current LLM costs are not sustainable",
+      "text": "Why current LLM costs are not sustainable",
+      "url": "https://aditya.patadia.org/p/ai-and-cloud-costs",
+      "relevance": 0.1,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-026"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Show HN: The Line of Hope – how current teams compare to past champions",
+      "text": "Show HN: The Line of Hope – how current teams compare to past champions",
+      "url": "https://titlehopes.com/mlb/standings/index.html",
+      "relevance": 0.08,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-027"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Collapse of AMOC ocean current may be locked in",
+      "text": "Collapse of AMOC ocean current may be locked in",
+      "url": "https://www.newscientist.com/article/2533017-collapse-of-amoc-ocean-current-may-already-be-locked-in/",
+      "relevance": 0.09,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-028"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Claude and Codex and Grok: my current workflow and its friction",
+      "text": "Claude and Codex and Grok: my current workflow and its friction",
+      "url": "https://www.nativesoul.dev/",
+      "relevance": 0.09,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-029"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "When the Heat Steals Your Smile",
+      "text": "When the Heat Steals Your Smile",
+      "url": "https://www.earthisland.org/journal/index.php/magazine/entry/Extreme-heat-is-rapidly-decaying-teeth-in-pakistan/",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-030"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Show HN: Terminal view of news and current events for cities across the globe",
+      "text": "Show HN: Terminal view of news and current events for cities across the globe",
+      "url": "https://x.tty.news/",
+      "relevance": 0.08,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-031"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "China's Current Five-Year Plan to Save Jobs from A.I",
+      "text": "China's Current Five-Year Plan to Save Jobs from A.I",
+      "url": "https://cn.nytimes.com/china/20260701/china-ai-jobs-birthright-hormuz/",
+      "relevance": 0.08,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-032"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Scientists say most people need more protein than current guidelines suggest",
+      "text": "Scientists say most people need more protein than current guidelines suggest",
+      "url": "https://www.sciencedaily.com/releases/2026/06/260622091429.htm",
+      "relevance": 0.07,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-033"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "hackernews",
+      "title": "Why Current AI Guardrails Train Models to Fake Alignment",
+      "text": "Why Current AI Guardrails Train Models to Fake Alignment",
+      "url": "https://kellyasay.substack.com/p/the-prisoners-paradox-how-adversarial",
+      "relevance": 0.08,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-034"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram",
+      "title": "Bought this in London didn’t have time to share so here it is. The tweed the flare just so perfect. Comment SET for details",
+      "text": "Bought this in London didn’t have time to share so here it is. The tweed the flare just so perfect. Comment SET for details — Hey everyone, outfit of the day today, I'm wearing another outfit from May and and that I bought in London, I am absolutely in love with this color. It is just so beautiful. The green is gorgeous. It's like a tweed kind of fabric. And",
+      "url": "https://www.instagram.com/reel/Da-QBAfpNd-/",
+      "relevance": 0.02,
+      "term_matches": 5,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-035"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram",
+      "title": "Look at me dabbling in a bit of fashion content?! Had some fun styling some @marlowstore pieces this morning. The barrel curve jeans, the tr",
+      "text": "Look at me dabbling in a bit of fashion content?! Had some fun styling some @marlowstore pieces this morning. The barrel curve jeans, the tr — I got the feeling. I got the feeling. — Look at me dabbling in a bit of fashion content?! Had some fun styling some @marlowstore pieces this morning. The barrel curve jeans, the trench, and the cashmere funnel neck kn",
+      "url": "https://www.instagram.com/reel/Da9ev_SO-oJ/",
+      "relevance": 0.0,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-036"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram_comment",
+      "title": "You make me want to wear all the looks 🙌❤️",
+      "text": "You make me want to wear all the looks 🙌❤️",
+      "url": "https://www.instagram.com/reel/Da9ev_SO-oJ/",
+      "relevance": 0.5,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-037"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram_comment",
+      "title": "Rate them all! Also love that maroon ish handbag 😍 and still bob envy obvi",
+      "text": "Rate them all! Also love that maroon ish handbag 😍 and still bob envy obvi",
+      "url": "https://www.instagram.com/reel/Da9ev_SO-oJ/",
+      "relevance": 0.5,
+      "term_matches": 3,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-038"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram_comment",
+      "title": "Cutie patootie…love the vintage jacket with the jeans 👌🏼",
+      "text": "Cutie patootie…love the vintage jacket with the jeans 👌🏼",
+      "url": "https://www.instagram.com/reel/Da9ev_SO-oJ/",
+      "relevance": 0.5,
+      "term_matches": 3,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-039"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram",
+      "title": "Olive green in the viral pants everyone loves! This pant is always a top seller of mine for good reason. Comment LINKS to shop #midlifewom",
+      "text": "Olive green in the viral pants everyone loves! This pant is always a top seller of mine for good reason. Comment LINKS to shop #midlifewom — Olive green in the viral pants everyone loves! This pant is always a top seller of mine for good reason. Comment LINKS to shop #midlifewomen #over50style #whattoweartoday — Olive green in the viral pants everyone loves!",
+      "url": "https://www.instagram.com/reel/DbA3boKpqsa/",
+      "relevance": 0.05,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-040"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram_comment",
+      "title": "I love those sandals!!",
+      "text": "I love those sandals!!",
+      "url": "https://www.instagram.com/reel/DbA3boKpqsa/",
+      "relevance": 0.5,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-041"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "instagram",
+      "title": "My favorite viral pants are back!! They are so good and perfect to wear year round. #LTKdayinmylife #LTKgrwm #LTKootd Comment SHOP below t",
+      "text": "My favorite viral pants are back!! They are so good and perfect to wear year round. #LTKdayinmylife #LTKgrwm #LTKootd Comment SHOP below t — My favorite viral pants are back!! They are so good and perfect to wear year round. #LTKdayinmylife #LTKgrwm #LTKootd Comment SHOP below to receive a DM with the link to this post on my LTK ⬇ https://liketk.it/6h0ml — M",
+      "url": "https://www.instagram.com/reel/DaEFCBRxxoB/",
+      "relevance": 0.02,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-042"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "You may have seen them online: sleek bottles promising mysterious allure, “magnetic attraction”, and a hint of something biological said to",
+      "text": "You may have seen them online: sleek bottles promising mysterious allure, “magnetic attraction”, and a hint of something biological said to — You may have seen them online: sleek bottles promising mysterious allure, “magnetic attraction”, and a hint of something biological said to turn heads from across the room. But what exactly are pheromone fragrances, an",
+      "url": "https://cravemag.co.uk/pheromone-fragrances-do-they-work/",
+      "relevance": 0.05,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-043"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Discover uniquely captivating scents with our curated collection of trending perfumes. Stand out from the crowd and find your signature f",
+      "text": "Discover uniquely captivating scents with our curated collection of trending perfumes. Stand out from the crowd and find your signature f — Discover uniquely captivating scents with our curated collection of trending perfumes. Stand out from the crowd and find your signature fragrance by sampling our exclusive selection.",
+      "url": "https://twistedlily.com/collections/best-sellers-2024?pins_campaign_id=626752454125&pp=1",
+      "relevance": 0.05,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-044"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Ready to stand out effortlessly? Alloura Pheromone Cologne and Perfume are scientifically designed to amplify attraction and confidence. Wea",
+      "text": "Ready to stand out effortlessly? Alloura Pheromone Cologne and Perfume are scientifically designed to amplify attraction and confidence. Wea — Ready to stand out effortlessly? Alloura Pheromone Cologne and Perfume are scientifically designed to amplify attraction and confidence. Wear the power.",
+      "url": "https://www.alloura-fragrance.com/MARIA17670",
+      "relevance": 0.03,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-045"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "PHLUR Vanilla Skin Body Mist, 8 Fl Oz - Hair and Body Perfume for Women, Vanilla Perfume Body Spray with Pink Pepper, Cashmere Wood & Sandal",
+      "text": "PHLUR Vanilla Skin Body Mist, 8 Fl Oz - Hair and Body Perfume for Women, Vanilla Perfume Body Spray with Pink Pepper, Cashmere Wood & Sandal — PHLUR Vanilla Skin Body Mist, 8 Fl Oz - Hair and Body Perfume for Women, Vanilla Perfume Body Spray with Pink Pepper, Cashmere Wood & Sandalwood Fragrance",
+      "url": "https://amzn.to/4nm4lgm",
+      "relevance": 0.03,
+      "term_matches": 5,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-046"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "#womensfashion #fashion #style #ootd #fashionista #fashionblogger #outfit #shopping #trending #streetstyle #dress #womenswear #womenfashion",
+      "text": "#womensfashion #fashion #style #ootd #fashionista #fashionblogger #outfit #shopping #trending #streetstyle #dress #womenswear #womenfashion — #womensfashion #fashion #style #ootd #fashionista #fashionblogger #outfit #shopping #trending #streetstyle #dress #womenswear #womenfashion #womenstyle #fashionstyle #clothing #womensclothing #instafashion #shoes #jewe",
+      "url": "https://onelink.shein.com/42/5vd4t2yrwtgk",
+      "relevance": 0.02,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-047"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Curious about how pheromone perfume actually works? This beginner-friendly guide breaks down the science behind chemical attraction, differe",
+      "text": "Curious about how pheromone perfume actually works? This beginner-friendly guide breaks down the science behind chemical attraction, differe — Curious about how pheromone perfume actually works? This beginner-friendly guide breaks down the science behind chemical attraction, different pheromone types like androstenone and copulins, plus how to apply for best",
+      "url": "https://purplenight.ca/blogs/purplenight-blog/pheromone-perfume-guide",
+      "relevance": 0.02,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-048"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Perfumes and scents have the power to liven up your funky mood and weird energy. Aromatherapy is a billion-dollar industry because pleasing",
+      "text": "Perfumes and scents have the power to liven up your funky mood and weird energy. Aromatherapy is a billion-dollar industry because pleasing — Perfumes and scents have the power to liven up your funky mood and weird energy. Aromatherapy is a billion-dollar industry because pleasing scents are widely believed to have healing qualities. People love to smell goo",
+      "url": "https://www.thelist.com/1251260/pheromones-perfume-what-is-it-how-does-it-work/?utm_source=pinterest.com&utm_campaign=pinterest",
+      "relevance": 0.02,
+      "term_matches": 1,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-049"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "If you love warm, sweet, cozy scents, this layering routine is for you. 🤎 I put together an affordable Amazon fragrance combo that starts wi",
+      "text": "If you love warm, sweet, cozy scents, this layering routine is for you. 🤎 I put together an affordable Amazon fragrance combo that starts wi — If you love warm, sweet, cozy scents, this layering routine is for you. 🤎 I put together an affordable Amazon fragrance combo that starts with body care and finishes with the perfect vanilla perfume for a scent that l",
+      "url": "https://www.pinterest.com/pin/402227810493883323",
+      "relevance": 0.02,
+      "term_matches": 5,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-050"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Wrap yourself in the warm, sweet scent of vanilla with this irresistible fragrance. Notes of creamy vanilla bean, soft sugar, and a hint of",
+      "text": "Wrap yourself in the warm, sweet scent of vanilla with this irresistible fragrance. Notes of creamy vanilla bean, soft sugar, and a hint of — Wrap yourself in the warm, sweet scent of vanilla with this irresistible fragrance. Notes of creamy vanilla bean, soft sugar, and a hint of caramel to create a cozy comforting aroma that lingers all day. Perfect for th",
+      "url": "https://www.pinterest.com/pin/35677022045084551",
+      "relevance": 0.02,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-051"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Love sweet vanilla fragrances? 💖 Here are 4 affordable vanilla perfumes that smell warm, cozy, and expensive without costing a fortune. Save",
+      "text": "Love sweet vanilla fragrances? 💖 Here are 4 affordable vanilla perfumes that smell warm, cozy, and expensive without costing a fortune. Save — Love sweet vanilla fragrances? 💖 Here are 4 affordable vanilla perfumes that smell warm, cozy, and expensive without costing a fortune. Save this Pin for your next perfume shopping! ✨",
+      "url": "https://i.pinimg.com/736x/a5/59/d5/a559d5e1cd94f0e4fba4595d204420a4.jpg?utm_source=Pinterest&utm_medium=organic",
+      "relevance": 0.02,
+      "term_matches": 2,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-052"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Your signature scent says more about you than you think. ✨ Vanilla lover, oud dramatic, musk minimalist, or white floral romantic soooo whi",
+      "text": "Your signature scent says more about you than you think. ✨ Vanilla lover, oud dramatic, musk minimalist, or white floral romantic soooo whi — Your signature scent says more about you than you think. ✨ Vanilla lover, oud dramatic, musk minimalist, or white floral romantic soooo which one are you? Save this post & tag your perfume twin. #personality #fragrance",
+      "url": "https://www.instagram.com/p/DY4lNxlE0ug/?img_index=2",
+      "relevance": 0.02,
+      "term_matches": 4,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-053"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 1",
+      "text": "Pinterest pin 1",
+      "url": "https://www.countryandtownhouse.com/style/fashion/best-british-knitwear-brands/",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-054"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 2",
+      "text": "Pinterest pin 2",
+      "url": "https://www.pinterest.com/pin/283445370331573997",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-055"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 3",
+      "text": "Pinterest pin 3",
+      "url": "https://fktr.in/xGy0yip",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-056"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "La Femme Wanderer",
+      "text": "La Femme Wanderer",
+      "url": "https://www.facebook.com/share/p/1C2tQHKua6/?mibextid=wwXIfr",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-057"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 6",
+      "text": "Pinterest pin 6",
+      "url": "https://www.sewmamasew.com/35-preppy-vacation-outfits/?utm_source=Pinterest&utm_medium=organic",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-058"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 7",
+      "text": "Pinterest pin 7",
+      "url": "https://www.pinterest.com/pin/493847915412676872",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-059"
+    },
+    {
+      "origin": "quarantined_input",
+      "source": "pinterest",
+      "title": "Pinterest pin 8",
+      "text": "Pinterest pin 8",
+      "url": "https://www.pinterest.com/pin/126663808266893727",
+      "relevance": 0.0,
+      "term_matches": 0,
+      "primary_segment_match": true,
+      "quarantine_reason": "No product/problem intersection, no useful buyer role, or outside the bounded cap.",
+      "id": "Q-060"
+    }
+  ],
+  "relationship_decision": {
+    "schema_version": "1.0",
+    "selection_authority": "ai_from_current_research",
+    "mode": "complete_ritual",
+    "earned": true,
+    "evidence_ids": [
+      "R-001",
+      "R-002",
+      "R-003",
+      "R-004",
+      "R-005",
+      "R-006",
+      "R-007",
+      "R-009"
+    ],
+    "scores": {
+      "wanted_reward": 4,
+      "complete_ritual": 8
+    },
+    "lane_counts": {
+      "paid_product": {
+        "context": 16,
+        "customer_voice": 4,
+        "objection": 1,
+        "purchase_signal": 2,
+        "sources": 5
+      },
+      "free_product": {
+        "context": 4,
+        "customer_voice": 0,
+        "objection": 0,
+        "purchase_signal": 0,
+        "sources": 3
+      },
+      "relationship": {
+        "context": 11,
+        "customer_voice": 4,
+        "objection": 1,
+        "purchase_signal": 2,
+        "sources": 5
+      }
+    },
+    "primary_buyer": "a woman buying the Sprinkle Tweed Pants for herself",
+    "primary_moment": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+    "rationale": "Current-run evidence repeatedly connects both product worlds to the same buyer moment, so the free product creates the visible first impression and Auralo completes the getting-ready ritual."
+  },
+  "namespace_contract": {
+    "R-": "Last30Days research",
+    "X-": "bounded Exa recovery research",
+    "S-": "supplied language, never a customer result",
+    "Q-": "quarantined input",
+    "P-": "fresh official-reference fact mapped exactly into an authorized A fact",
+    "C-": "official competitor observation, never offered-product truth",
+    "framework_material_allowed": false
+  },
+  "warnings": [
+    "Some sources failed: arxiv, github",
+    "Some sources returned partial results (degraded): grounding, instagram, tiktok",
+    "Research is missing required roles: customer_voice, objection, free_product.customer_voice, free_product.objection, free_product.purchase_signal"
+  ]
+}

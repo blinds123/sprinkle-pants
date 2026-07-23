@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "sprinkle-pants-client-preview-20260721",
+  "delivered_at": "2026-07-21T07:37:07Z",
+  "destination": "/Users/nelsonchan/Downloads/Sprinkle-Pants-FreePerry30Days-Ready-20260721",
+  "pack_count": 4,
+  "pack_counts": [
+    10,
+    10,
+    10,
+    9
+  ],
+  "reference_image_count": 2,
+  "reference_images": [
+    {
+      "path": "/Users/nelsonchan/Downloads/Sprinkle-Pants-FreePerry30Days-Ready-20260721/reference-images/REF-COMPANION-PRODUCT-01.jpg",
+      "sha256": "84803aa4f55aeda65b562c15336bee116f2ce7794667ee2bf26101ade0343f21"
+    },
+    {
+      "path": "/Users/nelsonchan/Downloads/Sprinkle-Pants-FreePerry30Days-Ready-20260721/reference-images/REF-PAID-PRODUCT-01.png",
+      "sha256": "f5d1e03dcf017845f17830089ca240b1d4e31ab6b649b4113d4a54a5365b5a7d"
+    }
+  ],
+  "clipboard": {
+    "requested_delay_seconds": 2.0,
+    "observed_intervals_seconds": [
+      2.05,
+      2.056,
+      2.057
+    ],
+    "copies": [
+      {
+        "pack": "pack-01.md",
+        "sha256": "1c1eee10ab7375376afb7915abb8134de82f07ffed2aaa6ac1998424958c0ce7",
+        "copied_at": "2026-07-21T07:37:01Z",
+        "elapsed_seconds": 0.064,
+        "readback_verified": true
+      },
+      {
+        "pack": "pack-02.md",
+        "sha256": "a6cceb435de34e4d3a89fbf0fb4f41bda6337e4974816f093bbeb0d1974d5908",
+        "copied_at": "2026-07-21T07:37:03Z",
+        "elapsed_seconds": 2.114,
+        "readback_verified": true
+      },
+      {
+        "pack": "pack-03.md",
+        "sha256": "378af80eab8e12ee91fa7dbc90d288897bbc2b0137113d91fc8430b9b62bb088",
+        "copied_at": "2026-07-21T07:37:05Z",
+        "elapsed_seconds": 4.17,
+        "readback_verified": true
+      },
+      {
+        "pack": "pack-04.md",
+        "sha256": "0d31de06863da8db790951c1581a96da3beb56b85fb89a35d9f98948c14dd721",
+        "copied_at": "2026-07-21T07:37:07Z",
+        "elapsed_seconds": 6.227,
+        "readback_verified": true
+      }
+    ],
+    "active_pack": "pack-04.md",
+    "active_sha256": "0d31de06863da8db790951c1581a96da3beb56b85fb89a35d9f98948c14dd721"
+  },
+  "sales_copy": {
+    "path": "/Users/nelsonchan/Downloads/Sprinkle-Pants-FreePerry30Days-Ready-20260721/sales-copy.json",
+    "sha256": "45c6c98e1b578c0ae91d123e85d696c01eda25cae1e2db459b252c2a333f5767"
+  }
+}

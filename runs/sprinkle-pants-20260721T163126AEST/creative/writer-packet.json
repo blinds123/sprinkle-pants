@@ -1,0 +1,505 @@
+{
+  "schema_version": "2.0",
+  "campaign_id": "sprinkle-pants-client-preview-20260721",
+  "generated_at": "2026-07-21T06:38:04Z",
+  "research_brief_sha256": "4d6231c2ee0596102f4b1515b9f5342dd91550cda6ab2c17ea9b75adfc463819",
+  "cast_plan_sha256": "5712d8d1c354a84bab7c75539cf3783a1335134f9f46eeb074fcbf9c046cbcfd",
+  "research_inputs": [
+    {
+      "id": "R-001",
+      "origin": "retrieved_research",
+      "retrieval_route": "last30days",
+      "roles": [
+        "problem_context",
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ],
+      "source": "youtube_comment",
+      "text": "What is the oldest linen piece still in your closet and what brand made it? Let us know below ⤵ I recently bought a linen top from J.Jill and when I held it up next to one I bought from them in 2012, I almost could not believe it was the same brand. The old one is still soft, still holds its color, still has clean seams. The new one felt thinner, the stitching was uneven, and the color already lo",
+      "url": "https://www.youtube.com/watch?v=DZBzFVi0tbI",
+      "selection_reason": "problem_context+customer_voice+objection+purchase_signal"
+    },
+    {
+      "id": "R-002",
+      "origin": "retrieved_research",
+      "retrieval_route": "last30days",
+      "roles": [
+        "product_context",
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ],
+      "source": "youtube_comment",
+      "text": "Girl! I just managed to order the GAP trousers! Before watching — Petite heaven :) i loved them!",
+      "url": "https://www.youtube.com/watch?v=e5z-Heg6qfY",
+      "selection_reason": "product_context+customer_voice+objection+purchase_signal"
+    },
+    {
+      "id": "R-003",
+      "origin": "retrieved_research",
+      "retrieval_route": "last30days",
+      "roles": [
+        "product_context",
+        "customer_voice"
+      ],
+      "source": "tiktok_comment",
+      "text": "They might not have come specifically to your yard they may have just been driving past you meat had",
+      "url": "https://www.tiktok.com/@totalsellingsolutions/video/7655100173906988305",
+      "selection_reason": "product_context+customer_voice"
+    },
+    {
+      "id": "S-005",
+      "origin": "supplied_language",
+      "retrieval_route": "supplied",
+      "roles": [
+        "customer_voice",
+        "objection",
+        "purchase_signal"
+      ],
+      "source": "supplied_comment",
+      "text": "Please send me a link to buy a pair of these trousers please?????",
+      "url": "",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal."
+    },
+    {
+      "id": "S-006",
+      "origin": "supplied_language",
+      "retrieval_route": "supplied",
+      "roles": [
+        "customer_voice",
+        "purchase_signal"
+      ],
+      "source": "supplied_comment",
+      "text": "How do I buy a pair!!!",
+      "url": "",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal."
+    },
+    {
+      "id": "S-010",
+      "origin": "supplied_language",
+      "retrieval_route": "supplied",
+      "roles": [
+        "customer_voice"
+      ],
+      "source": "supplied_comment",
+      "text": "vanilla sprinkles sur ismile.world :))",
+      "url": "",
+      "selection_reason": "Usable pain, question, desire, moment, or purchase signal."
+    }
+  ],
+  "authorized_facts": [
+    {
+      "id": "A-001",
+      "origin": "authorized_fact",
+      "fact_key": "offer-paid-price",
+      "path": "offer.paid_price_usd",
+      "fact": "Auralo Pheromone Perfume costs $29.",
+      "type": "offer"
+    },
+    {
+      "id": "A-002",
+      "origin": "authorized_fact",
+      "fact_key": "offer-companion-price",
+      "path": "offer.companion_price_usd",
+      "fact": "Sprinkle Tweed Pants costs $0 in this offer.",
+      "type": "offer"
+    },
+    {
+      "id": "A-003",
+      "origin": "authorized_fact",
+      "fact_key": "offer-shipping",
+      "path": "offer.shipping",
+      "fact": "Ships within 4 days",
+      "type": "offer"
+    },
+    {
+      "id": "A-004",
+      "origin": "authorized_fact",
+      "fact_key": "offer-returns",
+      "path": "offer.returns",
+      "fact": "90-day returns",
+      "type": "offer"
+    },
+    {
+      "id": "A-005",
+      "origin": "authorized_fact",
+      "fact_key": "offer-warranty",
+      "path": "offer.warranty",
+      "fact": "Five-year warranty",
+      "type": "offer"
+    },
+    {
+      "id": "A-006",
+      "origin": "authorized_fact",
+      "fact_key": "offer-checkout",
+      "path": "offer.checkout_provider",
+      "fact": "Checkout provider: SimpleSwap.",
+      "type": "offer"
+    },
+    {
+      "id": "A-007",
+      "origin": "authorized_fact",
+      "fact_key": "market-region",
+      "path": "audience.region",
+      "fact": "Primary market: Europe.",
+      "type": "market"
+    },
+    {
+      "id": "A-008",
+      "origin": "authorized_fact",
+      "fact_key": "sprinkle-tweed-appearance",
+      "path": "product_truth",
+      "fact": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "public_language": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+      "type": "appearance",
+      "evidence": "Standing exact-parity authorization plus the fresh official product page and supplied official product image",
+      "required_in_story": true,
+      "faq_question": "What do the pants look like?"
+    },
+    {
+      "id": "A-009",
+      "origin": "authorized_fact",
+      "fact_key": "relaxed-adjustable-fit",
+      "path": "product_truth",
+      "fact": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist.",
+      "public_language": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist.",
+      "type": "primary_capability",
+      "evidence": "Standing exact-parity authorization plus the fresh official product page",
+      "required_in_story": true,
+      "faq_question": "How do the pants fit?"
+    },
+    {
+      "id": "A-010",
+      "origin": "authorized_fact",
+      "fact_key": "women-size-range",
+      "path": "product_truth",
+      "fact": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "public_language": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+      "type": "compatibility",
+      "evidence": "Standing exact-parity authorization plus the fresh official size guide",
+      "required_in_story": true,
+      "faq_question": "Which size should I choose?"
+    },
+    {
+      "id": "A-011",
+      "origin": "authorized_fact",
+      "fact_key": "standard-length",
+      "path": "product_truth",
+      "fact": "The standard length is 110 cm from waistband to hem.",
+      "public_language": "The standard length is 110 cm from waistband to hem.",
+      "type": "compatibility",
+      "evidence": "Standing exact-parity authorization plus the fresh official size guide",
+      "required_in_story": false,
+      "faq_question": "How long are the pants?"
+    },
+    {
+      "id": "A-012",
+      "origin": "authorized_fact",
+      "fact_key": "tweed-care",
+      "path": "product_truth",
+      "fact": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it.",
+      "public_language": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it.",
+      "type": "limitation",
+      "evidence": "Standing exact-parity authorization plus the fresh official care instructions",
+      "required_in_story": true,
+      "faq_question": "How should I care for the pants?"
+    }
+  ],
+  "competitor_observations": [],
+  "offer_argument": {
+    "buyer": "a style-forward woman buying the pants for herself",
+    "opening": "Easy outfits often disappear into the background, while piling on more pieces can make them feel busy instead of personal.",
+    "primary_moment": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+    "secondary_moments": [
+      "weekend city outings styled with a simple fitted top or sweater",
+      "casual evenings and creative social settings where texture and colour can lead the look"
+    ],
+    "opportunity": "make the statement piece the trousers so their multicoloured tweed, relaxed silhouette, drawcord, and fringed hems do the visual work",
+    "outcome": "feel deliberately styled and distinctive without adding more competing pieces",
+    "product_way": "the Sprinkle Tweed Pants' multicoloured cream tweed, relaxed baggy fit, adjustable elastic waist, braided drawcord, and fringed hems",
+    "central_conclusion": "When one piece carries the colour, texture, and silhouette, a simple outfit can feel more individual and intentional.",
+    "offer_connection": "Auralo is the paid getting-ready finishing touch; the Sprinkle Tweed Pants are the FREE statement piece that shapes the outfit.",
+    "paid_role": "Auralo's $29 Pheromone Perfume is the paid product used as a getting-ready finishing touch.",
+    "companion_role": "The Sprinkle Tweed Pants are the FREE exact-parity statement trousers with the multicoloured tweed design and relaxed adjustable fit.",
+    "reasons": [
+      {
+        "title": "Let the trousers carry the outfit",
+        "explanation": "The cream tweed, multicoloured flecks, braided drawcord, and fringed hems provide the colour and texture, so the rest of the outfit can stay simple.",
+        "facts": [
+          {
+            "id": "A-008",
+            "public_language": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems."
+          }
+        ]
+      },
+      {
+        "title": "Choose the baggy shape on purpose",
+        "explanation": "The relaxed baggy fit and adjustable elastic waist make the silhouette a deliberate part of the look.",
+        "facts": [
+          {
+            "id": "A-009",
+            "public_language": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist."
+          }
+        ]
+      },
+      {
+        "title": "Know the size and care before first wear",
+        "explanation": "Use the EU size ranges and 110 cm standard length to choose, then protect the delicate tweed with dry-clean-only care.",
+        "facts": [
+          {
+            "id": "A-010",
+            "public_language": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44."
+          },
+          {
+            "id": "A-011",
+            "public_language": "The standard length is 110 cm from waistband to hem."
+          },
+          {
+            "id": "A-012",
+            "public_language": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it."
+          }
+        ]
+      }
+    ],
+    "headline_contract": {
+      "mode": "paid_first_free_companion_v1",
+      "required_headline": "When You Get Auralo's $29 Pheromone Perfume Today, You Get the Sprinkle Tweed Pants FREE.",
+      "secondary_hook": "When You Get Auralo's $29 Pheromone Perfume Today, You Get Sprinkle Tweed Pants FREE."
+    },
+    "optional_subheadline": "A cream multicoloured-tweed statement pair with a relaxed baggy fit, adjustable elastic waist, braided drawcord, and fringed hems.",
+    "optional_opening": "If your easiest outfits keep feeling forgettable, the answer may not be more layers or more accessories. It may be one pair of trousers designed to carry the colour, texture, and silhouette.",
+    "setup_steps": [
+      "Choose XS-S for EU 34-38, M for EU 38-40, or L-XL for EU 42-44.",
+      "Use the adjustable elastic waist to set the relaxed baggy fit.",
+      "Dry clean only and keep the delicate tweed away from rough surfaces that may snag it."
+    ]
+  },
+  "offer": {
+    "paid_name": "Auralo Pheromone Perfume",
+    "paid_price_usd": 29,
+    "companion_name": "Sprinkle Tweed Pants",
+    "companion_price_usd": 0,
+    "shipping": "Ships within 4 days",
+    "returns": "90-day returns",
+    "warranty": "Five-year warranty"
+  },
+  "story_jobs": [
+    {
+      "number": 1,
+      "job": "Open in the buyer's familiar situation."
+    },
+    {
+      "number": 2,
+      "job": "State the central customer conclusion in natural language."
+    },
+    {
+      "number": 3,
+      "job": "Explain the first reason using its authorized facts."
+    },
+    {
+      "number": 4,
+      "job": "Show what the product does using exact authorized language."
+    },
+    {
+      "number": 5,
+      "job": "Place the product in the primary real-life situation."
+    },
+    {
+      "number": 6,
+      "job": "Explain the second reason using its authorized facts."
+    },
+    {
+      "number": 7,
+      "job": "Show the practical freedom the buyer wants without guaranteeing an outcome."
+    },
+    {
+      "number": 8,
+      "job": "Explain the third reason using its authorized facts."
+    },
+    {
+      "number": 9,
+      "job": "Explain the safeguard, cancellation step, or limitation."
+    },
+    {
+      "number": 10,
+      "job": "Show why the paid and companion products belong in the same moment."
+    },
+    {
+      "number": 11,
+      "job": "Make price and fulfilment terms easy to scan."
+    },
+    {
+      "number": 12,
+      "job": "Show the ranked use situations."
+    },
+    {
+      "number": 13,
+      "job": "Explain setup in three clear steps."
+    },
+    {
+      "number": 14,
+      "job": "Close with the offer and one action."
+    }
+  ],
+  "sample_story_assignments": [
+    {
+      "id": "I-001",
+      "name": "Maya R.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "brief and spontaneous"
+    },
+    {
+      "id": "I-002",
+      "name": "Sofia L.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "calm and practical"
+    },
+    {
+      "id": "I-003",
+      "name": "Elena M.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "initially skeptical"
+    },
+    {
+      "id": "I-004",
+      "name": "Nadia K.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "warm self-purchaser"
+    },
+    {
+      "id": "I-005",
+      "name": "Amelia T.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "detail-focused"
+    },
+    {
+      "id": "I-006",
+      "name": "Clara B.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "plainspoken"
+    },
+    {
+      "id": "I-007",
+      "name": "Isla P.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "busy weekday tone"
+    },
+    {
+      "id": "I-008",
+      "name": "Leonie S.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "style-conscious"
+    },
+    {
+      "id": "I-009",
+      "name": "Marta V.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "question-led"
+    },
+    {
+      "id": "I-010",
+      "name": "Freya D.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "matter-of-fact"
+    },
+    {
+      "id": "I-011",
+      "name": "Ana C.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "cautious but decisive"
+    },
+    {
+      "id": "I-012",
+      "name": "Camille J.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "value-conscious"
+    },
+    {
+      "id": "I-013",
+      "name": "Eva N.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "scenario-specific"
+    },
+    {
+      "id": "I-014",
+      "name": "Lucia H.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "concise relief"
+    },
+    {
+      "id": "I-015",
+      "name": "Tara W.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "confidence-focused"
+    },
+    {
+      "id": "I-016",
+      "name": "Zoe A.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "ordinary repeat-use perspective"
+    },
+    {
+      "id": "I-017",
+      "name": "Lina F.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "design-first"
+    },
+    {
+      "id": "I-018",
+      "name": "Sara G.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "comparison-minded"
+    },
+    {
+      "id": "I-019",
+      "name": "Mila E.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "reassuring"
+    },
+    {
+      "id": "I-020",
+      "name": "Iris O.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "ordinary-day perspective"
+    },
+    {
+      "id": "I-021",
+      "name": "Layla Q.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "focused on one real situation"
+    },
+    {
+      "id": "I-022",
+      "name": "Noor I.",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "pleasantly surprised by practicality"
+    },
+    {
+      "id": "I-023",
+      "name": "Ines U.",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "clear about setup"
+    },
+    {
+      "id": "I-024",
+      "name": "Ruby Y.",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "decisive close"
+    }
+  ],
+  "rules": [
+    "Research inputs shape audience language and objections; they never authorize product claims or testimonials.",
+    "Only A facts authorize offered-product and offer claims. Their P lineage is already validated; R, S, X, and C text cannot add product behavior.",
+    "Match the official reference exactly. Do not add an improvement, extra feature, altered dependency, broader compatibility, brand detail, or seller policy.",
+    "Use how and when insights privately; do not print process labels, framework names, or field names.",
+    "Connect a known situation or authorized fact to a proportional customer meaning; never make an unsupported leap.",
+    "Every visible image heading, callout, diagram label, UI label, badge, and offer term must stay inside the exact authorized A facts and supplied offer terms. Artwork cannot invent a price, discount, saving, performance result, response time, guaranteed assistance outcome, protection, privacy or security promise, alert behavior, setting, or control.",
+    "Write public sales copy in second person. Write each illustrative story in a distinct first-person voice.",
+    "Illustrative stories may be realistic but must not cite R, X, S, or C inputs as customer-result provenance.",
+    "No quotation marks, platform logos, verified badges, aggregate review counts, or video controls.",
+    "When the companion price is zero, write FREE everywhere customer-facing; never write $0 or $0.00.",
+    "For a zero-price companion, use offer_argument.headline_contract.required_headline exactly as the main headline; use the researched pain or belief as an eyebrow, subheadline, or later hook."
+  ],
+  "footer_disclosure": "This client preview contains illustrative claims and sample customer stories."
+}

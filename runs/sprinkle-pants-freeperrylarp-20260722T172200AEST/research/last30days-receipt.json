@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "research_session_id": "a99ad3ec85e842d696c39792fb08af17",
+  "research_not_before": "2026-07-22T07:21:54Z",
+  "query_plan_sha256": "dd4fa3caf899a22c01d5cb535a8576104317dcd9b2dc8fa718230ade2e76d5e6",
+  "started_at": "2026-07-22T07:21:54Z",
+  "finished_at": "2026-07-22T07:24:20Z",
+  "raw_sha256": "908263e9247a1044e11ac020dfa83f779c50d82a87f47a2e6bbe3ce332ad2138",
+  "raw_bytes": 481046,
+  "output_path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-freeperrylarp-20260722T172200AEST/research/last30days-raw.json",
+  "fresh_research": true,
+  "prior_run_artifacts_used": false,
+  "command_program": "/Users/nelsonchan/.agents/skills/last30days/scripts/last30days.py"
+}

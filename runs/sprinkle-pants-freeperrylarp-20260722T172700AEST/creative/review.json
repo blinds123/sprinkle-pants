@@ -1,0 +1,31 @@
+{
+  "schema_version": "2.0",
+  "reviewed_at": "2026-07-22T07:49:33Z",
+  "passed": true,
+  "errors": [],
+  "warnings": [
+    "Some sources failed: github",
+    "Some sources returned partial results (degraded): grounding, instagram, tiktok"
+  ],
+  "checks": {
+    "prompt_count": 39,
+    "story_count": 15,
+    "proof_count": 24,
+    "pack_counts": [
+      10,
+      10,
+      10,
+      9
+    ],
+    "scenario_card_count": 24,
+    "distinct_cast_count": 24,
+    "reference_image_count": 2,
+    "prompt_word_limit": 220,
+    "prompt_word_count_max": 220,
+    "prompt_word_count_average": 201.4,
+    "research_evidence_count": 23,
+    "selected_research_count": 7,
+    "writer_packet_bytes": 24232,
+    "framework_keys_in_research": 0
+  }
+}

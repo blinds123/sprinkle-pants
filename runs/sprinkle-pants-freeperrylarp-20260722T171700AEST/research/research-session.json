@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "research_session_id": "260fe3ec5f6a483780f9d759471f7ec0",
+  "research_not_before": "2026-07-22T07:16:27Z",
+  "mode": "fresh_only",
+  "created_at": "2026-07-22T07:16:28Z",
+  "query_plan_sha256": "f6c885ab3dc35e1bada2fce5d16c5be2faff1fc8366ea1102f03805d33b4d537",
+  "competitor_plan_sha256": "81d6bb02121ecaaeaf53d316b62da8c072557293db1bee403f020382fc1e6d47",
+  "last30days_output_path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-freeperrylarp-20260722T171700AEST/research/last30days-raw.json",
+  "rules": [
+    "Run Last30Days anew from this plan and session.",
+    "Reject external, cached, copied, or prior-run raw research.",
+    "Treat current intake fields only as query seeds, never as retrieved evidence.",
+    "Map free-product facts only after current-session official-reference capture."
+  ]
+}

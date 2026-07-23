@@ -1,0 +1,544 @@
+{
+  "schema_version": "2.0",
+  "campaign": {
+    "campaign_id": "sprinkle-pants-client-preview-20260721",
+    "product": {
+      "name": "Sprinkle Tweed Pants",
+      "category": "women's multicoloured tweed statement trousers"
+    },
+    "audience": {
+      "region": "Europe",
+      "language": "English"
+    },
+    "offer": {
+      "paid_name": "Auralo Pheromone Perfume",
+      "paid_price_usd": 29,
+      "companion_name": "Sprinkle Tweed Pants",
+      "companion_price_usd": 0,
+      "shipping": "Ships within 4 days",
+      "returns": "90-day returns",
+      "warranty": "Five-year warranty",
+      "structure": "direct_to_customer_two_product",
+      "product_count": 2
+    }
+  },
+  "copy": {
+    "announcement": "Get Auralo's $29 Pheromone Perfume and receive the Sprinkle Tweed Pants FREE.",
+    "eyebrow": "One finishing touch. One unforgettable statement piece.",
+    "headline": "When You Get Auralo's $29 Pheromone Perfume Today, You Get the Sprinkle Tweed Pants FREE.",
+    "subheadline": "Let cream tweed, multicoloured flecks, a braided drawcord, and fringed hems carry the outfit while everything else stays simple.",
+    "primary_cta": "Get Auralo + My FREE Pants",
+    "secondary_cta": "See the Pants Details",
+    "story": [
+      {
+        "heading": "When simple starts to feel forgettable",
+        "body": "You know the moment: a casual plan is coming up, your reliable basics are ready, but the outfit still needs one detail that feels unmistakably yours."
+      },
+      {
+        "heading": "Make one piece the whole point",
+        "body": "When one piece carries the colour, texture, and silhouette, you can keep the rest of your outfit clean and still look deliberately styled."
+      },
+      {
+        "heading": "Colour and texture, already built in",
+        "body": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems. Pair them with a fitted tee, knit, or sweater and let those details lead."
+      },
+      {
+        "heading": "A closer look at the statement",
+        "body": "Cream tweed gives the pair its soft base. Multicoloured flecks add the visual spark, while the braided drawcord and fringed hems finish the design."
+      },
+      {
+        "heading": "Built for the plan already in your calendar",
+        "body": "Wear them when a coffee turns into a long city walk, when a casual evening deserves more personality, or when you want your trousers to carry an otherwise simple look."
+      },
+      {
+        "heading": "The silhouette is part of the design",
+        "body": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist. The shape is intentional, and the waist lets you adjust how the pair sits."
+      },
+      {
+        "heading": "More style without more competing pieces",
+        "body": "You do not need to stack prints, layers, and accessories. Choose a simple top, add your usual shoes, and let the trousers be the memorable part."
+      },
+      {
+        "heading": "Choose with the measurements in front of you",
+        "body": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44. The standard length is 110 cm from waistband to hem."
+      },
+      {
+        "heading": "Treat the tweed like the statement fabric it is",
+        "body": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it. Know the care before first wear and keep the textured finish looking considered."
+      },
+      {
+        "heading": "Two parts of one getting-ready moment",
+        "body": "Auralo's $29 Pheromone Perfume is the paid finishing touch. The Sprinkle Tweed Pants are the FREE statement piece that shapes the outfit."
+      },
+      {
+        "heading": "The complete offer, clearly stated",
+        "body": "Get Auralo's $29 Pheromone Perfume today and receive the Sprinkle Tweed Pants FREE. Ships within 4 days, with 90-day returns and a five-year warranty."
+      },
+      {
+        "heading": "One pair, three easy moments",
+        "body": "Lead with them for a casual social plan, style them with a fitted top or sweater for a weekend city outing, or use their texture and colour for a creative evening look."
+      },
+      {
+        "heading": "Three steps before you head out",
+        "body": "Choose XS-S for EU 34-38, M for EU 38-40, or L-XL for EU 42-44. Adjust the elastic waist for the relaxed baggy fit. Dry clean only and avoid rough surfaces that may snag the tweed."
+      },
+      {
+        "heading": "Finish the look with the complete offer",
+        "body": "Get Auralo's $29 Pheromone Perfume and claim the Sprinkle Tweed Pants FREE in the same offer."
+      }
+    ],
+    "offer_heading": "Get the finishing touch. Receive the statement piece FREE.",
+    "offer_body": "Your offer includes Auralo's $29 Pheromone Perfume as the paid product and the Sprinkle Tweed Pants as the FREE companion. The design-led trousers bring the colour, texture, and relaxed shape to your outfit.",
+    "offer_stack": [
+      "Auralo Pheromone Perfume — $29",
+      "Sprinkle Tweed Pants — FREE",
+      "Ships within 4 days",
+      "90-day returns",
+      "Five-year warranty"
+    ],
+    "final_heading": "Make the trousers the statement",
+    "final_body": "Get Auralo's $29 Pheromone Perfume today and receive the Sprinkle Tweed Pants FREE.",
+    "faq_heading": "Your pants and offer questions, answered",
+    "proof_sections": {
+      "social_kicker": "The first outfit idea",
+      "social_heading": "Start simple and let the trousers lead",
+      "recognition_kicker": "Real-life styling moments",
+      "recognition_heading": "For days when basics need one memorable piece",
+      "recognition_body": "See how a statement trouser can shape casual plans, city outings, and creative evenings without crowding the rest of the look.",
+      "compliments_kicker": "Details worth noticing",
+      "compliments_heading": "Cream tweed, colour flecks, drawcord, and fringe",
+      "wall_kicker": "More ways to wear the idea",
+      "wall_heading": "See the statement piece through different eyes",
+      "wall_body": "Different people, settings, and styling moments show how one distinctive pair can become the centre of a simple outfit."
+    },
+    "faq": [
+      {
+        "question": "What is included in the offer?",
+        "answer": "You get Auralo's $29 Pheromone Perfume as the paid product and the Sprinkle Tweed Pants FREE."
+      },
+      {
+        "question": "What do the pants look like?",
+        "answer": "The pants are made from cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems."
+      },
+      {
+        "question": "How do the pants fit?",
+        "answer": "The pants are designed for a relaxed, baggy fit with an adjustable elastic waist."
+      },
+      {
+        "question": "Which size should I choose?",
+        "answer": "The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44. The standard length is 110 cm from waistband to hem."
+      },
+      {
+        "question": "How should I care for the pants?",
+        "answer": "The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces that may snag it."
+      },
+      {
+        "question": "What are the fulfilment terms?",
+        "answer": "Ships within 4 days, with 90-day returns and a five-year warranty."
+      }
+    ]
+  },
+  "sample_stories": [
+    {
+      "name": "Maya R.",
+      "headline": "The outfit finally had a point",
+      "review_text": "I kept the top simple and let the flecked tweed carry the look. That was exactly the balance I wanted for a casual night out."
+    },
+    {
+      "name": "Sofia L.",
+      "headline": "Easy for a city Saturday",
+      "review_text": "I pictured these with a fitted navy top and my everyday shoes. The texture gives the outfit enough interest without asking for extra layers."
+    },
+    {
+      "name": "Elena M.",
+      "headline": "Less busy than I expected",
+      "review_text": "I usually hesitate around colourful pieces, but the cream base makes the flecks easier to style. I would keep everything else quiet."
+    },
+    {
+      "name": "Nadia K.",
+      "headline": "I bought the idea for myself",
+      "review_text": "I wanted one pair that could make my own basics feel intentional. The braided drawcord and fringe are the details that sold the look for me."
+    },
+    {
+      "name": "Amelia T.",
+      "headline": "The measurements made it clearer",
+      "review_text": "I checked the size range and the 110 cm length before styling the outfit in my head. Having those details upfront made the decision easier."
+    },
+    {
+      "name": "Clara B.",
+      "headline": "Just add a black top",
+      "review_text": "My plan is straightforward: black top, these trousers, simple shoes. The fabric already brings all the colour and texture I need."
+    },
+    {
+      "name": "Isla P.",
+      "headline": "A fast answer before going out",
+      "review_text": "When time is short, I do not want to build an outfit from six different ideas. One strong pair with a plain top is much more useful to me."
+    },
+    {
+      "name": "Leonie S.",
+      "headline": "The texture leads the look",
+      "review_text": "I like that the interest comes from the cream tweed, colour flecks, drawcord, and fringe together. It feels designed from top to hem."
+    },
+    {
+      "name": "Marta V.",
+      "headline": "Could one pair do enough",
+      "review_text": "I wondered if simple styling would feel unfinished. With this much texture and colour in the trousers, a quiet top actually feels like the right choice."
+    },
+    {
+      "name": "Freya D.",
+      "headline": "The relaxed shape is deliberate",
+      "review_text": "I would wear the baggy silhouette as the point, not try to disguise it. The adjustable waist helps me set how I want the pair to sit."
+    },
+    {
+      "name": "Ana C.",
+      "headline": "I checked the care first",
+      "review_text": "Delicate tweed needs thoughtful care, so I was glad to see dry-clean-only guidance before deciding. I know how I would look after the pair."
+    },
+    {
+      "name": "Camille J.",
+      "headline": "The FREE pair is the visual payoff",
+      "review_text": "The perfume is the paid part of the offer, and the trousers are the FREE statement piece. That structure is easy for me to understand."
+    },
+    {
+      "name": "Eva N.",
+      "headline": "Ready for a low-key dinner",
+      "review_text": "For a casual dinner, I would pair them with a charcoal knit and let the flecks brighten the whole outfit. Nothing else needs to compete."
+    },
+    {
+      "name": "Lucia H.",
+      "headline": "My basics feel useful again",
+      "review_text": "A red crew neck, simple shoes, and these trousers already feel complete. I like having one obvious place for the eye to land."
+    },
+    {
+      "name": "Tara W.",
+      "headline": "Colour without second-guessing",
+      "review_text": "I would let the trousers enter the room first and keep the rest restrained. That gives me a more confident way to wear colour."
+    },
+    {
+      "name": "Zoe A.",
+      "headline": "The white shirt gets a new role",
+      "review_text": "I already own the simple pieces. These trousers are the part that would make my white shirt feel different for another casual plan."
+    },
+    {
+      "name": "Lina F.",
+      "headline": "The hem detail caught me",
+      "review_text": "The fringed hems make the finish feel considered, and the braided drawcord adds another colour detail near the waist. I notice those choices."
+    },
+    {
+      "name": "Sara G.",
+      "headline": "Not another plain trouser",
+      "review_text": "I have enough neutral trousers that disappear into an outfit. This pair gives me a different option because the texture is the feature."
+    },
+    {
+      "name": "Mila E.",
+      "headline": "Simple does not have to vanish",
+      "review_text": "I can keep my top and shoes familiar without the outfit fading into the background. The trousers provide the memorable part."
+    },
+    {
+      "name": "Iris O.",
+      "headline": "Made for an ordinary Saturday",
+      "review_text": "I would wear them for coffee, browsing shops, and an unplanned late lunch. A soft knit keeps the statement grounded for the whole day."
+    },
+    {
+      "name": "Layla Q.",
+      "headline": "Exactly enough for the gallery night",
+      "review_text": "For one creative evening, I want texture and colour without building a costume. These trousers with a clean top hit that specific mood."
+    },
+    {
+      "name": "Noor I.",
+      "headline": "The adjustable waist matters",
+      "review_text": "I came for the unusual tweed and stayed interested because the waist is adjustable. The practical detail belongs inside the design."
+    },
+    {
+      "name": "Ines U.",
+      "headline": "Three steps and the outfit is set",
+      "review_text": "I would choose my EU size, adjust the waist, and pair the trousers with a cream knit. The care instructions are clear for afterwards."
+    },
+    {
+      "name": "Ruby Y.",
+      "headline": "This is the piece I would choose",
+      "review_text": "For a casual evening, I want the cream tweed and colour flecks to lead. I would take the complete offer and keep the styling simple."
+    }
+  ],
+  "visual_jobs": [
+    {
+      "id": "IMG-01",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-01.png"
+    },
+    {
+      "id": "IMG-02",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-02.png"
+    },
+    {
+      "id": "IMG-03",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-03.png"
+    },
+    {
+      "id": "IMG-04",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-04.png"
+    },
+    {
+      "id": "IMG-05",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-05.png"
+    },
+    {
+      "id": "IMG-06",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-06.png"
+    },
+    {
+      "id": "IMG-07",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-07.png"
+    },
+    {
+      "id": "IMG-08",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-08.png"
+    },
+    {
+      "id": "IMG-09",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-09.png"
+    },
+    {
+      "id": "IMG-10",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-10.png"
+    },
+    {
+      "id": "IMG-11",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-11.png"
+    },
+    {
+      "id": "IMG-12",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-12.png"
+    },
+    {
+      "id": "IMG-13",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-13.png"
+    },
+    {
+      "id": "IMG-14",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-14.png"
+    },
+    {
+      "id": "IMG-15",
+      "phase": "story",
+      "zone": "hero_carousel",
+      "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+      "image": "images/IMG-15.png"
+    },
+    {
+      "id": "IMG-16",
+      "phase": "proof",
+      "zone": "testimonial_rail_one",
+      "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "image": "images/IMG-16.png"
+    },
+    {
+      "id": "IMG-17",
+      "phase": "proof",
+      "zone": "testimonial_rail_one",
+      "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+      "image": "images/IMG-17.png"
+    },
+    {
+      "id": "IMG-18",
+      "phase": "proof",
+      "zone": "testimonial_rail_one",
+      "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+      "image": "images/IMG-18.png"
+    },
+    {
+      "id": "IMG-19",
+      "phase": "proof",
+      "zone": "testimonial_rail_one",
+      "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "image": "images/IMG-19.png"
+    },
+    {
+      "id": "IMG-20",
+      "phase": "proof",
+      "zone": "testimonial_rail_one",
+      "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+      "image": "images/IMG-20.png"
+    },
+    {
+      "id": "IMG-21",
+      "phase": "proof",
+      "zone": "testimonial_rail_one",
+      "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+      "image": "images/IMG-21.png"
+    },
+    {
+      "id": "IMG-22",
+      "phase": "proof",
+      "zone": "testimonial_rail_two",
+      "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "image": "images/IMG-22.png"
+    },
+    {
+      "id": "IMG-23",
+      "phase": "proof",
+      "zone": "testimonial_rail_two",
+      "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+      "image": "images/IMG-23.png"
+    },
+    {
+      "id": "IMG-24",
+      "phase": "proof",
+      "zone": "testimonial_rail_two",
+      "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+      "image": "images/IMG-24.png"
+    },
+    {
+      "id": "IMG-25",
+      "phase": "proof",
+      "zone": "testimonial_rail_two",
+      "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "image": "images/IMG-25.png"
+    },
+    {
+      "id": "IMG-26",
+      "phase": "proof",
+      "zone": "testimonial_rail_two",
+      "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+      "image": "images/IMG-26.png"
+    },
+    {
+      "id": "IMG-27",
+      "phase": "proof",
+      "zone": "testimonial_rail_two",
+      "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+      "image": "images/IMG-27.png"
+    },
+    {
+      "id": "IMG-28",
+      "phase": "proof",
+      "zone": "testimonial_rail_three",
+      "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "image": "images/IMG-28.png"
+    },
+    {
+      "id": "IMG-29",
+      "phase": "proof",
+      "zone": "testimonial_rail_three",
+      "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+      "image": "images/IMG-29.png"
+    },
+    {
+      "id": "IMG-30",
+      "phase": "proof",
+      "zone": "testimonial_rail_three",
+      "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+      "image": "images/IMG-30.png"
+    },
+    {
+      "id": "IMG-31",
+      "phase": "proof",
+      "zone": "testimonial_rail_three",
+      "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "image": "images/IMG-31.png"
+    },
+    {
+      "id": "IMG-32",
+      "phase": "proof",
+      "zone": "testimonial_rail_three",
+      "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+      "image": "images/IMG-32.png"
+    },
+    {
+      "id": "IMG-33",
+      "phase": "proof",
+      "zone": "testimonial_rail_three",
+      "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+      "image": "images/IMG-33.png"
+    },
+    {
+      "id": "IMG-34",
+      "phase": "proof",
+      "zone": "testimonial_rail_four",
+      "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "image": "images/IMG-34.png"
+    },
+    {
+      "id": "IMG-35",
+      "phase": "proof",
+      "zone": "testimonial_rail_four",
+      "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+      "image": "images/IMG-35.png"
+    },
+    {
+      "id": "IMG-36",
+      "phase": "proof",
+      "zone": "testimonial_rail_four",
+      "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+      "image": "images/IMG-36.png"
+    },
+    {
+      "id": "IMG-37",
+      "phase": "proof",
+      "zone": "testimonial_rail_four",
+      "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "image": "images/IMG-37.png"
+    },
+    {
+      "id": "IMG-38",
+      "phase": "proof",
+      "zone": "testimonial_rail_four",
+      "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+      "image": "images/IMG-38.png"
+    },
+    {
+      "id": "IMG-39",
+      "phase": "proof",
+      "zone": "testimonial_rail_four",
+      "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+      "image": "images/IMG-39.png"
+    }
+  ],
+  "preview": {
+    "mode": "client_preview",
+    "checkout_mode": "dry_run",
+    "indexing": "blocked",
+    "placeholder_images": false
+  }
+}

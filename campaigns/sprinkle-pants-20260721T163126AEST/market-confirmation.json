@@ -1,0 +1,17 @@
+{
+  "status": "ai_decided_recommendations",
+  "decision_authority": "standing_user_instruction",
+  "confirmed_fields": [
+    "primary_buyer",
+    "primary_moment",
+    "secondary_moments",
+    "offer_structure"
+  ],
+  "research_basis": [
+    "fresh supplied TikTok comments",
+    "fresh official reference-product research",
+    "fresh public customer language about fun tweed and baggy statement trousers"
+  ],
+  "reused_prior_positioning": false,
+  "confirmed_at": "2026-07-21T16:31:26+10:00"
+}

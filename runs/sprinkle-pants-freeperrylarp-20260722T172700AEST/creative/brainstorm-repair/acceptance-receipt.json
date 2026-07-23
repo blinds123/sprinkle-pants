@@ -1,0 +1,11 @@
+{
+  "state": "BRAINSTORM_ACCEPTED",
+  "run_id": "brainstorm-c2b13889-7349-4c79-b117-0547d579e56d",
+  "mode": "conversion",
+  "profile": "fast",
+  "branch_count": 5,
+  "idea_count": 20,
+  "problem_sha256": "ff32828ee9840393a2ac7d14109bc5b2140c645dafc0c8f03c0c9f8dc8aca666",
+  "decision_sha256": "1ac7daf848900c6fad0318957df1f8626a0e7ba4155120bf49433e6eed5fdae1",
+  "isolation_level": "independent_contexts"
+}

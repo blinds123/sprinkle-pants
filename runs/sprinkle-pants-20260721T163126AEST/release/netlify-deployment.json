@@ -1,0 +1,69 @@
+{
+  "schema_version": "3.0",
+  "kind": "freeperry30days_netlify_deployment",
+  "passed": true,
+  "completed_at": "2026-07-21T23:00:17Z",
+  "binding": {
+    "run_root": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST",
+    "campaign_id": "sprinkle-pants-client-preview-20260721",
+    "run_plugin_version": "0.4.0+codex.20260721063218",
+    "release_plugin_version": "0.4.0+codex.20260721074509",
+    "site_tree_sha256": "92998957cd37ca523a8f0d3750cd02ba397ff6c7ed6a5ccf509f2bafdee51184",
+    "qa_sha256": "3e85e13031005908c124d307d6281fb99cbf7432d045a274ea313fb025e70b5f",
+    "image_manifest_sha256": "2b8e580f1b20824e26d1f9d805c59fe919266bdf8b802ad8721917e01618d3da",
+    "site_data_sha256": "03cf1d8d6a5f68e57a3f1ab4461c3c02e0268b11c3ad811f838795f8d3128fd5"
+  },
+  "provider": "netlify",
+  "netlify_cli_version": "netlify-cli/26.2.0 darwin-arm64 node-v24.14.0",
+  "account_slug": "blinds123",
+  "account_slug_source": "persisted_same_run",
+  "site_strategy": "create_new",
+  "created_new": true,
+  "created_during_this_invocation": true,
+  "deployment_revision": 1,
+  "site_reused_within_same_run": false,
+  "previous_deploy_id": null,
+  "preexisting_site_match_count": 0,
+  "linking_disabled": true,
+  "reuse_existing_site": false,
+  "ambient_linkage_unchanged": true,
+  "site_name": "fp30-sprinkle-pants-client-260721-224255-71efdd3b",
+  "site_id": "ee3ec1ec-405b-4750-a359-99388a95ab27",
+  "deploy_id": "6a5ff9c48117e06d8a5bcd69",
+  "production_url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/",
+  "deploy_url": "https://6a5ff9c48117e06d8a5bcd69--fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app",
+  "published_state": "ready",
+  "checkout_mode": "dry_run",
+  "indexing": "blocked",
+  "http": {
+    "production_url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/",
+    "final_url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/",
+    "root_status": 200,
+    "root_sha256": "007cec498a3c4cdba1464d324512bbd06ccaa35fb07f7b1e63974bfedcce1ecc",
+    "expected_root_sha256": "007cec498a3c4cdba1464d324512bbd06ccaa35fb07f7b1e63974bfedcce1ecc",
+    "site_data_status": 200,
+    "site_data_sha256": "03cf1d8d6a5f68e57a3f1ab4461c3c02e0268b11c3ad811f838795f8d3128fd5",
+    "expected_site_data_sha256": "03cf1d8d6a5f68e57a3f1ab4461c3c02e0268b11c3ad811f838795f8d3128fd5",
+    "robots_status": 200,
+    "robots_disallow_all": true,
+    "x_robots_tag": "noindex, nofollow, noarchive, nosnippet",
+    "x_robots_directives_complete": true,
+    "passed": true
+  },
+  "provider_readback": {
+    "site": {
+      "id": "ee3ec1ec-405b-4750-a359-99388a95ab27",
+      "name": "fp30-sprinkle-pants-client-260721-224255-71efdd3b",
+      "ssl_url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app",
+      "published_deploy_id": "6a5ff9c48117e06d8a5bcd69",
+      "published_deploy_state": "ready"
+    },
+    "deploy": {
+      "id": "6a5ff9c48117e06d8a5bcd69",
+      "site_id": "ee3ec1ec-405b-4750-a359-99388a95ab27",
+      "state": "ready",
+      "deploy_ssl_url": "https://6a5ff9c48117e06d8a5bcd69--fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app"
+    }
+  },
+  "site_creation_receipt_sha256": "9741deab01fcae6dadd0bf2bb326ce03f15b496a724673a5e60fe0546c6cfa28"
+}

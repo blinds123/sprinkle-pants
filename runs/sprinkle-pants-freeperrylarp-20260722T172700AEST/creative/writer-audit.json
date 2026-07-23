@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "audited_at": "2026-07-22T07:46:51Z",
+  "passed": true,
+  "checks": {
+    "writer_packet_sha256": "592cfbd79f99b45462b2a0c9db9dffafce01d98dd9210f5f26382ce86ed812ae",
+    "selected_research_count": 7,
+    "used_research_ids": [
+      "R-001",
+      "S-003",
+      "S-005",
+      "S-006",
+      "S-007",
+      "S-010",
+      "X-001"
+    ],
+    "scenario_card_count": 24,
+    "story_beat_count": 14,
+    "framework_keys_in_research": 0
+  }
+}

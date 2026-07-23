@@ -1,0 +1,63 @@
+{
+  "intent": "concept",
+  "freshness_mode": "evergreen_ok",
+  "cluster_mode": "none",
+  "subqueries": [
+    {
+      "label": "primary",
+      "search_query": "OpenAI Codex plugin skill architecture workflow",
+      "ranking_query": "What current practices make OpenAI Codex plugins and skills reliable, reusable, and easy for agents to execute?",
+      "sources": [
+        "reddit",
+        "x",
+        "youtube",
+        "tiktok",
+        "instagram",
+        "hackernews",
+        "polymarket",
+        "github"
+      ],
+      "weight": 1.0
+    },
+    {
+      "label": "progressive-disclosure",
+      "search_query": "Codex SKILL.md progressive disclosure validation agents openai yaml",
+      "ranking_query": "How are concise SKILL.md files, progressive disclosure, metadata, and validation being used in Codex workflows?",
+      "sources": [
+        "reddit",
+        "github",
+        "hackernews",
+        "youtube",
+        "x"
+      ],
+      "weight": 0.8
+    },
+    {
+      "label": "deterministic-execution",
+      "search_query": "Codex deterministic agent workflow checkpoints resume QA tests",
+      "ranking_query": "Which checkpointing, resumability, automated QA, and verification patterns make Codex workflows dependable?",
+      "sources": [
+        "reddit",
+        "github",
+        "youtube",
+        "x",
+        "hackernews"
+      ],
+      "weight": 0.8
+    },
+    {
+      "label": "ecommerce-automation",
+      "search_query": "Codex ecommerce landing page workflow image generation deployment validation",
+      "ranking_query": "How are Codex workflows structuring ecommerce page research, creative production, image handling, deployment, and QA?",
+      "sources": [
+        "reddit",
+        "youtube",
+        "tiktok",
+        "instagram",
+        "github",
+        "x"
+      ],
+      "weight": 0.6
+    }
+  ]
+}

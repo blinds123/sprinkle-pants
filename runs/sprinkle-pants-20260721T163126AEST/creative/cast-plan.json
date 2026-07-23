@@ -1,0 +1,271 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "sprinkle-pants-client-preview-20260721",
+  "global_rule": "Use 24 visibly distinct adults who fit the primary buyer; vary apparent age, skin tone, facial features, hair, wardrobe, camera, and lighting.",
+  "assignments": [
+    {
+      "id": "I-001",
+      "name": "Maya R.",
+      "cast_id": "CAST-01",
+      "cast_description": "Distinct woman, early 20s, deep brown skin, oval face, short natural coils",
+      "wardrobe": "cream knit top",
+      "camera": "front-camera selfie",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "brief and spontaneous"
+    },
+    {
+      "id": "I-002",
+      "name": "Sofia L.",
+      "cast_id": "CAST-02",
+      "cast_description": "Distinct woman, late 20s, light olive skin, angular face, long dark waves",
+      "wardrobe": "navy blazer and silk camisole",
+      "camera": "three-quarter phone portrait",
+      "setting": "weekend city outings styled with a simple fitted top or sweater",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "calm and practical"
+    },
+    {
+      "id": "I-003",
+      "name": "Elena M.",
+      "cast_id": "CAST-03",
+      "cast_description": "Distinct woman, mid 30s, fair freckled skin, round face, copper bob",
+      "wardrobe": "green raincoat and white tee",
+      "camera": "waist-up candid",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "initially skeptical"
+    },
+    {
+      "id": "I-004",
+      "name": "Nadia K.",
+      "cast_id": "CAST-04",
+      "cast_description": "Distinct woman, early 40s, medium brown skin, heart-shaped face, shoulder-length twists",
+      "wardrobe": "burgundy wrap top",
+      "camera": "close product-and-face crop",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "warm self-purchaser"
+    },
+    {
+      "id": "I-005",
+      "name": "Amelia T.",
+      "cast_id": "CAST-05",
+      "cast_description": "Distinct woman, late 50s, warm beige skin, rectangular face, silver pixie cut",
+      "wardrobe": "grey wool coat and scarf",
+      "camera": "mirror photo",
+      "setting": "weekend city outings styled with a simple fitted top or sweater",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "detail-focused"
+    },
+    {
+      "id": "I-006",
+      "name": "Clara B.",
+      "cast_id": "CAST-06",
+      "cast_description": "Distinct woman, mid 20s, golden brown skin, square face, long box braids",
+      "wardrobe": "denim jacket and black top",
+      "camera": "over-shoulder candid",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "plainspoken"
+    },
+    {
+      "id": "I-007",
+      "name": "Isla P.",
+      "cast_id": "CAST-07",
+      "cast_description": "Distinct woman, early 30s, pale skin, narrow face, chin-length black hair",
+      "wardrobe": "camel trench over officewear",
+      "camera": "seated eye-level portrait",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "busy weekday tone"
+    },
+    {
+      "id": "I-008",
+      "name": "Leonie S.",
+      "cast_id": "CAST-08",
+      "cast_description": "Distinct woman, late 30s, dark skin, broad smile, shaved head",
+      "wardrobe": "soft blue sweater",
+      "camera": "wide environmental phone photo",
+      "setting": "weekend city outings styled with a simple fitted top or sweater",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "style-conscious"
+    },
+    {
+      "id": "I-009",
+      "name": "Marta V.",
+      "cast_id": "CAST-09",
+      "cast_description": "Distinct woman, mid 40s, olive skin, soft round face, dark curly lob",
+      "wardrobe": "black jumpsuit",
+      "camera": "soft side-profile crop",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "question-led"
+    },
+    {
+      "id": "I-010",
+      "name": "Freya D.",
+      "cast_id": "CAST-10",
+      "cast_description": "Distinct woman, early 60s, fair skin, high cheekbones, grey shoulder-length hair",
+      "wardrobe": "patterned blouse",
+      "camera": "chest-up direct portrait",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "matter-of-fact"
+    },
+    {
+      "id": "I-011",
+      "name": "Ana C.",
+      "cast_id": "CAST-11",
+      "cast_description": "Distinct woman, late 20s, tan skin, diamond-shaped face, high curly ponytail",
+      "wardrobe": "running jacket",
+      "camera": "walking candid",
+      "setting": "weekend city outings styled with a simple fitted top or sweater",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "cautious but decisive"
+    },
+    {
+      "id": "I-012",
+      "name": "Camille J.",
+      "cast_id": "CAST-12",
+      "cast_description": "Distinct woman, mid 30s, medium skin, oval face, straight chestnut hair with fringe",
+      "wardrobe": "linen shirt",
+      "camera": "table-level candid",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "value-conscious"
+    },
+    {
+      "id": "I-013",
+      "name": "Eva N.",
+      "cast_id": "CAST-13",
+      "cast_description": "Distinct woman, early 50s, deep brown skin, long face, salt-and-pepper locs",
+      "wardrobe": "charcoal cardigan",
+      "camera": "doorway portrait",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "scenario-specific"
+    },
+    {
+      "id": "I-014",
+      "name": "Lucia H.",
+      "cast_id": "CAST-14",
+      "cast_description": "Distinct woman, mid 20s, fair skin, round face, platinum cropped hair",
+      "wardrobe": "red crew-neck top",
+      "camera": "tight face-and-neckline crop",
+      "setting": "weekend city outings styled with a simple fitted top or sweater",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "concise relief"
+    },
+    {
+      "id": "I-015",
+      "name": "Tara W.",
+      "cast_id": "CAST-15",
+      "cast_description": "Distinct woman, late 40s, warm brown skin, angular face, dark wavy bob",
+      "wardrobe": "simple evening outfit",
+      "camera": "window-reflection portrait",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "confidence-focused"
+    },
+    {
+      "id": "I-016",
+      "name": "Zoe A.",
+      "cast_id": "CAST-16",
+      "cast_description": "Distinct woman, early 30s, olive skin, heart-shaped face, thick auburn curls",
+      "wardrobe": "white button-down",
+      "camera": "window-light portrait",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "ordinary repeat-use perspective"
+    },
+    {
+      "id": "I-017",
+      "name": "Lina F.",
+      "cast_id": "CAST-17",
+      "cast_description": "Distinct woman, mid 60s, light brown skin, oval face, short silver curls",
+      "wardrobe": "leather jacket",
+      "camera": "handheld close-up",
+      "setting": "weekend city outings styled with a simple fitted top or sweater",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "design-first"
+    },
+    {
+      "id": "I-018",
+      "name": "Sara G.",
+      "cast_id": "CAST-18",
+      "cast_description": "Distinct woman, late 20s, dark skin, square face, waist-length braids",
+      "wardrobe": "hooded travel coat",
+      "camera": "low-light street portrait",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "comparison-minded"
+    },
+    {
+      "id": "I-019",
+      "name": "Mila E.",
+      "cast_id": "CAST-19",
+      "cast_description": "Distinct woman, mid 30s, fair skin, long face, sandy-blonde layered hair",
+      "wardrobe": "tailored suit",
+      "camera": "office-lift mirror photo",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "reassuring"
+    },
+    {
+      "id": "I-020",
+      "name": "Iris O.",
+      "cast_id": "CAST-20",
+      "cast_description": "Distinct woman, early 40s, tan skin, round face, dark hair in a low bun",
+      "wardrobe": "striped weekend knit",
+      "camera": "weekend outdoor candid",
+      "setting": "weekend city outings styled with a simple fitted top or sweater",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "ordinary-day perspective"
+    },
+    {
+      "id": "I-021",
+      "name": "Layla Q.",
+      "cast_id": "CAST-21",
+      "cast_description": "Distinct woman, mid 20s, medium brown skin, high cheekbones, short springy curls",
+      "wardrobe": "gym zip-up",
+      "camera": "motion-frozen activity portrait",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "focused on one real situation"
+    },
+    {
+      "id": "I-022",
+      "name": "Noor I.",
+      "cast_id": "CAST-22",
+      "cast_description": "Distinct woman, late 50s, pale olive skin, square face, silver blunt bob",
+      "wardrobe": "deep green blouse",
+      "camera": "cafe selfie",
+      "setting": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "context": "getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+      "voice": "pleasantly surprised by practicality"
+    },
+    {
+      "id": "I-023",
+      "name": "Ines U.",
+      "cast_id": "CAST-23",
+      "cast_description": "Distinct woman, early 30s, deep brown skin, heart-shaped face, long natural twists",
+      "wardrobe": "cream turtleneck",
+      "camera": "home hallway portrait",
+      "setting": "weekend city outings styled with a simple fitted top or sweater",
+      "context": "weekend city outings styled with a simple fitted top or sweater",
+      "voice": "clear about setup"
+    },
+    {
+      "id": "I-024",
+      "name": "Ruby Y.",
+      "cast_id": "CAST-24",
+      "cast_description": "Distinct woman, mid 40s, fair freckled skin, oval face, dark red shoulder-length hair",
+      "wardrobe": "plum dinner jacket",
+      "camera": "arrival candid",
+      "setting": "casual evenings and creative social settings where texture and colour can lead the look",
+      "context": "casual evenings and creative social settings where texture and colour can lead the look",
+      "voice": "decisive close"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "global_rule": "Use 24 visibly distinct adults who fit the primary buyer; vary apparent age, skin tone, facial features, hair, wardrobe, camera, and lighting.",
+  "assignments": [
+    {
+      "id": "I-001",
+      "cast_id": "CAST-01",
+      "cast_description": "Distinct woman, early 20s, deep brown skin, oval face, short natural coils",
+      "wardrobe": "cream knit top",
+      "camera": "front-camera selfie",
+      "setting": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "brief and spontaneous"
+    },
+    {
+      "id": "I-002",
+      "cast_id": "CAST-02",
+      "cast_description": "Distinct woman, late 20s, light olive skin, angular face, long dark waves",
+      "wardrobe": "navy blazer and silk camisole",
+      "camera": "three-quarter phone portrait",
+      "setting": "a weekend city outing built around a simple top and distinctive trousers",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "calm and practical"
+    },
+    {
+      "id": "I-003",
+      "cast_id": "CAST-03",
+      "cast_description": "Distinct woman, mid 30s, fair freckled skin, round face, copper bob",
+      "wardrobe": "green raincoat and white tee",
+      "camera": "waist-up candid",
+      "setting": "an evening plan where she wants her outfit and scent to feel intentional",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "initially skeptical"
+    },
+    {
+      "id": "I-004",
+      "cast_id": "CAST-04",
+      "cast_description": "Distinct woman, early 40s, medium brown skin, heart-shaped face, shoulder-length twists",
+      "wardrobe": "burgundy wrap top",
+      "camera": "close product-and-face crop",
+      "setting": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "warm self-purchaser"
+    },
+    {
+      "id": "I-005",
+      "cast_id": "CAST-05",
+      "cast_description": "Distinct woman, late 50s, warm beige skin, rectangular face, silver pixie cut",
+      "wardrobe": "grey wool coat and scarf",
+      "camera": "mirror photo",
+      "setting": "a weekend city outing built around a simple top and distinctive trousers",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "detail-focused"
+    },
+    {
+      "id": "I-006",
+      "cast_id": "CAST-06",
+      "cast_description": "Distinct woman, mid 20s, golden brown skin, square face, long box braids",
+      "wardrobe": "denim jacket and black top",
+      "camera": "over-shoulder candid",
+      "setting": "an evening plan where she wants her outfit and scent to feel intentional",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "plainspoken"
+    },
+    {
+      "id": "I-007",
+      "cast_id": "CAST-07",
+      "cast_description": "Distinct woman, early 30s, pale skin, narrow face, chin-length black hair",
+      "wardrobe": "camel trench over officewear",
+      "camera": "seated eye-level portrait",
+      "setting": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "busy weekday tone"
+    },
+    {
+      "id": "I-008",
+      "cast_id": "CAST-08",
+      "cast_description": "Distinct woman, late 30s, dark skin, broad smile, shaved head",
+      "wardrobe": "soft blue sweater",
+      "camera": "wide environmental phone photo",
+      "setting": "a weekend city outing built around a simple top and distinctive trousers",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "style-conscious"
+    },
+    {
+      "id": "I-009",
+      "cast_id": "CAST-09",
+      "cast_description": "Distinct woman, mid 40s, olive skin, soft round face, dark curly lob",
+      "wardrobe": "black jumpsuit",
+      "camera": "soft side-profile crop",
+      "setting": "an evening plan where she wants her outfit and scent to feel intentional",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "question-led"
+    },
+    {
+      "id": "I-010",
+      "cast_id": "CAST-10",
+      "cast_description": "Distinct woman, early 60s, fair skin, high cheekbones, grey shoulder-length hair",
+      "wardrobe": "patterned blouse",
+      "camera": "chest-up direct portrait",
+      "setting": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "matter-of-fact"
+    },
+    {
+      "id": "I-011",
+      "cast_id": "CAST-11",
+      "cast_description": "Distinct woman, late 20s, tan skin, diamond-shaped face, high curly ponytail",
+      "wardrobe": "running jacket",
+      "camera": "walking candid",
+      "setting": "a weekend city outing built around a simple top and distinctive trousers",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "cautious but decisive"
+    },
+    {
+      "id": "I-012",
+      "cast_id": "CAST-12",
+      "cast_description": "Distinct woman, mid 30s, medium skin, oval face, straight chestnut hair with fringe",
+      "wardrobe": "linen shirt",
+      "camera": "table-level candid",
+      "setting": "an evening plan where she wants her outfit and scent to feel intentional",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "value-conscious"
+    },
+    {
+      "id": "I-013",
+      "cast_id": "CAST-13",
+      "cast_description": "Distinct woman, early 50s, deep brown skin, long face, salt-and-pepper locs",
+      "wardrobe": "charcoal cardigan",
+      "camera": "doorway portrait",
+      "setting": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "scenario-specific"
+    },
+    {
+      "id": "I-014",
+      "cast_id": "CAST-14",
+      "cast_description": "Distinct woman, mid 20s, fair skin, round face, platinum cropped hair",
+      "wardrobe": "red crew-neck top",
+      "camera": "tight face-and-neckline crop",
+      "setting": "a weekend city outing built around a simple top and distinctive trousers",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "concise relief"
+    },
+    {
+      "id": "I-015",
+      "cast_id": "CAST-15",
+      "cast_description": "Distinct woman, late 40s, warm brown skin, angular face, dark wavy bob",
+      "wardrobe": "simple evening outfit",
+      "camera": "window-reflection portrait",
+      "setting": "an evening plan where she wants her outfit and scent to feel intentional",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "confidence-focused"
+    },
+    {
+      "id": "I-016",
+      "cast_id": "CAST-16",
+      "cast_description": "Distinct woman, early 30s, olive skin, heart-shaped face, thick auburn curls",
+      "wardrobe": "white button-down",
+      "camera": "window-light portrait",
+      "setting": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "ordinary repeat-use perspective"
+    },
+    {
+      "id": "I-017",
+      "cast_id": "CAST-17",
+      "cast_description": "Distinct woman, mid 60s, light brown skin, oval face, short silver curls",
+      "wardrobe": "leather jacket",
+      "camera": "handheld close-up",
+      "setting": "a weekend city outing built around a simple top and distinctive trousers",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "design-first"
+    },
+    {
+      "id": "I-018",
+      "cast_id": "CAST-18",
+      "cast_description": "Distinct woman, late 20s, dark skin, square face, waist-length braids",
+      "wardrobe": "hooded travel coat",
+      "camera": "low-light street portrait",
+      "setting": "an evening plan where she wants her outfit and scent to feel intentional",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "comparison-minded"
+    },
+    {
+      "id": "I-019",
+      "cast_id": "CAST-19",
+      "cast_description": "Distinct woman, mid 30s, fair skin, long face, sandy-blonde layered hair",
+      "wardrobe": "tailored suit",
+      "camera": "office-lift mirror photo",
+      "setting": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "reassuring"
+    },
+    {
+      "id": "I-020",
+      "cast_id": "CAST-20",
+      "cast_description": "Distinct woman, early 40s, tan skin, round face, dark hair in a low bun",
+      "wardrobe": "striped weekend knit",
+      "camera": "weekend outdoor candid",
+      "setting": "a weekend city outing built around a simple top and distinctive trousers",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "ordinary-day perspective"
+    },
+    {
+      "id": "I-021",
+      "cast_id": "CAST-21",
+      "cast_description": "Distinct woman, mid 20s, medium brown skin, high cheekbones, short springy curls",
+      "wardrobe": "gym zip-up",
+      "camera": "motion-frozen activity portrait",
+      "setting": "an evening plan where she wants her outfit and scent to feel intentional",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "focused on one real situation"
+    },
+    {
+      "id": "I-022",
+      "cast_id": "CAST-22",
+      "cast_description": "Distinct woman, late 50s, pale olive skin, square face, silver blunt bob",
+      "wardrobe": "deep green blouse",
+      "camera": "cafe selfie",
+      "setting": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "context": "getting ready for a social plan where one visible statement piece and one personal scent can complete the ritual",
+      "voice": "pleasantly surprised by practicality"
+    },
+    {
+      "id": "I-023",
+      "cast_id": "CAST-23",
+      "cast_description": "Distinct woman, early 30s, deep brown skin, heart-shaped face, long natural twists",
+      "wardrobe": "cream turtleneck",
+      "camera": "home hallway portrait",
+      "setting": "a weekend city outing built around a simple top and distinctive trousers",
+      "context": "a weekend city outing built around a simple top and distinctive trousers",
+      "voice": "clear about setup"
+    },
+    {
+      "id": "I-024",
+      "cast_id": "CAST-24",
+      "cast_description": "Distinct woman, mid 40s, fair freckled skin, oval face, dark red shoulder-length hair",
+      "wardrobe": "plum dinner jacket",
+      "camera": "arrival candid",
+      "setting": "an evening plan where she wants her outfit and scent to feel intentional",
+      "context": "an evening plan where she wants her outfit and scent to feel intentional",
+      "voice": "decisive close"
+    }
+  ]
+}

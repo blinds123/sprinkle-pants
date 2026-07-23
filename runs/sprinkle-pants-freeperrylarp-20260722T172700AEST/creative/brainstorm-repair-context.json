@@ -1,0 +1,44 @@
+{
+  "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
+  "fixed_transaction": {
+    "purchase": "Auralo Pheromone Perfume",
+    "price_usd": 29,
+    "reward": "Sprinkle Tweed Pants",
+    "reward_public_price": "FREE"
+  },
+  "buyer": "A woman buying the pants for herself before a social plan, weekend city outing, or evening plan.",
+  "creative_problem": "Find a consumer-facing creative platform that makes the pants and perfume feel like parts of the same desirable ritual. Express the relationship through a concrete action, sensory contrast, recurring motif, and scene progression. Never describe the marketing task, diagnose two random products, or tell the audience that the products belong together.",
+  "authorized_facts": {
+    "A-008": "The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.",
+    "A-009": "The pants have an adjustable elastic waist and a relaxed, baggy fit.",
+    "A-010": "Sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.",
+    "A-012": "The pants are dry-clean only and the delicate tweed should be kept away from rough surfaces that may snag it.",
+    "A-013": "Auralo is a 15 ml pheromone-inspired floral-amber perfume.",
+    "A-014": "The scent profile combines jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper.",
+    "A-015": "Apply two or three drops to pulse points such as wrists, behind the ears, neck, and inner elbows."
+  },
+  "buyer_language": {
+    "R-001": "I wish you would also say if the fragrance is a skin scent or not.",
+    "X-001": "A fragrance buyer complained that an unrelated perfume felt extremely weak, smelled like alcohol, had little projection, and barely lasted; use only as category objection language.",
+    "S-003": "What is M in UK numbers size?",
+    "S-005": "Please send me a link to buy a pair of these trousers please?????",
+    "S-006": "How do I buy a pair!!!",
+    "S-007": "R u wearing size xs/s or M? What size would u recommend for waist 26"
+  },
+  "allowed_evidence_ids": ["R-001", "X-001", "S-003", "S-005", "S-006", "S-007"],
+  "allowed_fact_ids": ["A-001", "A-002", "A-003", "A-004", "A-005", "A-008", "A-009", "A-010", "A-012", "A-013", "A-014", "A-015"],
+  "public_language_rules": [
+    "Every visible line must speak to the shopper, never to the marketer or image model.",
+    "Do not say two products, product relationship, shared moment, coherent moment, complete ritual, visible first impression, sensory layer, not random, or belongs together.",
+    "Do not expose instructions such as show, depict, feature, focus, express visually, or image.",
+    "Use a specific lived action and desired identity instead of explaining the strategy.",
+    "Do not invent reviews, product performance, attraction, reactions, scent longevity, or scientific effects."
+  ],
+  "required_output_thinking": [
+    "Name one unifying creative platform.",
+    "Give a beginning, transition, and payoff that can organize fifteen story images.",
+    "Provide consumer-facing overlay territories, not production instructions.",
+    "Explain which scenes show pants only, perfume only, or both naturally.",
+    "Name leakage traps and weak forced-pairing patterns to reject."
+  ]
+}

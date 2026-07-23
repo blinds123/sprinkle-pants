@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "audited_at": "2026-07-21T06:41:05Z",
+  "passed": true,
+  "checks": {
+    "writer_packet_sha256": "36b944606126ca9fe8cb8dfc4fac43b7782a699404d1a829944c0889e67e4363",
+    "selected_research_count": 6,
+    "used_research_ids": [
+      "R-001",
+      "R-002",
+      "S-005",
+      "S-006",
+      "S-010"
+    ],
+    "sample_story_count": 24,
+    "story_beat_count": 14,
+    "framework_keys_in_research": 0
+  }
+}

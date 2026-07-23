@@ -1,0 +1,2942 @@
+{
+  "schema_version": "2.0",
+  "generated_at": "2026-07-21T23:02:11.760Z",
+  "collector": "deterministic_playwright",
+  "layout_contract_version": "goda-webinar-15-proof-4-v3",
+  "capture_policy": "geometry_audited_before_section_capture",
+  "mode": "live_deployment",
+  "binding": {
+    "deployment_receipt_sha256": "41ee58d8127a479c67068a3d5736f682366d31629aee55d72250ad8345b41d0b",
+    "site_tree_sha256": "92998957cd37ca523a8f0d3750cd02ba397ff6c7ed6a5ccf509f2bafdee51184",
+    "site_data_sha256": "03cf1d8d6a5f68e57a3f1ab4461c3c02e0268b11c3ad811f838795f8d3128fd5",
+    "image_manifest_sha256": "2b8e580f1b20824e26d1f9d805c59fe919266bdf8b802ad8721917e01618d3da",
+    "site_id": "ee3ec1ec-405b-4750-a359-99388a95ab27",
+    "deploy_id": "6a5ff9c48117e06d8a5bcd69",
+    "production_url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/"
+  },
+  "passed": true,
+  "errors": [],
+  "http": {
+    "root_status": 200,
+    "site_data_status": 200,
+    "robots_status": 200,
+    "robots_disallow_all": true,
+    "x_robots_directives_complete": true,
+    "image_response_count": 39,
+    "image_statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200
+    ],
+    "failed_response_count": 0
+  },
+  "viewports": [
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/",
+      "http_status": 200,
+      "load_milliseconds": 23054,
+      "render_error": "",
+      "layout_contract_version": "goda-webinar-15-proof-4-v3",
+      "image_count": 39,
+      "unique_image_source_count": 39,
+      "broken_image_count": 0,
+      "image_slot_ids": [
+        "IMG-01",
+        "IMG-02",
+        "IMG-03",
+        "IMG-04",
+        "IMG-05",
+        "IMG-06",
+        "IMG-07",
+        "IMG-08",
+        "IMG-09",
+        "IMG-10",
+        "IMG-11",
+        "IMG-12",
+        "IMG-13",
+        "IMG-14",
+        "IMG-15",
+        "IMG-16",
+        "IMG-17",
+        "IMG-18",
+        "IMG-19",
+        "IMG-20",
+        "IMG-21",
+        "IMG-22",
+        "IMG-23",
+        "IMG-24",
+        "IMG-25",
+        "IMG-26",
+        "IMG-27",
+        "IMG-28",
+        "IMG-29",
+        "IMG-30",
+        "IMG-31",
+        "IMG-32",
+        "IMG-33",
+        "IMG-34",
+        "IMG-35",
+        "IMG-36",
+        "IMG-37",
+        "IMG-38",
+        "IMG-39"
+      ],
+      "image_details": [
+        {
+          "id": "IMG-01",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-01.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-02",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-02.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-03",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-03.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-04",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-04.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-05",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-05.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-06",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-06.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-07",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-07.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-08",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-08.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-09",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-09.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-10",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-10.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-11",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-11.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-12",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-12.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-13",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-13.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-14",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-14.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-15",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-15.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-16",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-16.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-17",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-17.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-18",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-18.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-19",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-19.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-20",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-20.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-21",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-21.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-22",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-22.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-23",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-23.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-24",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-24.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-25",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-25.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-26",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-26.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-27",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-27.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-28",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-28.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-29",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-29.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-30",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-30.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-31",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-31.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-32",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-32.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-33",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-33.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-34",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-34.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-35",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-35.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-36",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-36.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-37",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-37.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-38",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-38.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-39",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-39.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        }
+      ],
+      "image_response_count": 39,
+      "image_responses": [
+        {
+          "id": "IMG-01",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-01.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-02",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-02.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-03",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-03.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-04",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-04.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-05",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-05.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-06",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-06.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-07",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-07.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-08",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-08.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-09",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-09.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-10",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-10.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-11",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-11.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-12",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-12.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-13",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-13.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-14",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-14.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-15",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-15.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-16",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-16.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-17",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-17.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-18",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-18.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-19",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-19.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-20",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-20.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-21",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-21.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-22",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-22.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-23",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-23.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-24",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-24.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-25",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-25.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-26",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-26.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-27",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-27.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-28",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-28.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-29",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-29.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-30",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-30.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-31",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-31.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-32",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-32.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-33",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-33.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-34",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-34.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-35",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-35.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-36",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-36.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-37",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-37.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-38",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-38.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-39",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-39.png",
+          "status": 200
+        }
+      ],
+      "placement_mismatches": [],
+      "image_mapping_passed": true,
+      "copy_mismatches": [],
+      "copy_audit_passed": true,
+      "hero_webinar_caption_count": 15,
+      "retired_story_dom_count": 0,
+      "retired_offer_summary_dom_count": 0,
+      "proof_card_count": 24,
+      "hero_slide_count": 15,
+      "hero_thumbnail_count": 15,
+      "hero_one_full_slide_per_viewport": true,
+      "hero_webinar_sequence_ordered": true,
+      "hero_counter_text": "1 / 15",
+      "testimonial_zone_count": 4,
+      "testimonial_zone_counts": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "testimonial_rails_horizontal": true,
+      "public_dollar_zero_count": 0,
+      "faq_count": 6,
+      "section_order": [
+        "announcement",
+        "header",
+        "hero",
+        "social",
+        "faq",
+        "recognition",
+        "offer",
+        "compliments",
+        "review_wall",
+        "final_offer",
+        "footer"
+      ],
+      "section_geometry": [
+        {
+          "name": "announcement",
+          "width": 390,
+          "height": 52.09375,
+          "visible": true
+        },
+        {
+          "name": "header",
+          "width": 390,
+          "height": 58,
+          "visible": true
+        },
+        {
+          "name": "hero",
+          "width": 390,
+          "height": 1548.140625,
+          "visible": true
+        },
+        {
+          "name": "social",
+          "width": 390,
+          "height": 743.984375,
+          "visible": true
+        },
+        {
+          "name": "faq",
+          "width": 390,
+          "height": 756.03125,
+          "visible": true
+        },
+        {
+          "name": "recognition",
+          "width": 390,
+          "height": 911.703125,
+          "visible": true
+        },
+        {
+          "name": "offer",
+          "width": 390,
+          "height": 830.34375,
+          "visible": true
+        },
+        {
+          "name": "compliments",
+          "width": 390,
+          "height": 820.296875,
+          "visible": true
+        },
+        {
+          "name": "review_wall",
+          "width": 390,
+          "height": 883.8125,
+          "visible": true
+        },
+        {
+          "name": "final_offer",
+          "width": 390,
+          "height": 672.296875,
+          "visible": true
+        },
+        {
+          "name": "footer",
+          "width": 390,
+          "height": 166.734375,
+          "visible": true
+        }
+      ],
+      "section_order_passed": true,
+      "horizontal_overflow": false,
+      "document_width": 390,
+      "viewport_width": 390,
+      "overlap_count": 0,
+      "overlaps": [],
+      "console_error_count": 0,
+      "console_errors": [],
+      "console_warning_count": 0,
+      "console_warnings": [],
+      "page_error_count": 0,
+      "page_errors": [],
+      "failed_request_count": 0,
+      "failed_requests": [],
+      "failed_response_count": 0,
+      "failed_responses": [],
+      "interaction_failures": [],
+      "interaction_audit_passed": true,
+      "accessibility_failures": [],
+      "accessibility_smoke_passed": true,
+      "first_viewport_offer_passed": true,
+      "hero_image_above_fold_fraction": 0.8177,
+      "hero_image_half_above_fold": true,
+      "primary_cta_count": 4,
+      "disclosure_text": "This client preview contains illustrative claims and sample customer stories.",
+      "disclosure_font_px": 14,
+      "robots_meta": "noindex,nofollow,noarchive,nosnippet",
+      "root_headers": {
+        "accept-ranges": "bytes",
+        "age": "21",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "cache-status": "\"Netlify Edge\"; hit",
+        "content-encoding": "br",
+        "content-length": "1540",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Tue, 21 Jul 2026 23:00:37 GMT",
+        "etag": "\"85ab544ff9776568c5bb4f724745ac3a-ssl-df\"",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Netlify",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-nf-request-id": "01KY3EHSDPPMARCPT8CKEB5JJ9",
+        "x-robots-tag": "noindex, nofollow, noarchive, nosnippet"
+      },
+      "site_data_status": 200,
+      "robots_status": 200,
+      "robots_disallow_all": true,
+      "x_robots_directives_complete": true,
+      "full_page_screenshot": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-full-page.png",
+      "full_page_sha256": "34af434565a1e3f9c22c5e5d4018589311d544255a874e648f2d5973bed80f24",
+      "full_page_capture_mode": "unmodified_page",
+      "section_screenshots": [
+        {
+          "section": "announcement",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-announcement.png",
+          "sha256": "b129f5e46d61c63e5bf3bed97c6313631f4f5ab83d7058f6686b4ba7bcf6b4b5",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "header",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-header.png",
+          "sha256": "66fb61a6e14a137274d8c9bd7064b5341803a184470193fb9ae657c1a255a293",
+          "capture_mode": "element_unmodified",
+          "sticky_header_suppressed": false
+        },
+        {
+          "section": "hero",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-hero.png",
+          "sha256": "159e55f3182e50b1395214b67fda23506979c9bf37b8a5248e1ac5c955d74c72",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "social",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-social.png",
+          "sha256": "ac27f04623f6da7d57af49715cc202738a39de57ffeeead732b8dc2f7eb5416f",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "faq",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-faq.png",
+          "sha256": "a831ce1cba2dd1ca153661188222a3958d63f1493f0f49e0058611e03bbd45fc",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "recognition",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-recognition.png",
+          "sha256": "7b880e77642d13e2f760c3aa7f13116c0e543195065084bed6b8dd21832cefbd",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "offer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-offer.png",
+          "sha256": "be2e978ba543444f22f44c1aa39111e639e3900f14710025840b51cd0687a137",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "compliments",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-compliments.png",
+          "sha256": "6675f8d47dfb06e4ddd0f94f3e7924217cff48d333838962be44981c42f7beb8",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "review_wall",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-review_wall.png",
+          "sha256": "0562f5340821d138b7ac0a00a7ba9095cfff09909d980f62e21930dd4ac67158",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "final_offer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-final_offer.png",
+          "sha256": "122fa3f00a0f4bb36b6f05ce27d639398c3ba91ef81fd3fa3385fc4acfb55d4b",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "footer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/mobile-footer.png",
+          "sha256": "22a968de2b643c0482e2909f2cd69618b4f67e931723ea19c989602674847b86",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        }
+      ]
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/",
+      "http_status": 200,
+      "load_milliseconds": 18217,
+      "render_error": "",
+      "layout_contract_version": "goda-webinar-15-proof-4-v3",
+      "image_count": 39,
+      "unique_image_source_count": 39,
+      "broken_image_count": 0,
+      "image_slot_ids": [
+        "IMG-01",
+        "IMG-02",
+        "IMG-03",
+        "IMG-04",
+        "IMG-05",
+        "IMG-06",
+        "IMG-07",
+        "IMG-08",
+        "IMG-09",
+        "IMG-10",
+        "IMG-11",
+        "IMG-12",
+        "IMG-13",
+        "IMG-14",
+        "IMG-15",
+        "IMG-16",
+        "IMG-17",
+        "IMG-18",
+        "IMG-19",
+        "IMG-20",
+        "IMG-21",
+        "IMG-22",
+        "IMG-23",
+        "IMG-24",
+        "IMG-25",
+        "IMG-26",
+        "IMG-27",
+        "IMG-28",
+        "IMG-29",
+        "IMG-30",
+        "IMG-31",
+        "IMG-32",
+        "IMG-33",
+        "IMG-34",
+        "IMG-35",
+        "IMG-36",
+        "IMG-37",
+        "IMG-38",
+        "IMG-39"
+      ],
+      "image_details": [
+        {
+          "id": "IMG-01",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-01.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-02",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-02.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-03",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-03.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-04",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-04.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-05",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-05.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-06",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-06.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-07",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-07.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-08",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-08.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-09",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-09.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-10",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-10.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-11",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-11.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-12",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-12.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-13",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-13.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-14",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-14.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-15",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-15.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-16",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-16.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-17",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-17.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-18",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-18.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-19",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-19.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-20",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-20.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-21",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-21.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-22",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-22.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-23",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-23.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-24",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-24.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-25",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-25.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-26",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-26.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-27",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-27.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-28",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-28.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-29",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-29.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-30",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-30.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-31",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-31.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-32",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-32.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-33",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-33.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-34",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-34.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-35",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-35.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-36",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-36.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-37",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-37.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-38",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-38.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-39",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-39.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        }
+      ],
+      "image_response_count": 39,
+      "image_responses": [
+        {
+          "id": "IMG-01",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-01.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-02",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-02.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-03",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-03.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-04",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-04.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-05",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-05.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-06",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-06.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-07",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-07.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-08",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-08.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-09",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-09.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-10",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-10.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-11",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-11.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-12",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-12.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-13",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-13.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-14",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-14.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-15",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-15.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-16",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-16.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-17",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-17.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-18",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-18.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-19",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-19.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-20",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-20.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-21",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-21.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-22",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-22.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-23",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-23.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-24",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-24.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-25",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-25.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-26",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-26.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-27",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-27.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-28",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-28.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-29",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-29.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-30",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-30.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-31",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-31.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-32",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-32.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-33",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-33.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-34",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-34.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-35",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-35.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-36",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-36.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-37",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-37.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-38",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-38.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-39",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-39.png",
+          "status": 200
+        }
+      ],
+      "placement_mismatches": [],
+      "image_mapping_passed": true,
+      "copy_mismatches": [],
+      "copy_audit_passed": true,
+      "hero_webinar_caption_count": 15,
+      "retired_story_dom_count": 0,
+      "retired_offer_summary_dom_count": 0,
+      "proof_card_count": 24,
+      "hero_slide_count": 15,
+      "hero_thumbnail_count": 15,
+      "hero_one_full_slide_per_viewport": true,
+      "hero_webinar_sequence_ordered": true,
+      "hero_counter_text": "1 / 15",
+      "testimonial_zone_count": 4,
+      "testimonial_zone_counts": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "testimonial_rails_horizontal": true,
+      "public_dollar_zero_count": 0,
+      "faq_count": 6,
+      "section_order": [
+        "announcement",
+        "header",
+        "hero",
+        "social",
+        "faq",
+        "recognition",
+        "offer",
+        "compliments",
+        "review_wall",
+        "final_offer",
+        "footer"
+      ],
+      "section_geometry": [
+        {
+          "name": "announcement",
+          "width": 768,
+          "height": 38.140625,
+          "visible": true
+        },
+        {
+          "name": "header",
+          "width": 768,
+          "height": 68,
+          "visible": true
+        },
+        {
+          "name": "hero",
+          "width": 768,
+          "height": 1774.8125,
+          "visible": true
+        },
+        {
+          "name": "social",
+          "width": 768,
+          "height": 695.453125,
+          "visible": true
+        },
+        {
+          "name": "faq",
+          "width": 768,
+          "height": 688.578125,
+          "visible": true
+        },
+        {
+          "name": "recognition",
+          "width": 768,
+          "height": 804.25,
+          "visible": true
+        },
+        {
+          "name": "offer",
+          "width": 768,
+          "height": 676.078125,
+          "visible": true
+        },
+        {
+          "name": "compliments",
+          "width": 768,
+          "height": 730.46875,
+          "visible": true
+        },
+        {
+          "name": "review_wall",
+          "width": 768,
+          "height": 804.25,
+          "visible": true
+        },
+        {
+          "name": "final_offer",
+          "width": 768,
+          "height": 630.625,
+          "visible": true
+        },
+        {
+          "name": "footer",
+          "width": 768,
+          "height": 143.53125,
+          "visible": true
+        }
+      ],
+      "section_order_passed": true,
+      "horizontal_overflow": false,
+      "document_width": 768,
+      "viewport_width": 768,
+      "overlap_count": 0,
+      "overlaps": [],
+      "console_error_count": 0,
+      "console_errors": [],
+      "console_warning_count": 0,
+      "console_warnings": [],
+      "page_error_count": 0,
+      "page_errors": [],
+      "failed_request_count": 0,
+      "failed_requests": [],
+      "failed_response_count": 0,
+      "failed_responses": [],
+      "interaction_failures": [],
+      "interaction_audit_passed": true,
+      "accessibility_failures": [],
+      "accessibility_smoke_passed": true,
+      "first_viewport_offer_passed": true,
+      "hero_image_above_fold_fraction": 0.7723,
+      "hero_image_half_above_fold": true,
+      "primary_cta_count": 4,
+      "disclosure_text": "This client preview contains illustrative claims and sample customer stories.",
+      "disclosure_font_px": 12,
+      "robots_meta": "noindex,nofollow,noarchive,nosnippet",
+      "root_headers": {
+        "accept-ranges": "bytes",
+        "age": "55",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "cache-status": "\"Netlify Edge\"; hit",
+        "content-encoding": "br",
+        "content-length": "1540",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Tue, 21 Jul 2026 23:01:11 GMT",
+        "etag": "\"85ab544ff9776568c5bb4f724745ac3a-ssl-df\"",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Netlify",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-nf-request-id": "01KY3EJTGEZVYJ7TXDQM0MTSXZ",
+        "x-robots-tag": "noindex, nofollow, noarchive, nosnippet"
+      },
+      "site_data_status": 200,
+      "robots_status": 200,
+      "robots_disallow_all": true,
+      "x_robots_directives_complete": true,
+      "full_page_screenshot": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-full-page.png",
+      "full_page_sha256": "675ade59353e3afabe070fc0a287e071b730389ff0d45d8f18a266a128c63377",
+      "full_page_capture_mode": "unmodified_page",
+      "section_screenshots": [
+        {
+          "section": "announcement",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-announcement.png",
+          "sha256": "2b4d04fcde0b314a0fbc855f7b6e3a1dd15aee231ecce235d545089e55895d95",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "header",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-header.png",
+          "sha256": "8682845c4850b5f69af097023e6472d60c1d9ca6174615ae64a1b02bdeb2e944",
+          "capture_mode": "element_unmodified",
+          "sticky_header_suppressed": false
+        },
+        {
+          "section": "hero",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-hero.png",
+          "sha256": "cd0eb7671f15a6f4379345aa19d6c5b3ec013366b3d8ed9e2be99d24fd7f52ae",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "social",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-social.png",
+          "sha256": "921443e5ec269781b832c02b1754dfaf237b29b50ad8b391f20eafa0bf184219",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "faq",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-faq.png",
+          "sha256": "e5c01e6d8c287787d252f356d10b1f439be5e60a558aa67cba95934c6cd570e0",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "recognition",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-recognition.png",
+          "sha256": "a654e73fdc2930dc0e81d2ce54e07c57364720b2267d772b611c13f5081c1332",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "offer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-offer.png",
+          "sha256": "07039197917e082542dabe6eed951b089ad70b5bdb92f9980ea8be9da4d214c8",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "compliments",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-compliments.png",
+          "sha256": "6e95655a27fefe7238c9d0509be1890e0eaecce342eeb3bdfd6ab78985b544d2",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "review_wall",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-review_wall.png",
+          "sha256": "a24a9eb853ea9c6aaca20fd7db0e22cab66d2ba7f06e65e0500d2deeab395238",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "final_offer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-final_offer.png",
+          "sha256": "bef25568303dc0567482ac1faaa1b8d4b344e1ace6b3af146b68add54a722c5f",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "footer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/tablet-footer.png",
+          "sha256": "74969ccc689ea1bee0ae8058df5b51e16c01132ebc9006cd3a0e98545b171d37",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        }
+      ]
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/",
+      "http_status": 200,
+      "load_milliseconds": 23065,
+      "render_error": "",
+      "layout_contract_version": "goda-webinar-15-proof-4-v3",
+      "image_count": 39,
+      "unique_image_source_count": 39,
+      "broken_image_count": 0,
+      "image_slot_ids": [
+        "IMG-01",
+        "IMG-02",
+        "IMG-03",
+        "IMG-04",
+        "IMG-05",
+        "IMG-06",
+        "IMG-07",
+        "IMG-08",
+        "IMG-09",
+        "IMG-10",
+        "IMG-11",
+        "IMG-12",
+        "IMG-13",
+        "IMG-14",
+        "IMG-15",
+        "IMG-16",
+        "IMG-17",
+        "IMG-18",
+        "IMG-19",
+        "IMG-20",
+        "IMG-21",
+        "IMG-22",
+        "IMG-23",
+        "IMG-24",
+        "IMG-25",
+        "IMG-26",
+        "IMG-27",
+        "IMG-28",
+        "IMG-29",
+        "IMG-30",
+        "IMG-31",
+        "IMG-32",
+        "IMG-33",
+        "IMG-34",
+        "IMG-35",
+        "IMG-36",
+        "IMG-37",
+        "IMG-38",
+        "IMG-39"
+      ],
+      "image_details": [
+        {
+          "id": "IMG-01",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-01.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-02",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-02.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-03",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-03.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-04",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-04.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-05",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-05.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-06",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-06.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-07",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-07.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-08",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-08.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-09",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-09.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-10",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-10.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-11",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-11.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-12",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-12.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-13",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-13.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-14",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-14.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-15",
+          "phase": "story",
+          "zone": "hero_carousel",
+          "expected_container": "hero",
+          "observed_container": "hero",
+          "src": "images/IMG-15.png",
+          "alt": "Campaign visual for Sprinkle Tweed Pants and Auralo Pheromone Perfume",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-16",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-16.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-17",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-17.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-18",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-18.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-19",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-19.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-20",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-20.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-21",
+          "phase": "proof",
+          "zone": "testimonial_rail_one",
+          "expected_container": "social",
+          "observed_container": "social",
+          "src": "images/IMG-21.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-22",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-22.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-23",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-23.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-24",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-24.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-25",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-25.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-26",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-26.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-27",
+          "phase": "proof",
+          "zone": "testimonial_rail_two",
+          "expected_container": "recognition",
+          "observed_container": "recognition",
+          "src": "images/IMG-27.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-28",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-28.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-29",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-29.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-30",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-30.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-31",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-31.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-32",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-32.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-33",
+          "phase": "proof",
+          "zone": "testimonial_rail_three",
+          "expected_container": "compliments",
+          "observed_container": "compliments",
+          "src": "images/IMG-33.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-34",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-34.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-35",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-35.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-36",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-36.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-37",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-37.png",
+          "alt": "Illustrative written customer review in getting dressed for a casual social plan when she wants one memorable piece to carry a simple outfit",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-38",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-38.png",
+          "alt": "Illustrative written customer review in weekend city outings styled with a simple fitted top or sweater",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        },
+        {
+          "id": "IMG-39",
+          "phase": "proof",
+          "zone": "testimonial_rail_four",
+          "expected_container": "review_wall",
+          "observed_container": "review_wall",
+          "src": "images/IMG-39.png",
+          "alt": "Illustrative written customer review in casual evenings and creative social settings where texture and colour can lead the look",
+          "natural_width": 1122,
+          "natural_height": 1402,
+          "complete": true
+        }
+      ],
+      "image_response_count": 39,
+      "image_responses": [
+        {
+          "id": "IMG-01",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-01.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-02",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-02.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-03",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-03.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-04",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-04.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-05",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-05.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-06",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-06.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-07",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-07.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-08",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-08.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-09",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-09.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-10",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-10.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-11",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-11.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-12",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-12.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-13",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-13.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-14",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-14.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-15",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-15.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-16",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-16.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-17",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-17.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-18",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-18.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-19",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-19.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-20",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-20.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-21",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-21.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-22",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-22.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-23",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-23.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-24",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-24.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-25",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-25.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-26",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-26.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-27",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-27.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-28",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-28.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-29",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-29.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-30",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-30.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-31",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-31.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-32",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-32.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-33",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-33.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-34",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-34.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-35",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-35.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-36",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-36.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-37",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-37.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-38",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-38.png",
+          "status": 200
+        },
+        {
+          "id": "IMG-39",
+          "url": "https://fp30-sprinkle-pants-client-260721-224255-71efdd3b.netlify.app/images/IMG-39.png",
+          "status": 200
+        }
+      ],
+      "placement_mismatches": [],
+      "image_mapping_passed": true,
+      "copy_mismatches": [],
+      "copy_audit_passed": true,
+      "hero_webinar_caption_count": 15,
+      "retired_story_dom_count": 0,
+      "retired_offer_summary_dom_count": 0,
+      "proof_card_count": 24,
+      "hero_slide_count": 15,
+      "hero_thumbnail_count": 15,
+      "hero_one_full_slide_per_viewport": true,
+      "hero_webinar_sequence_ordered": true,
+      "hero_counter_text": "1 / 15",
+      "testimonial_zone_count": 4,
+      "testimonial_zone_counts": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "testimonial_rails_horizontal": true,
+      "public_dollar_zero_count": 0,
+      "faq_count": 6,
+      "section_order": [
+        "announcement",
+        "header",
+        "hero",
+        "social",
+        "faq",
+        "recognition",
+        "offer",
+        "compliments",
+        "review_wall",
+        "final_offer",
+        "footer"
+      ],
+      "section_geometry": [
+        {
+          "name": "announcement",
+          "width": 1440,
+          "height": 38.140625,
+          "visible": true
+        },
+        {
+          "name": "header",
+          "width": 1440,
+          "height": 68,
+          "visible": true
+        },
+        {
+          "name": "hero",
+          "width": 1440,
+          "height": 1423.875,
+          "visible": true
+        },
+        {
+          "name": "social",
+          "width": 1440,
+          "height": 1052.9375,
+          "visible": true
+        },
+        {
+          "name": "faq",
+          "width": 1440,
+          "height": 858.625,
+          "visible": true
+        },
+        {
+          "name": "recognition",
+          "width": 1440,
+          "height": 1126.71875,
+          "visible": true
+        },
+        {
+          "name": "offer",
+          "width": 1440,
+          "height": 870.84375,
+          "visible": true
+        },
+        {
+          "name": "compliments",
+          "width": 1440,
+          "height": 1052.9375,
+          "visible": true
+        },
+        {
+          "name": "review_wall",
+          "width": 1440,
+          "height": 1126.71875,
+          "visible": true
+        },
+        {
+          "name": "final_offer",
+          "width": 1440,
+          "height": 720,
+          "visible": true
+        },
+        {
+          "name": "footer",
+          "width": 1440,
+          "height": 143.53125,
+          "visible": true
+        }
+      ],
+      "section_order_passed": true,
+      "horizontal_overflow": false,
+      "document_width": 1440,
+      "viewport_width": 1440,
+      "overlap_count": 0,
+      "overlaps": [],
+      "console_error_count": 0,
+      "console_errors": [],
+      "console_warning_count": 0,
+      "console_warnings": [],
+      "page_error_count": 0,
+      "page_errors": [],
+      "failed_request_count": 0,
+      "failed_requests": [],
+      "failed_response_count": 0,
+      "failed_responses": [],
+      "interaction_failures": [],
+      "interaction_audit_passed": true,
+      "accessibility_failures": [],
+      "accessibility_smoke_passed": true,
+      "first_viewport_offer_passed": true,
+      "hero_image_above_fold_fraction": 0.6523,
+      "hero_image_half_above_fold": true,
+      "primary_cta_count": 4,
+      "disclosure_text": "This client preview contains illustrative claims and sample customer stories.",
+      "disclosure_font_px": 12,
+      "robots_meta": "noindex,nofollow,noarchive,nosnippet",
+      "root_headers": {
+        "accept-ranges": "bytes",
+        "age": "82",
+        "cache-control": "public,max-age=0,must-revalidate",
+        "cache-status": "\"Netlify Edge\"; hit",
+        "content-encoding": "br",
+        "content-length": "1540",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Tue, 21 Jul 2026 23:01:38 GMT",
+        "etag": "\"85ab544ff9776568c5bb4f724745ac3a-ssl-df\"",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "server": "Netlify",
+        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-nf-request-id": "01KY3EKMKYP1JDH2EWF91NPV1J",
+        "x-robots-tag": "noindex, nofollow, noarchive, nosnippet"
+      },
+      "site_data_status": 200,
+      "robots_status": 200,
+      "robots_disallow_all": true,
+      "x_robots_directives_complete": true,
+      "full_page_screenshot": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-full-page.png",
+      "full_page_sha256": "ff49564032698318ff8c2ebaa65db6d330dc552a924ce4d3acd114caa70f4bcd",
+      "full_page_capture_mode": "unmodified_page",
+      "section_screenshots": [
+        {
+          "section": "announcement",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-announcement.png",
+          "sha256": "3f845262531827945d92295260eda066d5e8d413619c45c5dde02a1255f9e663",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "header",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-header.png",
+          "sha256": "d87246926e57c2dd1902c2df3336d9085e5c74ce1291b4d1943bb71b5c9974a3",
+          "capture_mode": "element_unmodified",
+          "sticky_header_suppressed": false
+        },
+        {
+          "section": "hero",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-hero.png",
+          "sha256": "a046739560ef98dd45bcd61375f03eda9ed07620dd0bd1b6a0ac9e0b43afb619",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "social",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-social.png",
+          "sha256": "883895b79d459b2ffcd9fa2e8d3919204bc1c78fcdb48a257d1c4b84b8c1aa00",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "faq",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-faq.png",
+          "sha256": "086fd524234a91faf7948a0b34202c999f312fe0a47fcff0f05cc35082854dc2",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "recognition",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-recognition.png",
+          "sha256": "83c92de69b8d0fab487ce7e9b03b5bcaa52f425fb2ff1cf9780e35697ec76c4a",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "offer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-offer.png",
+          "sha256": "d2c97adc88ebc6590981364cf9812848552e566fd0196cb74beccbe5121c6715",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "compliments",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-compliments.png",
+          "sha256": "ec442eaf73109fe0dc810646b50ab43516a87cd6f2aefc4781debe39b6e300ae",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "review_wall",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-review_wall.png",
+          "sha256": "5fcd7f13a2a8d1ab7d8099c40103183bac104b8d011b2f2d88754a9696518b5f",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "final_offer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-final_offer.png",
+          "sha256": "f71d125cae7790f0fd5db181d26bcc7d7f951390a22466476504466d6ed41181",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        },
+        {
+          "section": "footer",
+          "path": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/live/desktop-footer.png",
+          "sha256": "75a2032e7887667bc93795bdb5aa76304e82dc6128b1a96d070819264c7a623e",
+          "capture_mode": "element_with_sticky_header_suppressed_after_geometry_audit",
+          "sticky_header_suppressed": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "2.0",
+  "checked_at": "2026-07-21T22:41:58Z",
+  "passed": true,
+  "structurally_valid": true,
+  "state": "QA_ACCEPTED",
+  "errors": [],
+  "warnings": [
+    "Some sources failed: arxiv, github",
+    "Some sources returned partial results (degraded): digg, instagram"
+  ],
+  "checks": {
+    "visual_slot_count": 39,
+    "story_visual_count": 15,
+    "proof_visual_count": 24,
+    "hero_slide_count": 15,
+    "testimonial_zone_counts": [
+      6,
+      6,
+      6,
+      6
+    ],
+    "footer_disclosure_count": 1,
+    "image_count": 39,
+    "placeholder_count": 0,
+    "visual_semantic_review": true,
+    "checkout_mode": "dry_run",
+    "indexing": "blocked",
+    "prompt_pack_counts": [
+      10,
+      10,
+      10,
+      9
+    ],
+    "distinct_cast_count": 24
+  },
+  "visual_review": {
+    "schema_version": "2.0",
+    "reviewed_by": "host_visual_inspection",
+    "layout_contract_version": "goda-webinar-15-proof-4-v3",
+    "manifest_sha256": "2b8e580f1b20824e26d1f9d805c59fe919266bdf8b802ad8721917e01618d3da",
+    "site_data_sha256": "03cf1d8d6a5f68e57a3f1ab4461c3c02e0268b11c3ad811f838795f8d3128fd5",
+    "browser_observations": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/local/browser-observations.json",
+    "browser_observations_sha256": "ddfe957a69c7549b7f241b8dbce139160629738d4e740b91f3e4cfe85593dce8",
+    "hero_carousel": {
+      "image_count": 15,
+      "slide_count": 15,
+      "thumbnail_count": 15,
+      "one_full_slide_per_viewport": true,
+      "webinar_sequence_ordered": true,
+      "active_image_at_least_half_above_fold_each_viewport": true,
+      "product_consistent": true,
+      "message_matches_copy": true,
+      "no_internal_text": true,
+      "no_dollar_zero": true,
+      "no_unsupported_claims": true
+    },
+    "testimonial_images": {
+      "count": 24,
+      "zone_count": 4,
+      "cards_per_zone": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "distinct_people": 24,
+      "all_names_headlines_reviews_visible": true,
+      "no_play_controls": true,
+      "no_dollar_zero": true,
+      "no_unsupported_claims": true
+    },
+    "viewport_proof": [
+      {
+        "width": 390,
+        "screenshot": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/local/mobile-full-page.png",
+        "sha256": "a7e4d2530bfd702df925c2b480eb729575c56e91597287a938827fa28d82fa69",
+        "horizontal_overflow": false,
+        "console_error_count": 0,
+        "hero_slide_count": 15,
+        "hero_image_above_fold_fraction": 0.8177,
+        "hero_image_half_above_fold": true,
+        "retired_offer_summary_dom_count": 0,
+        "testimonial_zone_counts": [
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "width": 1440,
+        "screenshot": "/Users/nelsonchan/Documents/Sprinkle pants/runs/sprinkle-pants-20260721T163126AEST/qa/local/desktop-full-page.png",
+        "sha256": "ff49564032698318ff8c2ebaa65db6d330dc552a924ce4d3acd114caa70f4bcd",
+        "horizontal_overflow": false,
+        "console_error_count": 0,
+        "hero_slide_count": 15,
+        "hero_image_above_fold_fraction": 0.6523,
+        "hero_image_half_above_fold": true,
+        "retired_offer_summary_dom_count": 0,
+        "testimonial_zone_counts": [
+          6,
+          6,
+          6,
+          6
+        ]
+      }
+    ],
+    "issues": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "needed": false,
+  "provider": "exa",
+  "reason_codes": [],
+  "query": "",
+  "maximum_queries": 0,
+  "maximum_results": 0,
+  "start_published_date": "2026-06-21",
+  "rule": "Run only for this shortfall; retain exact URLs and text; reject seller copy as customer voice."
+}
