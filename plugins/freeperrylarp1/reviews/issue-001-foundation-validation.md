@@ -26,7 +26,7 @@ All commands were run from the clean Issue 1 worktree.
 | `ruff check plugins/freeperrylarp1` | PASS |
 | `ruff format --check plugins/freeperrylarp1` | PASS |
 | `python3 -m compileall -q plugins/freeperrylarp1` | PASS |
-| `python3 -m unittest discover -s plugins/freeperrylarp1/tests -p 'test_*.py' -v` | PASS, 50 tests |
+| `python3 -m unittest discover -s plugins/freeperrylarp1/tests -p 'test_*.py' -v` | PASS, 52 tests |
 | Repository validator | PASS |
 | Plugin manifest validator | PASS |
 | Main skill validator | PASS |
@@ -42,6 +42,8 @@ All commands were run from the clean Issue 1 worktree.
 | Reversed use-instruction fragment canary | `CLAIM_NOT_AUTHORIZED` |
 | Cross-product fact-ownership canary | `CLAIM_NOT_AUTHORIZED` |
 | Inverted `$29`/FREE offer-role canary | `CLAIM_NOT_AUTHORIZED` |
+| Relationship-scope price/partial-owner canary | `CLAIM_NOT_AUTHORIZED` |
+| Partial-name identity-swap canary | `CLAIM_NOT_AUTHORIZED` |
 | Fabricated five-star proof canary | `CLAIM_NOT_AUTHORIZED` |
 | Traversal FREE-reference path canary | `CAMPAIGN_ASSET_INVALID` |
 | Missing FREE-reference file canary | `CAMPAIGN_ASSET_INVALID` |
@@ -59,7 +61,7 @@ All commands were run from the clean Issue 1 worktree.
 | AC-5 | Angle repair attempts are capped at two; unresolved failures stop as `ANGLE_GAP` or `MARRIAGE_GAP`. |
 | AC-6 | Validator-only prior-product registry and public/prompt scans stop strategy text, generic placeholders, and stale entities as `CROSS_CAMPAIGN_LEAK`. |
 | AC-7 | Production direction is permitted only in non-visible fields; every visible-text field is treated as customer-facing copy. |
-| AC-8 | Every public text leaf is exactly bound to a typed claim path, required evidence lanes, and exact cited evidence fragments whose co-occurring factual order and product ownership must be preserved. Paid facts and `$29` stay attached to Auralo; FREE facts and the `FREE` label stay attached to the current FREE product. Public and prompt content share the outcome and fabricated-proof firewalls; questions, asterisks, disclosures, unrelated valid IDs, swapped fact values, role inversions, reversed instructions, and rating decoration cannot authorize new claims. |
+| AC-8 | Every public text leaf is exactly bound to a typed claim path, required evidence lanes, and exact cited evidence fragments whose co-occurring factual order and product ownership must be preserved. Paid facts and `$29` stay attached to Auralo; FREE facts and the `FREE` label stay attached to the exact current FREE product. Relationship scope cannot carry commercial markers, partial product ownership, or unanchored cross-lane identity assignments. Public and prompt content share the outcome and fabricated-proof firewalls; questions, asterisks, disclosures, unrelated valid IDs, swapped fact values, scope laundering, role inversions, reversed instructions, and rating decoration cannot authorize new claims. |
 | AC-9 | Two unrelated-product fixtures plus negative tests prove stale-entity, missing-marriage, hidden-field, unsupported-claim, and private-strategy rejection. |
 | AC-10 | This receipt records the deterministic test and validation envelope. |
 | NG-1 | No predecessor-plugin files were edited. |

@@ -86,9 +86,12 @@ swapped merely because their tokens exist. Product ownership is checked across
 bindings as well: paid-only facts and `$29` remain attached to Auralo, while
 FREE-only facts and the `FREE` label remain attached to the exact current FREE
 product. Ambiguous two-product clauses and cross-product role inversions stop.
+Relationship scope cannot carry `$29` or `FREE`, use a partial current-product
+name as its owner, or assign paid- and FREE-lane identity facts to each other
+without exact product anchors.
 An unrelated valid evidence ID cannot authorize a new claim. Missing paths,
 extra factual language, fragment mismatches, reversed relationships,
-product-role inversions, and scope/evidence mismatches stop as
+product-role inversions, scope laundering, and scope/evidence mismatches stop as
 `CLAIM_NOT_AUTHORIZED`.
 
 Punctuation is removed before claim checks, so turning a statement into a

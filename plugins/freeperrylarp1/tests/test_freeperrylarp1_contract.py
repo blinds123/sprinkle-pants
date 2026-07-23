@@ -1030,6 +1030,95 @@ class ContractTests(unittest.TestCase):
             ),
         )
 
+    def test_relationship_scope_cannot_launder_price_or_partial_owner(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        unsupported = "Before an evening out, Star Burst is a $29 perfume."
+        payload["copy"]["headline"] = unsupported
+        payload["claims"][0].update(
+            {
+                "scope": "relationship",
+                "text": unsupported,
+                "evidence_ids": [
+                    "AURALO-IDENTITY-001",
+                    "AURALO-PRICE-001",
+                    "FREE-IDENTITY-001",
+                    "REL-001",
+                ],
+                "evidence_bindings": [
+                    {
+                        "evidence_id": "AURALO-IDENTITY-001",
+                        "fragments": ["perfume"],
+                    },
+                    {
+                        "evidence_id": "AURALO-PRICE-001",
+                        "fragments": ["$29"],
+                    },
+                    {
+                        "evidence_id": "FREE-IDENTITY-001",
+                        "fragments": ["Star Burst"],
+                    },
+                    {
+                        "evidence_id": "REL-001",
+                        "fragments": ["before an evening out"],
+                    },
+                ],
+            }
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_relationship_scope_rejects_partial_name_identity_swap(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        unsupported = "Before an evening out, Star Burst is perfume."
+        payload["copy"]["headline"] = unsupported
+        payload["claims"][0].update(
+            {
+                "scope": "relationship",
+                "text": unsupported,
+                "evidence_ids": [
+                    "AURALO-IDENTITY-001",
+                    "FREE-IDENTITY-001",
+                    "REL-001",
+                ],
+                "evidence_bindings": [
+                    {
+                        "evidence_id": "AURALO-IDENTITY-001",
+                        "fragments": ["perfume"],
+                    },
+                    {
+                        "evidence_id": "FREE-IDENTITY-001",
+                        "fragments": ["Star Burst"],
+                    },
+                    {
+                        "evidence_id": "REL-001",
+                        "fragments": ["before an evening out"],
+                    },
+                ],
+            }
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
     def test_star_rating_decoration_requires_evidence_and_is_rejected(self) -> None:
         brief = self.brief()
         payload = self.payload(brief)

@@ -607,6 +607,27 @@ def _assert_claim_product_ownership(
     free_anchor = re.compile(rf"\b{re.escape(free_name)}\b", re.IGNORECASE)
     has_paid_anchor = bool(paid_anchor.search(text))
     has_free_anchor = bool(free_anchor.search(text))
+    text_tokens = claim_tokens(text)
+    free_name_tokens = claim_tokens(free_name) - claim_tokens(*COMMON_ENTITY_WORDS)
+    partial_name_threshold = min(2, len(free_name_tokens))
+    observed_free_name_tokens = text_tokens & free_name_tokens
+    if (
+        not has_free_anchor
+        and partial_name_threshold
+        and len(observed_free_name_tokens) >= partial_name_threshold
+    ):
+        raise ContractError(
+            "CLAIM_NOT_AUTHORIZED",
+            f"{claim_id} uses a partial FREE-product name without its exact owner",
+            details=sorted(observed_free_name_tokens),
+        )
+    if scope == "relationship" and (
+        re.search(r"\$29\b", text) or re.search(r"\bfree\b", text, re.IGNORECASE)
+    ):
+        raise ContractError(
+            "CLAIM_NOT_AUTHORIZED",
+            f"{claim_id} relationship scope cannot carry commercial offer markers",
+        )
 
     if scope == "paid_fact" and has_free_anchor:
         raise ContractError(
@@ -719,6 +740,23 @@ def _assert_claim_product_ownership(
                     "CLAIM_NOT_AUTHORIZED",
                     f"{claim_id} combines role-defining facts in an ambiguous two-product clause",
                     details=role_tokens,
+                )
+        elif scope == "relationship":
+            paid_markers = segment_tokens & (paid_only_tokens | paid_owner_tokens)
+            free_markers = segment_tokens & (free_only_tokens | free_owner_tokens)
+            if (
+                paid_markers
+                and free_markers
+                and re.search(
+                    r"\b(?:becomes?|equals?|is|means?|serves?|works?)\b",
+                    segment,
+                    re.IGNORECASE,
+                )
+            ):
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} relationship scope assigns unanchored facts across products",
+                    details=sorted(paid_markers | free_markers),
                 )
 
 
