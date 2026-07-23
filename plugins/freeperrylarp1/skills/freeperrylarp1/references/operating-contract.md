@@ -82,9 +82,13 @@ current evidence and the public text. When factual fragments co-occur in an
 evidence row, their order must remain intact in public copy. This preserves
 subject/action/object and value/unit relationships; pulse points cannot become
 the thing applied to drops, and the `$29` price and `15 ml` format cannot be
-swapped merely because their tokens exist. An unrelated valid evidence ID
-cannot authorize a new claim. Missing paths, extra factual language, fragment
-mismatches, reversed relationships, and scope/evidence mismatches stop as
+swapped merely because their tokens exist. Product ownership is checked across
+bindings as well: paid-only facts and `$29` remain attached to Auralo, while
+FREE-only facts and the `FREE` label remain attached to the exact current FREE
+product. Ambiguous two-product clauses and cross-product role inversions stop.
+An unrelated valid evidence ID cannot authorize a new claim. Missing paths,
+extra factual language, fragment mismatches, reversed relationships,
+product-role inversions, and scope/evidence mismatches stop as
 `CLAIM_NOT_AUTHORIZED`.
 
 Punctuation is removed before claim checks, so turning a statement into a

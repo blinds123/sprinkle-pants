@@ -940,6 +940,96 @@ class ContractTests(unittest.TestCase):
             ),
         )
 
+    def test_valid_facts_cannot_be_assigned_to_the_wrong_product(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        unsupported = (
+            "Auralo Pheromone Perfume is jewellery and "
+            "Star Burst Necklace is a floral-amber scent."
+        )
+        payload["copy"]["headline"] = unsupported
+        payload["claims"][0].update(
+            {
+                "scope": "multi_product_fact",
+                "text": unsupported,
+                "evidence_ids": [
+                    "AURALO-SCENT-001",
+                    "FREE-IDENTITY-001",
+                ],
+                "evidence_bindings": [
+                    {
+                        "evidence_id": "AURALO-SCENT-001",
+                        "fragments": [
+                            "Auralo Pheromone Perfume",
+                            "floral-amber scent",
+                        ],
+                    },
+                    {
+                        "evidence_id": "FREE-IDENTITY-001",
+                        "fragments": [
+                            "Star Burst Necklace",
+                            "jewellery",
+                        ],
+                    },
+                ],
+            }
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_paid_and_free_offer_roles_cannot_be_inverted(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        unsupported = (
+            "Get Star Burst Necklace for $29 and receive Auralo Pheromone Perfume FREE."
+        )
+        payload["copy"]["headline"] = unsupported
+        payload["claims"][0].update(
+            {
+                "scope": "offer",
+                "text": unsupported,
+                "evidence_ids": [
+                    "AURALO-IDENTITY-001",
+                    "AURALO-PRICE-001",
+                    "FREE-IDENTITY-001",
+                ],
+                "evidence_bindings": [
+                    {
+                        "evidence_id": "AURALO-IDENTITY-001",
+                        "fragments": ["Auralo Pheromone Perfume"],
+                    },
+                    {
+                        "evidence_id": "AURALO-PRICE-001",
+                        "fragments": ["$29"],
+                    },
+                    {
+                        "evidence_id": "FREE-IDENTITY-001",
+                        "fragments": ["Star Burst Necklace"],
+                    },
+                ],
+            }
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
     def test_star_rating_decoration_requires_evidence_and_is_rejected(self) -> None:
         brief = self.brief()
         payload = self.payload(brief)

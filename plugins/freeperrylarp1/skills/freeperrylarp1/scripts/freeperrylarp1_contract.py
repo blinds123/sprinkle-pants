@@ -590,6 +590,138 @@ def _assert_fragment_relationships(
                 )
 
 
+def _assert_claim_product_ownership(
+    *,
+    claim_id: str,
+    scope: str,
+    text: str,
+    campaign: dict[str, Any],
+    evidence_records: dict[str, dict[str, Any]],
+) -> None:
+    """Keep product facts, price, and FREE status attached to their owner."""
+
+    if scope == "disclosure":
+        return
+    paid_anchor = re.compile(r"\bauralo(?: pheromone perfume)?\b", re.IGNORECASE)
+    free_name = campaign["free_product"]["public_name"]
+    free_anchor = re.compile(rf"\b{re.escape(free_name)}\b", re.IGNORECASE)
+    has_paid_anchor = bool(paid_anchor.search(text))
+    has_free_anchor = bool(free_anchor.search(text))
+
+    if scope == "paid_fact" and has_free_anchor:
+        raise ContractError(
+            "CLAIM_NOT_AUTHORIZED",
+            f"{claim_id} paid_fact assigns language to the FREE product",
+        )
+    if scope == "free_fact" and has_paid_anchor:
+        raise ContractError(
+            "CLAIM_NOT_AUTHORIZED",
+            f"{claim_id} free_fact assigns language to Auralo",
+        )
+    if scope in {"multi_product_fact", "offer"} and not (
+        has_paid_anchor and has_free_anchor
+    ):
+        raise ContractError(
+            "CLAIM_NOT_AUTHORIZED",
+            f"{claim_id} {scope} must name both exact product owners",
+        )
+    if scope == "offer" and (
+        not re.search(r"\$29\b", text)
+        or not re.search(r"\bfree\b", text, re.IGNORECASE)
+    ):
+        raise ContractError(
+            "CLAIM_NOT_AUTHORIZED",
+            f"{claim_id} offer must materialize Auralo's $29 price and the current product's FREE status",
+        )
+
+    paid_texts = [
+        value
+        for record in evidence_records.values()
+        if record["lane"] == "paid_product"
+        for value in record["texts"]
+    ]
+    free_texts = [
+        value
+        for record in evidence_records.values()
+        if record["lane"] == "free_product"
+        for value in record["texts"]
+    ]
+    neutral_tokens = claim_tokens(*SAFE_COPY_TOKENS, *COMMON_ENTITY_WORDS)
+    paid_owner_tokens = claim_tokens(AURALO_NAME, "Auralo")
+    free_owner_tokens = claim_tokens(free_name)
+    paid_only_tokens = (
+        claim_tokens(*paid_texts)
+        - claim_tokens(*free_texts)
+        - neutral_tokens
+        - paid_owner_tokens
+    )
+    free_only_tokens = (
+        claim_tokens(*free_texts)
+        - claim_tokens(*paid_texts)
+        - neutral_tokens
+        - free_owner_tokens
+    )
+
+    segments = [
+        segment.strip()
+        for segment in re.split(
+            r"(?<=[.!?;])\s+|\s+\b(?:and|but|plus|while)\b\s+",
+            text,
+            flags=re.IGNORECASE,
+        )
+        if segment.strip()
+    ]
+    inherited_owner: str | None = (
+        "paid" if scope == "paid_fact" else "free" if scope == "free_fact" else None
+    )
+    for segment in segments:
+        segment_has_paid = bool(paid_anchor.search(segment))
+        segment_has_free = bool(free_anchor.search(segment))
+        if segment_has_paid and segment_has_free:
+            owner = "both"
+        elif segment_has_paid:
+            owner = "paid"
+            inherited_owner = owner
+        elif segment_has_free:
+            owner = "free"
+            inherited_owner = owner
+        else:
+            owner = inherited_owner
+
+        segment_tokens = claim_tokens(segment)
+        if owner == "paid":
+            wrong_tokens = sorted(segment_tokens & free_only_tokens)
+            if wrong_tokens or re.search(r"\bfree\b", segment, re.IGNORECASE):
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} assigns FREE-product facts or status to Auralo",
+                    details=wrong_tokens or ["FREE"],
+                )
+        elif owner == "free":
+            wrong_tokens = sorted(segment_tokens & paid_only_tokens)
+            if wrong_tokens or re.search(r"\$29\b", segment):
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} assigns Auralo facts or price to the FREE product",
+                    details=wrong_tokens or ["$29"],
+                )
+        elif owner == "both":
+            role_tokens = sorted(
+                (segment_tokens & paid_only_tokens)
+                | (segment_tokens & free_only_tokens)
+            )
+            if (
+                role_tokens
+                or re.search(r"\$29\b", segment)
+                or re.search(r"\bfree\b", segment, re.IGNORECASE)
+            ):
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} combines role-defining facts in an ambiguous two-product clause",
+                    details=role_tokens,
+                )
+
+
 def relationship_support_tokens(
     evidence_ids: Iterable[str],
     records: dict[str, dict[str, Any]],
@@ -1870,6 +2002,13 @@ def _validate_claims(
                 f"{claim_id} adds language not present in its cited evidence",
                 details=sorted(unsupported_tokens),
             )
+        _assert_claim_product_ownership(
+            claim_id=claim_id,
+            scope=scope,
+            text=text,
+            campaign=campaign,
+            evidence_records=evidence_records,
+        )
 
     missing_public_paths = sorted(set(public_rows) - observed_public_paths)
     if missing_public_paths:
