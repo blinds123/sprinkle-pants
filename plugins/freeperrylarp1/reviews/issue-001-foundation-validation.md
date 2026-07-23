@@ -11,8 +11,10 @@
 - Auralo dossier version: `auralo-pheromone-perfume-v1`
 - Canonical dossier SHA-256: `375f9f95d6674261b8ca8a99e3cd7daa3887d3446812c14a2d1b430ac0f474d9`
 - Auralo reference image SHA-256: `1781cd27811a984a89290722966742f5cb18084fcd78905515df1ad19fd9973d`
-- Star Burst fixture campaign SHA-256: `c6bfd4f12c8d70773a351834d5e9dfe7db18642a2ac7681f75d2cdb6578db9ea`
-- Cloud Travel Case fixture campaign SHA-256: `374d16fc51dc61cddec95311b375fc76e92bbc670b1e9b550c7248a81d078c64`
+- Star Burst fixture campaign SHA-256: `cc76c070c4aad746fe8953cf200e71d2c8f6d3d5007289a11e154bb73d7be901`
+- Star Burst fixture reference SHA-256: `03a2ee50ce977a252fc6ea0119b41ba5755f863205fe17b2a123024a0b842864`
+- Cloud Travel Case fixture campaign SHA-256: `bc721c231a13d608be339e3775ecf77d278e6cd3936dd379e3dbd668e72cbd01`
+- Cloud Travel Case fixture reference SHA-256: `90cc9e73a202b5a31fa967d0e31e4e468251d9c4fc3eddd994a8121727b49d45`
 - Predecessor installed manifest SHA-256 observed before this change: `461bbfcdbe1487e14cd08177acafe37950b60d798757abc86e218d171e640422`
 
 ## Automated verification
@@ -24,7 +26,7 @@ All commands were run from the clean Issue 1 worktree.
 | `ruff check plugins/freeperrylarp1` | PASS |
 | `ruff format --check plugins/freeperrylarp1` | PASS |
 | `python3 -m compileall -q plugins/freeperrylarp1` | PASS |
-| `python3 -m unittest discover -s plugins/freeperrylarp1/tests -p 'test_*.py' -v` | PASS, 43 tests |
+| `python3 -m unittest discover -s plugins/freeperrylarp1/tests -p 'test_*.py' -v` | PASS, 48 tests |
 | Repository validator | PASS |
 | Plugin manifest validator | PASS |
 | Main skill validator | PASS |
@@ -37,6 +39,11 @@ All commands were run from the clean Issue 1 worktree.
 | Swapped `$29` / `15 ml` fact canary | `CLAIM_NOT_AUTHORIZED` |
 | Generic paid/FREE prompt placeholder canary | `CROSS_CAMPAIGN_LEAK` |
 | Unsupported prompt-outcome canary | `CLAIM_NOT_AUTHORIZED` |
+| Reversed use-instruction fragment canary | `CLAIM_NOT_AUTHORIZED` |
+| Fabricated five-star proof canary | `CLAIM_NOT_AUTHORIZED` |
+| Traversal FREE-reference path canary | `CAMPAIGN_ASSET_INVALID` |
+| Missing FREE-reference file canary | `CAMPAIGN_ASSET_INVALID` |
+| Mismatched FREE-reference hash canary | `CAMPAIGN_ASSET_INVALID` |
 | `git diff --check` | PASS |
 
 ## Acceptance and non-goal ledger
@@ -45,12 +52,12 @@ All commands were run from the clean Issue 1 worktree.
 | --- | --- |
 | AC-1 | New files are isolated under `plugins/freeperrylarp1`; the predecessor plugin is unchanged. |
 | AC-2 | Versioned dossier and reference asset are hash-verified; only enumerated fact IDs may support public claims. |
-| AC-3 | Campaign input requires a fresh free-product identity, evidence ledger, fact ledger, and reference images. There are no prior-campaign defaults or examples in writer-facing assets. |
+| AC-3 | Campaign input requires a fresh free-product identity, evidence ledger, fact ledger, and reference images. References must exist under an explicit campaign asset root, remain inside that root, avoid symlinks, and match their declared SHA-256. There are no prior-campaign defaults or examples in writer-facing assets. |
 | AC-4 | Campaign validation requires an accepted, hash-bound marriage brief with exact product roles, primary and backup angles, a current-evidence buyer bridge, and a replacement-based substitution explanation. Paid/FREE restatements stop as `MARRIAGE_GAP`. |
 | AC-5 | Angle repair attempts are capped at two; unresolved failures stop as `ANGLE_GAP` or `MARRIAGE_GAP`. |
 | AC-6 | Validator-only prior-product registry and public/prompt scans stop strategy text, generic placeholders, and stale entities as `CROSS_CAMPAIGN_LEAK`. |
 | AC-7 | Production direction is permitted only in non-visible fields; every visible-text field is treated as customer-facing copy. |
-| AC-8 | Every public text leaf is exactly bound to a typed claim path, required evidence lanes, and exact cited evidence fragments. Public and prompt content share the outcome firewall; questions, asterisks, disclosures, unrelated valid IDs, and swapped fact values cannot authorize new claims. |
+| AC-8 | Every public text leaf is exactly bound to a typed claim path, required evidence lanes, and exact cited evidence fragments whose co-occurring factual order must be preserved. Public and prompt content share the outcome and fabricated-proof firewalls; questions, asterisks, disclosures, unrelated valid IDs, swapped fact values, reversed instructions, and rating decoration cannot authorize new claims. |
 | AC-9 | Two unrelated-product fixtures plus negative tests prove stale-entity, missing-marriage, hidden-field, unsupported-claim, and private-strategy rejection. |
 | AC-10 | This receipt records the deterministic test and validation envelope. |
 | NG-1 | No predecessor-plugin files were edited. |

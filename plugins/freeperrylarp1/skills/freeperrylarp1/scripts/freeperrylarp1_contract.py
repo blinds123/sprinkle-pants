@@ -161,6 +161,44 @@ UNSUPPORTED_OUTCOME_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ),
 )
 
+FABRICATED_PROOF_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
+    (
+        "star-rating glyphs",
+        re.compile(r"(?:★|☆|⭐|🌟){3,}"),
+    ),
+    (
+        "numeric star rating",
+        re.compile(
+            r"\b(?:[0-5](?:\.\d)?\s*(?:/|out of)\s*5|"
+            r"[1-5](?:\.\d)?[- ]stars?)\b",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "testimonial or review label",
+        re.compile(
+            r"\b(?:customer testimonials?|customer reviews?|"
+            r"what customers? (?:say|said)|real customer story|"
+            r"verified customers?|verified buyers?)\b",
+            re.IGNORECASE,
+        ),
+    ),
+    (
+        "testimonial attribution",
+        re.compile(
+            r"(?:“[^”]{8,}”|\"[^\"]{8,}\")\s*(?:—|–|-)\s*[A-Z][A-Za-z .'-]{1,48}"
+        ),
+    ),
+    (
+        "proof badge",
+        re.compile(
+            r"\b(?:customer approved|editor.?s choice|best seller|"
+            r"award winning|top rated)\b",
+            re.IGNORECASE,
+        ),
+    ),
+)
+
 COMMON_ENTITY_WORDS = {
     "accessory",
     "and",
@@ -508,6 +546,50 @@ def comparable_phrase(value: str) -> str:
     return re.sub(r"\s+", " ", value.casefold()).strip()
 
 
+def _assert_fragment_relationships(
+    *,
+    claim_id: str,
+    evidence_id: str,
+    claim_phrase: str,
+    support_phrases: list[str],
+    fragments: list[str],
+) -> None:
+    """Preserve the order of factual spans that co-occur in evidence."""
+
+    normalized_fragments = [comparable_phrase(fragment) for fragment in fragments]
+    claim_positions: dict[str, int] = {}
+    for fragment in normalized_fragments:
+        if claim_phrase.count(fragment) != 1:
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id} binding fragment is ambiguous in public text",
+                details=[evidence_id, fragment],
+            )
+        claim_positions[fragment] = claim_phrase.index(fragment)
+
+    for left_index, left in enumerate(normalized_fragments):
+        for right in normalized_fragments[left_index + 1 :]:
+            if left in right or right in left:
+                continue
+            shared_support = [
+                phrase
+                for phrase in support_phrases
+                if left in phrase and right in phrase
+            ]
+            if not shared_support:
+                continue
+            claim_order = claim_positions[left] < claim_positions[right]
+            if not any(
+                (phrase.index(left) < phrase.index(right)) == claim_order
+                for phrase in shared_support
+            ):
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} reverses an evidence-backed factual relationship",
+                    details=[evidence_id, left, right],
+                )
+
+
 def relationship_support_tokens(
     evidence_ids: Iterable[str],
     records: dict[str, dict[str, Any]],
@@ -717,7 +799,7 @@ def validate_dossier(
     }
 
 
-def validate_campaign(
+def _validate_campaign_schema(
     campaign: dict[str, Any],
     dossier: dict[str, Any],
 ) -> dict[str, Any]:
@@ -994,6 +1076,116 @@ def validate_campaign(
     }
 
 
+def _validate_campaign_assets(
+    campaign: dict[str, Any],
+    asset_root: Path,
+) -> None:
+    root = asset_root.resolve()
+    if not root.is_dir():
+        raise ContractError(
+            "CAMPAIGN_ASSET_INVALID",
+            "campaign asset root must be an existing directory",
+            details=[str(asset_root)],
+        )
+    observed_asset_ids: set[str] = set()
+    observed_paths: set[str] = set()
+    for index, raw_image in enumerate(campaign["free_product"]["reference_images"]):
+        image = require_mapping(
+            raw_image,
+            f"free_product.reference_images[{index}]",
+        )
+        asset_id = require_token(
+            image.get("asset_id"),
+            f"free_product.reference_images[{index}].asset_id",
+        )
+        if asset_id in observed_asset_ids:
+            raise ContractError(
+                "CAMPAIGN_ASSET_INVALID",
+                f"duplicate FREE-product reference asset ID: {asset_id}",
+            )
+        observed_asset_ids.add(asset_id)
+        relative_path = require_string(
+            image.get("path"),
+            f"free_product.reference_images[{index}].path",
+        )
+        if relative_path in observed_paths:
+            raise ContractError(
+                "CAMPAIGN_ASSET_INVALID",
+                f"duplicate FREE-product reference path: {relative_path}",
+            )
+        observed_paths.add(relative_path)
+        declared_path = Path(relative_path)
+        if declared_path.is_absolute():
+            raise ContractError(
+                "CAMPAIGN_ASSET_INVALID",
+                "FREE-product reference paths must be relative to the campaign asset root",
+                details=[relative_path],
+            )
+        unresolved_candidate = root / declared_path
+        cursor = root
+        for part in declared_path.parts:
+            cursor = cursor / part
+            if cursor.is_symlink():
+                raise ContractError(
+                    "CAMPAIGN_ASSET_INVALID",
+                    "FREE-product reference path must not contain symlinks",
+                    details=[relative_path],
+                )
+        candidate = unresolved_candidate.resolve()
+        if root not in candidate.parents:
+            raise ContractError(
+                "CAMPAIGN_ASSET_INVALID",
+                "FREE-product reference escapes the campaign asset root",
+                details=[relative_path],
+            )
+        if candidate.suffix.casefold() not in {
+            ".avif",
+            ".gif",
+            ".jpeg",
+            ".jpg",
+            ".png",
+            ".svg",
+            ".webp",
+        }:
+            raise ContractError(
+                "CAMPAIGN_ASSET_INVALID",
+                "FREE-product reference must use a supported image extension",
+                details=[relative_path],
+            )
+        if not candidate.is_file():
+            raise ContractError(
+                "CAMPAIGN_ASSET_INVALID",
+                "FREE-product reference asset is missing or is a symlink",
+                details=[relative_path],
+            )
+        expected_hash = require_string(
+            image.get("sha256"),
+            f"free_product.reference_images[{index}].sha256",
+        )
+        observed_hash = file_sha256(candidate)
+        if observed_hash != expected_hash:
+            raise ContractError(
+                "CAMPAIGN_ASSET_INVALID",
+                "FREE-product reference asset hash mismatch",
+                details=[
+                    relative_path,
+                    f"expected={expected_hash}",
+                    f"observed={observed_hash}",
+                ],
+            )
+
+
+def validate_campaign(
+    campaign: dict[str, Any],
+    dossier: dict[str, Any],
+    *,
+    asset_root: Path,
+) -> dict[str, Any]:
+    result = _validate_campaign_schema(campaign, dossier)
+    _validate_campaign_assets(campaign, asset_root)
+    return result
+
+
 def _angle(
     raw: Any,
     path: str,
@@ -1026,8 +1218,10 @@ def validate_marriage_brief(
     brief: dict[str, Any],
     campaign: dict[str, Any],
     dossier: dict[str, Any],
+    *,
+    asset_root: Path,
 ) -> dict[str, Any]:
-    validate_campaign(campaign, dossier)
+    validate_campaign(campaign, dossier, asset_root=asset_root)
     reject_unknown_keys(
         brief,
         {
@@ -1323,13 +1517,15 @@ def build_prior_entity_registry(
     current_campaign: dict[str, Any],
     prior_campaigns: Iterable[dict[str, Any]],
     dossier: dict[str, Any],
+    *,
+    asset_root: Path,
 ) -> dict[str, Any]:
-    validate_campaign(current_campaign, dossier)
+    validate_campaign(current_campaign, dossier, asset_root=asset_root)
     current_terms = _entity_terms(current_campaign["free_product"])
     forbidden: set[str] = set()
     sources: list[dict[str, str]] = []
     for prior in prior_campaigns:
-        validate_campaign(prior, dossier)
+        _validate_campaign_schema(prior, dossier)
         if prior["campaign_id"] == current_campaign["campaign_id"]:
             continue
         prior_terms = _entity_terms(prior["free_product"])
@@ -1614,6 +1810,8 @@ def _validate_claims(
                 f"{binding_path}.fragments",
                 1,
             )
+            normalized_binding_fragments: set[str] = set()
+            binding_fragments: list[str] = []
             support_phrases = [
                 comparable_phrase(value)
                 for value in evidence_records[evidence_id]["texts"]
@@ -1626,6 +1824,13 @@ def _validate_claims(
                     3,
                 )
                 comparable_fragment = comparable_phrase(fragment)
+                if comparable_fragment in normalized_binding_fragments:
+                    raise ContractError(
+                        "CLAIM_NOT_AUTHORIZED",
+                        f"{claim_id} repeats a binding fragment",
+                        details=[evidence_id, fragment],
+                    )
+                normalized_binding_fragments.add(comparable_fragment)
                 if not any(
                     comparable_fragment in support_phrase
                     for support_phrase in support_phrases
@@ -1641,7 +1846,15 @@ def _validate_claims(
                         f"{claim_id} binding fragment is absent from public text",
                         details=[evidence_id, fragment],
                     )
+                binding_fragments.append(fragment)
                 bound_fragments.append(fragment)
+            _assert_fragment_relationships(
+                claim_id=claim_id,
+                evidence_id=evidence_id,
+                claim_phrase=claim_phrase,
+                support_phrases=support_phrases,
+                fragments=binding_fragments,
+            )
         if bound_evidence_ids != set(evidence_ids):
             raise ContractError(
                 "CLAIM_NOT_AUTHORIZED",
@@ -1786,6 +1999,8 @@ def validate_public_payload(
     brief: dict[str, Any],
     dossier: dict[str, Any],
     registry: dict[str, Any],
+    *,
+    asset_root: Path,
 ) -> dict[str, Any]:
     reject_unknown_keys(
         payload,
@@ -1800,8 +2015,17 @@ def validate_public_payload(
         "public_payload",
         code="PUBLIC_PAYLOAD_INVALID",
     )
-    campaign_result = validate_campaign(campaign, dossier)
-    brief_result = validate_marriage_brief(brief, campaign, dossier)
+    campaign_result = validate_campaign(
+        campaign,
+        dossier,
+        asset_root=asset_root,
+    )
+    brief_result = validate_marriage_brief(
+        brief,
+        campaign,
+        dossier,
+        asset_root=asset_root,
+    )
     forbidden_entities = validate_registry(registry, campaign)
 
     if payload.get("campaign_id") != campaign["campaign_id"]:
@@ -1842,6 +2066,19 @@ def validate_public_payload(
             "CROSS_CAMPAIGN_LEAK",
             "customer/prompt content contains private, generic, production, or stale-product language",
             details=sorted(set(stale_hits)),
+        )
+
+    fabricated_proof_hits: list[str] = []
+    for path, _, text in content_rows:
+        for label, pattern in FABRICATED_PROOF_PATTERNS:
+            match = pattern.search(text)
+            if match:
+                fabricated_proof_hits.append(f"{path}: {label}: {match.group(0)}")
+    if fabricated_proof_hits:
+        raise ContractError(
+            "CLAIM_NOT_AUTHORIZED",
+            "public or prompt content contains unevidenced rating, testimonial, or proof decoration",
+            details=sorted(set(fabricated_proof_hits)),
         )
 
     public_text = " ".join(text for _, mode, text in content_rows if mode == "public")
@@ -1912,14 +2149,17 @@ def build_parser() -> argparse.ArgumentParser:
 
     campaign = subparsers.add_parser("validate-campaign")
     campaign.add_argument("--campaign", type=Path, required=True)
+    campaign.add_argument("--asset-root", type=Path, required=True)
 
     brief = subparsers.add_parser("validate-brief")
     brief.add_argument("--campaign", type=Path, required=True)
     brief.add_argument("--brief", type=Path, required=True)
+    brief.add_argument("--asset-root", type=Path, required=True)
 
     registry = subparsers.add_parser("build-registry")
     registry.add_argument("--campaign", type=Path, required=True)
     registry.add_argument("--prior", type=Path, action="append", default=[])
+    registry.add_argument("--asset-root", type=Path, required=True)
     registry.add_argument("--output", type=Path)
 
     public = subparsers.add_parser("validate-public")
@@ -1927,6 +2167,7 @@ def build_parser() -> argparse.ArgumentParser:
     public.add_argument("--brief", type=Path, required=True)
     public.add_argument("--registry", type=Path, required=True)
     public.add_argument("--payload", type=Path, required=True)
+    public.add_argument("--asset-root", type=Path, required=True)
 
     return parser
 
@@ -1940,12 +2181,17 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "validate-dossier":
             result = validate_dossier(dossier, asset_root=asset_root)
         elif args.command == "validate-campaign":
-            result = validate_campaign(load_json(args.campaign), dossier)
+            result = validate_campaign(
+                load_json(args.campaign),
+                dossier,
+                asset_root=args.asset_root,
+            )
         elif args.command == "validate-brief":
             result = validate_marriage_brief(
                 load_json(args.brief),
                 load_json(args.campaign),
                 dossier,
+                asset_root=args.asset_root,
             )
         elif args.command == "build-registry":
             current = load_json(args.campaign)
@@ -1953,6 +2199,7 @@ def main(argv: list[str] | None = None) -> int:
                 current,
                 (load_json(path) for path in args.prior),
                 dossier,
+                asset_root=args.asset_root,
             )
             _write_or_print(result, args.output)
             return 0
@@ -1963,6 +2210,7 @@ def main(argv: list[str] | None = None) -> int:
                 load_json(args.brief),
                 dossier,
                 load_json(args.registry),
+                asset_root=args.asset_root,
             )
         else:  # pragma: no cover - argparse enforces the command set
             parser.error(f"unsupported command: {args.command}")

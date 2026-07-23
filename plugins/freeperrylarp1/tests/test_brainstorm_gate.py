@@ -24,6 +24,7 @@ DOSSIER_PATH = (
     PLUGIN_ROOT / "skills" / "freeperrylarp1" / "assets" / "auralo-dossier.json"
 )
 CAMPAIGN_PATH = PLUGIN_ROOT / "tests" / "fixtures" / "star-burst-campaign.json"
+ASSET_ROOT = CAMPAIGN_PATH.parent
 
 CONTRACT_SPEC = importlib.util.spec_from_file_location(
     "freeperrylarp1_contract",
@@ -160,6 +161,7 @@ class BrainstormGateTests(unittest.TestCase):
             self.payload(),
             self.campaign,
             self.dossier,
+            asset_root=ASSET_ROOT,
         )
         self.assertEqual(result["status"], "accepted")
         self.assertEqual(
@@ -181,6 +183,7 @@ class BrainstormGateTests(unittest.TestCase):
                 payload,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -194,6 +197,7 @@ class BrainstormGateTests(unittest.TestCase):
                 payload,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -204,6 +208,7 @@ class BrainstormGateTests(unittest.TestCase):
                 self.payload(repair_cycle=3),
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -218,6 +223,7 @@ class BrainstormGateTests(unittest.TestCase):
                 payload,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -239,7 +245,12 @@ class BrainstormGateTests(unittest.TestCase):
                 ),
             ],
         }
-        result = brainstorm.select_angles(payload, self.campaign, self.dossier)
+        result = brainstorm.select_angles(
+            payload,
+            self.campaign,
+            self.dossier,
+            asset_root=ASSET_ROOT,
+        )
         self.assertEqual(
             result["decision_brief"]["relationship_mode"],
             "evidence_backed_complement",
@@ -257,6 +268,7 @@ class BrainstormGateTests(unittest.TestCase):
                 payload,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -272,6 +284,7 @@ class BrainstormGateTests(unittest.TestCase):
                 payload,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 

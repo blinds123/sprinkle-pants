@@ -282,8 +282,10 @@ def select_angles(
     payload: dict[str, Any],
     campaign: dict[str, Any],
     dossier: dict[str, Any],
+    *,
+    asset_root: Path,
 ) -> dict[str, Any]:
-    validate_campaign(campaign, dossier)
+    validate_campaign(campaign, dossier, asset_root=asset_root)
     repair_cycle = payload.get("repair_cycle")
     if not isinstance(repair_cycle, int) or repair_cycle < 0:
         raise ContractError(
@@ -351,7 +353,12 @@ def select_angles(
         )
 
     brief = _candidate_brief(primary, backup, campaign, repair_cycle)
-    receipt = validate_marriage_brief(brief, campaign, dossier)
+    receipt = validate_marriage_brief(
+        brief,
+        campaign,
+        dossier,
+        asset_root=asset_root,
+    )
     return {
         "status": "accepted",
         "decision_brief": brief,
@@ -367,6 +374,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--campaign", type=Path, required=True)
     parser.add_argument("--candidates", type=Path, required=True)
     parser.add_argument("--dossier", type=Path, default=DEFAULT_DOSSIER_PATH)
+    parser.add_argument("--asset-root", type=Path, required=True)
     parser.add_argument("--output", type=Path)
     return parser
 
@@ -378,6 +386,7 @@ def main(argv: list[str] | None = None) -> int:
             load_json(args.candidates),
             load_json(args.campaign),
             load_json(args.dossier),
+            asset_root=args.asset_root,
         )
         rendered = (
             json.dumps(result, indent=2, ensure_ascii=False, sort_keys=True) + "\n"

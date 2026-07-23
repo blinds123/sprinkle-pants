@@ -13,6 +13,11 @@ The FREE side is campaign-local. Its identity, claims, reference assets, offer
 terms, and evidence must be supplied again for each run. No prior campaign is a
 template.
 
+Every FREE-product reference path is resolved under an explicit campaign asset
+root. The validator rejects absolute paths, root escapes, missing files,
+symlinks, unsupported image extensions, duplicate assets, and SHA-256
+mismatches. A manifest string or placeholder hash is not a supplied image.
+
 ## Relationship modes
 
 `wanted_premium` is the honest default when the products are not functionally
@@ -73,14 +78,20 @@ Every public text leaf carries exactly one typed claim record with the same
 normalized text and exact public path. Its scope requires the corresponding
 paid, FREE, offer, or relationship evidence lanes, and its product/outcome
 language must be covered by exact fragments that occur in both the cited
-current evidence and the public text. This preserves value/unit relationships;
-the `$29` price and `15 ml` format cannot be swapped merely because both tokens
-exist. An unrelated valid evidence ID cannot authorize a new claim. Missing
-paths, extra factual language, fragment mismatches, and scope/evidence
-mismatches stop as `CLAIM_NOT_AUTHORIZED`.
+current evidence and the public text. When factual fragments co-occur in an
+evidence row, their order must remain intact in public copy. This preserves
+subject/action/object and value/unit relationships; pulse points cannot become
+the thing applied to drops, and the `$29` price and `15 ml` format cannot be
+swapped merely because their tokens exist. An unrelated valid evidence ID
+cannot authorize a new claim. Missing paths, extra factual language, fragment
+mismatches, reversed relationships, and scope/evidence mismatches stop as
+`CLAIM_NOT_AUTHORIZED`.
 
 Punctuation is removed before claim checks, so turning a statement into a
 question or adding `*` cannot bypass the ledger. Mock-page disclosures use the
 restricted `disclosure` scope, carry no evidence IDs, and cannot contain product
-or outcome claims. Prompt directions pass the same prohibited-outcome firewall
-before image jobs are delivered.
+or outcome claims. Star ratings, numeric ratings, testimonial/review labels,
+testimonial attributions, and proof badges are rejected before punctuation
+normalization because factual product evidence cannot authorize fabricated
+social proof. Prompt directions pass the same prohibited-outcome and proof
+firewalls before image jobs are delivered.

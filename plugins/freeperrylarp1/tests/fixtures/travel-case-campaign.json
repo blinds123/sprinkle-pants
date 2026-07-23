@@ -33,8 +33,8 @@
     "reference_images": [
       {
         "asset_id": "CASE-REF-001",
-        "path": "cloud-travel-case-reference.png",
-        "sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+        "path": "assets/cloud-travel-case-reference.svg",
+        "sha256": "90cc9e73a202b5a31fa967d0e31e4e468251d9c4fc3eddd994a8121727b49d45"
       }
     ]
   },

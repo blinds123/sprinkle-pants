@@ -33,8 +33,8 @@
     "reference_images": [
       {
         "asset_id": "FREE-REF-001",
-        "path": "star-burst-reference.png",
-        "sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+        "path": "assets/star-burst-reference.svg",
+        "sha256": "03a2ee50ce977a252fc6ea0119b41ba5755f863205fe17b2a123024a0b842864"
       }
     ]
   },

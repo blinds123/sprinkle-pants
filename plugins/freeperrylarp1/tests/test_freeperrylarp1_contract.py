@@ -16,6 +16,7 @@ DOSSIER_PATH = (
 )
 CAMPAIGN_PATH = PLUGIN_ROOT / "tests" / "fixtures" / "star-burst-campaign.json"
 SECOND_CAMPAIGN_PATH = PLUGIN_ROOT / "tests" / "fixtures" / "travel-case-campaign.json"
+ASSET_ROOT = CAMPAIGN_PATH.parent
 
 SPEC = importlib.util.spec_from_file_location("freeperrylarp1_contract", CONTRACT_PATH)
 assert SPEC and SPEC.loader
@@ -117,6 +118,7 @@ class ContractTests(unittest.TestCase):
             self.campaign,
             prior_campaigns or [],
             self.dossier,
+            asset_root=ASSET_ROOT,
         )
 
     def payload(
@@ -391,7 +393,11 @@ class ContractTests(unittest.TestCase):
         changed["paid_product"] = {"public_name": "Something else"}
         self.assert_code(
             "PAID_PRODUCT_OVERRIDE",
-            lambda: contract.validate_campaign(changed, self.dossier),
+            lambda: contract.validate_campaign(
+                changed,
+                self.dossier,
+                asset_root=ASSET_ROOT,
+            ),
         )
 
     def test_hidden_campaign_fields_are_rejected(self) -> None:
@@ -399,7 +405,11 @@ class ContractTests(unittest.TestCase):
         changed["prior_campaign_copy"] = "stale material"
         self.assert_code(
             "CAMPAIGN_INVALID",
-            lambda: contract.validate_campaign(changed, self.dossier),
+            lambda: contract.validate_campaign(
+                changed,
+                self.dossier,
+                asset_root=ASSET_ROOT,
+            ),
         )
 
     def test_stale_facts_cannot_be_relabelled_as_a_new_free_product(self) -> None:
@@ -412,7 +422,11 @@ class ContractTests(unittest.TestCase):
         ]
         self.assert_code(
             "CAMPAIGN_INVALID",
-            lambda: contract.validate_campaign(changed, self.dossier),
+            lambda: contract.validate_campaign(
+                changed,
+                self.dossier,
+                asset_root=ASSET_ROOT,
+            ),
         )
 
     def test_fixed_dossier_price_override_is_rejected(self) -> None:
@@ -432,13 +446,67 @@ class ContractTests(unittest.TestCase):
         )
 
     def test_current_free_product_contract_passes(self) -> None:
-        result = contract.validate_campaign(self.campaign, self.dossier)
+        result = contract.validate_campaign(
+            self.campaign,
+            self.dossier,
+            asset_root=ASSET_ROOT,
+        )
         self.assertEqual(result["free_product_name"], "Star Burst Necklace")
         self.assertEqual(result["status"], "accepted")
 
+    def test_free_product_reference_cannot_escape_asset_root(self) -> None:
+        changed = copy.deepcopy(self.campaign)
+        changed["free_product"]["reference_images"][0]["path"] = (
+            "../../archive/sprinkle-pants.png"
+        )
+        changed["free_product"]["reference_images"][0]["sha256"] = "f" * 64
+        self.assert_code(
+            "CAMPAIGN_ASSET_INVALID",
+            lambda: contract.validate_campaign(
+                changed,
+                self.dossier,
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_free_product_reference_must_exist(self) -> None:
+        changed = copy.deepcopy(self.campaign)
+        changed["free_product"]["reference_images"][0]["path"] = (
+            "assets/missing-reference.png"
+        )
+        changed["free_product"]["reference_images"][0]["sha256"] = "0" * 64
+        self.assert_code(
+            "CAMPAIGN_ASSET_INVALID",
+            lambda: contract.validate_campaign(
+                changed,
+                self.dossier,
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_free_product_reference_hash_must_match_bytes(self) -> None:
+        changed = copy.deepcopy(self.campaign)
+        changed["free_product"]["reference_images"][0]["sha256"] = "f" * 64
+        self.assert_code(
+            "CAMPAIGN_ASSET_INVALID",
+            lambda: contract.validate_campaign(
+                changed,
+                self.dossier,
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
     def test_two_unrelated_free_products_remain_isolated(self) -> None:
-        first = contract.validate_campaign(self.campaign, self.dossier)
-        second = contract.validate_campaign(self.second_campaign, self.dossier)
+        first = contract.validate_campaign(
+            self.campaign,
+            self.dossier,
+            asset_root=ASSET_ROOT,
+        )
+        second = contract.validate_campaign(
+            self.second_campaign,
+            self.dossier,
+            asset_root=ASSET_ROOT,
+        )
         self.assertEqual(first["free_product_name"], "Star Burst Necklace")
         self.assertEqual(second["free_product_name"], "Cloud Travel Case")
 
@@ -446,11 +514,13 @@ class ContractTests(unittest.TestCase):
             self.campaign,
             [self.second_campaign],
             self.dossier,
+            asset_root=ASSET_ROOT,
         )
         second_registry = contract.build_prior_entity_registry(
             self.second_campaign,
             [self.campaign],
             self.dossier,
+            asset_root=ASSET_ROOT,
         )
         self.assertIn("quilted shell", first_registry["forbidden_entities"])
         self.assertNotIn("radiating pendant", first_registry["forbidden_entities"])
@@ -484,7 +554,11 @@ class ContractTests(unittest.TestCase):
         changed["free_product"]["facts"] = []
         self.assert_code(
             "INVALID_CONTRACT",
-            lambda: contract.validate_campaign(changed, self.dossier),
+            lambda: contract.validate_campaign(
+                changed,
+                self.dossier,
+                asset_root=ASSET_ROOT,
+            ),
         )
 
     def test_wanted_premium_marriage_brief_passes(self) -> None:
@@ -492,6 +566,7 @@ class ContractTests(unittest.TestCase):
             self.brief(),
             self.campaign,
             self.dossier,
+            asset_root=ASSET_ROOT,
         )
         self.assertEqual(result["relationship_mode"], "wanted_premium")
 
@@ -504,6 +579,7 @@ class ContractTests(unittest.TestCase):
                 changed,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -514,6 +590,7 @@ class ContractTests(unittest.TestCase):
                 self.brief(repair_cycles=3),
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -526,6 +603,7 @@ class ContractTests(unittest.TestCase):
                 changed,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -540,6 +618,7 @@ class ContractTests(unittest.TestCase):
                 changed,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -563,6 +642,7 @@ class ContractTests(unittest.TestCase):
                 changed,
                 self.campaign,
                 self.dossier,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -574,6 +654,7 @@ class ContractTests(unittest.TestCase):
             brief,
             self.dossier,
             self.registry(),
+            asset_root=ASSET_ROOT,
         )
         self.assertEqual(result["image_job_count"], 3)
         self.assertEqual(result["status"], "accepted")
@@ -592,6 +673,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -609,6 +691,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -628,6 +711,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -645,6 +729,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -693,6 +778,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 registry,
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -721,6 +807,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -743,6 +830,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -772,6 +860,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -811,6 +900,75 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_evidence_fragments_cannot_reverse_a_use_instruction(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        unsupported = "Apply pulse points to two or three drops."
+        payload["copy"]["headline"] = unsupported
+        payload["claims"][0].update(
+            {
+                "scope": "paid_fact",
+                "text": unsupported,
+                "evidence_ids": ["AURALO-USE-001"],
+                "evidence_bindings": [
+                    {
+                        "evidence_id": "AURALO-USE-001",
+                        "fragments": [
+                            "Apply",
+                            "pulse points",
+                            "two",
+                            "three",
+                            "drops",
+                        ],
+                    }
+                ],
+            }
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
+            ),
+        )
+
+    def test_star_rating_decoration_requires_evidence_and_is_rejected(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        unsupported = "★★★★★ Auralo is a 15 ml pheromone-inspired floral-amber perfume."
+        payload["copy"]["headline"] = unsupported
+        payload["claims"][0].update(
+            {
+                "scope": "paid_fact",
+                "text": unsupported,
+                "evidence_ids": ["AURALO-IDENTITY-001"],
+                "evidence_bindings": [
+                    {
+                        "evidence_id": "AURALO-IDENTITY-001",
+                        "fragments": [
+                            "Auralo is a 15 ml pheromone-inspired floral-amber perfume."
+                        ],
+                    }
+                ],
+            }
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -826,6 +984,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -841,6 +1000,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -856,6 +1016,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -873,6 +1034,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -888,6 +1050,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -903,6 +1066,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -918,6 +1082,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 
@@ -938,6 +1103,7 @@ class ContractTests(unittest.TestCase):
                 brief,
                 self.dossier,
                 self.registry(),
+                asset_root=ASSET_ROOT,
             ),
         )
 

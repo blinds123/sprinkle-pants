@@ -16,6 +16,8 @@ contract again.
 - Never let a campaign override Auralo identity, price, facts, evidence type, or
   prohibited outcome claims.
 - Create a new run root and campaign identifier for every FREE product.
+- Resolve every FREE-product reference under that explicit run root and verify
+  the file bytes against the campaign SHA-256 before accepting the campaign.
 - Do not copy writer packets, accepted briefs, copy, prompts, images, or site
   data from another campaign.
 - Keep prior-product entity fingerprints in the validator boundary only. Never
@@ -52,7 +54,9 @@ phases.
 ## Contract command
 
 ```bash
-python3 scripts/freeperrylarp1_contract.py --help
+python3 scripts/freeperrylarp1_contract.py validate-campaign \
+  --campaign /absolute/path/to/campaign.json \
+  --asset-root /absolute/path/to/current-run-root
 ```
 
 Read [operating-contract.md](references/operating-contract.md) before changing

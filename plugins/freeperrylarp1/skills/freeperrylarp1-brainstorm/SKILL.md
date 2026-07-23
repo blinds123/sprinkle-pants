@@ -11,6 +11,7 @@ does not write public copy and cannot promote a hypothesis into evidence.
 ## Inputs
 
 - validated current campaign manifest;
+- explicit current campaign asset root with hash-verified FREE references;
 - fixed Auralo dossier;
 - current-run research ledger;
 - no prior campaign copy, prompts, images, or site data.
