@@ -58,7 +58,9 @@ class BrainstormGateTests(unittest.TestCase):
         mode: str = "wanted_premium",
     ) -> dict:
         relationship_ids = (
-            ["REL-001", "REL-002"] if mode == "evidence_backed_complement" else []
+            ["REL-001", "REL-002"]
+            if mode == "evidence_backed_complement"
+            else ["REL-001"]
         )
         return {
             "id": candidate_id,
@@ -68,20 +70,44 @@ class BrainstormGateTests(unittest.TestCase):
                 "Apply the scent, fasten the necklace, and leave for the evening."
             ),
             "buyer_moment": buyer_moment,
+            "buyer_bridge": {
+                "shared_avatar": (
+                    "A style-led self-purchaser preparing for an evening out."
+                ),
+                "occasion_or_desire": (
+                    "She wants separate scent and jewellery finishing choices "
+                    "before an evening out."
+                ),
+                "reason_to_act": (
+                    "The $29 scent purchase adds the wanted visible necklace "
+                    "choice before the evening."
+                ),
+                "evidence_ids": relationship_ids,
+            },
             "transaction_bridge": (
                 "Choose Auralo Pheromone Perfume for $29 and receive the "
-                "Star Burst Necklace FREE as the visible finishing piece."
+                "Star Burst Necklace FREE as separate scent and jewellery "
+                "finishing choices before an evening out."
             ),
             "product_roles": {
                 "paid": "Auralo Pheromone Perfume is the $29 floral-amber scent she chooses.",
                 "free": "Star Burst Necklace is the wanted visible piece included FREE.",
             },
             "substitution_test": {
-                "question": "Do the scent and necklace retain distinct, material buyer roles?",
+                "question": (
+                    "If either product is replaced, does the evidence-backed "
+                    "buyer reason materially change?"
+                ),
                 "result": "passed",
+                "reason": (
+                    "Replacing Auralo Pheromone Perfume or the Star Burst Necklace "
+                    "removes the separate scent and jewellery finishing choices "
+                    "before an evening out."
+                ),
                 "evidence_ids": [
                     "AURALO-IDENTITY-001",
                     "FREE-IDENTITY-001",
+                    *relationship_ids,
                 ],
             },
             "evidence_ids": [

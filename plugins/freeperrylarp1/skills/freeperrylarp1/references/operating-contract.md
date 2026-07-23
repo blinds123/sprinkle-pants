@@ -32,12 +32,21 @@ The writer gate requires:
 - accepted status;
 - primary and backup angle;
 - concrete buyer moment;
+- a structured buyer bridge naming the shared avatar, evidenced
+  occasion/desire, reason to act, and current relationship evidence IDs;
 - concise transaction bridge;
 - distinct paid and FREE product roles;
-- passed substitution test;
+- a passed substitution test that actually replaces, swaps, or removes one
+  product and explains why the evidenced buyer reason changes;
 - current evidence IDs;
-- relationship-mode evidence when complementarity is claimed; and
+- at least one current relationship row for `wanted_premium` and two distinct
+  rows for `evidence_backed_complement`; and
 - no more than two repair cycles.
+
+The buyer moment, transaction bridge, reason to act, and substitution reason
+must materialize distinctive language from those current relationship rows.
+Naming one item paid and the other FREE is offer clarity, not an accepted
+product marriage.
 
 ## Direct-response standard
 
@@ -60,7 +69,15 @@ placeholder, or production instruction rendered as visible copy blocks delivery.
 
 ## Claims
 
-Each explicit claim carries current evidence IDs. Punctuation is removed before
-claim checks, so turning a statement into a question or adding `*` cannot bypass
-the ledger. Mock-page disclosures communicate preview status; they are not claim
-evidence.
+Every public text leaf carries exactly one typed claim record with the same
+normalized text and exact public path. Its scope requires the corresponding
+paid, FREE, offer, or relationship evidence lanes, and its product/outcome
+vocabulary must occur in the cited current evidence. An unrelated valid
+evidence ID cannot authorize a new claim. Missing paths, extra factual language,
+and scope/evidence mismatches stop as `CLAIM_NOT_AUTHORIZED`.
+
+Punctuation is removed before claim checks, so turning a statement into a
+question or adding `*` cannot bypass the ledger. Mock-page disclosures use the
+restricted `disclosure` scope, carry no evidence IDs, and cannot contain product
+or outcome claims. Prompt directions pass the same prohibited-outcome firewall
+before image jobs are delivered.

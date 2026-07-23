@@ -38,7 +38,9 @@ class ContractTests(unittest.TestCase):
         repair_cycles: int = 0,
     ) -> dict:
         relationship_ids = (
-            ["REL-001", "REL-002"] if mode == "evidence_backed_complement" else []
+            ["REL-001", "REL-002"]
+            if mode == "evidence_backed_complement"
+            else ["REL-001"]
         )
         evidence_ids = [
             "AURALO-IDENTITY-001",
@@ -66,20 +68,44 @@ class ContractTests(unittest.TestCase):
                 "buyer_action": "Choose the floral-amber scent and wear the starburst at your collarbone.",
             },
             "buyer_moment": "She is choosing the last details before leaving for an evening out.",
+            "buyer_bridge": {
+                "shared_avatar": (
+                    "A style-led self-purchaser preparing for an evening out."
+                ),
+                "occasion_or_desire": (
+                    "She wants separate scent and jewellery finishing choices "
+                    "before an evening out."
+                ),
+                "reason_to_act": (
+                    "The $29 scent purchase adds the wanted visible necklace "
+                    "choice before the evening."
+                ),
+                "evidence_ids": relationship_ids,
+            },
             "transaction_bridge": (
                 "Choose Auralo Pheromone Perfume for $29 and receive the "
-                "Star Burst Necklace FREE as the visible finishing piece."
+                "Star Burst Necklace FREE as separate scent and jewellery "
+                "finishing choices before an evening out."
             ),
             "product_roles": {
                 "paid": "Auralo Pheromone Perfume is the $29 floral-amber scent she chooses.",
                 "free": "Star Burst Necklace is the wanted visible piece included FREE.",
             },
             "substitution_test": {
-                "question": "Do the scent and necklace retain distinct, material buyer roles?",
+                "question": (
+                    "If either product is replaced, does the evidence-backed "
+                    "buyer reason materially change?"
+                ),
                 "result": "passed",
+                "reason": (
+                    "Replacing Auralo Pheromone Perfume or the Star Burst Necklace "
+                    "removes the separate scent and jewellery finishing choices "
+                    "before an evening out."
+                ),
                 "evidence_ids": [
                     "AURALO-IDENTITY-001",
                     "FREE-IDENTITY-001",
+                    *relationship_ids,
                 ],
             },
             "evidence_ids": evidence_ids,
@@ -121,11 +147,88 @@ class ContractTests(unittest.TestCase):
             },
             "claims": [
                 {
-                    "text": "Auralo is a 15 ml pheromone-inspired floral-amber perfume.",
+                    "claim_id": "CLAIM-001",
+                    "public_path": "copy.headline",
+                    "scope": "relationship",
+                    "text": "Your signature scent comes with a star-bright finish.",
+                    "evidence_ids": [
+                        "AURALO-IDENTITY-001",
+                        "FREE-IDENTITY-001",
+                        "REL-001",
+                    ],
+                },
+                {
+                    "claim_id": "CLAIM-002",
+                    "public_path": "copy.subheadline",
+                    "scope": "offer",
+                    "text": (
+                        "Get Auralo Pheromone Perfume for $29 and receive the "
+                        "Star Burst Necklace FREE."
+                    ),
+                    "evidence_ids": [
+                        "AURALO-PRICE-001",
+                        "FREE-IDENTITY-001",
+                    ],
+                },
+                {
+                    "claim_id": "CLAIM-003",
+                    "public_path": "copy.body",
+                    "scope": "multi_product_fact",
+                    "text": (
+                        "Auralo Pheromone Perfume brings a floral-amber scent in a "
+                        "15 ml bottle. The Star Burst Necklace adds a radiating "
+                        "pendant on a gold-tone chain."
+                    ),
+                    "evidence_ids": [
+                        "AURALO-IDENTITY-001",
+                        "AURALO-SCENT-001",
+                        "FREE-IDENTITY-001",
+                        "FREE-FORM-001",
+                    ],
+                },
+                {
+                    "claim_id": "CLAIM-004",
+                    "public_path": "copy.cta",
+                    "scope": "paid_fact",
+                    "text": "Choose Auralo for $29",
+                    "evidence_ids": ["AURALO-PRICE-001"],
+                },
+                {
+                    "claim_id": "CLAIM-005",
+                    "public_path": "copy.footer",
+                    "scope": "disclosure",
+                    "text": (
+                        "Promotional lifestyle scenes are creative representations. "
+                        "Product details and purchase terms appear on this mock page."
+                    ),
+                    "evidence_ids": [],
+                },
+                {
+                    "claim_id": "CLAIM-006",
+                    "public_path": "image_jobs.0.visible_text",
+                    "scope": "paid_fact",
+                    "text": "Meet Auralo Pheromone Perfume",
                     "evidence_ids": ["AURALO-IDENTITY-001"],
                 },
                 {
-                    "text": "The Star Burst Necklace has a radiating pendant.",
+                    "claim_id": "CLAIM-007",
+                    "public_path": "image_jobs.1.visible_text",
+                    "scope": "free_fact",
+                    "text": "Your Star Burst Necklace is FREE",
+                    "evidence_ids": ["FREE-IDENTITY-001"],
+                },
+                {
+                    "claim_id": "CLAIM-008",
+                    "public_path": "image_jobs.2.visible_text.0",
+                    "scope": "paid_fact",
+                    "text": "Auralo Pheromone Perfume — $29",
+                    "evidence_ids": ["AURALO-PRICE-001"],
+                },
+                {
+                    "claim_id": "CLAIM-009",
+                    "public_path": "image_jobs.2.visible_text.1",
+                    "scope": "free_fact",
+                    "text": "Star Burst Necklace — FREE",
                     "evidence_ids": ["FREE-IDENTITY-001"],
                 },
             ],
@@ -345,6 +448,29 @@ class ContractTests(unittest.TestCase):
             ),
         )
 
+    def test_paid_and_free_restatement_is_not_a_marriage_bridge(self) -> None:
+        changed = self.brief()
+        changed["transaction_bridge"] = (
+            "Auralo Pheromone Perfume is the paid item and the "
+            "Star Burst Necklace is the FREE item."
+        )
+        changed["buyer_moment"] = (
+            "The customer sees the two items on the same checkout page."
+        )
+        changed["substitution_test"] = {
+            "question": "Are these simply the two named items in this transaction?",
+            "result": "passed",
+            "evidence_ids": ["AURALO-IDENTITY-001"],
+        }
+        self.assert_code(
+            "MARRIAGE_GAP",
+            lambda: contract.validate_marriage_brief(
+                changed,
+                self.campaign,
+                self.dossier,
+            ),
+        )
+
     def test_public_payload_passes_with_current_products_and_angles(self) -> None:
         brief = self.brief()
         result = contract.validate_public_payload(
@@ -382,6 +508,23 @@ class ContractTests(unittest.TestCase):
         )
         self.assert_code(
             "CROSS_CAMPAIGN_LEAK",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+            ),
+        )
+
+    def test_unsupported_outcome_in_prompt_direction_is_rejected(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["image_jobs"][0]["production_direction"] = (
+            "Editorial scene implying pheromones attract everyone nearby."
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
             lambda: contract.validate_public_payload(
                 payload,
                 self.campaign,
@@ -448,10 +591,13 @@ class ContractTests(unittest.TestCase):
     def test_question_and_asterisk_do_not_authorize_outcome_claim(self) -> None:
         brief = self.brief()
         payload = self.payload(brief)
-        payload["claims"][0] = {
-            "text": "Guaranteed attraction*?",
-            "evidence_ids": ["AURALO-IDENTITY-001"],
-        }
+        payload["claims"][0].update(
+            {
+                "scope": "paid_fact",
+                "text": "Guaranteed attraction*?",
+                "evidence_ids": ["AURALO-IDENTITY-001"],
+            }
+        )
         payload["copy"]["headline"] = "Guaranteed attraction*?"
         self.assert_code(
             "CLAIM_NOT_AUTHORIZED",
@@ -467,11 +613,67 @@ class ContractTests(unittest.TestCase):
     def test_reworded_question_does_not_bypass_outcome_gate(self) -> None:
         brief = self.brief()
         payload = self.payload(brief)
-        payload["claims"][0] = {
-            "text": "Could pheromones make everyone flirt with you*?",
-            "evidence_ids": ["AURALO-IDENTITY-001"],
-        }
+        payload["claims"][0].update(
+            {
+                "scope": "paid_fact",
+                "text": "Could pheromones make everyone flirt with you*?",
+                "evidence_ids": ["AURALO-IDENTITY-001"],
+            }
+        )
         payload["copy"]["headline"] = "Could pheromones make everyone flirt with you*?"
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+            ),
+        )
+
+    def test_unrelated_valid_evidence_cannot_authorize_new_claim(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        unsupported = "Auralo Pheromone Perfume eliminates anxiety."
+        payload["copy"]["headline"] = unsupported
+        payload["claims"][0].update(
+            {
+                "scope": "paid_fact",
+                "text": unsupported,
+                "evidence_ids": ["AURALO-IDENTITY-001"],
+            }
+        )
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+            ),
+        )
+
+    def test_claim_scope_cannot_launder_relationship_evidence(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["claims"][0]["scope"] = "paid_fact"
+        self.assert_code(
+            "CLAIM_NOT_AUTHORIZED",
+            lambda: contract.validate_public_payload(
+                payload,
+                self.campaign,
+                brief,
+                self.dossier,
+                self.registry(),
+            ),
+        )
+
+    def test_every_public_text_field_requires_exact_claim_grounding(self) -> None:
+        brief = self.brief()
+        payload = self.payload(brief)
+        payload["copy"]["body"] += " This extra sentence is not grounded."
         self.assert_code(
             "CLAIM_NOT_AUTHORIZED",
             lambda: contract.validate_public_payload(

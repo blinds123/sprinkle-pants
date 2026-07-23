@@ -24,7 +24,7 @@ All commands were run from the clean Issue 1 worktree.
 | `ruff check plugins/freeperrylarp1` | PASS |
 | `ruff format --check plugins/freeperrylarp1` | PASS |
 | `python3 -m compileall -q plugins/freeperrylarp1` | PASS |
-| `python3 -m unittest discover -s plugins/freeperrylarp1/tests -p 'test_*.py' -v` | PASS, 36 tests |
+| `python3 -m unittest discover -s plugins/freeperrylarp1/tests -p 'test_*.py' -v` | PASS, 41 tests |
 | Repository validator | PASS |
 | Plugin manifest validator | PASS |
 | Main skill validator | PASS |
@@ -32,6 +32,9 @@ All commands were run from the clean Issue 1 worktree.
 | `validate-dossier` CLI | PASS |
 | `validate-campaign` CLI, Star Burst | PASS |
 | `validate-campaign` CLI, Cloud Travel Case | PASS |
+| Paid/FREE restatement canary | `MARRIAGE_GAP` |
+| Unrelated valid evidence claim canary | `CLAIM_NOT_AUTHORIZED` |
+| Unsupported prompt-outcome canary | `CLAIM_NOT_AUTHORIZED` |
 | `git diff --check` | PASS |
 
 ## Acceptance and non-goal ledger
@@ -41,11 +44,11 @@ All commands were run from the clean Issue 1 worktree.
 | AC-1 | New files are isolated under `plugins/freeperrylarp1`; the predecessor plugin is unchanged. |
 | AC-2 | Versioned dossier and reference asset are hash-verified; only enumerated fact IDs may support public claims. |
 | AC-3 | Campaign input requires a fresh free-product identity, evidence ledger, fact ledger, and reference images. There are no prior-campaign defaults or examples in writer-facing assets. |
-| AC-4 | Campaign validation requires an accepted, hash-bound marriage brief with exact product roles, primary and backup angles, a buyer moment, and a substitution test. |
+| AC-4 | Campaign validation requires an accepted, hash-bound marriage brief with exact product roles, primary and backup angles, a current-evidence buyer bridge, and a replacement-based substitution explanation. Paid/FREE restatements stop as `MARRIAGE_GAP`. |
 | AC-5 | Angle repair attempts are capped at two; unresolved failures stop as `ANGLE_GAP` or `MARRIAGE_GAP`. |
 | AC-6 | Validator-only prior-product registry and public-payload scans stop strategy text, generic placeholders, and stale entities as `CROSS_CAMPAIGN_LEAK`. |
 | AC-7 | Production direction is permitted only in non-visible fields; every visible-text field is treated as customer-facing copy. |
-| AC-8 | Questions, asterisks, and disclaimers do not bypass claim evidence or fabricated-social-proof checks. |
+| AC-8 | Every public text leaf is exactly bound to a typed claim path, required evidence lanes, and cited evidence vocabulary. Public and prompt content share the outcome firewall; questions, asterisks, disclosures, and unrelated valid IDs cannot authorize new claims. |
 | AC-9 | Two unrelated-product fixtures plus negative tests prove stale-entity, missing-marriage, hidden-field, unsupported-claim, and private-strategy rejection. |
 | AC-10 | This receipt records the deterministic test and validation envelope. |
 | NG-1 | No predecessor-plugin files were edited. |

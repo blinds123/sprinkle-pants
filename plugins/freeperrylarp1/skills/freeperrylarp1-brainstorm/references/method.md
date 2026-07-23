@@ -14,6 +14,8 @@ Score each candidate from zero to five on:
 Claim integrity and evidence fit are gates, not averages. A candidate scoring
 below four on either is rejected. A complement candidate also needs at least two
 current relationship evidence IDs describing distinct product roles.
+`wanted_premium` still needs one current relationship row proving the buyer,
+occasion, desire, or premium relevance. A paid/FREE restatement is not a bridge.
 
 The primary is the highest valid total. The backup must use a meaningfully
 different hook or buyer moment. Wording variants are not separate angles.

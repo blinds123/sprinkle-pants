@@ -77,6 +77,7 @@ def _candidate_brief(
             "buyer_action": backup["buyer_action"],
         },
         "buyer_moment": candidate["buyer_moment"],
+        "buyer_bridge": candidate["buyer_bridge"],
         "transaction_bridge": candidate["transaction_bridge"],
         "product_roles": candidate["product_roles"],
         "substitution_test": candidate["substitution_test"],
@@ -139,6 +140,10 @@ def _normalize_candidate(
             f"{path}.buyer_moment",
             16,
         ),
+        "buyer_bridge": require_mapping(
+            candidate.get("buyer_bridge"),
+            f"{path}.buyer_bridge",
+        ),
         "transaction_bridge": require_string(
             candidate.get("transaction_bridge"),
             f"{path}.transaction_bridge",
@@ -194,6 +199,11 @@ def _normalize_candidate(
         f"{path}.substitution_test.question",
         16,
     )
+    require_string(
+        substitution.get("reason"),
+        f"{path}.substitution_test.reason",
+        16,
+    )
     if substitution.get("result") != "passed":
         raise ContractError("MARRIAGE_GAP", f"{path} substitution test did not pass")
     if normalized_text(AURALO_NAME) not in normalized_text(
@@ -213,17 +223,57 @@ def _normalize_candidate(
             "ANGLE_REJECTED",
             f"{path} needs paid and FREE product evidence",
         )
-    if result["relationship_mode"] == "evidence_backed_complement":
-        valid_relationship = {
-            evidence_id
-            for evidence_id in result["relationship_evidence_ids"]
-            if evidence_map.get(evidence_id) == "relationship"
-        }
-        if len(valid_relationship) < 2:
-            raise ContractError(
-                "MARRIAGE_GAP",
-                f"{path} complement mode lacks two current relationship evidence rows",
-            )
+    required_relationship_count = (
+        2 if result["relationship_mode"] == "evidence_backed_complement" else 1
+    )
+    valid_relationship = {
+        evidence_id
+        for evidence_id in result["relationship_evidence_ids"]
+        if evidence_map.get(evidence_id) == "relationship"
+    }
+    if len(valid_relationship) < required_relationship_count:
+        raise ContractError(
+            "MARRIAGE_GAP",
+            f"{path} lacks {required_relationship_count} current relationship evidence row(s)",
+        )
+    buyer_bridge = result["buyer_bridge"]
+    if set(buyer_bridge) != {
+        "shared_avatar",
+        "occasion_or_desire",
+        "reason_to_act",
+        "evidence_ids",
+    }:
+        raise ContractError(
+            "MARRIAGE_GAP",
+            f"{path}.buyer_bridge fields are incomplete",
+        )
+    require_string(
+        buyer_bridge.get("shared_avatar"),
+        f"{path}.buyer_bridge.shared_avatar",
+        16,
+    )
+    require_string(
+        buyer_bridge.get("occasion_or_desire"),
+        f"{path}.buyer_bridge.occasion_or_desire",
+        16,
+    )
+    require_string(
+        buyer_bridge.get("reason_to_act"),
+        f"{path}.buyer_bridge.reason_to_act",
+        16,
+    )
+    bridge_ids = require_list(
+        buyer_bridge.get("evidence_ids"),
+        f"{path}.buyer_bridge.evidence_ids",
+        required_relationship_count,
+    )
+    if len(set(bridge_ids)) < required_relationship_count or any(
+        evidence_id not in valid_relationship for evidence_id in bridge_ids
+    ):
+        raise ContractError(
+            "MARRIAGE_GAP",
+            f"{path}.buyer_bridge does not cite accepted relationship evidence",
+        )
     result["total_score"] = _validate_scores(candidate, path)
     return result
 

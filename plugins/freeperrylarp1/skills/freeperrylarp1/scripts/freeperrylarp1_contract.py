@@ -196,6 +196,111 @@ DIRECTION_ROOT_KEYS = {
     "visual_direction",
 }
 
+CLAIM_SCOPES = {
+    "paid_fact",
+    "free_fact",
+    "multi_product_fact",
+    "offer",
+    "relationship",
+    "disclosure",
+}
+
+CLAIM_REQUIRED_LANES = {
+    "paid_fact": {"paid_product"},
+    "free_fact": {"free_product"},
+    "multi_product_fact": {"paid_product", "free_product"},
+    "offer": {"paid_product", "free_product"},
+    "relationship": {"paid_product", "free_product", "relationship"},
+}
+
+CLAIM_ALLOWED_LANES = {
+    "paid_fact": {"paid_product"},
+    "free_fact": {"free_product"},
+    "multi_product_fact": {"paid_product", "free_product"},
+    "offer": {"paid_product", "free_product"},
+    "relationship": {"paid_product", "free_product", "relationship"},
+}
+
+# These words may connect or present evidence-backed facts, but they may not
+# supply a product outcome. Product, sensory, use, buyer, and relationship
+# vocabulary must still come from the exact cited evidence rows.
+SAFE_COPY_TOKENS = {
+    "a",
+    "add",
+    "adds",
+    "an",
+    "and",
+    "are",
+    "as",
+    "at",
+    "bright",
+    "brings",
+    "by",
+    "choose",
+    "comes",
+    "for",
+    "free",
+    "from",
+    "get",
+    "in",
+    "included",
+    "is",
+    "meet",
+    "my",
+    "now",
+    "of",
+    "on",
+    "or",
+    "our",
+    "receive",
+    "signature",
+    "star",
+    "the",
+    "this",
+    "to",
+    "today",
+    "with",
+    "your",
+}
+
+DISCLOSURE_COPY_TOKENS = {
+    "and",
+    "appear",
+    "are",
+    "creative",
+    "details",
+    "for",
+    "illustrative",
+    "lifestyle",
+    "mock",
+    "on",
+    "page",
+    "preview",
+    "product",
+    "promotional",
+    "purchase",
+    "representations",
+    "scenes",
+    "terms",
+    "this",
+}
+
+RELATIONSHIP_EVIDENCE_STOP_TOKENS = {
+    "buyer",
+    "current",
+    "describes",
+    "evidence",
+    "item",
+    "language",
+    "product",
+    "products",
+    "research",
+    "row",
+    "shows",
+    "source",
+    "the",
+}
+
 
 class ContractError(ValueError):
     """A stable machine-readable contract failure."""
@@ -336,6 +441,100 @@ def all_evidence_ids(
     for row in campaign["evidence_ledger"]:
         result[row["evidence_id"]] = row["lane"]
     return result
+
+
+def evidence_support_records(
+    dossier: dict[str, Any],
+    campaign: dict[str, Any],
+) -> dict[str, dict[str, Any]]:
+    """Return validator-only evidence language and lane metadata."""
+
+    records: dict[str, dict[str, Any]] = {}
+    paid_name = dossier["product"]["public_name"]
+    paid_format = dossier["product"]["format"]
+    for row in dossier["facts"]:
+        records[row["evidence_id"]] = {
+            "lane": "paid_product",
+            "texts": [
+                row["claim"],
+                row["public_language"],
+                paid_name,
+                paid_format,
+            ],
+        }
+
+    free_product = campaign["free_product"]
+    free_name = free_product["public_name"]
+    free_category = free_product["category"]
+    for row in free_product["facts"]:
+        records[row["evidence_id"]] = {
+            "lane": "free_product",
+            "texts": [
+                row["claim"],
+                row["public_language"],
+                free_name,
+                free_category,
+                *free_product["identity_terms"],
+            ],
+        }
+
+    for row in campaign["evidence_ledger"]:
+        evidence_id = row["evidence_id"]
+        existing = records.get(
+            evidence_id,
+            {"lane": row["lane"], "texts": []},
+        )
+        existing["lane"] = row["lane"]
+        existing["texts"].append(row["excerpt"])
+        records[evidence_id] = existing
+    return records
+
+
+def claim_tokens(*values: str) -> set[str]:
+    result: set[str] = set()
+    for value in values:
+        for token in re.findall(r"[a-z0-9]+", value.casefold()):
+            result.add(token)
+            if len(token) > 4 and token.endswith("ing"):
+                result.add(token[:-3])
+            if len(token) > 3 and token.endswith("s"):
+                result.add(token[:-1])
+            if len(token) > 4 and token.endswith("ed"):
+                result.add(token[:-2])
+    return result
+
+
+def relationship_support_tokens(
+    evidence_ids: Iterable[str],
+    records: dict[str, dict[str, Any]],
+) -> set[str]:
+    texts = [
+        text
+        for evidence_id in evidence_ids
+        for text in records[evidence_id]["texts"]
+        if records[evidence_id]["lane"] == "relationship"
+    ]
+    return claim_tokens(*texts) - claim_tokens(*RELATIONSHIP_EVIDENCE_STOP_TOKENS)
+
+
+def require_relationship_overlap(
+    value: Any,
+    path: str,
+    support_tokens: set[str],
+    minimum: int = 2,
+) -> str:
+    text = require_string(value, path, 16)
+    overlap = claim_tokens(text) & support_tokens
+    if len(overlap) < minimum:
+        raise ContractError(
+            "MARRIAGE_GAP",
+            f"{path} merely states the offer instead of materializing the evidenced buyer bridge",
+            details=[
+                f"required_distinctive_overlap={minimum}",
+                f"observed={sorted(overlap)}",
+            ],
+        )
+    return text
 
 
 def validate_dossier(
@@ -838,6 +1037,7 @@ def validate_marriage_brief(
             "primary_angle",
             "backup_angle",
             "buyer_moment",
+            "buyer_bridge",
             "transaction_bridge",
             "product_roles",
             "substitution_test",
@@ -891,7 +1091,7 @@ def validate_marriage_brief(
     _assert_no_internal_strategy(primary["hook"], "primary_angle.hook")
     _assert_no_internal_strategy(backup["hook"], "backup_angle.hook")
 
-    require_string(brief.get("buyer_moment"), "buyer_moment", 16)
+    buyer_moment = require_string(brief.get("buyer_moment"), "buyer_moment", 16)
     bridge = require_string(
         brief.get("transaction_bridge"),
         "transaction_bridge",
@@ -955,11 +1155,79 @@ def validate_marriage_brief(
             "relationship evidence IDs are invalid",
             details=invalid_relationship_ids,
         )
-    if mode == "evidence_backed_complement" and len(set(relationship_ids)) < 2:
+    required_relationship_count = 2 if mode == "evidence_backed_complement" else 1
+    if len(set(relationship_ids)) < required_relationship_count:
         raise ContractError(
             "MARRIAGE_GAP",
-            "complement mode requires at least two current relationship evidence IDs",
+            f"{mode} requires at least {required_relationship_count} current "
+            "relationship evidence ID(s)",
         )
+    if any(evidence_id not in evidence_ids for evidence_id in relationship_ids):
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "relationship evidence must be part of the accepted brief evidence set",
+        )
+
+    buyer_bridge = require_mapping(brief.get("buyer_bridge"), "buyer_bridge")
+    reject_unknown_keys(
+        buyer_bridge,
+        {
+            "shared_avatar",
+            "occasion_or_desire",
+            "reason_to_act",
+            "evidence_ids",
+        },
+        "buyer_bridge",
+    )
+    require_string(buyer_bridge.get("shared_avatar"), "buyer_bridge.shared_avatar", 16)
+    bridge_evidence_ids = require_list(
+        buyer_bridge.get("evidence_ids"),
+        "buyer_bridge.evidence_ids",
+        required_relationship_count,
+    )
+    invalid_bridge_ids = sorted(
+        evidence_id
+        for evidence_id in bridge_evidence_ids
+        if evidence_map.get(evidence_id) != "relationship"
+        or evidence_id not in relationship_ids
+    )
+    if invalid_bridge_ids:
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "buyer_bridge must cite accepted current relationship evidence",
+            details=invalid_bridge_ids,
+        )
+    if len(set(bridge_evidence_ids)) < required_relationship_count:
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "buyer_bridge does not cite enough distinct relationship evidence",
+        )
+
+    evidence_records = evidence_support_records(dossier, campaign)
+    bridge_support = relationship_support_tokens(
+        bridge_evidence_ids,
+        evidence_records,
+    )
+    require_relationship_overlap(
+        buyer_moment,
+        "buyer_moment",
+        bridge_support,
+    )
+    require_relationship_overlap(
+        bridge,
+        "transaction_bridge",
+        bridge_support,
+    )
+    require_relationship_overlap(
+        buyer_bridge.get("occasion_or_desire"),
+        "buyer_bridge.occasion_or_desire",
+        bridge_support,
+    )
+    require_relationship_overlap(
+        buyer_bridge.get("reason_to_act"),
+        "buyer_bridge.reason_to_act",
+        bridge_support,
+    )
 
     substitution = require_mapping(
         brief.get("substitution_test"),
@@ -967,10 +1235,23 @@ def validate_marriage_brief(
     )
     reject_unknown_keys(
         substitution,
-        {"question", "result", "evidence_ids"},
+        {"question", "result", "reason", "evidence_ids"},
         "substitution_test",
     )
-    require_string(substitution.get("question"), "substitution_test.question", 16)
+    substitution_question = require_string(
+        substitution.get("question"),
+        "substitution_test.question",
+        16,
+    )
+    if not re.search(
+        r"\b(?:replace|replaced|replacement|swap|substitut|remove|removed)\w*\b",
+        substitution_question,
+        re.IGNORECASE,
+    ):
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "substitution test must actually test a replacement, swap, or removal",
+        )
     if substitution.get("result") != "passed":
         raise ContractError("MARRIAGE_GAP", "substitution test did not pass")
     substitution_evidence = require_list(
@@ -982,6 +1263,37 @@ def validate_marriage_brief(
         raise ContractError(
             "MARRIAGE_GAP",
             "substitution test cites evidence outside the accepted brief",
+        )
+    substitution_lanes = {
+        evidence_map[evidence_id] for evidence_id in substitution_evidence
+    }
+    required_substitution_lanes = {
+        "paid_product",
+        "free_product",
+        "relationship",
+    }
+    if not required_substitution_lanes.issubset(substitution_lanes):
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "substitution test must cite paid, FREE, and relationship evidence",
+            details=sorted(required_substitution_lanes - substitution_lanes),
+        )
+    substitution_reason = require_relationship_overlap(
+        substitution.get("reason"),
+        "substitution_test.reason",
+        bridge_support,
+    )
+    if normalized_text(AURALO_NAME) not in normalized_text(substitution_reason):
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "substitution reason must name Auralo",
+        )
+    if normalized_text(free_product["public_name"]) not in normalized_text(
+        substitution_reason
+    ):
+        raise ContractError(
+            "MARRIAGE_GAP",
+            "substitution reason must name the current FREE product",
         )
 
     return {
@@ -1103,21 +1415,78 @@ def _validate_claims(
     payload: dict[str, Any],
     campaign: dict[str, Any],
     dossier: dict[str, Any],
+    content_rows: list[tuple[str, str, str]],
 ) -> None:
     claims = require_list(payload.get("claims"), "claims", 1)
-    evidence_map = all_evidence_ids(dossier, campaign)
+    evidence_records = evidence_support_records(dossier, campaign)
     prohibited = [
         normalized_claim_text(value) for value in dossier["prohibited_outcome_patterns"]
     ]
+    public_rows = {path: text for path, mode, text in content_rows if mode == "public"}
+    if not public_rows:
+        raise ContractError(
+            "PUBLIC_PAYLOAD_INVALID",
+            "payload contains no public text to ground",
+        )
+    observed_claim_ids: set[str] = set()
+    observed_public_paths: set[str] = set()
     for index, raw_claim in enumerate(claims):
         claim = require_mapping(raw_claim, f"claims[{index}]")
         reject_unknown_keys(
             claim,
-            {"text", "evidence_ids"},
+            {
+                "claim_id",
+                "public_path",
+                "scope",
+                "text",
+                "evidence_ids",
+            },
             f"claims[{index}]",
             code="PUBLIC_PAYLOAD_INVALID",
         )
+        claim_id = require_token(
+            claim.get("claim_id"),
+            f"claims[{index}].claim_id",
+        )
+        if claim_id in observed_claim_ids:
+            raise ContractError(
+                "PUBLIC_PAYLOAD_INVALID",
+                f"duplicate claim_id: {claim_id}",
+            )
+        observed_claim_ids.add(claim_id)
+        public_path = require_string(
+            claim.get("public_path"),
+            f"claims[{index}].public_path",
+            3,
+        )
+        if public_path not in public_rows:
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id} points to a missing or non-public path",
+                details=[public_path],
+            )
+        if public_path in observed_public_paths:
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"public text has more than one grounding claim: {public_path}",
+            )
+        observed_public_paths.add(public_path)
+        scope = claim.get("scope")
+        if scope not in CLAIM_SCOPES:
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id}.scope is invalid",
+                details=[str(scope)],
+            )
         text = require_string(claim.get("text"), f"claims[{index}].text", 8)
+        if normalized_claim_text(text) != normalized_claim_text(
+            public_rows[public_path]
+        ):
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id} does not exactly ground its declared public path",
+                details=[public_path],
+            )
         normalized = normalized_claim_text(text)
         matches = [
             pattern for pattern in prohibited if pattern and pattern in normalized
@@ -1135,22 +1504,83 @@ def _validate_claims(
                     f"claim contains unsupported {label}",
                     details=[text],
                 )
+
         evidence_ids = require_list(
             claim.get("evidence_ids"),
             f"claims[{index}].evidence_ids",
-            1,
+            0 if scope == "disclosure" else 1,
         )
+        if len(set(evidence_ids)) != len(evidence_ids):
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id} repeats evidence IDs",
+            )
         unknown = sorted(
             evidence_id
             for evidence_id in evidence_ids
-            if not isinstance(evidence_id, str) or evidence_id not in evidence_map
+            if not isinstance(evidence_id, str) or evidence_id not in evidence_records
         )
         if unknown:
             raise ContractError(
                 "CLAIM_NOT_AUTHORIZED",
-                f"claims[{index}] cites unknown evidence",
+                f"{claim_id} cites unknown evidence",
                 details=unknown,
             )
+        if scope == "disclosure":
+            if evidence_ids:
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} disclosure must not masquerade as evidence",
+                )
+            unsupported_disclosure_tokens = claim_tokens(text) - claim_tokens(
+                *DISCLOSURE_COPY_TOKENS
+            )
+            if unsupported_disclosure_tokens:
+                raise ContractError(
+                    "CLAIM_NOT_AUTHORIZED",
+                    f"{claim_id} disclosure contains non-disclosure language",
+                    details=sorted(unsupported_disclosure_tokens),
+                )
+            continue
+
+        cited_lanes = {
+            evidence_records[evidence_id]["lane"] for evidence_id in evidence_ids
+        }
+        missing_lanes = CLAIM_REQUIRED_LANES[scope] - cited_lanes
+        if missing_lanes:
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id} evidence does not match its declared scope",
+                details=sorted(missing_lanes),
+            )
+        unexpected_lanes = cited_lanes - CLAIM_ALLOWED_LANES[scope]
+        if unexpected_lanes:
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id} uses evidence outside its declared scope",
+                details=sorted(unexpected_lanes),
+            )
+        support_texts = [
+            support_text
+            for evidence_id in evidence_ids
+            for support_text in evidence_records[evidence_id]["texts"]
+        ]
+        supported_tokens = claim_tokens(*support_texts, *SAFE_COPY_TOKENS)
+        unsupported_tokens = claim_tokens(text) - supported_tokens
+        if unsupported_tokens:
+            raise ContractError(
+                "CLAIM_NOT_AUTHORIZED",
+                f"{claim_id} adds language not present in its cited evidence",
+                details=sorted(unsupported_tokens),
+            )
+
+    missing_public_paths = sorted(set(public_rows) - observed_public_paths)
+    if missing_public_paths:
+        raise ContractError(
+            "CLAIM_NOT_AUTHORIZED",
+            "public text contains ungrounded fields",
+            details=missing_public_paths,
+        )
 
 
 def _validate_image_jobs(
@@ -1343,24 +1773,25 @@ def validate_public_payload(
             "public content never materializes the current FREE product by exact name",
         )
 
+    claim_checked_text = " ".join(text for _, _, text in content_rows)
     for pattern in dossier["prohibited_outcome_patterns"]:
-        if normalized_claim_text(pattern) in normalized_claim_text(public_text):
+        if normalized_claim_text(pattern) in normalized_claim_text(claim_checked_text):
             raise ContractError(
                 "CLAIM_NOT_AUTHORIZED",
-                "public content contains a prohibited Auralo outcome",
+                "public or prompt content contains a prohibited Auralo outcome",
                 details=[pattern],
             )
     for label, pattern in UNSUPPORTED_OUTCOME_PATTERNS:
-        match = pattern.search(public_text)
+        match = pattern.search(claim_checked_text)
         if match:
             raise ContractError(
                 "CLAIM_NOT_AUTHORIZED",
-                f"public content contains unsupported {label}",
+                f"public or prompt content contains unsupported {label}",
                 details=[match.group(0)],
             )
 
-    _validate_claims(payload, campaign, dossier)
     _validate_image_jobs(payload, brief_result, campaign, dossier)
+    _validate_claims(payload, campaign, dossier, content_rows)
 
     return {
         "status": "accepted",
