@@ -1,0 +1,4 @@
+interface:
+  display_name: "FreePerryLarp1"
+  short_description: "Build isolated Auralo plus FREE-product campaigns."
+  default_prompt: "Use $freeperrylarp1 to start a clean Auralo campaign for my newly supplied FREE product, require an evidence-backed marriage brief, and block stale-product or strategy leakage."

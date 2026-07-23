@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "cloud-travel-case-canary",
+  "paid_product_contract": {
+    "dossier_id": "auralo-pheromone-perfume-15ml",
+    "dossier_version": "1.0.0"
+  },
+  "free_product": {
+    "id": "cloud-travel-case",
+    "public_name": "Cloud Travel Case",
+    "category": "travel accessory",
+    "identity_terms": [
+      "quilted shell",
+      "zip-around closure",
+      "interior divider"
+    ],
+    "facts": [
+      {
+        "evidence_id": "CASE-IDENTITY-001",
+        "claim": "The supplied reference shows a compact travel case with a quilted shell.",
+        "public_language": "A compact quilted shell gives the travel case its soft-sided form.",
+        "evidence_type": "client_supplied_reference",
+        "source_url": "client://cloud-travel-case-reference"
+      },
+      {
+        "evidence_id": "CASE-FORM-001",
+        "claim": "The supplied reference shows a zip-around closure and an interior divider.",
+        "public_language": "A zip-around closure opens to an interior divider.",
+        "evidence_type": "client_supplied_reference",
+        "source_url": "client://cloud-travel-case-reference"
+      }
+    ],
+    "reference_images": [
+      {
+        "asset_id": "CASE-REF-001",
+        "path": "assets/cloud-travel-case-reference.svg",
+        "sha256": "90cc9e73a202b5a31fa967d0e31e4e468251d9c4fc3eddd994a8121727b49d45"
+      }
+    ]
+  },
+  "offer_terms": {
+    "paid_price_usd": 29,
+    "free_price_usd": 0,
+    "free_public_label": "FREE"
+  },
+  "evidence_ledger": [
+    {
+      "evidence_id": "CASE-IDENTITY-001",
+      "lane": "free_product",
+      "excerpt": "The supplied reference shows a compact quilted travel case.",
+      "source_url": "client://cloud-travel-case-reference"
+    },
+    {
+      "evidence_id": "CASE-FORM-001",
+      "lane": "free_product",
+      "excerpt": "The supplied reference shows a zip-around closure and divider.",
+      "source_url": "client://cloud-travel-case-reference"
+    },
+    {
+      "evidence_id": "CASE-REL-001",
+      "lane": "relationship",
+      "excerpt": "Current research describes keeping small fragrance bottles organised while travelling.",
+      "source_url": "https://example.com/current-research/travel-1"
+    },
+    {
+      "evidence_id": "CASE-REL-002",
+      "lane": "relationship",
+      "excerpt": "Current research distinguishes fragrance use from the case's storage role.",
+      "source_url": "https://example.com/current-research/travel-2"
+    }
+  ]
+}

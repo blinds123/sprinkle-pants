@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">Star Burst Necklace test reference</title>
+  <desc id="desc">A gold-tone chain with a radiating starburst pendant.</desc>
+  <rect width="320" height="320" fill="#fffaf0"/>
+  <path d="M80 56c22 72 44 108 80 108s58-36 80-108" fill="none" stroke="#a97822" stroke-width="8" stroke-linecap="round"/>
+  <g transform="translate(160 182)" fill="#d6a13a" stroke="#8a641d" stroke-width="3">
+    <path d="M0-54 10-15 38-38 17-8 54 0 17 8 38 38 10 15 0 54-10 15-38 38-17 8-54 0-17-8-38-38-10-15Z"/>
+    <circle r="12" fill="#fff2b5"/>
+  </g>
+</svg>

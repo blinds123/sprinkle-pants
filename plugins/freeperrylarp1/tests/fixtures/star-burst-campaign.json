@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "star-burst-necklace-canary",
+  "paid_product_contract": {
+    "dossier_id": "auralo-pheromone-perfume-15ml",
+    "dossier_version": "1.0.0"
+  },
+  "free_product": {
+    "id": "star-burst-necklace",
+    "public_name": "Star Burst Necklace",
+    "category": "jewellery",
+    "identity_terms": [
+      "radiating pendant",
+      "gold-tone chain",
+      "starburst silhouette"
+    ],
+    "facts": [
+      {
+        "evidence_id": "FREE-IDENTITY-001",
+        "claim": "The supplied reference shows a necklace with a radiating starburst pendant.",
+        "public_language": "A radiating starburst pendant gives the necklace its focal shape.",
+        "evidence_type": "client_supplied_reference",
+        "source_url": "client://star-burst-reference"
+      },
+      {
+        "evidence_id": "FREE-FORM-001",
+        "claim": "The supplied reference shows the pendant suspended from a gold-tone chain.",
+        "public_language": "The starburst pendant hangs from a gold-tone chain.",
+        "evidence_type": "client_supplied_reference",
+        "source_url": "client://star-burst-reference"
+      }
+    ],
+    "reference_images": [
+      {
+        "asset_id": "FREE-REF-001",
+        "path": "assets/star-burst-reference.svg",
+        "sha256": "03a2ee50ce977a252fc6ea0119b41ba5755f863205fe17b2a123024a0b842864"
+      }
+    ]
+  },
+  "offer_terms": {
+    "paid_price_usd": 29,
+    "free_price_usd": 0,
+    "free_public_label": "FREE"
+  },
+  "evidence_ledger": [
+    {
+      "evidence_id": "FREE-IDENTITY-001",
+      "lane": "free_product",
+      "excerpt": "The supplied reference shows a radiating starburst pendant.",
+      "source_url": "client://star-burst-reference"
+    },
+    {
+      "evidence_id": "FREE-FORM-001",
+      "lane": "free_product",
+      "excerpt": "The supplied reference shows a gold-tone chain.",
+      "source_url": "client://star-burst-reference"
+    },
+    {
+      "evidence_id": "REL-001",
+      "lane": "relationship",
+      "excerpt": "Current buyer-language research describes scent and jewellery as separate finishing choices before an evening out.",
+      "source_url": "https://example.com/current-research/relationship-1"
+    },
+    {
+      "evidence_id": "REL-002",
+      "lane": "relationship",
+      "excerpt": "Current buyer-language research distinguishes a close-range scent role from a visible jewellery role.",
+      "source_url": "https://example.com/current-research/relationship-2"
+    }
+  ]
+}

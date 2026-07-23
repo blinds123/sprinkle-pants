@@ -1,0 +1,4 @@
+interface:
+  display_name: "FreePerryLarp1 Brainstorm"
+  short_description: "Choose bounded evidence-backed product angles."
+  default_prompt: "Use $freeperrylarp1-brainstorm to choose one primary and one backup angle from current evidence, then emit the required marriage brief without exposing internal strategy."
