@@ -30,12 +30,13 @@ SHA-256: `1781cd27811a984a89290722966742f5cb18084fcd78905515df1ad19fd9973d`
 Apply these rules to every IMG prompt in this pack:
 
 - Generate one image only and preserve the IMG ID in its filename.
-- Treat both attached reference images as the product-appearance source of truth.
+- Treat each attached reference image as the appearance source of truth for its named item.
 - Render only the exact visible text assigned in the IMG prompt; instructions and labels stay invisible.
 - Match product geometry and proportions. Do not add, duplicate, improve, or redesign a product.
-- No competitor asset, platform logo, copied interface, verification badge, aggregate review count, fake certification, malformed product, collage, decorative media control, or watermark.
+- No competitor asset, platform logo, copied interface, verification badge, aggregate review count, fake certification, malformed item, collage, decorative media control, or watermark.
+- Never manufacture connection through a side-by-side packshot, plus sign, arrow, split screen, or visible explanation. Let the described action create the connection.
 - Do not invent or imply a price, discount, saving, performance result, response time, assistance outcome, protection, privacy or security promise, alert behavior, setting, control, shipping, return, or warranty beyond the exact assigned copy and authorized transaction terms.
-- Every visible heading, callout, diagram label, interface label, and badge stays inside that fact boundary.
+- Every visible heading, callout, diagram label, interface label, and badge stays inside that fact boundary and speaks to the shopper rather than the creative team.
 
 ## IMG-01
 
@@ -47,10 +48,10 @@ Use both attached reference images from the pack header. Match Sprinkle Tweed Pa
 
 VISIBLE TEXT
 Heading exactly: Sprinkle Tweed Pants — FREE With Your $29 Auralo Pheromone Perfume Purchase.
-Do not render this body; express it visually: One cream multicoloured-tweed statement pair. One floral-amber finishing step. Both in the same getting-ready decision.
+Do not render this body; express it visually: You tie the braided drawcord, place two or three drops at your pulse points, take your keys, and head for the door.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Premium close-up of the exact free product, worn or used in its most desirable context, with Auralo present as the purchase.
 
 STYLE
@@ -58,7 +59,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 Short headline area and a restrained FREE-with-$29 transaction badge.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -71,19 +72,19 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: The pair that refuses to disappear into the outfit
-Do not render this body; express it visually: The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems. Wear them with a simple top and let every distinctive detail do its work.
+Heading exactly: Start with the pants.
+Do not render this body; express it visually: You lift the Sprinkle Tweed Pants from the chair and bring the cream tweed into the light before you step in.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
-Auralo and the exact free product together in a clean two-product composition.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
+A lived preparation scene: the exact FREE item is being worn or used while Auralo is opened for its authorized next action.
 
 STYLE
 Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions. Everyday environments in the target market that match the campaign's locked use moments. Use believable Europe context, natural skin, accurate proportions, and mobile-first hierarchy.
-One price, one FREE reward, no crossed-out pricing or comparison math.
+Name Auralo, the exact FREE item, and the transaction directly; no generic bundle language or comparison math.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -96,11 +97,11 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: The transaction is deliberately simple
-Do not render this body; express it visually: Auralo Pheromone Perfume costs $29. Sprinkle Tweed Pants is FREE with the qualifying $29 purchase. Choose the perfume and claim the exact statement pair at the same time.
+Heading exactly: Step into the look you chose.
+Do not render this body; express it visually: You guide each foot through, pull the waistband into place, and let the relaxed shape fall from your waist.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Design-led editorial crop showing the exact silhouette, texture, pattern, and fit or form.
 
 STYLE
@@ -108,7 +109,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 One concrete design callout and generous text-safe space.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -121,11 +122,11 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: Looking dressed is not always feeling finished
-Do not render this body; express it visually: You can have the top, the shoes, and the trousers right—and still feel like the getting-ready moment stopped one detail too soon. This pairing turns that last detail into a deliberate finishing step.
+Heading exactly: Set the waist your way.
+Do not render this body; express it visually: You adjust the waistband and check the shape in the mirror. The pants have an adjustable elastic waist and are designed for a relaxed, baggy fit.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Believable mirror or doorway moment where the buyer looks finished but the atmosphere still feels incomplete.
 
 STYLE
@@ -133,7 +134,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 One question-led headline zone; no diagnostic or fear imagery.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -146,11 +147,11 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: Meet the invisible finishing detail
-Do not render this body; express it visually: Auralo is a 15 ml pheromone-inspired floral-amber perfume. It is the personal scent step you add after the visible look is already working.
+Heading exactly: Tie the braided drawcord.
+Do not render this body; express it visually: You pull, cross, and tie the drawcord at your waist. The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Premium perfume close-up with floral-amber notes, bottle geometry preserved exactly.
 
 STYLE
@@ -158,7 +159,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 A short product line and one sensory path.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -171,11 +172,11 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: Because vague fragrance is not enough
-Do not render this body; express it visually: Real fragrance shoppers ask whether a perfume sits close to the skin and worry about weak scent. Here, the format, notes, and application are stated clearly so you can decide from facts rather than hype.
+Heading exactly: Choose from the published size bands.
+Do not render this body; express it visually: You check the published band before you decide. The women's sizes are XS-S for EU 34-38, M for EU 38-40, and L-XL for EU 42-44.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Elegant ingredient-world still life around Auralo using jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper notes.
 
 STYLE
@@ -183,7 +184,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 Exact authorized scent-profile copy only.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -196,11 +197,11 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: A floral-amber profile with contrast
-Do not render this body; express it visually: The scent profile combines jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper. Floral notes meet fruit, soft sweetness, and peppery contrast in the same composition.
+Heading exactly: Check the length as you turn.
+Do not render this body; express it visually: You look from waistband to hem before taking your next step. The standard length is 110 cm from waistband to hem.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Accurate hands applying two or three drops to wrists, behind ears, neck, or inner elbows.
 
 STYLE
@@ -208,7 +209,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 Numbered pulse-point path using exact authorized language.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -221,11 +222,11 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: Your final step before the door
-Do not render this body; express it visually: Apply two or three drops to pulse points such as the wrists, behind the ears, neck, and inner elbows. Make those few drops the moment your outfit shifts from dressed to deliberately finished.
+Heading exactly: Keep the tweed away from snags.
+Do not render this body; express it visually: You move rough accessories aside before dressing. The pants are dry-clean only, and the delicate tweed should be kept away from rough surfaces and accessories that may snag it.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Cinematic arrival moment with the buyer wearing or carrying the free product and Auralo subtly present.
 
 STYLE
@@ -233,7 +234,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 One high-heat question; no guaranteed reaction or mind-control imagery.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -246,11 +247,11 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: Start with what is actually verified
-Do not render this body; express it visually: Auralo is a 15 ml pheromone-inspired floral-amber perfume. The scent profile combines jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper. Those are the facts; the anticipation belongs to you.
+Heading exactly: Open Auralo at the vanity.
+Do not render this body; express it visually: You leave the full-length mirror, reach for the bottle, and open it at the vanity. Auralo is a 15 ml pheromone-inspired floral-amber perfume.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Product-led close-up or real-use demonstration tied only to an authorized appearance or functionality fact.
 
 STYLE
@@ -258,7 +259,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 One exact fact and one visual pointer.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---
 
@@ -271,11 +272,11 @@ CREATE ONE LANDING-PAGE IMAGE
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT
-Heading exactly: What if the anticipation is part of the pleasure?
-Do not render this body; express it visually: Scent can frame a moment without controlling another person. Choose Auralo for its floral-amber character and let every imagined possibility remain a possibility—not a promised reaction.
+Heading exactly: Read the scent description.
+Do not render this body; express it visually: You pause over the named notes before applying. The scent profile combines jasmine, blackcurrant bud, panna cotta, peony, rose, and pink pepper.
 
 SCENE
-Depict a woman buying the Sprinkle Tweed Pants for herself: getting ready for a social plan where one visible statement piece and one personal scent can complete the look.
+Depict a woman buying the Sprinkle Tweed Pants for herself: She wants the Sprinkle Tweed Pants for herself, checks the published size information, and is ready to buy through the $29 Auralo purchase..
 Clean product-and-use composition centered on the authorized 15 ml format or application.
 
 STYLE
@@ -283,6 +284,6 @@ Premium direct-response editorial photography with believable phone-camera textu
 One exact fact; no scientific outcome claim.
 
 RULES
-Apply the pack-wide rules above. Show both products only when natural. Keep product geometry and palette consistent. Add no extra text, badge, UI, or watermark.
+Apply the pack-wide rules above. Place each named item only where the described action physically calls for it. Keep geometry and palette consistent. Add no extra text, badge, UI, or watermark.
 
 ---

@@ -30,12 +30,13 @@ SHA-256: `1781cd27811a984a89290722966742f5cb18084fcd78905515df1ad19fd9973d`
 Apply these rules to every IMG prompt in this pack:
 
 - Generate one image only and preserve the IMG ID in its filename.
-- Treat both attached reference images as the product-appearance source of truth.
+- Treat each attached reference image as the appearance source of truth for its named item.
 - Render only the exact visible text assigned in the IMG prompt; instructions and labels stay invisible.
 - Match product geometry and proportions. Do not add, duplicate, improve, or redesign a product.
-- No competitor asset, platform logo, copied interface, verification badge, aggregate review count, fake certification, malformed product, collage, decorative media control, or watermark.
+- No competitor asset, platform logo, copied interface, verification badge, aggregate review count, fake certification, malformed item, collage, decorative media control, or watermark.
+- Never manufacture connection through a side-by-side packshot, plus sign, arrow, split screen, or visible explanation. Let the described action create the connection.
 - Do not invent or imply a price, discount, saving, performance result, response time, assistance outcome, protection, privacy or security promise, alert behavior, setting, control, shipping, return, or warranty beyond the exact assigned copy and authorized transaction terms.
-- Every visible heading, callout, diagram label, interface label, and badge stays inside that fact boundary.
+- Every visible heading, callout, diagram label, interface label, and badge stays inside that fact boundary and speaks to the shopper rather than the creative team.
 
 ## IMG-31
 
@@ -47,24 +48,24 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: Repeat the finishing steps without reinventing them
-Moment: You reach again for the relaxed trousers, keep the supporting pieces simple, and apply Auralo to the same pulse points before another plan.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Choose behind your ears.
+Moment: You lift your auburn curls, place the measured drops behind your ears, and return the bottle to the same spot.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-16; Distinct woman, early 30s, olive skin, heart-shaped face, thick auburn curls
 Wardrobe: white button-down
 Camera: window-light portrait
-Setting: getting ready for a social plan where one visible statement piece and one personal scent can complete the look
-Focus: Show Sprinkle Tweed Pants and Auralo Pheromone Perfume together in one coherent moment.
+Setting: You are applying Auralo before putting your bag in order.
+Focus: Sprinkle Tweed Pants already worn or used; Auralo Pheromone Perfume enters only for authorized application before departure. No side-by-side packages.
 
 STYLE
-Confident arrival scene with both products naturally represented.
+Arrival led by the FREE item in use; Auralo appears only as a plausibly carried personal item.
 Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions. Use candid texture, natural expression, and accurate proportions.
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---
 
@@ -78,24 +79,24 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: Design first, everything else quieter
-Moment: You let cream tweed, colourful flecks, fringe, and the braided drawcord define the visual language while the rest of the outfit stays restrained.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Choose your inner elbow.
+Moment: You push back the sleeve of your leather jacket and place the measured drops at your inner elbow.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-17; Distinct woman, mid 60s, light brown skin, oval face, short silver curls
 Wardrobe: leather jacket
 Camera: handheld close-up
-Setting: a weekend city outing built around a simple top and distinctive trousers
-Focus: Show Sprinkle Tweed Pants and Auralo Pheromone Perfume together in one coherent moment.
+Setting: You are using your inner elbow as a pulse point before leaving the vanity.
+Focus: Sprinkle Tweed Pants already worn or used; Auralo Pheromone Perfume enters only for authorized application before departure. No side-by-side packages.
 
 STYLE
-Getting-ready timeline distilled into one uncluttered editorial frame with both products.
+One uncluttered action: adjust or use the FREE item, apply Auralo as authorized, then leave.
 Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions. Use candid texture, natural expression, and accurate proportions.
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---
 
@@ -109,24 +110,24 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: Compare facts, not fantasies
-Moment: You read the Auralo format, scent notes, and pulse-point instructions, then decide whether that finishing step belongs in the evening you are planning.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Slip Auralo into your bag.
+Moment: You place the closed 15 ml bottle inside your open bag, then let your hooded travel coat fall back around you.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-18; Distinct woman, late 20s, dark skin, square face, waist-length braids
 Wardrobe: hooded travel coat
 Camera: low-light street portrait
-Setting: an evening plan where she wants her outfit and scent to feel intentional
-Focus: Show Sprinkle Tweed Pants and Auralo Pheromone Perfume together in one coherent moment.
+Setting: You are moving from the vanity toward the door.
+Focus: Sprinkle Tweed Pants already worn or used; Auralo Pheromone Perfume enters only for authorized application before departure. No side-by-side packages.
 
 STYLE
-Handbag, vanity, or wardrobe moment showing how both products belong in one sequence.
+FREE item already worn or used as Auralo is set down or bagged after application.
 Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions. Use candid texture, natural expression, and accurate proportions.
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---
 
@@ -140,24 +141,24 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: The terms are there when you need reassurance
-Moment: You confirm four-day shipping, 90-day returns, and the Five-year warranty before choosing the size and completing the $29 purchase.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Return to the mirror.
+Moment: You face the lift mirror in your tailored top and the Sprinkle Tweed Pants, with the Auralo bottle put away in your closed bag.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-19; Distinct woman, mid 30s, fair skin, long face, sandy-blonde layered hair
 Wardrobe: tailored suit
 Camera: office-lift mirror photo
-Setting: getting ready for a social plan where one visible statement piece and one personal scent can complete the look
-Focus: Show a calm, concrete decision moment with both products visible when composition allows.
+Setting: You are checking the full look on the way out.
+Focus: Name Auralo Pheromone Perfume and Sprinkle Tweed Pants in a calm decision or arrival scene; no generic bundle language.
 
 STYLE
-Calm checkout-decision scene with both products and clear exact-text space.
+Calm decision scene naming Auralo, the FREE item, and the authorized transaction.
 Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions. Use candid texture, natural expression, and accurate proportions.
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---
 
@@ -171,24 +172,24 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: A statement pair for an ordinary Saturday
-Moment: You wear the baggy tweed trousers with a simple top, walk into the city without a complicated styling plan, and keep Auralo as your chosen finishing touch.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Close the bag.
+Moment: You tuck the strap beside your striped weekend knit, close the bag, and keep walking in the cream tweed pants.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-20; Distinct woman, early 40s, tan skin, round face, dark hair in a low bun
 Wardrobe: striped weekend knit
 Camera: weekend outdoor candid
-Setting: a weekend city outing built around a simple top and distinctive trousers
-Focus: Show a calm, concrete decision moment with both products visible when composition allows.
+Setting: You are preparing to cross from home into the city.
+Focus: Name Auralo Pheromone Perfume and Sprinkle Tweed Pants in a calm decision or arrival scene; no generic bundle language.
 
 STYLE
-Two-product unboxing scene emphasizing what arrives for the $29 purchase.
+Unboxing that names Auralo as the $29 purchase and the exact item as FREE.
 Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions. Use candid texture, natural expression, and accurate proportions.
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---
 
@@ -202,24 +203,24 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: One evening, one clear sequence
-Moment: You choose the pants for the visible statement and Auralo for the pulse-point step that signals to you that getting ready is complete.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Take your keys.
+Moment: You reach past your gym zip-up, close your fingers around the keys, and let the braided drawcord stay tied at your waist.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-21; Distinct woman, mid 20s, medium brown skin, high cheekbones, short springy curls
 Wardrobe: gym zip-up
 Camera: motion-frozen activity portrait
-Setting: an evening plan where she wants her outfit and scent to feel intentional
-Focus: Show a calm, concrete decision moment with both products visible when composition allows.
+Setting: You are one action away from leaving for the evening.
+Focus: Name Auralo Pheromone Perfume and Sprinkle Tweed Pants in a calm decision or arrival scene; no generic bundle language.
 
 STYLE
-Factual fulfilment scene with both products, parcel, and restrained shipping or return motifs.
+Parcel, Auralo, the FREE item, and only authorized shipping or return terms.
 Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions. Use candid texture, natural expression, and accurate proportions.
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---
 
@@ -233,16 +234,16 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: The practical details are part of the pleasure
-Moment: You use the adjustable elastic waist, choose from the stated EU size ranges, and keep the dry-clean-only care note in mind from the start.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Cross the hallway.
+Moment: You move down the hallway in your deep green blouse and Sprinkle Tweed Pants, carrying your closed bag at your side.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-22; Distinct woman, late 50s, pale olive skin, square face, silver blunt bob
 Wardrobe: deep green blouse
 Camera: cafe selfie
-Setting: getting ready for a social plan where one visible statement piece and one personal scent can complete the look
-Focus: Show a calm, concrete decision moment with both products visible when composition allows.
+Setting: You are leaving home for a social plan.
+Focus: Name Auralo Pheromone Perfume and Sprinkle Tweed Pants in a calm decision or arrival scene; no generic bundle language.
 
 STYLE
 FAQ-style editorial panel answering one researched hesitation without fake interface chrome.
@@ -250,7 +251,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---
 
@@ -264,16 +265,16 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: Set the shape, protect the texture
-Moment: You adjust the waist for the intended relaxed fit, avoid rough accessories that could snag the tweed, and let the fringed hems move freely.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Step through the door.
+Moment: You cross the threshold in your cream turtleneck and the cream tweed pants while the fringed hems move with your stride.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-23; Distinct woman, early 30s, deep brown skin, heart-shaped face, long natural twists
 Wardrobe: cream turtleneck
 Camera: home hallway portrait
-Setting: a weekend city outing built around a simple top and distinctive trousers
-Focus: Show a calm, concrete decision moment with both products visible when composition allows.
+Setting: You are taking the chosen look into your weekend plan.
+Focus: Name Auralo Pheromone Perfume and Sprinkle Tweed Pants in a calm decision or arrival scene; no generic bundle language.
 
 STYLE
 Final-decision portrait with the exact free product prominent and Auralo visible.
@@ -281,7 +282,7 @@ Premium direct-response editorial photography with believable phone-camera textu
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---
 
@@ -295,23 +296,23 @@ REFERENCES
 Use both attached reference images from the pack header. Match Sprinkle Tweed Pants and Auralo Pheromone Perfume exactly.
 
 VISIBLE TEXT — EXACT
-Heading: Finish the decision in one move
-Moment: You choose Auralo for $29, select the pants size, claim the pair FREE, and leave the rest of the evening open to possibility.
-Render both lines completely. No name, rating, stars, quotes, or review label.
+Heading: Meet the next hour outside.
+Moment: You arrive in your plum dinner jacket and Sprinkle Tweed Pants, set your closed bag beside your chair, and keep the keys in your hand.
+Render both lines completely. No review styling.
 
 SCENE — INSTRUCTIONS ONLY
 Cast: CAST-24; Distinct woman, mid 40s, fair freckled skin, oval face, dark red shoulder-length hair
 Wardrobe: plum dinner jacket
 Camera: arrival candid
-Setting: an evening plan where she wants her outfit and scent to feel intentional
-Focus: Show a calm, concrete decision moment with both products visible when composition allows.
+Setting: You have carried the departure sequence into a real evening destination.
+Focus: Name Auralo Pheromone Perfume and Sprinkle Tweed Pants in a calm decision or arrival scene; no generic bundle language.
 
 STYLE
-Premium closing flat lay with both products, clean CTA-safe space, and no urgency device.
+Closing departure still: FREE item ready for use, Auralo at its next action point, clean CTA space.
 Premium direct-response editorial photography with believable phone-camera texture and accurate product proportions. Use candid texture, natural expression, and accurate proportions.
 Render one scene heading and one complete second-person moment. No name, rating, stars, quotation marks, review label, platform UI, or verification badge.
 
 RULES
-Apply the pack-wide rules above. Never imply customer testimony. Keep person, products, and text clear. Add no name, stars, rating, quote treatment, customer-result claim, collage, platform UI, badge, or watermark.
+Apply the pack-wide rules above. Editorial, never testimony. Keep person, items, and text clear. No extra UI, badge, rating, quote, collage, or watermark.
 
 ---

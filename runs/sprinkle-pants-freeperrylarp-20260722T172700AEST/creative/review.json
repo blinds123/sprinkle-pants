@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "reviewed_at": "2026-07-22T07:49:33Z",
+  "reviewed_at": "2026-07-23T02:19:11Z",
   "passed": true,
   "errors": [],
   "warnings": [
@@ -21,8 +21,8 @@
     "distinct_cast_count": 24,
     "reference_image_count": 2,
     "prompt_word_limit": 220,
-    "prompt_word_count_max": 220,
-    "prompt_word_count_average": 201.4,
+    "prompt_word_count_max": 217,
+    "prompt_word_count_average": 192.3,
     "research_evidence_count": 23,
     "selected_research_count": 7,
     "writer_packet_bytes": 24232,

@@ -5,9 +5,9 @@
     "version": "0.1.0+codex.20260722072638"
   },
   "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
-  "state": "CREATIVE_DRAFT_READY",
+  "state": "PROMPT_PACK_READY",
   "created_at": "2026-07-22T07:26:51Z",
-  "updated_at": "2026-07-23T02:18:48Z",
+  "updated_at": "2026-07-23T02:19:11Z",
   "research_session": {
     "id": "685ac819f8bf45b29d9a04e177ea52f3",
     "mode": "fresh_only",
@@ -64,8 +64,8 @@
   "deadline": {
     "target_minutes": 40.0,
     "maximum_minutes": 40,
-    "active_elapsed_seconds": 151.298,
-    "active_remaining_seconds": 2248.702,
+    "active_elapsed_seconds": 151.418,
+    "active_remaining_seconds": 2248.582,
     "provider_wait_seconds": 0.0,
     "human_wait_seconds": 0.0,
     "status": "ON_TARGET"
@@ -125,6 +125,16 @@
       "state": "CREATIVE_DRAFT_READY",
       "at": "2026-07-23T02:18:48Z",
       "command": "writer-accept:refresh"
+    },
+    {
+      "state": "PROMPTS_COMPILED",
+      "at": "2026-07-23T02:19:07Z",
+      "command": "compile"
+    },
+    {
+      "state": "PROMPT_PACK_READY",
+      "at": "2026-07-23T02:19:11Z",
+      "command": "review"
     }
   ],
   "artifacts": {
@@ -221,12 +231,12 @@
     "prompts/reference-manifest.json": {
       "path": "prompts/reference-manifest.json",
       "bytes": 2855,
-      "sha256": "fd750716a05723f4af8a21233f54dc8101970492e3c9c61208f5a342084d0ad0"
+      "sha256": "24d2d205999993f1d928827fc73250639ef378cb07e562ec7e41166d7b49cb22"
     },
     "prompts/prompts.json": {
       "path": "prompts/prompts.json",
-      "bytes": 65351,
-      "sha256": "6f6c71293a3301eefde0336dfb69a7fe776ac5f086f6bb9960f4c14dd52cdc15"
+      "bytes": 61537,
+      "sha256": "8644001430e9fb9aa33b20e2263ab7f08bd614ea79880fa7996668ed8aa38ca2"
     },
     "prompts/reference-images/REF-COMPANION-PRODUCT-01.jpg": {
       "path": "prompts/reference-images/REF-COMPANION-PRODUCT-01.jpg",
@@ -240,28 +250,28 @@
     },
     "prompts/packs/pack-01.md": {
       "path": "prompts/packs/pack-01.md",
-      "bytes": 15160,
-      "sha256": "32838e0d77af5ece44b80b4bafdf4ccea9171ef7dc94340313ef590eed89ee3b"
+      "bytes": 15539,
+      "sha256": "b388cd868bde9af196f80e30583815009d20b9032cc828ebac8813f675423362"
     },
     "prompts/packs/pack-02.md": {
       "path": "prompts/packs/pack-02.md",
-      "bytes": 16355,
-      "sha256": "7c7a6e6b7b6fc481ea2d93c8a3d522bbe86f8d634bcf5581c405bf51098154a0"
+      "bytes": 15858,
+      "sha256": "5f48bb7d09798a6aef59893e3c6ebccc0616dcd28112a378633a567839b0d37c"
     },
     "prompts/packs/pack-03.md": {
       "path": "prompts/packs/pack-03.md",
-      "bytes": 17217,
-      "sha256": "01716ff46d12005547a64ccc4a61119f310e694f4e7b44d576501aed43679907"
+      "bytes": 15986,
+      "sha256": "b193509522749f7b8c337c3b1c8f6f89270ebca8f8098f2b8250ddce58e2134e"
     },
     "prompts/packs/pack-04.md": {
       "path": "prompts/packs/pack-04.md",
-      "bytes": 15879,
-      "sha256": "471e3f2882a2f7565cc051a549290f2692ae6799984666b45f568c96434c25ec"
+      "bytes": 15062,
+      "sha256": "a9903b939b12d70f0d3dc94974c6bcbbba1ac96039d80338c8c903b5fb9a73f5"
     },
     "creative/review.json": {
       "path": "creative/review.json",
       "bytes": 738,
-      "sha256": "0fc20aaed82632527a226ec3dfcd5082097d11f088da72e91967214d730dc5b9"
+      "sha256": "9e939deb34cc9882d2fb33b8a4c3f8d2764a3681dcb1546639bf5d78bf0f9f10"
     },
     "prompts/handoff-receipt.json": {
       "path": "prompts/handoff-receipt.json",
@@ -349,6 +359,16 @@
       "command": "writer-accept",
       "elapsed_seconds": 0.021,
       "recorded_at": "2026-07-23T02:18:48Z"
+    },
+    {
+      "command": "compile",
+      "elapsed_seconds": 0.066,
+      "recorded_at": "2026-07-23T02:19:07Z"
+    },
+    {
+      "command": "review",
+      "elapsed_seconds": 0.054,
+      "recorded_at": "2026-07-23T02:19:11Z"
     }
   ]
 }
