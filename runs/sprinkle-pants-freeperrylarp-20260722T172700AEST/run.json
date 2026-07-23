@@ -7,7 +7,7 @@
   "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
   "state": "PROMPT_PACK_READY",
   "created_at": "2026-07-22T07:26:51Z",
-  "updated_at": "2026-07-22T07:49:57Z",
+  "updated_at": "2026-07-23T02:15:34Z",
   "research_session": {
     "id": "685ac819f8bf45b29d9a04e177ea52f3",
     "mode": "fresh_only",
@@ -64,8 +64,8 @@
   "deadline": {
     "target_minutes": 40.0,
     "maximum_minutes": 40,
-    "active_elapsed_seconds": 151.262,
-    "active_remaining_seconds": 2248.738,
+    "active_elapsed_seconds": 151.27,
+    "active_remaining_seconds": 2248.73,
     "provider_wait_seconds": 0.0,
     "human_wait_seconds": 0.0,
     "status": "ON_TARGET"
@@ -329,6 +329,11 @@
       "command": "prompts-deliver",
       "elapsed_seconds": 6.329,
       "recorded_at": "2026-07-22T07:49:57Z"
+    },
+    {
+      "command": "writer-accept:failed",
+      "elapsed_seconds": 0.008,
+      "recorded_at": "2026-07-23T02:15:34Z"
     }
   ]
 }
