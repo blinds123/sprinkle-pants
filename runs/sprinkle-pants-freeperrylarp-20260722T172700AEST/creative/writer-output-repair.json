@@ -102,13 +102,13 @@
     "bridge_heading": "Pull on the pants you came to see.",
     "bridge_body": "You begin with cream tweed, multicoloured flecks, a braided drawcord, and fringed hems—then you keep moving toward the plan outside.",
     "desire_questions": [
-      "What if the pants you keep thinking about were already tied at your waist as you reached for the keys?",
+      "What if Auralo's floral-amber scent became the finishing moment before your hand closed around the keys?",
+      "Picture this: the Sprinkle Tweed Pants become the look you choose before your next city moment?",
+      "Could Auralo's jasmine, rose, and pink pepper scent be the one you choose before you leave?",
       "Picture this: you step into cream tweed, draw in the braided cord, and watch the fringed hems move toward the door?",
-      "Could your next city plan begin with the multicoloured flecks you noticed first?",
       "Imagine choosing your published size, checking the relaxed silhouette, and getting on with your evening?",
-      "What if two or three drops at your pulse points became the last action before your hand closed around the keys?",
-      "Could you keep the pants on as daylight changes and a new hour begins?",
-      "Picture this: your bag closes, your keys lift, and you walk out in the pants you chose?"
+      "What if the pants you keep thinking about were already tied at your waist as you reached for the keys?",
+      "Could you keep the pants on as daylight changes and a new hour begins?"
     ],
     "story_heading": "Follow your hands from waist to wrist to keys.",
     "story_intro": "You start at the chair, dress for the plan, pause at your pulse points, and leave through the door.",
@@ -170,21 +170,23 @@
         "body": "You buy Auralo Pheromone Perfume for $29, receive the Sprinkle Tweed Pants FREE, choose your published size, and step toward the plan outside."
       }
     ],
-    "paid_proof_heading": "Choose Auralo at your pulse points.",
-    "paid_proof_body": "You open a 15 ml pheromone-inspired floral-amber perfume and use two or three drops at your wrists, behind your ears, neck, or inner elbows.",
-    "paid_proof_cta": "Read the Auralo details",
-    "companion_proof_heading": "Choose the Sprinkle Tweed Pants you noticed.",
-    "companion_proof_body": "You receive cream tweed with multicoloured flecks, a multicoloured braided drawcord, fringed hems, an adjustable elastic waist, and a relaxed, baggy fit.",
-    "companion_proof_cta": "Choose your published size band",
-    "relationship_proof_heading": "Move from waist to wrist to keys.",
-    "relationship_proof_body": "You tie the drawcord, apply two or three drops at a pulse point, close your bag, and take your keys when it is time to leave.",
-    "relationship_proof_cta": "Follow your departure",
-    "decision_proof_heading": "Check every verified detail before you decide.",
-    "decision_proof_body": "You can choose XS-S for EU 34-38, M for EU 38-40, or L-XL for EU 42-44, then review the $29 price, FREE pants, shipping, returns, warranty, and care details.",
-    "decision_proof_cta": "Review your purchase details",
-    "transaction_heading": "Buy Auralo and receive the Sprinkle Tweed Pants FREE.",
-    "transaction_body": "You buy Auralo Pheromone Perfume for $29 and receive the Sprinkle Tweed Pants FREE with that qualifying purchase.",
-    "transaction_stack": [
+    "proof_sections": {
+      "paid_kicker": "Choose your pulse points.",
+      "paid_heading": "Choose Auralo before you leave.",
+      "paid_body": "You open a 15 ml pheromone-inspired floral-amber perfume and use two or three drops at your wrists, behind your ears, neck, or inner elbows.",
+      "free_kicker": "Tie it your way.",
+      "free_heading": "Choose the Sprinkle Tweed Pants you noticed.",
+      "free_body": "You receive cream tweed with multicoloured flecks, a multicoloured braided drawcord, fringed hems, an adjustable elastic waist, and a relaxed, baggy fit.",
+      "relationship_kicker": "Keys. Bag. Go.",
+      "relationship_heading": "Move from waist to wrist to keys.",
+      "relationship_body": "You tie the drawcord, apply two or three drops at a pulse point, close your bag, and take your keys when it is time to leave.",
+      "decision_kicker": "Check before you choose.",
+      "decision_heading": "Check every stated detail before you decide.",
+      "decision_body": "You can choose XS-S for EU 34-38, M for EU 38-40, or L-XL for EU 42-44, then review the $29 price, FREE pants, shipping, returns, warranty, and care details."
+    },
+    "offer_heading": "Buy Auralo and receive the Sprinkle Tweed Pants FREE.",
+    "offer_body": "You buy Auralo Pheromone Perfume for $29 and receive the Sprinkle Tweed Pants FREE with that qualifying purchase.",
+    "offer_stack": [
       "You receive Auralo Pheromone Perfume for $29.",
       "You receive the Sprinkle Tweed Pants FREE with the qualifying $29 purchase.",
       "Your purchase ships within 4 days.",
@@ -195,7 +197,7 @@
     "final_heading": "Plans on. Take the next step.",
     "final_body": "You choose your published size, buy Auralo Pheromone Perfume for $29, receive the Sprinkle Tweed Pants FREE, and get ready for the door.",
     "faq_heading": "Choose with the verified details in front of you.",
-    "faqs": [
+    "faq": [
       {
         "question": "What will you see in the Sprinkle Tweed Pants?",
         "answer": "You will see the stated construction details. The pants are hand-crafted in cream tweed with multicoloured flecks, a multicoloured braided drawcord, and fringed hems."
@@ -434,18 +436,14 @@
         "research_ids": [
           "S-010"
         ],
-        "fact_ids": [
-          "A-008"
-        ]
+        "fact_ids": []
       },
       {
         "number": 2,
         "research_ids": [
           "S-005"
         ],
-        "fact_ids": [
-          "A-009"
-        ]
+        "fact_ids": []
       },
       {
         "number": 3,
@@ -526,28 +524,21 @@
         "research_ids": [
           "R-001"
         ],
-        "fact_ids": [
-          "A-013"
-        ]
+        "fact_ids": []
       },
       {
         "number": 12,
         "research_ids": [
           "S-010"
         ],
-        "fact_ids": [
-          "A-008"
-        ]
+        "fact_ids": []
       },
       {
         "number": 13,
         "research_ids": [
           "S-006"
         ],
-        "fact_ids": [
-          "A-008",
-          "A-013"
-        ]
+        "fact_ids": []
       },
       {
         "number": 14,
@@ -557,8 +548,7 @@
         ],
         "fact_ids": [
           "A-001",
-          "A-002",
-          "A-010"
+          "A-002"
         ]
       }
     ],

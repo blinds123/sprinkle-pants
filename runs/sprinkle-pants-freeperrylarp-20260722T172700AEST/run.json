@@ -5,9 +5,9 @@
     "version": "0.1.0+codex.20260722072638"
   },
   "campaign_id": "sprinkle-pants-freeperrylarp-20260722t170403aest",
-  "state": "PROMPT_PACK_READY",
+  "state": "CREATIVE_DRAFT_READY",
   "created_at": "2026-07-22T07:26:51Z",
-  "updated_at": "2026-07-23T02:15:34Z",
+  "updated_at": "2026-07-23T02:18:48Z",
   "research_session": {
     "id": "685ac819f8bf45b29d9a04e177ea52f3",
     "mode": "fresh_only",
@@ -64,8 +64,8 @@
   "deadline": {
     "target_minutes": 40.0,
     "maximum_minutes": 40,
-    "active_elapsed_seconds": 151.27,
-    "active_remaining_seconds": 2248.73,
+    "active_elapsed_seconds": 151.298,
+    "active_remaining_seconds": 2248.702,
     "provider_wait_seconds": 0.0,
     "human_wait_seconds": 0.0,
     "status": "ON_TARGET"
@@ -120,6 +120,11 @@
       "state": "PROMPT_PACK_READY",
       "at": "2026-07-22T07:49:57Z",
       "command": "prompts-deliver"
+    },
+    {
+      "state": "CREATIVE_DRAFT_READY",
+      "at": "2026-07-23T02:18:48Z",
+      "command": "writer-accept:refresh"
     }
   ],
   "artifacts": {
@@ -195,23 +200,23 @@
     },
     "creative/writer-output.json": {
       "path": "creative/writer-output.json",
-      "bytes": 23208,
-      "sha256": "626df22f70a240c900ac117e2b7edda0c9a672a311b788980d3a73395730c9be"
+      "bytes": 22402,
+      "sha256": "abe6f6f50a5af8ebc5865b811a3a89cc70fcd2a6bdcbeb88de736c72180d5ae0"
     },
     "creative/creative.json": {
       "path": "creative/creative.json",
-      "bytes": 59795,
-      "sha256": "0ad1d9fb5f3b60aabd1876985536d35a32e5106160ef8b95124a2ce749fde82a"
+      "bytes": 57603,
+      "sha256": "a3fff0028745407257a196367a4d5d49fb690d345e6472ce7a8df0e26bff4f12"
     },
     "creative/public-copy.json": {
       "path": "creative/public-copy.json",
-      "bytes": 15170,
-      "sha256": "39eeaaae0e8e988c4133fedb2f03060625f7c60a6cd42cf0a9c957f982941c1b"
+      "bytes": 13818,
+      "sha256": "13d2bf55ba28d39c8c7b6475460abcf774f1a67cdc1a08e6f39654257f61d3d5"
     },
     "creative/writer-audit.json": {
       "path": "creative/writer-audit.json",
       "bytes": 470,
-      "sha256": "17225948a9b1391abf41364db37c1a8a31453333acd91b37db1bdbb16fcf8fd2"
+      "sha256": "69714801f728971afd77e9f24b2407a5c2385760d00110b634e0152d7bde56e2"
     },
     "prompts/reference-manifest.json": {
       "path": "prompts/reference-manifest.json",
@@ -334,6 +339,16 @@
       "command": "writer-accept:failed",
       "elapsed_seconds": 0.008,
       "recorded_at": "2026-07-23T02:15:34Z"
+    },
+    {
+      "command": "writer-accept:failed",
+      "elapsed_seconds": 0.007,
+      "recorded_at": "2026-07-23T02:18:20Z"
+    },
+    {
+      "command": "writer-accept",
+      "elapsed_seconds": 0.021,
+      "recorded_at": "2026-07-23T02:18:48Z"
     }
   ]
 }
